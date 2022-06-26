@@ -1,4 +1,4 @@
-import '../assets/scss/global.scss';
+import '../../assets/scss/global.scss';
 import React, { Fragment, FunctionComponent } from 'react';
 import ManakitType from './types/Manakit.types';
 
