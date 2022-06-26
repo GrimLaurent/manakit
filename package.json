@@ -8,7 +8,8 @@
     "test": "jest",
     "lint": "eslint",
     "build-storybook": "build-storybook",
-    "deploy": "node cli.js deploy"
+    "deploy": "node cli.js deploy",
+    "prepare": "husky install"
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
