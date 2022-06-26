@@ -1,5 +1,6 @@
-const welcomeManaKit = () => {
-  return console.log("ManaKit");
-};
+function welcomeManaKit() {
+  console.log("ManaKit");
+  return "ManaKit";
+}
 
-module.exports = { welcomeManaKit };
+export default welcomeManaKit;
