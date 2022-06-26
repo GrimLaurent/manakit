@@ -1,3 +1,3 @@
-import ManaKit from "./modules/Manakit.module";
+import ManaKit from './modules/manakit/Manakit.module';
 
 export { ManaKit };
