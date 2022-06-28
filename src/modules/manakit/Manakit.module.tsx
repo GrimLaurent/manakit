@@ -8,13 +8,7 @@ const ManaKit: FunctionComponent<ManakitType> = ({ children, ...props }) => {
     return null;
   } // fix hydratation
 
-  return (
-    <Fragment>
-      <div id="manakit" className="manakit-ui">
-        {children}
-      </div>
-    </Fragment>
-  );
+  return <Fragment>{children}</Fragment>;
 };
 
 export default hydrate(ManaKit);
