@@ -32,11 +32,24 @@ A Manakit is initial base for your project.
 In order to import the style library on your project, **Manakit** must be put in the index or in the file which will include your whole project. Manakit is mandatory to use the other modules.
 
     <Manakit>
-        {content}
+        {children}
     </Manakit>
+
+full exemple
+
+    <Manakit noControl>
+        {children}
+    </Manakit>
+
+### noControl
+
+**noControl** is an option that allows not to check the client browser in order to open it on all browsers (even those not supported by Manakit and those no longer maintained by the creator).
+
+Here is the list of all currently supported browsers.
 
 ## Props
 
 - children: any = ''
+- noControl: boolean = false
 
 </div>
