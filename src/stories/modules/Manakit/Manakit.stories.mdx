@@ -1,0 +1,42 @@
+import { Meta } from "@storybook/addon-docs";
+import "../assets/styles/stories.css";
+
+<Meta title="Modules/Manakit" />
+
+<div className="documentation-header">
+
+### Structure
+
+# Manakit
+
+A Manakit is initial base for your project.
+
+<div>
+  <span className="documentation-chip-label">Chrome 100+</span>
+  <span className="documentation-chip-label">Safari 14+</span>
+  <span className="documentation-chip-label">Firefox 91+</span>
+  <span className="documentation-chip-label">Edge 101+</span>
+  <span className="documentation-chip-label">Opera 87+</span>
+  <span className="documentation-chip-label">Yandex 22.5+</span>
+</div>
+</div>
+
+<div className="documentation-content">
+
+## Declaration
+
+    import { Manakit } from 'manakit';
+
+## Overview
+
+In order to import the style library on your project, **Manakit** must be put in the index or in the file which will include your whole project. Manakit is mandatory to use the other modules.
+
+    <Manakit>
+        {content}
+    </Manakit>
+
+## Props
+
+- children: any = ''
+
+</div>

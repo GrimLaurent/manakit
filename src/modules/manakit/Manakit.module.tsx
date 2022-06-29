@@ -3,12 +3,14 @@ import React, { Fragment, FunctionComponent } from "react";
 import { hydrate } from "ReactDOM";
 import ManakitType from "./types/Manakit.types";
 
-const ManaKit: FunctionComponent<ManakitType> = ({ children, ...props }) => {
-  if (typeof window === "undefined") {
-    return null;
-  } // fix hydratation
+const isSSR = () => typeof window === "undefined";
 
-  return <Fragment>{children}</Fragment>;
+const ManaKit: FunctionComponent<ManakitType> = ({ children }) => {
+  // if (typeof window === "undefined") {
+  //   return null;
+  // } // fix hydratation
+
+  return !isSSR() && children;
 };
 
-export default hydrate(ManaKit);
+export default ManaKit;
