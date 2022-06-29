@@ -1,9 +1,8 @@
-import "../../assets/scss/global.scss";
-import React, { Fragment, FunctionComponent } from "react";
-import { hydrate } from "ReactDOM";
-import ManakitType from "./types/Manakit.types";
+import '../../assets/scss/global.scss';
+import React, { Fragment, FunctionComponent } from 'react';
+import ManakitType from './types/Manakit.types';
 
-const isSSR = () => typeof window === "undefined";
+const isSSR = () => typeof window === 'undefined';
 
 const ManaKit: FunctionComponent<ManakitType> = ({ children }) => {
   // if (typeof window === "undefined") {
@@ -25,7 +24,7 @@ const ManaKit: FunctionComponent<ManakitType> = ({ children }) => {
   // Ensuite, dans mon jsx, je peux faire
   // { !isSSR && <div....
 
-  return !isSSR() && children;
+  return !isSSR() && (children as any);
 };
 
 export default ManaKit;
