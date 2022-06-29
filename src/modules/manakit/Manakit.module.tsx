@@ -1,30 +1,16 @@
 import '../../assets/scss/global.scss';
-import React, { Fragment, FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import ManakitType from './types/Manakit.types';
 
-const isSSR = () => typeof window === 'undefined';
-
 const ManaKit: FunctionComponent<ManakitType> = ({ children }) => {
-  // if (typeof window === "undefined") {
-  //   return null;
-  // } // fix hydratation
+  const [render, setRender] = useState(null) as any;
 
-  //   useState(typeof window === "undefined");
+  useEffect(() => {
+    // fix Hydration failed because the initial UI does not match what was rendered on the server
+    setRender(<div>{children}</div>);
+  }, []);
 
-  // const [isInFavorites, setIsInFavorites] = useState(typeof window === "undefined" && OTHER CODE HERE));
-
-  //   const isSSR = typeof window === "undefined"
-  // à
-
-  // const [isSSR, setIsSSR] = useState(true);
-
-  // useEffect(() => {
-  // 	setIsSSR(false);
-  // }, []);
-  // Ensuite, dans mon jsx, je peux faire
-  // { !isSSR && <div....
-
-  return !isSSR() && (children as any);
+  return render;
 };
 
 export default ManaKit;
