@@ -9,7 +9,8 @@
     "lint": "eslint",
     "build-storybook": "build-storybook",
     "deploy": "node cli.js deploy",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "scriptname": "cmd"
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -26,7 +27,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
