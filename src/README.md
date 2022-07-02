@@ -9,7 +9,7 @@ You will find all the steps to configure your environment and the packages neces
 
 |             | [node.js](https://www.npmjs.com/package/node)     | [yarn](https://www.npmjs.com/package/yarn)        |
 | ----------- | ------------------------------------------------- | ------------------------------------------------- |
-| Version use | 18.0.0                                            | 1.22.18                                           |
+| Version use | 18.2.0                                            | 1.22.18                                           |
 | Lts         | ![npm version](https://badge.fury.io/js/node.svg) | ![npm version](https://badge.fury.io/js/yarn.svg) |
 
 _last update: 26/06/2022_
