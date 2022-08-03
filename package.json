@@ -1,6 +1,6 @@
 {
   "name": "manakit",
-  "version": "0.0.38",
+  "version": "0.0.72",
   "description": "",
   "scripts": {
     "develop": "start-storybook -p 6006",
@@ -52,6 +52,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/react-test-renderer": "^18.0.0",
+    "@types/styled-components": "^5.1.25",
     "babel-jest": "^28.1.2",
     "boxen": "4.2.0",
     "chalk": "4.1.2",
@@ -74,6 +75,7 @@
     "sass": "^1.50.0",
     "sass-loader": "^13.0.1",
     "shelljs": "0.8.5",
+    "styled-components": "^5.3.5",
     "ts-jest": "^28.0.5",
     "typescript": "4.6.3"
   }
