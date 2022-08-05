@@ -29,12 +29,12 @@ function npmHookDeploy() {
   shell.exec(`yarn test`);
   shell.echo(chalk.bold.bgGreen('✅ Test Success'));
 
-  shell.echo(chalk.bold.bgBlue('📦  Generating Doc'));
-  shell.exec(`yarn build-storybook`);
-  shell.exec(`mv ${storybookFolderDefault} ${storybookFolderNaming}`);
-  shell.exec(`cp -r ${storybookFolderNaming} build`);
-  shell.exec(`rm -rf docs`);
-  shell.echo(chalk.bold.bgGreen('✅ Doc Build Success'));
+  // shell.echo(chalk.bold.bgBlue('📦  Generating Doc'));
+  // shell.exec(`yarn build-storybook`);
+  // shell.exec(`mv ${storybookFolderDefault} ${storybookFolderNaming}`);
+  // shell.exec(`cp -r ${storybookFolderNaming} build`);
+  // shell.exec(`rm -rf docs`);
+  // shell.echo(chalk.bold.bgGreen('✅ Doc Build Success'));
 
   shell.echo(chalk.bold.bgBlue('📦  Prepare for deploy'));
   shell.exec(`cp LICENSE.md build/`);
