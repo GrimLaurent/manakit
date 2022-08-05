@@ -97,7 +97,7 @@ const defaultTheme: DefaultThemeType = {
   },
   breakpoint: {
     treshold: {
-      xs: '600px',
+      xs: '320px',
       sm: '600px',
       md: '960px',
       lg: '1264px',

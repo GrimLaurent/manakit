@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useState, useContext, Fragment } from 'react';
 import GlobalStyle from '../../../assets/styles/globalStyles';
 import { AppType } from '../types/App.types';
-import { Application, ApplicationWrap } from '../styles/App.styled';
+import { ApplicationStyled, ApplicationWrapsStyled } from '../styles/App.styled';
 import { useClassHtml, useIdHtml, useStyleHtml } from '../../../utils';
 
 // Theme
@@ -21,6 +21,8 @@ const Structural: FunctionComponent<AppType> = ({ className, style, children, da
       if (dark) setMode(true);
       if (light) setMode(false);
     }
+
+    console.log('Manakit theming', theme);
   }, []);
 
   const updateTheme = () => {
@@ -37,15 +39,15 @@ const Structural: FunctionComponent<AppType> = ({ className, style, children, da
     <Fragment>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Application
+        <ApplicationStyled
           id={useIdHtml('manakit-app')}
           className={useClassHtml(`mk-app theme--${Boolean(mode) ? 'dark' : 'light'}`, className)}
           style={useStyleHtml({}, style)}
           data-app="true"
           mode={Boolean(mode) ? 'dark' : 'light'}
         >
-          <ApplicationWrap className={useClassHtml(`mk-app__wrap`)}>{children}</ApplicationWrap>
-        </Application>
+          <ApplicationWrapsStyled className={useClassHtml(`mk-app__wrap`)}>{children}</ApplicationWrapsStyled>
+        </ApplicationStyled>
       </ThemeProvider>
     </Fragment>
   );

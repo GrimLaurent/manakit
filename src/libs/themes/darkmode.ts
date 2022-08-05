@@ -13,6 +13,8 @@ const useDarkMode = (mode?: boolean) => {
   local.theme.system = false;
 
   setElementStorage(`_muid`, local);
+
+  console.log('useDarkMode func');
   // Event
   window.dispatchEvent(new Event('mana-theme'));
 };

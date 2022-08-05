@@ -36,9 +36,11 @@ export function ManakitCore(theme?: any) {
 
 export function updateMode() {
   if (typeof window !== 'undefined') {
+    console.log('updateMode launch');
     if (localStorage.getItem('_muid') !== null) {
       const storage = getElementStorage('_muid');
       ModeApi = createContext(storage?.theme?.dark);
+      console.log('updateMode data', ModeApi, storage);
     }
   }
 }
