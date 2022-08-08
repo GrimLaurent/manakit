@@ -5,9 +5,9 @@
  * @type Structural
  * @module App
  *
- * @company ManaStone
+ * @company Manastone
  * @author Laurent Grimaldi
- * @repository https://github.com/GrimLaurent/manakit
+ * @repository https://github.com/manastone/manakit
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import React, { FunctionComponent, useEffect, useState } from 'react';
