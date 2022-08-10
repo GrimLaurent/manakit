@@ -7,7 +7,7 @@ import {
 
 import { DefaultThemeType } from './theming';
 
-import { ColsSizeType } from './cols';
+import { ColsSizeType, ColsOrderType, ColsAlignSelftType } from './cols';
 
 export type {
   ElementHTMLDefaultType,
@@ -16,4 +16,6 @@ export type {
   ElementHTMLDefaultType_Extended,
   DefaultThemeType,
   ColsSizeType,
+  ColsOrderType,
+  ColsAlignSelftType,
 };

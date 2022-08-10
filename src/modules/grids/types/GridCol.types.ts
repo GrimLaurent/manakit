@@ -1,16 +1,39 @@
-import { ElementHTMLDefaultType_Extended, ColsSizeType } from '../../../types';
+import { ElementHTMLDefaultType_Extended, ColsSizeType, ColsOrderType, ColsAlignSelftType } from '../../../types';
 export interface GridColType extends ModuleCustomType, ElementHTMLDefaultType_Extended {}
 
 interface ModuleCustomType {
-  col?: ColsSizeType;
+  alignSelf?: ColsAlignSelftType;
+  cols?: ColsSizeType;
   xs?: ColsSizeType;
   sm?: ColsSizeType;
   md?: ColsSizeType;
   lg?: ColsSizeType;
   xl?: ColsSizeType;
+  offset?: ColsSizeType;
+  offsetXs?: ColsSizeType;
+  offsetSm?: ColsSizeType;
+  offsetMd?: ColsSizeType;
+  offsetLg?: ColsSizeType;
+  offsetXl?: ColsSizeType;
 }
 
-interface GridPropsType {}
+interface OrderType {
+  order?: ColsOrderType;
+  orderXs?: ColsOrderType;
+  orderSm?: ColsOrderType;
+  orderMd?: ColsOrderType;
+  orderLg?: ColsOrderType;
+  orderXl?: ColsOrderType;
+}
 
-export interface GridColType extends ModuleCustomType, ElementHTMLDefaultType_Extended {}
+interface GridPropsType {
+  order?: ColsOrderType | '-1' | -1 | '13' | 13;
+  orderXs?: ColsOrderType | '-1' | -1 | '13' | 13;
+  orderSm?: ColsOrderType | '-1' | -1 | '13' | 13;
+  orderMd?: ColsOrderType | '-1' | -1 | '13' | 13;
+  orderLg?: ColsOrderType | '-1' | -1 | '13' | 13;
+  orderXl?: ColsOrderType | '-1' | -1 | '13' | 13;
+}
+
+export interface GridColType extends ModuleCustomType, OrderType, ElementHTMLDefaultType_Extended {}
 export interface GridColStyledType extends GridPropsType, ModuleCustomType, ElementHTMLDefaultType_Extended {}
