@@ -14,6 +14,8 @@ import concatObject from './format/concatObj';
 import useThemeColor from './color/useThemeColor';
 import formatColorToRgba from './color/formatColorToRgba';
 
+import useRoundedTheme from './rounded/useRoundedTheme';
+
 export {
   useIdHtml,
   useClassHtml,
@@ -26,4 +28,5 @@ export {
   concatObject,
   useThemeColor,
   formatColorToRgba,
+  useRoundedTheme,
 };

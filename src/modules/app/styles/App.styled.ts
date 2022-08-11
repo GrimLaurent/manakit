@@ -10,6 +10,12 @@ export const ApplicationStyled = styled('div')<AppStyledType>`
   transform-origin: center top 0px;
   display: flex;
   position: relative;
+
+  // modules
+  .mk-rectangle {
+    background: ${(props) => props.theme.themes[props.mode].background};
+    border-color: ${(props) => props.theme.themes[props.mode].background};
+  }
 `;
 
 export const ApplicationWrapsStyled = styled('div')<AppType>`

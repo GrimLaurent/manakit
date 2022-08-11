@@ -12,16 +12,16 @@
  */
 import React, { FunctionComponent } from 'react';
 import { SpacerType } from '../types/Spacer.types';
-import { GridRowStyled } from '../styles/GridRow.styled';
+import { SpacerStyled } from '../styles/Spacer.styled';
 import { useClassHtml, useIdHtml, useStyleHtml } from '../../../utils';
 
 const Spacer: FunctionComponent<SpacerType> = ({ id, className, style }) => {
   return (
-    <GridRowStyled
+    <SpacerStyled
       id={useIdHtml(id)}
       className={useClassHtml('mk-grid--spacer', className)}
       style={useStyleHtml({}, style)}
-    ></GridRowStyled>
+    ></SpacerStyled>
   );
 };
 

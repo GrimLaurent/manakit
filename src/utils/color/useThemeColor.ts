@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { ThemeApi, ModeApi } from '../../core';
 import formatColorToRgba from './formatColorToRgba';
 
-function useThemeColor(value?: string) {
+function useThemeColor(value?: string, modeTheme?: boolean) {
   if (value) {
     const colorStringify = value.split(' ');
     const color = colorStringify[0];
@@ -15,7 +15,7 @@ function useThemeColor(value?: string) {
       // ThemeAPi
       const contextTheme: any = useContext(ThemeApi);
       const constextMode = useContext(ModeApi);
-      const mode = constextMode ? 'dark' : 'light';
+      const mode = modeTheme ? 'dark' : modeTheme === false ? 'light' : constextMode ? 'dark' : 'light';
       const colorList: any = contextTheme?.themes[mode];
 
       if (colorList[color]) {

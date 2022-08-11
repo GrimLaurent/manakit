@@ -7,7 +7,7 @@ interface ModuleCustomType {
 }
 
 interface AppPropsType {
-  mode: string;
+  mode: 'dark' | 'light';
 }
 
 export interface AppType extends ModuleCustomType, ElementHTMLDefaultType_Extended {}

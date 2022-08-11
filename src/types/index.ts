@@ -9,6 +9,16 @@ import { DefaultThemeType } from './theming';
 
 import { ColsSizeType, ColsOrderType, ColsAlignSelftType } from './cols';
 
+import {
+  ElementSizeDefaultType,
+  ElementSizeMinDefaultType,
+  ElementSizeMaxDefaultType,
+  ElementSizeDefaultType_Extended,
+  SizeType,
+} from './size';
+
+import { RoundedType } from './radius';
+
 export type {
   ElementHTMLDefaultType,
   ElementHTMLDefaultRequiredType,
@@ -18,4 +28,10 @@ export type {
   ColsSizeType,
   ColsOrderType,
   ColsAlignSelftType,
+  ElementSizeDefaultType,
+  ElementSizeMinDefaultType,
+  ElementSizeMaxDefaultType,
+  ElementSizeDefaultType_Extended,
+  SizeType,
+  RoundedType,
 };
