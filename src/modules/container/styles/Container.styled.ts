@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { ViewStyledType } from '../types/View.types';
+import { ContainerStyledType } from '../types/Container.types';
 
-export const ContainerStyled = styled('div')<ViewStyledType>`
+export const ContainerStyled = styled('section')<ContainerStyledType>`
   width: 100%;
   padding: 12px;
   margin-right: auto;
@@ -17,9 +17,5 @@ export const ContainerStyled = styled('div')<ViewStyledType>`
 
   @media (min-width: ${(props) => props.theme.sys.breakpoint.lg}) {
     max-width: ${(props) => (props.fluid ? '100%' : '1185px')};
-  }
-
-  @media (min-width: ${(props) => props.theme.sys.breakpoint.xl}) {
-    max-width: ${(props) => (props.fluid ? '100%' : '1785px')};
   }
 `;

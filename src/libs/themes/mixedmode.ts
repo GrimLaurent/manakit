@@ -18,6 +18,9 @@ export const useMixedMode = (mode?: boolean) => {
 
   // Event
   window.dispatchEvent(new Event('mana-theme'));
+
+  // fix temp
+  location.reload();
 };
 
 export default useMixedMode;

@@ -2,7 +2,7 @@
 import { CSSProperties } from 'react';
 
 export type ElementIdHTMLType = string;
-export type ElementClassHTMLType = React.HTMLAttributes<HTMLDivElement>;
+export type ElementClassHTMLType = React.HTMLAttributes<HTMLDivElement> | string;
 export type ElementStyleHTMLType = CSSProperties;
 export type ElementChildrenType = React.ReactNode | React.ReactChild[];
 

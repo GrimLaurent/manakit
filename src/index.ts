@@ -2,9 +2,42 @@ import { ManakitCore } from './core';
 import { useDarkMode, useMixedMode } from './libs';
 
 import App from './modules/app/App.module';
-import View from './modules/view/View.module';
+import Avatar from './modules/avatar/Avatar.module';
 import Grid from './modules/grids/Grid.module';
+import Container from './modules/container/Container.module';
+import Paper from './modules/paper/Paper.module';
+import List from './modules/list/List.module';
+import SubHeader from './modules/subheader/SubHeader.module';
 import { GridCol, GridRow, Spacer } from './modules/grids';
-import { Rectangle } from './modules/shapes';
+import {
+  ListItem,
+  ListItemContent,
+  ListItemTitle,
+  ListItemSubTitle,
+  ListItemIcon,
+  ListItemAction,
+  ListItemAvatar,
+} from './modules/list';
 
-export { ManakitCore as Manakit, useDarkMode, useMixedMode, App, View, Grid, GridCol, GridRow, Spacer, Rectangle };
+export {
+  ManakitCore as Manakit,
+  useDarkMode,
+  useMixedMode,
+  App,
+  Avatar,
+  Container,
+  Grid,
+  GridCol,
+  GridRow,
+  Spacer,
+  Paper,
+  SubHeader,
+  List,
+  ListItem,
+  ListItemContent,
+  ListItemTitle,
+  ListItemSubTitle,
+  ListItemIcon,
+  ListItemAction,
+  ListItemAvatar,
+};

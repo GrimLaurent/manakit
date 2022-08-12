@@ -46,7 +46,7 @@ const Structural: FunctionComponent<AppType> = ({ className, style, children, da
           data-app="true"
           mode={Boolean(mode) ? 'dark' : 'light'}
         >
-          <ApplicationWrapsStyled className={useClassHtml(`mk-app__wrap`)}>{children}</ApplicationWrapsStyled>
+          <ApplicationWrapsStyled className={useClassHtml(`mk-app--wrap`)}>{children}</ApplicationWrapsStyled>
         </ApplicationStyled>
       </ThemeProvider>
     </Fragment>

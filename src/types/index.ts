@@ -5,7 +5,7 @@ import {
   ElementHTMLDefaultType_Extended,
 } from './dom';
 
-import { DefaultThemeType } from './theming';
+import { DefaultThemeType, ThemeApiType } from './theming';
 
 import { ColsSizeType, ColsOrderType, ColsAlignSelftType } from './cols';
 
@@ -18,6 +18,7 @@ import {
 } from './size';
 
 import { RoundedType } from './radius';
+import { ElevationType } from './elevation';
 
 export type {
   ElementHTMLDefaultType,
@@ -34,4 +35,6 @@ export type {
   ElementSizeDefaultType_Extended,
   SizeType,
   RoundedType,
+  ThemeApiType,
+  ElevationType,
 };

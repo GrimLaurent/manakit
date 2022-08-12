@@ -1,9 +1,9 @@
 /**
- * View
+ * SubHeader
  *
  * @description View is a basic module that allows you to display content in line with the manakit theme and to ensure the effects of transitions and placement for the content.
  * @type Module
- * @module View
+ * @module SubHeader
  *
  * @company Manastone
  * @author Laurent Grimaldi
@@ -11,22 +11,24 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import React, { FunctionComponent, Fragment } from 'react';
-import { useClassHtml, useIdHtml, useStyleHtml } from '../../utils';
-import { ViewType } from './types/View.types';
-import { ContainerStyled } from './styles/View.styled';
+import { useClassHtml, useIdHtml, useStyleHtml, useThemeColor } from '../../utils';
+import { SubHeaderType } from './types/SubHeader.types';
+import { SubHeaderStyled } from './styles/SubHeader.styled';
 
-const View: FunctionComponent<ViewType> = ({ id, className, style, children }) => {
+const SubHeader: FunctionComponent<SubHeaderType> = ({ id, className, style, children, color, inset }) => {
   return (
     <Fragment>
-      <ContainerStyled
+      <SubHeaderStyled
         id={useIdHtml(id)}
-        className={useClassHtml(`mk-view`, className)}
+        className={useClassHtml(`mk-subheader`, className)}
         style={useStyleHtml({}, style)}
+        color={useThemeColor(color, undefined, 'onSurface')}
+        inset={inset}
       >
         {children}
-      </ContainerStyled>
+      </SubHeaderStyled>
     </Fragment>
   );
 };
 
-export default View;
+export default SubHeader;

@@ -35,3 +35,22 @@ export interface DarkLightType {
   dark?: boolean;
   light?: boolean;
 }
+
+export interface ThemeApiType {
+  icon: {};
+  pkg: {};
+  sys: {
+    font: keyObjectType;
+    iconfont: keyObjectType;
+    rounded: keyObjectType;
+    breakpoint: keyObjectType;
+  };
+  themes: {
+    light: keyObjectType;
+    dark: keyObjectType;
+  };
+}
+
+type keyObjectType = {
+  [key: string]: any;
+};

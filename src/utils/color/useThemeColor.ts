@@ -2,17 +2,29 @@ import { useContext } from 'react';
 import { ThemeApi, ModeApi } from '../../core';
 import formatColorToRgba from './formatColorToRgba';
 
-function useThemeColor(value?: string, modeTheme?: boolean) {
-  if (value) {
-    const colorStringify = value.split(' ');
-    const color = colorStringify[0];
-    const opacity = colorStringify[1];
+function useThemeColor(value?: string, modeTheme?: boolean, base?: string) {
+  let colorStringify;
+  let color;
+  let opacity;
 
+  if (value || base) {
+    if (value) {
+      colorStringify = value.split(' ');
+    } else if (base) {
+      colorStringify = base.split(' ');
+    }
+  }
+
+  if (colorStringify) {
+    color = colorStringify[0];
+    opacity = colorStringify[1];
+  }
+
+  if (color) {
     if (color.includes('#')) {
       // isHexa
       return color;
     } else {
-      // ThemeAPi
       const contextTheme: any = useContext(ThemeApi);
       const constextMode = useContext(ModeApi);
       const mode = modeTheme ? 'dark' : modeTheme === false ? 'light' : constextMode ? 'dark' : 'light';
@@ -28,6 +40,7 @@ function useThemeColor(value?: string, modeTheme?: boolean) {
       }
     }
   }
+
   return value;
 }
 export default useThemeColor;

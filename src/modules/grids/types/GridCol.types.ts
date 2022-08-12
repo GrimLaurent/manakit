@@ -26,7 +26,7 @@ interface OrderType {
   orderXl?: ColsOrderType;
 }
 
-interface GridPropsType {
+interface StyledPropsType {
   order?: ColsOrderType | '-1' | -1 | '13' | 13;
   orderXs?: ColsOrderType | '-1' | -1 | '13' | 13;
   orderSm?: ColsOrderType | '-1' | -1 | '13' | 13;
@@ -36,4 +36,4 @@ interface GridPropsType {
 }
 
 export interface GridColType extends ModuleCustomType, OrderType, ElementHTMLDefaultType_Extended {}
-export interface GridColStyledType extends GridPropsType, ModuleCustomType, ElementHTMLDefaultType_Extended {}
+export interface GridColStyledType extends StyledPropsType, ModuleCustomType, ElementHTMLDefaultType_Extended {}

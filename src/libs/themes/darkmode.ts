@@ -17,6 +17,9 @@ const useDarkMode = (mode?: boolean) => {
   console.log('useDarkMode func');
   // Event
   window.dispatchEvent(new Event('mana-theme'));
+
+  // fix temp
+  location.reload();
 };
 
 export default useDarkMode;
