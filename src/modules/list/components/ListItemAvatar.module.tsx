@@ -13,17 +13,48 @@
 import React, { FunctionComponent } from 'react';
 import { ListItemAvatarType } from '../types/ListItemAvatar.types';
 import { ListItemAvatarStyled } from '../styles/ListItemAvatar.styled';
-import { useClassHtml, useIdHtml, useStyleHtml } from '../../../utils';
+import { useClassHtml } from '../../../utils';
 
-const ListItemAvatar: FunctionComponent<ListItemAvatarType> = ({ id, className, style, children }) => {
+import Avatar from '../../avatar/Avatar.module';
+
+const ListItemAvatarStyledHOC = ListItemAvatarStyled(Avatar);
+
+const ListItemAvatar: FunctionComponent<ListItemAvatarType> = ({
+  id,
+  className,
+  style,
+  children,
+  color,
+  rounded,
+  width,
+  minWidth,
+  maxWidth,
+  height,
+  minHeight,
+  maxHeight,
+  size,
+  left,
+  right,
+}) => {
   return (
-    <ListItemAvatarStyled
-      id={useIdHtml(id)}
+    <ListItemAvatarStyledHOC
+      id={id}
       className={useClassHtml('mk-list-item--avatar', className)}
-      style={useStyleHtml({}, style)}
+      style={style}
+      color={color}
+      rounded={rounded}
+      width={width}
+      minWidth={minWidth}
+      maxWidth={maxWidth}
+      height={height}
+      minHeight={minHeight}
+      maxHeight={maxHeight}
+      size={size ? size : '40px'}
+      left={left}
+      right={right}
     >
       {children}
-    </ListItemAvatarStyled>
+    </ListItemAvatarStyledHOC>
   );
 };
 
