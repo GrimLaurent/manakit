@@ -1,6 +1,6 @@
 {
   "name": "manakit",
-  "version": "0.0.200",
+  "version": "0.0.201",
   "description": "",
   "scripts": {
     "develop": "start-storybook -p 6006",
