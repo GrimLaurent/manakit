@@ -6,10 +6,10 @@
  * @param configCustom
  * @returns array
  */
-import { DefaultThemeType } from '../../types';
+import { CoreThemeType, CustomThemeType } from '../../types';
 import { concatObject } from '../../utils';
 
-const createFont = (configInit: any, configCustom?: any) => {
+const createFont = (configInit: CoreThemeType, configCustom?: CustomThemeType) => {
   let font = configInit.sys.font;
 
   if (configCustom && configCustom?.sys && configCustom?.sys?.font) {

@@ -8,20 +8,14 @@
  */
 import { DefaultThemeType } from '../../types';
 
-const createIconFont = (configInit: DefaultThemeType, configCustom?: any) => {
-  if (configCustom) {
-    if (configCustom?.icon) {
-      let iconfont = configInit.icon.iconfont;
+const createIconFont = (configInit: any, configCustom?: any) => {
+  let iconfont = configInit.sys.icon.iconfont;
 
-      if (configCustom?.icon.iconfont) {
-        iconfont = configCustom?.icon.iconfont;
-      }
-
-      return iconfont;
-    }
+  if (configCustom && configCustom?.sys && configCustom?.sys?.icon && configCustom?.sys?.icon?.iconfont) {
+    iconfont = configCustom?.icon.iconfont;
   }
-  // if configCustom is undefined
-  return configInit.icon.iconfont;
+
+  return iconfont;
 };
 
 export default createIconFont;

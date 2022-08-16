@@ -1,9 +1,10 @@
-import { ElementHTMLDefaultType_Extended } from '../../../types';
+import { ElementHTMLDefaultType_Extended, CustomThemeType } from '../../../types';
 
 interface ModuleCustomType {
   dark?: boolean;
   light?: boolean;
   noSSR?: boolean;
+  theme?: CustomThemeType;
 }
 
 interface StyledPropsType {

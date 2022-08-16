@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { ThemeApi, ModeApi } from '../../core';
 import formatColorToRgba from './formatColorToRgba';
 
@@ -25,8 +24,8 @@ function useThemeColor(value?: string, modeTheme?: boolean, base?: string) {
       // isHexa
       return color;
     } else {
-      const contextTheme: any = useContext(ThemeApi);
-      const constextMode = useContext(ModeApi);
+      const contextTheme: any = ThemeApi;
+      const constextMode = ModeApi;
       const mode = modeTheme ? 'dark' : modeTheme === false ? 'light' : constextMode ? 'dark' : 'light';
       const colorList: any = contextTheme?.themes[mode];
 

@@ -6,13 +6,13 @@
  * @param configCustom
  * @returns array
  */
-import { DefaultThemeType } from '../../types';
+import { CoreThemeType, CustomThemeType } from '../../types';
 import { concatObject } from '../../utils';
 
-const createRounded = (configInit: any, configCustom?: any) => {
+const createRounded = (configInit: CoreThemeType, configCustom?: CustomThemeType) => {
   let rounded = configInit.sys.rounded;
   if (configCustom && configCustom.sys && configCustom.sys?.rounded) {
-    rounded = concatObject(rounded, configCustom?.rounded);
+    rounded = concatObject(rounded, configCustom?.sys?.rounded);
   }
 
   return rounded;

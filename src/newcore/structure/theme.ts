@@ -6,10 +6,10 @@
  * @param configCustom
  * @returns array
  */
-import { DefaultThemeType } from './../../types/theming';
+import { CoreThemeType, CustomThemeType } from '../../types';
 import { concatObject } from '../../utils';
 
-const createTheme = (configInit: any, configCustom?: any) => {
+const createTheme = (configInit: CoreThemeType, configCustom?: CustomThemeType) => {
   let light = configInit.themes.light;
   let dark = configInit.themes.dark;
 

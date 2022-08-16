@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { ThemeApi } from '../../core';
 import { RoundedType } from '../../types';
 /**
@@ -9,7 +8,7 @@ import { RoundedType } from '../../types';
  */
 
 const useRoundedTheme = (value?: RoundedType, persistent?: RoundedType) => {
-  const contextTheme: any = useContext(ThemeApi);
+  const contextTheme: any = ThemeApi;
 
   if (value) {
     if (typeof value === 'boolean') {

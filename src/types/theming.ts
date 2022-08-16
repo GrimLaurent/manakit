@@ -54,3 +54,21 @@ export interface ThemeApiType {
 type keyObjectType = {
   [key: string]: any;
 };
+
+export interface CoreThemeType {
+  sys: {
+    font: keyObjectType;
+    rounded: keyObjectType;
+    breakpoint: keyObjectType;
+  };
+  themes: keyObjectType;
+}
+
+export interface CustomThemeType {
+  sys?: {
+    font?: keyObjectType;
+    rounded?: keyObjectType;
+    breakpoint?: keyObjectType;
+  };
+  themes?: keyObjectType;
+}

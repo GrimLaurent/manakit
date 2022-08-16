@@ -6,10 +6,10 @@
  * @param configCustom
  * @returns array
  */
-import { DefaultThemeType } from '../../types';
+import { CoreThemeType, CustomThemeType } from '../../types';
 import { concatObject } from '../../utils';
 
-const createBreakpoint = (configInit: any, configCustom?: any) => {
+const createBreakpoint = (configInit: CoreThemeType, configCustom?: CustomThemeType) => {
   let breakpoint = configInit.sys.breakpoint;
 
   if (configCustom && configCustom?.sys && configCustom?.sys?.breakpoint) {

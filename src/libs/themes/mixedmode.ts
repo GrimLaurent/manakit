@@ -17,7 +17,7 @@ export const useMixedMode = (mode?: boolean) => {
   setElementStorage(`_muid`, local);
 
   // Event
-  window.dispatchEvent(new Event('mana-theme'));
+  //window.dispatchEvent(new Event('mana-theme'));
 
   // fix temp
   location.reload();

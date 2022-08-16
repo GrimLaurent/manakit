@@ -9,20 +9,13 @@
 import { DefaultThemeType } from '../../types';
 import { concatObject } from '../../utils';
 
-const createIconFontValue = (configInit: DefaultThemeType, configCustom?: any) => {
-  if (configCustom) {
-    if (configCustom?.icon) {
-      let iconvalue = configInit.icon.value;
+const createIconFontValue = (configInit: any, configCustom?: any) => {
+  let iconvalue = configInit.sys.icon.value;
 
-      if (configCustom?.icon?.value) {
-        iconvalue = concatObject(iconvalue, configCustom?.icon?.value);
-      }
-
-      return iconvalue;
-    }
+  if (configCustom && configCustom?.sys && configCustom?.sys?.icon && configCustom?.sys?.icon?.value) {
+    iconvalue = concatObject(iconvalue, configCustom?.icon?.value);
   }
-  // if configCustom is undefined
-  return configInit.icon.value;
+  return iconvalue;
 };
 
 export default createIconFontValue;

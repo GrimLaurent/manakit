@@ -6,7 +6,8 @@
  */
 
 const ModeSystem = () => {
-  const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const dark = false;
   return dark;
 };
 
