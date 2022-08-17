@@ -1,4 +1,8 @@
 const evolDefaultTheme = {
+  mode: {
+    default: 'light',
+    use: 'light',
+  },
   sys: {
     font: {
       default: 'Roboto, sans-serif',

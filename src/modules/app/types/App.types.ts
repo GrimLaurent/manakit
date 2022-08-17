@@ -1,15 +1,12 @@
 import { ElementHTMLDefaultType_Extended, CustomThemeType } from '../../../types';
 
 interface ModuleCustomType {
-  dark?: boolean;
-  light?: boolean;
   noSSR?: boolean;
   theme?: CustomThemeType;
+  dark?: boolean;
 }
 
-interface StyledPropsType {
-  mode: 'dark' | 'light';
-}
+interface StyledPropsType {}
 
 export interface AppType extends ModuleCustomType, ElementHTMLDefaultType_Extended {}
 export interface AppStyledType extends StyledPropsType, ModuleCustomType, ElementHTMLDefaultType_Extended {}

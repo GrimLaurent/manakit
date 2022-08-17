@@ -4,8 +4,7 @@
  * @param value
  */
 const setElementStorage = (key: string, value: unknown) => {
-  // localStorage.setItem(key, JSON.stringify(value));
-  console.log(key, value);
+  localStorage.setItem(key, JSON.stringify(value));
 };
 
 export default setElementStorage;

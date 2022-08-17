@@ -56,6 +56,10 @@ type keyObjectType = {
 };
 
 export interface CoreThemeType {
+  mode: {
+    default: string;
+    use: string;
+  };
   sys: {
     font: keyObjectType;
     rounded: keyObjectType;
@@ -65,6 +69,9 @@ export interface CoreThemeType {
 }
 
 export interface CustomThemeType {
+  mode?: {
+    default?: string;
+  };
   sys?: {
     font?: keyObjectType;
     rounded?: keyObjectType;

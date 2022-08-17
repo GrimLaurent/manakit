@@ -1,25 +1,29 @@
 import { getElementStorage, setElementStorage } from '../../utils';
+import { keyLocalMode, keyDark, keyLight } from '../../assets/constant';
 
-const useDarkMode = (mode?: boolean) => {
-  const local = getElementStorage(`_muid`);
-
-  if (mode !== undefined) {
-    local.theme.dark = mode;
+const useDarkMode = (mode: boolean) => {
+  if (mode) {
+    setElementStorage(keyLocalMode, keyDark);
   } else {
-    local.theme.dark = local.theme.dark ? false : true;
+    setElementStorage(keyLocalMode, keyLight);
   }
 
+  // if (mode !== undefined) {
+  //   local = mode;
+  // } else {
+  //   if (local === keyLight) response =   local.theme.dark = local.theme.dark ? false : true;
+  // }
+
   // force disabled system
-  local.theme.system = false;
+  // local.theme.system = false;
 
-  setElementStorage(`_muid`, local);
+  // setElementStorage(`_muid`, local);
 
-  console.log('useDarkMode func');
   // Event
-  //window.dispatchEvent(new Event('mana-theme'));
+  window.dispatchEvent(new Event('mk-theme'));
 
   // fix temp
-  location.reload();
+  // location.reload();
 };
 
 export default useDarkMode;

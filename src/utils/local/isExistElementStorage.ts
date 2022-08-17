@@ -4,9 +4,7 @@
  * @returns
  */
 const isExistElementStorage = (key: string) => {
-  // return !!localStorage.getItem(key);
-  console.log(key);
-  return false;
+  return !!localStorage.getItem(key);
 };
 
 export default isExistElementStorage;

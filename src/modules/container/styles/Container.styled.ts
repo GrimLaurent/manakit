@@ -7,10 +7,6 @@ export const ContainerStyled = styled('section')<ContainerStyledType>`
   margin-right: auto;
   margin-left: auto;
 
-  @media (min-width: ${(props) => props.theme.sys.breakpoint.xs}) {
-    max-width: 100%;
-  }
-
   @media (min-width: ${(props) => props.theme.sys.breakpoint.md}) {
     max-width: ${(props) => (props.fluid ? '100%' : '900px')};
   }

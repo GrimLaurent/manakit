@@ -1,6 +1,3 @@
-import { ManakitCore } from './core';
-import { useDarkMode, useMixedMode } from './libs';
-
 import App from './modules/app/App.module';
 import Avatar from './modules/avatar/Avatar.module';
 import Grid from './modules/grids/Grid.module';
@@ -20,9 +17,6 @@ import {
 } from './modules/list';
 
 export {
-  ManakitCore as Manakit,
-  useDarkMode,
-  useMixedMode,
   App,
   Avatar,
   Container,
