@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getColor } from '../../../utils';
 import { SubHeaderStyledType } from '../types/SubHeader.types';
 
 export const SubHeaderStyled = styled('div')<SubHeaderStyledType>`
@@ -9,6 +10,6 @@ export const SubHeaderStyled = styled('div')<SubHeaderStyledType>`
   font-weight: 400;
   padding: 0 16px;
   opacity: 0.6;
-  color: ${(props) => props.color};
+  color: ${(props) => getColor(props.theme, props.color, 'onSurface')};
   margin-left: ${(props) => (props.inset ? '56px' : '')};
 `;

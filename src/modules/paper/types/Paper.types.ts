@@ -16,10 +16,11 @@ interface ModuleCustomType {
 }
 
 interface StyledPropsType {
-  rounded?: number | string;
+  rounded?: RoundedType;
   color?: string;
   background?: string;
   outlined?: boolean;
+  mode?: string;
 }
 
 export interface PaperType extends ModuleCustomType, ElementHTMLDefaultType_Extended, ElementSizeDefaultType_Extended {}

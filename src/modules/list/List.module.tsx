@@ -13,7 +13,7 @@
 import React, { FunctionComponent } from 'react';
 import { ListType } from './types/List.types';
 import { ListStyled } from './styles/List.styled';
-import { useClassHtml, useIdHtml, useStyleHtml, useThemeColor } from './../../utils';
+import { useClassHtml, useIdHtml } from './../../utils';
 
 import Paper from '../paper/Paper.module';
 

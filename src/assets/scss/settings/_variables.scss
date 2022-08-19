@@ -1,0 +1,223 @@
+@import '../tools/_functions.sass';
+
+$color-use-md: true !default;
+$color-use-mk: true !default;
+
+$body-font-family: 'Roboto', sans-serif !default;
+$font-size-root: 16px !default;
+$line-height-root: 1.5 !default;
+$border-radius-root: 4px !default;
+
+$display-list: (none, inline, inline-block, block, table, table-cell, table-row, flex, inline-flex);
+$margin-list: (auto, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$padding-list: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$flex-list: (row, row-reverse, column, column-reverse);
+$flex-align-list: (start, end, center, baseline, baseline);
+$flex-align-content-list: (start, end, center, space-between, space-around);
+$flex-align-self-list: (start, end, center, baseline, stretch);
+$flex-align-grow-shrink-list: (0, 1);
+$flex-align-justify-list: (start, end, center, between, around);
+$flex-wrap-list: (nowrap, wrap, wrap-reverse);
+$float-list: (left, right, none);
+$overflow-list: (auto, hidden, visible);
+$text-list: (left, right, center);
+$cols-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$order-list: (first, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, end);
+
+$rounded: () !default;
+$rounded: map-deep-merge(
+  (
+    0: 0,
+    'sm': $border-radius-root / 2,
+    null: $border-radius-root,
+    'lg': $border-radius-root * 2,
+    'xl': $border-radius-root * 6,
+    'pill': 9999px,
+    'circle': 50%,
+  ),
+  $rounded
+);
+
+$spacer: 4px !default;
+$spacers-steps: 16 !default;
+
+$spacers: () !default;
+@if (type-of($spacers) == list) {
+  @for $i from 0 through $spacers-steps {
+    $spacers: map-merge(
+      $spacers,
+      (
+        $i: $spacer * $i,
+      )
+    );
+  }
+}
+
+$negative-spacers: () !default;
+@if (type-of($negative-spacers) == list) {
+  @for $i from 1 through $spacers-steps {
+    $negative-spacers: map-merge($negative-spacers, ('n' + $i: -$spacer * $i));
+  }
+}
+
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-deep-merge(
+  (
+    'xs': 320px,
+    'sm': 600px,
+    'md': 960px,
+    'lg': 1280px - 16px,
+    'xl': 1920px - 16px,
+  ),
+  $grid-breakpoints
+);
+
+$display-breakpoints: () !default;
+$display-breakpoints: map-deep-merge(
+  (
+    'print-only': 'only print',
+    'screen-only': 'only screen',
+    'xs-only': 'only screen and (min-width: #{map-get($grid-breakpoints, ' xs ')})',
+    'sm-only': 'only screen and (min-width: #{map-get($grid-breakpoints, ' sm ')})',
+    'md-only': 'only screen and (min-width: #{map-get($grid-breakpoints, ' md ')})',
+    'lg-only': 'only screen and (min-width: #{map-get($grid-breakpoints, ' lg ')})',
+    'xl-only': 'only screen and (min-width: #{map-get($grid-breakpoints, ' xl ')})',
+  ),
+  $display-breakpoints
+);
+$display-breakpoints-xs: #{map-get($grid-breakpoints, 'xs')};
+$display-breakpoints-sm: #{map-get($grid-breakpoints, 'sm')};
+$display-breakpoints-md: #{map-get($grid-breakpoints, 'md')};
+$display-breakpoints-lg: #{map-get($grid-breakpoints, 'lg')};
+$display-breakpoints-xl: #{map-get($grid-breakpoints, 'xl')};
+
+$font-weights: () !default;
+$font-weights: map-deep-merge(
+  (
+    'thin': 100,
+    'light': 300,
+    'regular': 400,
+    'medium': 500,
+    'bold': 700,
+    'black': 900,
+  ),
+  $font-weights
+);
+
+$heading-font-family: $body-font-family !default;
+
+$headings: () !default;
+$headings: map-deep-merge(
+  (
+    'h1': (
+      'size': 6rem,
+      'weight': 300,
+      'line-height': 6rem,
+      'letter-spacing': -0.015625em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
+    ),
+    'h2': (
+      'size': 3.75rem,
+      'weight': 300,
+      'line-height': 3.75rem,
+      'letter-spacing': -0.0083333333em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
+    ),
+    'h3': (
+      'size': 3rem,
+      'weight': 400,
+      'line-height': 3.125rem,
+      'letter-spacing': normal,
+      'font-family': $heading-font-family,
+      'text-transform': false,
+    ),
+    'h4': (
+      'size': 2.125rem,
+      'weight': 400,
+      'line-height': 2.5rem,
+      'letter-spacing': 0.0073529412em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
+    ),
+    'h5': (
+      'size': 1.5rem,
+      'weight': 400,
+      'line-height': 2rem,
+      'letter-spacing': normal,
+      'font-family': $heading-font-family,
+      'text-transform': false,
+    ),
+    'h6': (
+      'size': 1.25rem,
+      'weight': 500,
+      'line-height': 2rem,
+      'letter-spacing': 0.0125em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
+    ),
+    'subtitle-1': (
+      'size': 1rem,
+      'weight': normal,
+      'line-height': 1.75rem,
+      'letter-spacing': 0.009375em,
+      'font-family': $body-font-family,
+      'text-transform': false,
+    ),
+    'subtitle-2': (
+      'size': 0.875rem,
+      'weight': 500,
+      'line-height': 1.375rem,
+      'letter-spacing': 0.0071428571em,
+      'font-family': $body-font-family,
+      'text-transform': false,
+    ),
+    'body-1': (
+      'size': 1rem,
+      'weight': 400,
+      'line-height': 1.5rem,
+      'letter-spacing': 0.03125em,
+      'font-family': $body-font-family,
+      'text-transform': false,
+    ),
+    'body-2': (
+      'size': 0.875rem,
+      'weight': 400,
+      'line-height': 1.25rem,
+      'letter-spacing': 0.0178571429em,
+      'font-family': $body-font-family,
+      'text-transform': false,
+    ),
+    'button': (
+      'size': 0.875rem,
+      'weight': 500,
+      'line-height': 2.25rem,
+      'letter-spacing': 0.0892857143em,
+      'font-family': $body-font-family,
+      'text-transform': uppercase,
+    ),
+    'caption': (
+      'size': 0.75rem,
+      'weight': 400,
+      'line-height': 1.25rem,
+      'letter-spacing': 0.0333333333em,
+      'font-family': $body-font-family,
+      'text-transform': false,
+    ),
+    'overline': (
+      'size': 0.75rem,
+      'weight': 500,
+      'line-height': 2rem,
+      'letter-spacing': 0.1666666667em,
+      'font-family': $body-font-family,
+      'text-transform': uppercase,
+    ),
+  ),
+  $headings
+);
+
+$typography: () !default;
+@each $type, $values in $headings {
+  $typography: map-deep-merge($typography, (#{$type}: map-values($values)));
+}

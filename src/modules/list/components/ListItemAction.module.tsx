@@ -13,7 +13,7 @@
 import React, { FunctionComponent } from 'react';
 import { ListItemActionType } from '../types/ListItemAction.types';
 import { ListItemActionStyled } from '../styles/ListItemAction.styled';
-import { useClassHtml, useIdHtml, useStyleHtml, useThemeColor } from '../../../utils';
+import { useClassHtml, useIdHtml, useStyleHtml } from '../../../utils';
 
 const ListItemAction: FunctionComponent<ListItemActionType> = ({ id, className, style, children, color }) => {
   return (
@@ -21,7 +21,7 @@ const ListItemAction: FunctionComponent<ListItemActionType> = ({ id, className, 
       id={useIdHtml(id)}
       className={useClassHtml('mk-list-item--action', className)}
       style={useStyleHtml({}, style)}
-      color={useThemeColor(color)}
+      color={color}
     >
       {children}
     </ListItemActionStyled>

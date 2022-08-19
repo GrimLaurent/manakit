@@ -20,6 +20,10 @@ import {
 import { RoundedType } from './radius';
 import { ElevationType } from './elevation';
 
+import { ElementActionOnClikType, ElementActionHrefType, ElementActionType_Extend } from './action';
+
+import { AlignType, AlignContentType, JustifyType, AlignSelfType } from './align';
+
 export type {
   ElementHTMLDefaultType,
   ElementHTMLDefaultRequiredType,
@@ -39,4 +43,11 @@ export type {
   ElevationType,
   CoreThemeType,
   CustomThemeType,
+  ElementActionOnClikType,
+  ElementActionHrefType,
+  ElementActionType_Extend,
+  AlignType,
+  AlignContentType,
+  JustifyType,
+  AlignSelfType,
 };

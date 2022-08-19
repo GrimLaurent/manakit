@@ -10,6 +10,7 @@
  * @repository https://github.com/manastone/manakit
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
+import '../../assets/scss/main.scss';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { AppType } from './types/App.types';
 

@@ -11,7 +11,7 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import React, { FunctionComponent, Fragment } from 'react';
-import { useClassHtml, useIdHtml, useStyleHtml, useThemeColor } from '../../utils';
+import { useClassHtml, useIdHtml, useStyleHtml } from '../../utils';
 import { SubHeaderType } from './types/SubHeader.types';
 import { SubHeaderStyled } from './styles/SubHeader.styled';
 
@@ -22,7 +22,7 @@ const SubHeader: FunctionComponent<SubHeaderType> = ({ id, className, style, chi
         id={useIdHtml(id)}
         className={useClassHtml(`mk-subheader`, className)}
         style={useStyleHtml({}, style)}
-        color={useThemeColor(color, undefined, 'onSurface')}
+        color={color}
         inset={inset}
       >
         {children}

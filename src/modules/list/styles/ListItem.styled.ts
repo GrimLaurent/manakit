@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getColor } from '../../../utils';
 import { ListItemStyledType } from '../types/ListItem.types';
 
 export const ListItemStyled = styled('div')<ListItemStyledType>`
@@ -22,6 +23,7 @@ export const ListItemStyled = styled('div')<ListItemStyledType>`
   padding: 0 16px;
   position: relative;
   text-decoration: none;
-  color: ${(props) => props.color};
-  caret-color: ${(props) => props.color};
+  color: ${(props) => getColor(props.theme, props.color, 'onSurface')};
+  caret-color: ${(props) => getColor(props.theme, props.color, 'onSurface')};
+  background: ${(props) => (props.isActive ? getColor(props.theme, props.color, 'primary') : '')};
 `;

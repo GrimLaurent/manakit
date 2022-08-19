@@ -1,4 +1,3 @@
-import { ManakitCore, ThemeApi, ModeApi, updateMode } from './core';
-import { ModeSystem } from './browser';
+import core from './structural';
 
-export { ManakitCore, ThemeApi, ModeApi, ModeSystem, updateMode };
+export { core };

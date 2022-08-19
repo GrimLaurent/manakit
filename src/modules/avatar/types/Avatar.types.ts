@@ -7,7 +7,7 @@ interface ModuleCustomType {
 }
 
 interface StyledPropsType {
-  rounded?: number | string;
+  rounded?: RoundedType;
   color?: string;
   size?: string | number;
 }

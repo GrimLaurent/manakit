@@ -1,0 +1,590 @@
+// DISPLAY
+@each $name in $display-list {
+  .d-#{$name} {
+    display: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $display-list {
+      .d-#{$size}-#{$name} {
+        display: #{$name};
+      }
+    }
+  }
+}
+
+@media print {
+  @each $name in $display-list {
+    .d-print-#{$name} {
+      display: #{$name};
+    }
+  }
+}
+
+// FLEX
+@each $name in $flex-list {
+  .flex-#{$name} {
+    flex-direction: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-list {
+      .flex-#{$size}-#{$name} {
+        flex-direction: #{$name};
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-list {
+  .align-#{$name} {
+    align-items: flex-#{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-list {
+      .align-#{$size}-#{$name} {
+        align-items: flex-#{$name};
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-content-list {
+  @if ($name == center) {
+    .align-content-#{$name} {
+      align-content: #{$name};
+    }
+  } @else {
+    .align-content-#{$name} {
+      align-content: flex-#{$name};
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-content-list {
+      @if ($name == center) {
+        .align-#{$size}-content-#{$name} {
+          align-content: #{$name};
+        }
+      } @else {
+        .align-#{$size}-content-#{$name} {
+          align-content: flex-#{$name};
+        }
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-self-list {
+  @if ($name == center) {
+    .align-self-#{$name} {
+      align-self: #{$name};
+    }
+  } @else {
+    .align-self-#{$name} {
+      align-self: flex-#{$name};
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-self-list {
+      @if ($name == center) {
+        .align-#{$size}-self-#{$name} {
+          align-self: #{$name};
+        }
+      } @else {
+        .align-#{$size}-self-#{$name} {
+          align-self: flex-#{$name};
+        }
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-grow-shrink-list {
+  .align-grow-#{$name} {
+    flex-grow: #{$name};
+  }
+  .align-shrink-#{$name} {
+    flex-shrink: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-grow-shrink-list {
+      .align-#{$size}-grow-#{$name} {
+        flex-grow: #{$name};
+      }
+      .align-#{$size}-shrink-#{$name} {
+        flex-shrink: #{$name};
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-justify-list {
+  .justify-#{$name} {
+    justify-content: flex-#{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-justify-list {
+      .justify-#{$size}-#{$name} {
+        justify-content: flex-#{$name};
+      }
+    }
+  }
+}
+
+@each $name in $flex-wrap-list {
+  .flex-#{$name} {
+    flex-wrap: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-wrap-list {
+      .flex-#{$size}-#{$name} {
+        flex-wrap: #{$name};
+      }
+    }
+  }
+}
+
+//FLOAT
+@each $name in $float-list {
+  .float-#{$name} {
+    float: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $float-list {
+      .float-#{$size}-#{$name} {
+        float: #{$name};
+      }
+    }
+  }
+}
+
+//GRIDS
+.col {
+  width: 100%;
+}
+
+@each $name in $cols-list {
+  .col-#{$name} {
+    flex: 0 0 calc((100 / 12) * #{$name} + '%');
+    max-width: calc((100 / 12) * #{$name} + '%');
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $cols-list {
+      .col-#{$size}-#{$name} {
+        flex: 0 0 calc((100 / 12) * #{$name} + '%');
+        max-width: calc((100 / 12) * #{$name} + '%');
+      }
+    }
+  }
+}
+
+@each $name in $cols-list {
+  .offset-#{$name} {
+    margin-left: calc((100 / 12) * #{$name} + '%');
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $cols-list {
+      .offset-#{$size}-#{$name} {
+        margin-left: calc((100 / 12) * #{$name} + '%');
+      }
+    }
+  }
+}
+
+@each $name in $order-list {
+  .order-#{$name} {
+    order: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $order-list {
+      .order-#{$size}-#{$name} {
+        order: #{$name};
+      }
+    }
+  }
+}
+
+//OVERFLOW
+@each $name in $overflow-list {
+  .overflow-#{$name} {
+    order: #{$name};
+  }
+  .overflow-x-#{$name} {
+    order: #{$name};
+  }
+  .overflow-y-#{$name} {
+    order: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $overflow-list {
+      .overflow-#{$size}-#{$name} {
+        order: #{$name};
+      }
+      .overflow-#{$size}-x-#{$name} {
+        order: #{$name};
+      }
+      .overflow-#{$size}-y-#{$name} {
+        order: #{$name};
+      }
+    }
+  }
+}
+
+//ROUNDED
+@each $name, $value in $rounded {
+  .rounded-#{$name} {
+    border-radius: #{$value};
+  }
+  .rounded-t-#{$name} {
+    border-top-left-radius: #{$value};
+    border-top-right-radius: #{$value};
+  }
+  .rounded-b-#{$name} {
+    border-bottom-left-radius: #{$value};
+    border-bottom-right-radius: #{$value};
+  }
+  .rounded-r-#{$name} {
+    border-top-right-radius: #{$value};
+    border-bottom-right-radius: #{$value};
+  }
+  .rounded-l-#{$name} {
+    border-top-left-radius: #{$value};
+    border-bottom-left-radius: #{$value};
+  }
+  .rounded-tl-#{$name} {
+    border-top-left-radius: #{$value};
+  }
+  .rounded-tr-#{$name} {
+    border-top-right-radius: #{$value};
+  }
+  .rounded-bl-#{$name} {
+    border-bottom-left-radius: #{$value};
+  }
+  .rounded-br-#{$name} {
+    border-bottom-right-radius: #{$value};
+  }
+}
+
+//MARGINS
+@each $name in $margin-list {
+  @if ($name == auto) {
+    .ma-#{$name} {
+      margin: #{$name};
+    }
+    .mt-#{$name} {
+      margin-top: #{$name};
+    }
+    .mb-#{$name} {
+      margin-bottom: #{$name};
+    }
+    .ml-#{$name} {
+      margin-left: #{$name};
+    }
+    .mr-#{$name} {
+      margin-right: #{$name};
+    }
+    .mx-#{$name} {
+      margin-left: #{$name};
+      margin-right: #{$name};
+    }
+    .my-#{$name} {
+      margin-top: #{$name};
+      margin-bottom: #{$name};
+    }
+  } @else {
+    .ma-#{$name} {
+      margin: calc((#{$name}px) * 4);
+    }
+    .mt-#{$name} {
+      margin-top: calc((#{$name}px) * 4);
+    }
+    .mb-#{$name} {
+      margin-bottom: calc((#{$name}px) * 4);
+    }
+    .ml-#{$name} {
+      margin-left: calc((#{$name}px) * 4);
+    }
+    .mr-#{$name} {
+      margin-right: calc((#{$name}px) * 4);
+    }
+    .mx-#{$name} {
+      margin-left: calc((#{$name}px) * 4);
+      margin-right: calc((#{$name}px) * 4);
+    }
+    .my-#{$name} {
+      margin-top: calc((#{$name}px) * 4);
+      margin-bottom: calc((#{$name}px) * 4);
+    }
+
+    @if ($name != 0) {
+      .ma-n#{$name} {
+        margin: calc((-#{$name}px) * 4);
+      }
+      .mt-n#{$name} {
+        margin-top: calc((-#{$name}px) * 4);
+      }
+      .mb-n#{$name} {
+        margin-bottom: calc((-#{$name}px) * 4);
+      }
+      .ml-n#{$name} {
+        margin-left: calc((-#{$name}px) * 4);
+      }
+      .mr-n#{$name} {
+        margin-right: calc((-#{$name}px) * 4);
+      }
+      .mx-n#{$name} {
+        margin-left: calc((-#{$name}px) * 4);
+        margin-right: calc((-#{$name}px) * 4);
+      }
+      .my-n#{$name} {
+        margin-top: calc((-#{$name}px) * 4);
+        margin-bottom: calc((-#{$name}px) * 4);
+      }
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $margin-list {
+      @if ($name == auto) {
+        .ma-#{$size}-#{$name} {
+          margin: #{$name};
+        }
+        .mt-#{$size}-#{$name} {
+          margin-top: #{$name};
+        }
+        .mb-#{$size}-#{$name} {
+          margin-bottom: #{$name};
+        }
+        .ml-#{$size}-#{$name} {
+          margin-left: #{$name};
+        }
+        .mr-#{$size}-#{$name} {
+          margin-right: #{$name};
+        }
+        .mx-#{$size}-#{$name} {
+          margin-left: #{$name};
+          margin-right: #{$name};
+        }
+        .my-#{$size}-#{$name} {
+          margin-top: #{$name};
+          margin-bottom: #{$name};
+        }
+      } @else {
+        .ma-#{$size}-#{$name} {
+          margin: calc((#{$name}px) * 4);
+        }
+        .mt-#{$size}-#{$name} {
+          margin-top: calc((#{$name}px) * 4);
+        }
+        .mb-#{$size}-#{$name} {
+          margin-bottom: calc((#{$name}px) * 4);
+        }
+        .ml-#{$size}-#{$name} {
+          margin-left: calc((#{$name}px) * 4);
+        }
+        .mr-#{$size}-#{$name} {
+          margin-right: calc((#{$name}px) * 4);
+        }
+        .mx-#{$size}-#{$name} {
+          margin-left: calc((#{$name}px) * 4);
+          margin-right: calc((#{$name}px) * 4);
+        }
+        .my-#{$name} {
+          margin-top: calc((#{$name}px) * 4);
+          margin-bottom: calc((#{$name}px) * 4);
+        }
+
+        @if ($name != 0) {
+          .ma-#{$size}-n#{$name} {
+            margin: calc((-#{$name}px) * 4);
+          }
+          .mt-#{$size}-n#{$name} {
+            margin-top: calc((-#{$name}px) * 4);
+          }
+          .mb-#{$size}-n#{$name} {
+            margin-bottom: calc((-#{$name}px) * 4);
+          }
+          .ml-#{$size}-n#{$name} {
+            margin-left: calc((-#{$name}px) * 4);
+          }
+          .mr-#{$size}-n#{$name} {
+            margin-right: calc((-#{$name}px) * 4);
+          }
+          .mx-#{$size}-n#{$name} {
+            margin-left: calc((-#{$name}px) * 4);
+            margin-right: calc((-#{$name}px) * 4);
+          }
+          .my-#{$size}-n#{$name} {
+            margin-top: calc((-#{$name}px) * 4);
+            margin-bottom: calc((-#{$name}px) * 4);
+          }
+        }
+      }
+    }
+  }
+}
+
+//PADDINGS
+@each $name in $padding-list {
+  .pa-#{$name} {
+    padding: calc((#{$name}px) * 4);
+  }
+  .pt-#{$name} {
+    padding-top: calc((#{$name}px) * 4);
+  }
+  .pb-#{$name} {
+    padding-bottom: calc((#{$name}px) * 4);
+  }
+  .pl-#{$name} {
+    padding-left: calc((#{$name}px) * 4);
+  }
+  .pr-#{$name} {
+    padding-right: calc((#{$name}px) * 4);
+  }
+  .px-#{$name} {
+    padding-left: calc((#{$name}px) * 4);
+    padding-right: calc((#{$name}px) * 4);
+  }
+  .py-#{$name} {
+    padding-top: calc((#{$name}px) * 4);
+    padding-bottom: calc((#{$name}px) * 4);
+  }
+
+  @if ($name != 0) {
+    .pa-n#{$name} {
+      padding: calc((-#{$name}px) * 4);
+    }
+    .pt-n#{$name} {
+      padding-top: calc((-#{$name}px) * 4);
+    }
+    .pb-n#{$name} {
+      padding-bottom: calc((-#{$name}px) * 4);
+    }
+    .pl-n#{$name} {
+      padding-left: calc((-#{$name}px) * 4);
+    }
+    .pr-n#{$name} {
+      padding-right: calc((-#{$name}px) * 4);
+    }
+    .px-n#{$name} {
+      padding-left: calc((-#{$name}px) * 4);
+      padding-right: calc((-#{$name}px) * 4);
+    }
+    .py-n#{$name} {
+      padding-top: calc((-#{$name}px) * 4);
+      padding-bottom: calc((-#{$name}px) * 4);
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $padding-list {
+      .pa-#{$size}-#{$name} {
+        padding: calc((#{$name}px) * 4);
+      }
+      .pt-#{$size}-#{$name} {
+        padding-top: calc((#{$name}px) * 4);
+      }
+      .pb-#{$size}-#{$name} {
+        padding-bottom: calc((#{$name}px) * 4);
+      }
+      .pl-#{$size}-#{$name} {
+        padding-left: calc((#{$name}px) * 4);
+      }
+      .pr-#{$size}-#{$name} {
+        padding-right: calc((#{$name}px) * 4);
+      }
+      .px-#{$size}-#{$name} {
+        padding-left: calc((#{$name}px) * 4);
+        padding-right: calc((#{$name}px) * 4);
+      }
+      .py-#{$name} {
+        padding-top: calc((#{$name}px) * 4);
+        padding-bottom: calc((#{$name}px) * 4);
+      }
+
+      @if ($name != 0) {
+        .pa-#{$size}-n#{$name} {
+          padding: calc((-#{$name}px) * 4);
+        }
+        .pt-#{$size}-n#{$name} {
+          padding-top: calc((-#{$name}px) * 4);
+        }
+        .pb-#{$size}-n#{$name} {
+          padding-bottom: calc((-#{$name}px) * 4);
+        }
+        .pl-#{$size}-n#{$name} {
+          padding-left: calc((-#{$name}px) * 4);
+        }
+        .pr-#{$size}-n#{$name} {
+          padding-right: calc((-#{$name}px) * 4);
+        }
+        .px-#{$size}-n#{$name} {
+          padding-left: calc((-#{$name}px) * 4);
+          padding-right: calc((-#{$name}px) * 4);
+        }
+        .py-#{$size}-n#{$name} {
+          padding-top: calc((-#{$name}px) * 4);
+          padding-bottom: calc((-#{$name}px) * 4);
+        }
+      }
+    }
+  }
+}
+
+//TYPOGRAPHY
+@each $name in $text-list {
+  .text-#{$name} {
+    text-align: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $text-list {
+      .text-#{$size}-#{$name} {
+        text-align: #{$name};
+      }
+    }
+  }
+}

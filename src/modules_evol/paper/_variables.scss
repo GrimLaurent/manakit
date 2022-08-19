@@ -1,0 +1,6 @@
+@import '../../assets/scss/utils.scss';
+
+$paper-border-radius: 0 !default;
+$paper-elevation: 0 !default;
+$paper-outlined-border-width: thin !default;
+$paper-shaped-border-radius: map-get($rounded, 'xl') $paper-border-radius !default;

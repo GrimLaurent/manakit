@@ -11,7 +11,7 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import React, { FunctionComponent, Fragment, useEffect, useState } from 'react';
-import { useClassHtml, useIdHtml, useRoundedTheme, useStyleHtml, useThemeColor } from '../../utils';
+import { useClassHtml, useIdHtml, useStyleHtml } from '../../utils';
 import { AvatarType } from './types/Avatar.types';
 import { AvatarStyled } from './styles/Avatar.styled';
 
@@ -46,8 +46,8 @@ const Avatar: FunctionComponent<AvatarType> = ({
         id={useIdHtml(id)}
         className={useClassHtml(`mk-avatar`, className)}
         style={useStyleHtml({}, style)}
-        color={useThemeColor(color, undefined, 'primary')}
-        rounded={useRoundedTheme(rounded, 'pill')}
+        color={color}
+        rounded={rounded}
         width={width}
         minWidth={minWidth}
         maxWidth={maxWidth}

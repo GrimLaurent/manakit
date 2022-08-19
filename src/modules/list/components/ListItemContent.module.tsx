@@ -13,7 +13,7 @@
 import React, { FunctionComponent } from 'react';
 import { ListItemContentType } from '../types/ListItemContent.types';
 import { ListItemContentStyled } from '../styles/ListItemContent.styled';
-import { useClassHtml, useIdHtml, useStyleHtml, useThemeColor } from '../../../utils';
+import { useClassHtml, useIdHtml, useStyleHtml } from '../../../utils';
 
 const ListItemContent: FunctionComponent<ListItemContentType> = ({ id, className, style, children }) => {
   return (

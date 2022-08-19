@@ -11,7 +11,7 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import React, { FunctionComponent, Fragment, useState, useEffect } from 'react';
-import { useClassHtml, useIdHtml, useStyleHtml, useRoundedTheme, useThemeColor } from '../../utils';
+import { useClassHtml, useIdHtml, useStyleHtml } from '../../utils';
 import { PaperType } from './types/Paper.types';
 import { PaperStyled } from './styles/Paper.styled';
 
@@ -51,9 +51,9 @@ const Paper: FunctionComponent<PaperType> = ({
         id={useIdHtml(id)}
         className={useClassHtml(`mk-paper`, className, classList)}
         style={useStyleHtml({}, style)}
-        rounded={useRoundedTheme(rounded, 'none')}
-        color={useThemeColor(color, mode, 'onSurface')}
-        background={useThemeColor(background, mode, 'surface')}
+        rounded={rounded}
+        color={color}
+        background={background}
         outlined={outlined}
         width={width}
         minWidth={minWidth}
@@ -61,6 +61,7 @@ const Paper: FunctionComponent<PaperType> = ({
         height={height}
         minHeight={minHeight}
         maxHeight={maxHeight}
+        mode={mode}
       >
         {children}
       </PaperStyled>

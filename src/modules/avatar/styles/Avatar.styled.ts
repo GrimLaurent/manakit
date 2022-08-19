@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getColor, getRounded } from '../../../utils';
 import { AvatarStyledType } from '../types/Avatar.types';
 
 export const AvatarStyled = styled('div')<AvatarStyledType>`
@@ -8,7 +9,7 @@ export const AvatarStyled = styled('div')<AvatarStyledType>`
   max-height: ${(props) => props.maxHeight};
   min-width: ${(props) => (props.minWidth ? props.minWidth : props.size)};
   max-width: ${(props) => props.maxWidth};
-  border-radius: ${(props) => props.rounded};
+  border-radius: ${(props) => getRounded(props.theme, props.rounded, 'pill')};
   align-items: center;
   display: inline-flex;
   justify-content: center;
@@ -17,7 +18,7 @@ export const AvatarStyled = styled('div')<AvatarStyledType>`
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
-  background: ${(props) => props.color};
+  background: ${(props) => getColor(props.theme, props.color, 'primary')};
 
   img {
     border-radius: inherit;

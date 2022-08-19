@@ -11,10 +11,10 @@ import setElementStorage from './local/setElementStorage';
 
 import concatObject from './format/concatObj';
 
-import useThemeColor from './color/useThemeColor';
 import formatColorToRgba from './color/formatColorToRgba';
+import getColor from './color/getColor';
 
-import useRoundedTheme from './rounded/useRoundedTheme';
+import getRounded from './rounded/getRounded';
 
 export {
   useIdHtml,
@@ -26,7 +26,7 @@ export {
   setElementStorage,
   isExistElementStorage,
   concatObject,
-  useThemeColor,
   formatColorToRgba,
-  useRoundedTheme,
+  getRounded,
+  getColor,
 };

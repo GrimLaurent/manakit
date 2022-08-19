@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRounded } from '../../../utils';
 import { ListStyledType } from '../types/List.types';
 
 export const ListStyled = (Paper: any) => styled(Paper)`
@@ -6,7 +7,7 @@ export const ListStyled = (Paper: any) => styled(Paper)`
   padding: 8px 0;
   position: static;
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: ${(props) => props.roundedChild};
+  border-radius: ${(props) => getRounded(props.theme, props.roundedChild)};
   padding-left: ${(props) => (props.nav ? '8px' : '')};
   padding-right: ${(props) => (props.nav ? '8px' : '')};
 

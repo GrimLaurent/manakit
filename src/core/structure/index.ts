@@ -1,4 +1,7 @@
-import rootCore from './root';
-import customCore from './custom';
+import createBreakpoint from './breakpoint';
+import createFont from './font';
+import createRounded from './rounded';
+import createTheme from './theme';
+import createModeDefault from './mode';
 
-export { rootCore, customCore };
+export { createBreakpoint, createFont, createRounded, createTheme, createModeDefault };

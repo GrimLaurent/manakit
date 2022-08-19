@@ -1,0 +1,19 @@
+@import './variables';
+
+.mk-container {
+  &.is--fluid {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $display-breakpoints-md) {
+    &:not(.is--fluid) {
+      max-width: 900px;
+    }
+  }
+
+  @media screen and (min-width: $display-breakpoints-lg) {
+    &:not(.is--fluid) {
+      max-width: 1185px;
+    }
+  }
+}
