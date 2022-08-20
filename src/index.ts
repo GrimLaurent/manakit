@@ -50,6 +50,7 @@ import Subheader from './modules_evol/subheader';
 import { Paper as PaperEvol } from './modules_evol/paper';
 import { Avatar as AvatarEvol } from './modules_evol/avatar';
 import { Toolbar, ToolbarTitle, ToolbarItems } from './modules_evol/toolbars';
+import BottomBar from './modules_evol/bottom-bar';
 
 export {
   AppEvol,
@@ -66,4 +67,5 @@ export {
   Toolbar,
   ToolbarTitle,
   ToolbarItems,
+  BottomBar,
 };

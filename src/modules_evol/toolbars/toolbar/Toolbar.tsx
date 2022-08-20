@@ -37,8 +37,8 @@ const Toolbar: FunctionComponent<ToolbarType> = ({
   floating,
 }) => {
   const classList = [
-    { el: 'elevation-4', val: typeof rounded === 'boolean' && elevation },
-    { el: 'elevation', val: typeof rounded === 'string' ? elevation : false },
+    { el: 'elevation-4', val: typeof elevation === 'boolean' && elevation },
+    { el: 'elevation', val: typeof elevation === 'string' ? elevation : false },
     { el: 'rounded-lg', val: typeof rounded === 'boolean' && rounded },
     { el: 'rounded', val: typeof rounded === 'string' ? rounded : false },
     { el: 'toolbar--absolute', val: absolute },

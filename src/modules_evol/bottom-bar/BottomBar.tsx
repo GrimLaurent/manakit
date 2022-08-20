@@ -1,29 +1,27 @@
 /**
- * Paper
+ * BottomBar
  *
  * @type Structural
- * @module Paper
+ * @module BottomBar
  *
  * @company Manastone
  * @author Laurent Grimaldi
  * @repository https://github.com/manastone/manakit
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
-import './Paper.scss';
+import './BottomBar.scss';
 import React, { Fragment, FunctionComponent } from 'react';
-import { PaperType } from './types/Paper';
+import { BottomBarType } from './types/BottomBar';
 import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../utils';
 
-const Paper: FunctionComponent<PaperType> = ({
+const BottomBar: FunctionComponent<BottomBarType> = ({
   id,
   className,
   style,
   children,
-  elevation,
-  outlined,
-  rounded,
-  shaped,
-  tile,
+  absolute,
+  fixed,
+  grow,
   width,
   height,
   minWidth,
@@ -32,13 +30,10 @@ const Paper: FunctionComponent<PaperType> = ({
   maxHeight,
 }) => {
   const classList = [
-    { el: 'elevation-1', val: typeof elevation === 'boolean' && elevation },
-    { el: 'elevation', val: typeof elevation === 'string' ? elevation : false },
-    { el: 'rounded-lg', val: typeof rounded === 'boolean' && rounded },
-    { el: 'rounded', val: typeof rounded === 'string' ? rounded : false },
-    { el: 'paper--outlined', val: outlined },
-    { el: 'paper--shaped', val: shaped },
-    { el: 'paper--tile', val: tile },
+    { el: 'elevation-2', val: true },
+    { el: 'bottom-bar--absolute', val: absolute },
+    { el: 'bottom-bar--fixed', val: fixed },
+    { el: 'is--grow', val: grow },
   ];
 
   const styleList = {
@@ -54,7 +49,7 @@ const Paper: FunctionComponent<PaperType> = ({
     <Fragment>
       <div
         id={useIdHtml(id)}
-        className={useClassHtml('mk-paper', className, classList)}
+        className={useClassHtml('mk-bottom-bar', className, classList)}
         style={useStyleHtml(styleList, style)}
       >
         {children}
@@ -63,4 +58,4 @@ const Paper: FunctionComponent<PaperType> = ({
   );
 };
 
-export default Paper;
+export default BottomBar;
