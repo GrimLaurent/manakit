@@ -1,6 +1,6 @@
 {
   "name": "manakit",
-  "version": "0.0.306",
+  "version": "0.0.307",
   "description": "",
   "scripts": {
     "build": "rollup -c",
