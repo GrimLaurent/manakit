@@ -1,0 +1,62 @@
+.mk-navigation-drawer {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  pointer-events: auto;
+
+  background-color: #fff;
+  height: 100%;
+  width: 256px;
+  max-width: 100%;
+  transform: translateX(-100%);
+
+  &.is--open {
+    transform: translateX(0%);
+  }
+
+  &.navigation-drawer--absolute,
+  &.navigation-drawer--fixed {
+    z-index: 1;
+  }
+
+  &.navigation-drawer--absolute {
+    position: absolute;
+  }
+
+  &.navigation-drawer--fixed {
+    position: fixed;
+  }
+
+  &.navigation-drawer--right {
+    left: auto;
+    right: 0;
+  }
+
+  &.navigation-drawer--bottom {
+    max-height: 50%;
+    top: auto;
+    bottom: 0;
+    min-width: 100%;
+  }
+
+  &.navigation-drawer--temporary {
+    z-index: 7;
+  }
+
+  .mk-navigation-drawer--wrap {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .mk-navigation-drawer--border {
+    background-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+  }
+}

@@ -588,3 +588,9 @@
     }
   }
 }
+
+@each $type, $value in $font-weights {
+  .font-weight-#{$type} {
+    font-weight: #{$value};
+  }
+}

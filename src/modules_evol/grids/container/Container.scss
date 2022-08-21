@@ -5,13 +5,13 @@
     max-width: 100%;
   }
 
-  @media screen and (min-width: $display-breakpoints-md) {
+  @media screen and (min-width: #{map-get($grid-breakpoints, 'md')}) {
     &:not(.is--fluid) {
       max-width: 900px;
     }
   }
 
-  @media screen and (min-width: $display-breakpoints-lg) {
+  @media screen and (min-width: #{map-get($grid-breakpoints, 'lg')}) {
     &:not(.is--fluid) {
       max-width: 1185px;
     }

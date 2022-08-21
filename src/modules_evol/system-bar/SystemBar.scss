@@ -1,0 +1,16 @@
+.mk-system-bar {
+  align-items: center;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0 8px;
+  height: 30px;
+
+  &.system-bar--absolute {
+    position: absolute;
+  }
+
+  &.system-bar--fixed {
+    position: fixed;
+  }
+}

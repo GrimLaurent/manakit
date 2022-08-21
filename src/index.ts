@@ -51,6 +51,11 @@ import { Paper as PaperEvol } from './modules_evol/paper';
 import { Avatar as AvatarEvol } from './modules_evol/avatar';
 import { Toolbar, ToolbarTitle, ToolbarItems } from './modules_evol/toolbars';
 import BottomBar from './modules_evol/bottom-bar';
+import { Appbar, AppbarTitle } from './modules_evol/appbars';
+import SystemBar from './modules_evol/system-bar';
+import { Overlay } from './modules_evol/overlay';
+import NavigationDrawer from './modules_evol/navigation-drawers';
+import Footer from './modules_evol/footer';
 
 export {
   AppEvol,
@@ -68,4 +73,10 @@ export {
   ToolbarTitle,
   ToolbarItems,
   BottomBar,
+  Appbar,
+  AppbarTitle,
+  SystemBar,
+  Overlay,
+  NavigationDrawer,
+  Footer,
 };

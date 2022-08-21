@@ -17,7 +17,7 @@ import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../../uti
 const ToolbarTitle: FunctionComponent<ToolbarTitleType> = ({ id, className, style, children }) => {
   return (
     <Fragment>
-      <div id={useIdHtml(id)} className={useClassHtml('mk-toolbar--title', className)} style={useStyleHtml({}, style)}>
+      <div id={useIdHtml(id)} className={useClassHtml('mk-toolbar-title', className)} style={useStyleHtml({}, style)}>
         {children}
       </div>
     </Fragment>

@@ -1,0 +1,42 @@
+.mk-footer {
+  align-items: center;
+  display: flex;
+  flex: 0 1 auto !important;
+  flex-wrap: wrap;
+  padding: 6px 16px;
+  position: relative;
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0;
+
+  &.footer-absolute,
+  &.footer--fixed {
+    z-index: 4;
+  }
+
+  &.footer--absolute {
+    position: absolute;
+  }
+  &.footer--fixed {
+    position: fixed;
+  }
+
+  &.is--inset {
+  }
+
+  &.footer--outlined {
+    border: thin solid rgba(0, 0, 0, 0.12);
+  }
+
+  &.footer--shaped {
+    border-radius: 24px 0;
+  }
+
+  &.footer--tile {
+    border-radius: 0;
+  }
+
+  &.footer--padless {
+    padding: 0;
+  }
+}
