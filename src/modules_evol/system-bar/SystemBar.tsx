@@ -14,10 +14,20 @@ import React, { Fragment, FunctionComponent } from 'react';
 import { SystemBarType } from './types/SystemBar';
 import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../utils';
 
-const SystemBar: FunctionComponent<SystemBarType> = ({ id, className, style, children, absolute, fixed, height }) => {
+const SystemBar: FunctionComponent<SystemBarType> = ({
+  id,
+  className,
+  style,
+  children,
+  absolute,
+  fixed,
+  height,
+  app,
+}) => {
   const classList = [
     { el: 'system-bar--absolute', val: absolute },
     { el: 'system-bar--fixed', val: fixed },
+    { el: 'system-bar--fixed', val: app },
   ];
 
   const styleList = {
