@@ -1,5 +1,6 @@
-import GridCol from './components/GridCol.module';
-import GridRow from './components/GridRow.module';
-import Spacer from './components/Spacer.module';
+import Container from './container/Container';
+import GridRow from './row';
+import GridCol from './col';
+import Spacer from './spacer';
 
-export { GridCol, GridRow, Spacer };
+export { Container, GridRow, GridCol, Spacer };

@@ -1,0 +1,40 @@
+.mk-card {
+  border-width: thin;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  text-decoration: none;
+  transition-property: box-shadow, opacity;
+  overflow-wrap: break-word;
+  position: relative;
+  white-space: normal;
+
+  //default
+  background-color: #fff;
+  border-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 4px;
+
+  &.mk-card--outlined {
+    border: thin solid rgba(0, 0, 0, 0.12);
+  }
+
+  &.mk-card--shaped {
+    border-radius: 24px 4px;
+  }
+
+  &.mk-card--tile {
+    border-radius: 0;
+  }
+
+  &.mk-card--disabled {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    opacity: 0.6;
+    transition: inherit;
+  }
+}

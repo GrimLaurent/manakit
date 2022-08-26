@@ -1,0 +1,40 @@
+.mk-breadcrumbs {
+  padding-left: 24px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 18px 12px;
+
+  li {
+    align-items: center;
+    display: inline-flex;
+    font-size: 14px;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a.is-disabled {
+      pointer-events: none;
+      color: rgba(0, 0, 0, 0.38);
+    }
+  }
+
+  li:nth-child(2n) {
+    padding: 0 12px;
+  }
+
+  &.breadcrumbs--large {
+    li {
+      font-size: 16px;
+    }
+  }
+
+  .mk-breadcrumbs--divider {
+    color: rgba(0, 0, 0, 0.38);
+  }
+}

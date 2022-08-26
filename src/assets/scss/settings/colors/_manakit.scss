@@ -26,6 +26,12 @@ $inverse-surface: #313033;
 $inverse-on-surface: #f4eff4;
 $inverse-primary: #d0bcff;
 
+// Alert / Status
+$state-succes: #4caf50;
+$state-info: #2196f3;
+$state-warning: #fb8c00;
+$state-error: #ff5252;
+
 $colors-manakit: () !default;
 $colors-manakit: map-deep-merge(
   (
@@ -41,9 +47,9 @@ $colors-manakit: map-deep-merge(
     'on-tertiary': $on-tertiary,
     'tertiary-container': $tertiary-container,
     'on-tertiary-container': $on-tertiary-container,
-    'error': $error,
+    'error-mode': $error,
     'on-error': $on-error,
-    'error-container': $error-container,
+    'error-container-mode': $error-container,
     'on-error-container': $on-error-container,
     'background': $background,
     'on-background': $on-background,
@@ -56,6 +62,10 @@ $colors-manakit: map-deep-merge(
     'inverse-surface': $inverse-surface,
     'inverse-on-surface': $inverse-on-surface,
     'inverse-primary': $inverse-primary,
+    'succes': $state-succes,
+    'info': $state-info,
+    'warning': $state-warning,
+    'error': $state-error,
   ),
   $colors-manakit
 );

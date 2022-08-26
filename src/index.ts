@@ -1,74 +1,57 @@
-import App from './modules/app/App.module';
-import Avatar from './modules/avatar/Avatar.module';
-import Grid from './modules/grids/Grid.module';
-import Container from './modules/container/Container.module';
-import Paper from './modules/paper/Paper.module';
-import List from './modules/list/List.module';
-import SubHeader from './modules/subheader/SubHeader.module';
-import { GridCol, GridRow, Spacer } from './modules/grids';
+import { App } from './modules/app';
+import { Content } from './modules/content';
+import { Main } from './modules/main';
+import { Container, GridRow, GridCol, Spacer } from './modules/grids';
+import { Divider } from './modules/divider';
+import { Subheader } from './modules/subheader';
+import { Paper } from './modules/paper';
+import { Avatar } from './modules/avatar';
+import { Toolbar, ToolbarTitle, ToolbarItems } from './modules/toolbars';
+import { BottomBar } from './modules/bottom-bar';
+import { Appbar, AppbarTitle } from './modules/appbars';
+import { SystemBar } from './modules/system-bar';
+import { Overlay } from './modules/overlay';
+import { NavigationDrawer } from './modules/navigation-drawers';
+import { Footer } from './modules/footer';
+import { Breadcrumbs } from './modules/breadcrumbs';
+import { Alert } from './modules/alerts';
+import { Btn } from './modules/btn';
+import { Card, CardTitle, CardSubTitle, CardText, CardActions } from './modules/cards';
+import { Chip } from './modules/chips';
+import { Table } from './modules/tables';
+import { Dialog } from './modules/dialogs';
 import {
-  ListItem,
-  ListItemContent,
-  ListItemTitle,
-  ListItemSubTitle,
-  ListItemIcon,
-  ListItemAction,
-  ListItemAvatar,
-} from './modules/list';
-
-export {
-  App,
-  Avatar,
-  Container,
-  Grid,
-  GridCol,
-  GridRow,
-  Spacer,
-  Paper,
-  SubHeader,
+  ExpansionPanels,
+  ExpansionPanel,
+  ExpansionPanelHeader,
+  ExpansionPanelContent,
+} from './modules/expansion-panels';
+import { Icon } from './modules/icons';
+import {
   List,
+  ListItemGroup,
   ListItem,
-  ListItemContent,
-  ListItemTitle,
-  ListItemSubTitle,
   ListItemIcon,
-  ListItemAction,
+  ListItemContent,
   ListItemAvatar,
-};
-
-import { App as AppEvol } from './modules_evol/app';
-import Content from './modules_evol/content';
-import Main from './modules_evol/main';
-import {
-  Container as ContainerEvol,
-  GridRow as GridRowEvol,
-  GridCol as GridColEvol,
-  Spacer as SpacerEvol,
-} from './modules_evol/grids';
-import Divider from './modules_evol/divider';
-import Subheader from './modules_evol/subheader';
-import { Paper as PaperEvol } from './modules_evol/paper';
-import { Avatar as AvatarEvol } from './modules_evol/avatar';
-import { Toolbar, ToolbarTitle, ToolbarItems } from './modules_evol/toolbars';
-import BottomBar from './modules_evol/bottom-bar';
-import { Appbar, AppbarTitle } from './modules_evol/appbars';
-import SystemBar from './modules_evol/system-bar';
-import { Overlay } from './modules_evol/overlay';
-import NavigationDrawer from './modules_evol/navigation-drawers';
-import Footer from './modules_evol/footer';
+  ListItemAction,
+  ListItemTitle,
+  ListItemSubtitle,
+} from './modules/lists';
 
 export {
-  AppEvol,
+  Alert,
+  App,
   Content,
   Main,
-  ContainerEvol,
-  GridRowEvol,
-  GridColEvol,
-  SpacerEvol,
+  Container,
+  GridRow,
+  GridCol,
+  Spacer,
   Divider,
   Subheader,
-  PaperEvol,
-  AvatarEvol,
+  Paper,
+  Avatar,
   Toolbar,
   ToolbarTitle,
   ToolbarItems,
@@ -79,4 +62,28 @@ export {
   Overlay,
   NavigationDrawer,
   Footer,
+  Breadcrumbs,
+  Btn,
+  Card,
+  CardTitle,
+  CardSubTitle,
+  CardText,
+  CardActions,
+  Chip,
+  Table,
+  Dialog,
+  ExpansionPanels,
+  ExpansionPanel,
+  ExpansionPanelHeader,
+  ExpansionPanelContent,
+  Icon,
+  List,
+  ListItemGroup,
+  ListItem,
+  ListItemIcon,
+  ListItemContent,
+  ListItemAvatar,
+  ListItemAction,
+  ListItemTitle,
+  ListItemSubtitle,
 };

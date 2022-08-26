@@ -1,4 +1,8 @@
 import {
+  ElementIdHTMLType,
+  ElementClassHTMLType,
+  ElementStyleHTMLType,
+  ElementChildrenType,
   ElementHTMLDefaultType,
   ElementHTMLDefaultRequiredType,
   ElementHTMLDefaultRequiredType_Extended,
@@ -25,6 +29,10 @@ import { ElementActionOnClikType, ElementActionHrefType, ElementActionType_Exten
 import { AlignType, AlignContentType, JustifyType, AlignSelfType } from './align';
 
 export type {
+  ElementIdHTMLType,
+  ElementClassHTMLType,
+  ElementStyleHTMLType,
+  ElementChildrenType,
   ElementHTMLDefaultType,
   ElementHTMLDefaultRequiredType,
   ElementHTMLDefaultRequiredType_Extended,
