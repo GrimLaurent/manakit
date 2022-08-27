@@ -190,8 +190,8 @@
 
 @each $name in $cols-list {
   .col-#{$name} {
-    flex: 0 0 calc((100 / 12) * #{$name} + '%');
-    max-width: calc((100 / 12) * #{$name} + '%');
+    flex: 0 0 calc((100% / 12) * #{$name});
+    max-width: calc((100% / 12) * #{$name});
   }
 }
 
@@ -199,8 +199,8 @@
   @media all and (min-width: #{$width}) {
     @each $name in $cols-list {
       .col-#{$size}-#{$name} {
-        flex: 0 0 calc((100 / 12) * #{$name} + '%');
-        max-width: calc((100 / 12) * #{$name} + '%');
+        flex: 0 0 calc((100% / 12) * #{$name});
+        max-width: calc((100% / 12) * #{$name});
       }
     }
   }
@@ -208,7 +208,7 @@
 
 @each $name in $cols-list {
   .offset-#{$name} {
-    margin-left: calc((100 / 12) * #{$name} + '%');
+    margin-left: calc((100% / 12) * #{$name});
   }
 }
 
@@ -216,7 +216,7 @@
   @media all and (min-width: #{$width}) {
     @each $name in $cols-list {
       .offset-#{$size}-#{$name} {
-        margin-left: calc((100 / 12) * #{$name} + '%');
+        margin-left: calc((100% / 12) * #{$name});
       }
     }
   }
