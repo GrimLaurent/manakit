@@ -39,6 +39,10 @@ import {
   ListItemSubtitle,
 } from './modules/lists';
 
+import { Hstack, Vstack } from './modules/layout';
+
+import { Menu } from './modules/menu';
+
 export {
   Alert,
   App,
@@ -86,4 +90,7 @@ export {
   ListItemAction,
   ListItemTitle,
   ListItemSubtitle,
+  Hstack,
+  Vstack,
+  Menu,
 };
