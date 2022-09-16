@@ -2,7 +2,7 @@ import useSizeHtml from '../useSizeHtml';
 
 describe('useSizeHtml', () => {
   test('value is undefined', () => {
-    expect(useSizeHtml(undefined)).toBe('');
+    expect(useSizeHtml(undefined)).toBe(undefined);
   });
 
   test('value is number', () => {
@@ -19,5 +19,9 @@ describe('useSizeHtml', () => {
 
   test('value is string and is not size', () => {
     expect(useSizeHtml('bonjour')).toBe('bonjour');
+  });
+
+  test('value is string with no charactere', () => {
+    expect(useSizeHtml('')).toBe('');
   });
 });

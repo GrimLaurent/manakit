@@ -14,10 +14,18 @@ function useSizeHtml(value?: number | string) {
       if (isNaN(value as never)) {
         return value;
       } else {
-        return value + 'px';
+        const obj = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+        for (let v of obj) {
+          if ((value as string)!.includes(v)) {
+            return value + 'px';
+          }
+        }
+
+        return value;
       }
     default:
-      return '';
+      return value === undefined ? undefined : '';
   }
 }
 

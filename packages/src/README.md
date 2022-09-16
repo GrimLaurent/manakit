@@ -1,6 +1,6 @@
-# ManaKit Developer's
+# Manakit Developer's
 
-This documentation is intended for developers who wish to participate actively in the development of ManaKit.
+This documentation is intended for developers who wish to participate actively in the development of Manakit.
 You will find all the steps to configure your environment and the packages necessary for the development of the project. Feel free to join our **[Discord](https://discord.gg/ATm5mcPK3h)**.
 
 **Let's go!**
@@ -25,14 +25,6 @@ In order to automate the tests on the project, we use the Husky package which en
 
     yarn prepare
 
-### Mode Dev
-
-Hot-refresh development takes place via storybook, it ensures the complete development of a module independently and prepares versioned generic documentation.
-
-    yarn develop
-
-open your browser and go to http://localhost:6006/.
-
 ### Mode Build
 
 A hook allows to build the project and to prepare its use for a local link.
@@ -44,15 +36,15 @@ With each build the **linter** and the **tests** are executed in order to verify
 
 **Test in local project**
 
-You have the possibility with a build to use **ManaKit** on your project locally without having to go through the npm repository.
+You have the possibility with a build to use **Manakit** on your project locally without having to go through the npm repository.
 
 In your project use the **npm link**.
 
     npm link manakit
 
-With each new local build of ManaKit, your linked project will be synchronized
+With each new local build of Manakit, your linked project will be synchronized
 
 ### Mode Publish
 
-**Only Laurent Grimaldi has the rights to publish the ManaKit.**
-**Submit your Merge Request to the reviewer at @GrimLaurent**
+**Only Laurent Grimaldi has the rights to publish the Manakit.**
+**Submit your Merge Request to the reviewer at @Lalattyna**

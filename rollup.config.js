@@ -5,7 +5,7 @@ import postcss from 'rollup-plugin-postcss';
 const pkg = require('./package.json');
 
 export default {
-  input: 'src/index.ts',
+  input: 'packages/src/index.ts',
   output: [
     {
       file: pkg.main,

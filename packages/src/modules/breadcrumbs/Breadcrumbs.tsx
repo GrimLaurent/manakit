@@ -37,7 +37,7 @@ const Breadcrumbs: FunctionComponent<BreadcrumbsType> = ({
             const separator = items.length > index + 1 ? true : false;
             return (
               <Fragment>
-                <li key={index}>
+                <li key={index + '-' + item.text}>
                   <a
                     href={item.href}
                     className={useClassHtml(

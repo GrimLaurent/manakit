@@ -7,14 +7,15 @@ Because the code is not (yet) made by machines but by humans, it is important to
 _TEAM_
 My role on this project: **Developer JS**
 Name: **Laurent Grimaldi**
-Email: **grimlaurent.95@gmail.com**
-Github: **https://github.com/GrimLaurent**
+Email: **hello@lalattyna.dev**
+Github: **https://github.com/Lalattyna**
 Location: **Massy (91), France**
 
 _THANKS_
 
 - **Dona Sarkar** ( for inspiration )
 - **Simone De Sousa Fernandes** ( for support ! ❤️)
+- **Gabriel Henry** ( for support ! ❤️)
 
 _SITE_
 

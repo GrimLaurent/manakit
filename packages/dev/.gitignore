@@ -5,8 +5,19 @@
 /.pnp
 .pnp.js
 
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
 # production
 /build
+
+# misc
+.DS_Store
+*.pem
 
 # debug
 npm-debug.log*
@@ -22,7 +33,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-
-# misc
-.DS_Store
-*.pem
+next-env.d.ts

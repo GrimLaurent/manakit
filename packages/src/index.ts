@@ -42,6 +42,8 @@ import {
 import { Hstack, Vstack } from './modules/layout';
 
 import { Menu } from './modules/menu';
+import { Input } from './modules/inputs';
+import { Textfield } from './modules/textfields';
 
 export {
   Alert,
@@ -93,4 +95,6 @@ export {
   Hstack,
   Vstack,
   Menu,
+  Input,
+  Textfield,
 };
