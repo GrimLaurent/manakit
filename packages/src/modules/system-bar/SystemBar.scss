@@ -1,0 +1,28 @@
+.mk-system-bar {
+  align-items: center;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0 8px;
+  height: 24px;
+
+  // Color default
+  background-color: #e0e0e0;
+  color: rgba(0, 0, 0, 0.6);
+
+  &.system-bar--absolute {
+    position: absolute;
+  }
+
+  &.system-bar--fixed {
+    position: fixed;
+  }
+
+  &.system-bar--fixed,
+  &.system-bar--absolute {
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+}

@@ -12,7 +12,7 @@
     "esModuleInterop": true,
     "allowJs": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,13 +20,14 @@
     "noUnusedParameters": true,
     "strictNullChecks": true
   },
-  "include": ["src/**/*", "scripts/App"],
+  "include": ["packages/src/**/*", "scripts/App"],
   "exclude": [
     "node_modules",
     "build",
-    "src/**/*.stories.tsx",
-    "src/**/*.test.tsx",
-    "src/stories/",
-    "scripts"
+    "packages/src/**/*.stories.tsx",
+    "packages/src/**/*.test.tsx",
+    "packages/src/stories/",
+    "packages/scripts",
+    "packages/dev"
   ]
 }

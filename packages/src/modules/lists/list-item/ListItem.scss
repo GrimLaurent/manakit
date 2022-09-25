@@ -1,0 +1,26 @@
+.mk-list-item {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  letter-spacing: normal;
+  min-height: 48px;
+  outline: none;
+  padding: 0 16px;
+  position: relative;
+  text-decoration: none;
+
+  &.mk-list-item--link {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &.mk-list-item--two-line {
+    min-height: 64px;
+  }
+  &.mk-list-item--three-line {
+    min-height: 88px;
+  }
+}

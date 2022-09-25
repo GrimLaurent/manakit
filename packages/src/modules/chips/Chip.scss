@@ -1,0 +1,79 @@
+.mk-chip {
+  align-items: center;
+  cursor: default;
+  display: inline-flex;
+  line-height: 20px;
+  max-width: 100%;
+  outline: none;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.28s;
+  transition-property: box-shadow, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  white-space: nowrap;
+
+  //default
+  border-color: rgba(0, 0, 0, 0.12);
+  background: #e0e0e0;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 16px;
+  font-size: 14px;
+  height: 32px;
+
+  &.mk-chip--x-small:not(.mk-chip--label) {
+    border-radius: 8px;
+  }
+  &.mk-chip--small:not(.mk-chip--label) {
+    border-radius: 12px;
+  }
+  &.mk-chip--large:not(.mk-chip--label) {
+    border-radius: 27px;
+  }
+  &.mk-chip--x-large:not(.mk-chip--label) {
+    border-radius: 33px;
+  }
+
+  &.mk-chip--x-small {
+    font-size: 10px;
+    height: 16px;
+  }
+  &.mk-chip--small {
+    font-size: 12px;
+    height: 24px;
+  }
+  &.mk-chip--large {
+    font-size: 16px;
+    height: 54px;
+  }
+  &.mk-chip--x-large {
+    font-size: 18px;
+    height: 66px;
+  }
+
+  &.mk-chip--clickable {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &.mk-chip--outlined {
+    border-width: thin;
+    border-style: solid;
+  }
+
+  &.mk-chip--label {
+    border-radius: 4px !important;
+  }
+
+  .mk-card--content {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+    max-width: 100%;
+  }
+}

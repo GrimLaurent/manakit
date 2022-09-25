@@ -1,0 +1,55 @@
+@mixin background-color($color_value) {
+  background-color: $color_value !important;
+  border-color: $color_value !important;
+}
+@mixin text-color($color_value) {
+  color: $color_value !important;
+  caret-color: $color_value !important;
+}
+
+// Put the loop in a function so it can't leak
+@each $color_name, $color_value in $shades {
+  .mk-app .#{$color_name} {
+    @include background-color($color_value);
+  }
+
+  .mk-app .text--#{$color_name} {
+    @include text-color($color_value);
+  }
+}
+
+@if ($color-use-mk) {
+  @each $color_name, $color_value in $colors-manakit {
+    .mk-app .#{$color_name} {
+      @include background-color($color_value);
+    }
+
+    .mk-app .text--#{$color_name} {
+      @include text-color($color_value);
+    }
+  }
+}
+
+@if ($color-use-md) {
+  @each $color_name, $color_color in $colors {
+    @each $color_type, $color_value in $color_color {
+      @if ($color_type == 'base') {
+        .mk-app .#{$color_name} {
+          @include background-color($color_value);
+        }
+
+        .mk-app .text--#{$color_name} {
+          @include text-color($color_value);
+        }
+      } @else if ($color_type != 'shades') {
+        .mk-app .#{$color_name}.#{$color_type} {
+          @include background-color($color_value);
+        }
+
+        .mk-app .text--#{$color_name}.text--#{$color_type} {
+          @include text-color($color_value);
+        }
+      }
+    }
+  }
+}

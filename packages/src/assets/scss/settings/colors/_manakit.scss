@@ -1,0 +1,71 @@
+$primary: #6750a4;
+$on-primary: #ffffff;
+$primary-container: #eaddff;
+$on-primary-container: #21005e;
+$secondary: #625b71;
+$on-secondary: #ffffff;
+$secondary-container: #e8def8;
+$on-secondary-container: #1e192b;
+$tertiary: #212121;
+$on-tertiary: #ffffff;
+$tertiary-container: #370b1e;
+$on-tertiary-container: #370b1e;
+$error: #b3261e;
+$on-error: #ffffff;
+$error-container: #f9dedc;
+$on-error-container: #370b1e;
+$background: #fffbfe;
+$on-background: #1c1b1f;
+$surface: #fffbfe;
+$on-surface: #1c1b1f;
+$surface-variant: #e7e0ec;
+$on-surface-variant: #49454e;
+$outline: #79747e;
+$shadow: #000000;
+$inverse-surface: #313033;
+$inverse-on-surface: #f4eff4;
+$inverse-primary: #d0bcff;
+
+// Alert / Status
+$state-succes: #4caf50;
+$state-info: #2196f3;
+$state-warning: #fb8c00;
+$state-error: #ff5252;
+
+$colors-manakit: () !default;
+$colors-manakit: map-deep-merge(
+  (
+    'primary': $primary,
+    'on-primary': $on-primary,
+    'primary-container': $primary-container,
+    'on-primary-container': $on-primary-container,
+    'secondary': $secondary,
+    'on-secondary': $on-secondary,
+    'secondary-container': $secondary-container,
+    'on-secondary-container': $on-secondary-container,
+    'tertiary': $tertiary,
+    'on-tertiary': $on-tertiary,
+    'tertiary-container': $tertiary-container,
+    'on-tertiary-container': $on-tertiary-container,
+    'error-mode': $error,
+    'on-error': $on-error,
+    'error-container-mode': $error-container,
+    'on-error-container': $on-error-container,
+    'background': $background,
+    'on-background': $on-background,
+    'surface': $surface,
+    'on-surface': $on-surface,
+    'surface-variant': $surface-variant,
+    'on-surface-variant': $on-surface-variant,
+    'outline': $outline,
+    'shadow': $shadow,
+    'inverse-surface': $inverse-surface,
+    'inverse-on-surface': $inverse-on-surface,
+    'inverse-primary': $inverse-primary,
+    'succes': $state-succes,
+    'info': $state-info,
+    'warning': $state-warning,
+    'error': $state-error,
+  ),
+  $colors-manakit
+);

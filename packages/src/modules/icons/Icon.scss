@@ -1,0 +1,39 @@
+.mk-icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  letter-spacing: normal;
+  line-height: 1;
+  position: relative;
+  text-indent: 0;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  //default
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 24px;
+
+  &.mk-icon--x-small {
+    font-size: 12px;
+  }
+  &.mk-icon--small {
+    font-size: 16px;
+  }
+  &.mk-icon--large {
+    font-size: 36px;
+  }
+  &.mk-icon--x-large {
+    font-size: 40px;
+  }
+
+  &.mk-icon--dense {
+    font-size: 20px;
+  }
+
+  &.mk-icon--disabled {
+    color: rgba(0, 0, 0, 0.38) !important;
+  }
+}

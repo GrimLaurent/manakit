@@ -1,0 +1,9 @@
+.mk-list-item--subtitle {
+  flex: 1 1 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.6);
+}

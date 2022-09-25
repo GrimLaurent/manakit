@@ -1,0 +1,12 @@
+.mk-app-bar {
+  margin-top: 0px;
+  transform: translateY(0px);
+  left: 0px;
+  right: 0px;
+
+  &.app-bar--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+  }
+}
