@@ -2,5 +2,6 @@
 
 ## Packages for the Manakit
 
-1. **dev** - Manakit sandbox Next.js
+1. **examples** - Manakit sandbox Next.js
 2. **src** - main source code for Manakit
+3. **docs** - Manakit documentation
