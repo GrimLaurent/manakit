@@ -1,7 +1,31 @@
 {
   "name": "manakit",
   "version": "0.0.350",
-  "description": "",
+  "private": false,
+  "author": "Laurent Grimaldi",
+  "description": "React User Interface Component Library",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "types": "build/index.d.ts",
+  "keywords": [
+    "react",
+    "react-component",
+    "ui",
+    "interface",
+    "material design",
+    "manastone",
+    "manakit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manastone/manakit.git",
+    "directory": "/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manastone/manakit/issues"
+  },
+  "homepage": "https://manastone.fr",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -10,9 +34,6 @@
     "prepare": "husky install",
     "scriptname": "cmd"
   },
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "types": "build/index.d.ts",
   "files": [
     "build"
   ],
@@ -22,9 +43,6 @@
       "pre-push": "yarn test"
     }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
