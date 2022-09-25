@@ -11,7 +11,7 @@ const NextApp: NextPage = () => {
           <title>{siteTitle}</title>
         </Head>
         <section>
-          <p>[Your Self Introduction]</p>
+          <h1>Home page</h1>
         </section>
       </Layout>
     </Fragment>

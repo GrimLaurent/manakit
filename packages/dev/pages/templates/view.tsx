@@ -1,10 +1,18 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import Home from '../home';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export const siteTitle = 'Manakit Sandbox (Nextjs)';
 
 function Layout({ children, home }: { children: React.ReactNode; home?: boolean }) {
+  const router = useRouter();
+
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    router.push(e.target.href);
+  };
+
   return (
     <Fragment>
       <Head>
@@ -13,13 +21,22 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {home ? (
-        <div>
-          <Home />
-        </div>
-      ) : (
-        <div>{children}</div>
-      )}
+      <ul>
+        {home ? (
+          <li>
+            <a href="/about" onClick={handleClick}>
+              About
+            </a>
+          </li>
+        ) : (
+          <li>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </li>
+        )}
+      </ul>
+      <div>{children}</div>
     </Fragment>
   );
 }
