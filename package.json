@@ -6,7 +6,7 @@
     "build": "rollup -c",
     "test": "jest",
     "lint": "eslint",
-    "deploy": "node cli.js deploy",
+    "deploy": "node scripts/cli.js deploy",
     "prepare": "husky install",
     "scriptname": "cmd"
   },
