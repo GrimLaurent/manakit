@@ -3,27 +3,17 @@
 [size]: https://packagephobia.now.sh/badge?p=manakit
 [size-url]: https://packagephobia.now.sh/result?p=manakit
 
-![ManaKit](https://raw.githubusercontent.com/GrimLaurent/GrimLaurent/main/resources/manastone/manakit/logo_storybook.png)
+# Manakit [Framework React UI]
 
-# ManaKit React UI Component
+## Welcome to Manakit
 
-**NPM info - [go to npm page](https://www.npmjs.com/package/manakit)**
-| | **ManaKit** |
-|--|--|
-| version | ![npm version](https://badge.fury.io/js/manakit.svg) |
-| size | [![size][size]][size-url] |
-| ddl/months | <img src="https://img.shields.io/npm/dm/manakit.svg" alt="Downloads" /> |
-| ddl global | <img src="https://img.shields.io/npm/dt/manakit.svg" alt="Downloads" /> |
+Manakit is a user interface component library for web applications. It is based on the Javascript language via the React.js framework. It has a clean and modern syntax, offers full customization and native support for recent browsers.
 
-## Welcome to ManaKit
-
-ManaKit is a user interface component library for web applications. It is based on the Javascript language via the React.js framework. It has a clean and modern syntax, offers full customization and native support for recent browsers.
-
-Although inspired by Material Design, Vuetify and many other interface libraries, Manakit is not itself a library derived from Material Design. As a complete and independent library, ManaKit brings together essential components such as theme management, grids (12 columns) and normalized CSS standards. ManaKit embraces the modules in order to limit the imports and the duplication of code that they imply.
+Although inspired by Material Design, Vuetify and many other interface libraries, Manakit is not itself a library derived from Material Design. As a complete and independent library, Manakit brings together essential components such as theme management, grids (12 columns) and normalized CSS standards. Manakit embraces the modules in order to limit the imports and the duplication of code that they imply.
 
 To learn more about this magnificent and powerful bookseller, go to the [documentation](https://manastone.fr)
 
-## Contributing to ManaKit
+## Contributing to Manakit
 
 Developers interested in contributing should read the [Code of Conduct](https://manastone.fr) and the [Contribution Guide](https://manastone.fr).
 
@@ -37,8 +27,8 @@ This project exists thanks to all the people who contribute 😍!
 
 ## Getting Started
 
-You can use ManaKit on a new project, or an existing project.
-For this you must install ManaKit and the dependencies required for ManaKit.
+You can use Manakit on a new project, or an existing project.
+For this you must install Manakit and the dependencies required for Manakit.
 
 Manakit works on both [CRA](https://create-react-app.dev/) and [Next.js](https://nextjs.org/).
 
@@ -49,9 +39,9 @@ Manakit works on both [CRA](https://create-react-app.dev/) and [Next.js](https:/
 
 NodeJS **18** or more
 
-📌 ManaKit is currently in pre Alpha, the minimal configuration will open in order to ensure greater support.
+📌 Manakit is currently in pre Alpha, the minimal configuration will open in order to ensure greater support.
 
-### Install ManaKit
+### Install Manakit
 
 **npm**
 
@@ -63,12 +53,20 @@ NodeJS **18** or more
 
 ### Documentation (Alpha)
 
-Currently the ManaKit documentation is not online. You can run it quickly thanks to the index.html in the ManaKit package installed on your project.
+Currently the Manakit documentation is not online. You can run it quickly thanks to the index.html in the Manakit package installed on your project.
 
 **path**
 
     node_modules/manakit/doc/index.html
 
 You will have thanks to that the list of all the available modules, their doc and their available configuration.
+
+**NPM info - [go to npm page](https://www.npmjs.com/package/manakit)**
+| | **Manakit** |
+|--|--|
+| version | ![npm version](https://badge.fury.io/js/manakit.svg) |
+| size | [![size][size]][size-url] |
+| ddl/months | <img src="https://img.shields.io/npm/dm/manakit.svg" alt="Downloads" /> |
+| ddl global | <img src="https://img.shields.io/npm/dt/manakit.svg" alt="Downloads" /> |
 
 Copyright (c) 2022 Laurent Grimaldi

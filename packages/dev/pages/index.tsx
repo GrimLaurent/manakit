@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Layout, { siteTitle } from './view';
+import Layout, { siteTitle } from './templates/view';
 
-const Home: NextPage = () => {
+const NextApp: NextPage = () => {
   return (
     <Fragment>
       <Layout home>
@@ -18,4 +18,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default NextApp;
