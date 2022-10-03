@@ -35,6 +35,7 @@ const Toolbar: FunctionComponent<ToolbarType> = ({
   dense,
   flat,
   floating,
+  contentClass,
 }) => {
   const classList = [
     { el: 'elevation-4', val: typeof elevation === 'boolean' && elevation },
@@ -71,7 +72,7 @@ const Toolbar: FunctionComponent<ToolbarType> = ({
         className={useClassHtml('mk-toolbar', className, classList)}
         style={useStyleHtml(styleList, style)}
       >
-        <div className="mk-toolbar--content" style={useStyleHtml(styleWrapList)}>
+        <div className={useClassHtml('mk-toolbar--content', contentClass)} style={useStyleHtml(styleWrapList)}>
           {children}
         </div>
       </header>

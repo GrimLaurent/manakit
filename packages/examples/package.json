@@ -11,10 +11,14 @@
   "dependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "i18next": "^21.9.2",
+    "i18next-browser-languagedetector": "^6.1.5",
+    "manakit": "^0.0.351",
     "next": "12.3.0",
     "prettier": "^2.7.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-i18next": "^11.18.6"
   },
   "devDependencies": {
     "@types/node": "18.7.16",
