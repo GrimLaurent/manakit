@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdi/font": "^7.0.96",
+    "@mdi/js": "^7.0.96",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^6.1.5",
-    "manakit": "^0.0.351",
+    "manakit": "0.0.354",
     "next": "12.3.0",
     "prettier": "^2.7.1",
     "react": "18.2.0",

@@ -4,7 +4,8 @@ import Head from 'next/head';
 import Layout, { siteTitle } from './templates/view';
 import { useTranslation } from 'react-i18next';
 
-import { Container, Toolbar } from 'manakit';
+import { Appbar, Avatar, Btn, Card, CardActions, Container, GridCol, GridRow, Icon, Spacer, Toolbar } from 'manakit';
+import { mdiQrcode } from '@mdi/js';
 
 const NextApp: NextPage = () => {
   const { t } = useTranslation();
@@ -15,13 +16,42 @@ const NextApp: NextPage = () => {
         <Head>
           <title>{siteTitle}</title>
         </Head>
+        <Appbar>
+          <div>
+            <h1 className="text-uppercase text-caption">{t('portfolio')}</h1>
+            <h4 className="text-h5 font-weight-black mt-n1">Bonsoir</h4>
+          </div>
+          <Spacer />
+          <Btn icon>
+            <Icon>{mdiQrcode}</Icon>
+          </Btn>
+          <button>QrCode</button>
+        </Appbar>
         <Container>
-          <Toolbar className={'pa-0'}>
-            <div>
-              <h1>{t('portfolio')}</h1>
-              <h4>Bonsoir</h4>
-            </div>
-          </Toolbar>
+          <GridRow>
+            <GridCol cols={12}>
+              <Card>
+                <img src="https://picsum.photos/seed/picsum/200/300" width={'100%'} />
+                <Avatar>
+                  <img src="https://picsum.photos/seed/picsum/200/300" />
+                </Avatar>
+                <h2>Laurent Grimaldi</h2>
+                <h3>Lalattyna</h3>
+                <p>Developpeur Web JS</p>
+                <div>progress bar</div>
+                <span>lvl4</span>
+                <p>En Savoir plus</p>
+                <p>Bim Bam Boum</p>
+                <CardActions>
+                  <Spacer />
+                  <button>Hello</button>
+                </CardActions>
+              </Card>
+            </GridCol>
+            <GridCol cols={12}>
+              <Card>Card</Card>
+            </GridCol>
+          </GridRow>
         </Container>
       </Layout>
     </Fragment>

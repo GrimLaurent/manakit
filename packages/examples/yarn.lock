@@ -56,6 +56,16 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@mdi/font@^7.0.96":
+  version "7.0.96"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-7.0.96.tgz#9853c222623072f5575b4039c8c195ea929b61fc"
+  integrity sha512-rzlxTfR64hqY8yiBzDjmANfcd8rv+T5C0Yedv/TWk2QyAQYdc66e0kaN1ipmnYU3RukHRTRcBARHzzm+tIhL7w==
+
+"@mdi/js@^7.0.96":
+  version "7.0.96"
+  resolved "https://registry.yarnpkg.com/@mdi/js/-/js-7.0.96.tgz#8e7a54d5cb38831e3150632cc19e380f54d9edd6"
+  integrity sha512-lNqhkV3cpPfYb/Avh+vXLFukUTbHbyHoFo4Jdc7Oc9UvURGVhamFIpgOVvEf2bNA78zvjXTZeVWExUTR+DLBfQ==
+
 "@next/env@12.3.0":
   version "12.3.0"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.3.0.tgz#85f971fdc668cc312342761057c59cb8ab1abadf"
@@ -1224,10 +1234,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-manakit@^0.0.351:
-  version "0.0.351"
-  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.351.tgz#05a94f8a1af94693d7a285520c672f79414a7507"
-  integrity sha512-GUNGDw8VCVgWARx4mqhHbm/mENt+/vHjm/VpR2kTAoHmkKm2fCGwIZHRcUzhfg5RR2q/HHQFPEPLY0ffoTiIyw==
+manakit@0.0.354:
+  version "0.0.354"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.354.tgz#aa9223600d6e9261b71005327b51e330891f2ef5"
+  integrity sha512-4LWumEy7HSC5dqkwPbtP9m8vjxu89+hrqeYBEY5Q6ZUGA/RlQUmw9RT2G/LyyfRWf6iWjQpZOMYEw9mn9FCEAA==
 
 merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
