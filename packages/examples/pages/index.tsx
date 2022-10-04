@@ -4,8 +4,9 @@ import Head from 'next/head';
 import Layout, { siteTitle } from './templates/view';
 import { useTranslation } from 'react-i18next';
 
-import { Appbar, Avatar, Btn, Card, CardActions, Container, GridCol, GridRow, Icon, Spacer, Toolbar } from 'manakit';
-import { mdiQrcode } from '@mdi/js';
+import { Appbar, Avatar, Btn, Card, CardActions, Container, GridCol, GridRow, Spacer, Toolbar, Icon } from 'manakit';
+import { mdiQrcode, mdiAbugidaThai, mdiChat } from '@mdi/js';
+// import Icon from '@mdi/react';
 
 const NextApp: NextPage = () => {
   const { t } = useTranslation();
@@ -23,7 +24,13 @@ const NextApp: NextPage = () => {
           </div>
           <Spacer />
           <Btn icon>
-            <Icon>{mdiQrcode}</Icon>
+            {/* <Icon>{mdiQrcode}</Icon>
+            <Icon>{mdiAbugidaThai}</Icon>
+            <Icon>{mdiChat}</Icon> */}
+            <Icon className={'text--primary'} small>
+              {mdiQrcode}
+            </Icon>
+            {/* <Icon path={mdiQrcode} title="User Profile" size={1} horizontal vertical rotate={90} color="red" spin /> */}
           </Btn>
           <button>QrCode</button>
         </Appbar>
