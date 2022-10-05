@@ -17,7 +17,7 @@
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^6.1.5",
     "i18next-http-backend": "^1.4.4",
-    "manakit": "0.0.361",
+    "manakit": "0.0.369",
     "next": "12.3.0",
     "next-i18next": "^12.1.0",
     "prettier": "^2.7.1",

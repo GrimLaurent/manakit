@@ -27,7 +27,7 @@
     .mk-app .text--#{$color_name} {
       @include text-color($color_value);
 
-      &.mk-icon span svg g path {
+      &.mk-icon svg g path {
         //color MDI SVG
         fill: $color_value !important;
       }

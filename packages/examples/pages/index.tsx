@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 import { Appbar, Avatar, Btn, Card, CardActions, Container, GridCol, GridRow, Spacer, Toolbar, Icon } from 'manakit';
 import { mdiQrcode, mdiAbugidaThai, mdiChat } from '@mdi/js';
-// import Icon from '@mdi/react';
 
 const NextApp: NextPage = () => {
   const { t } = useTranslation();
@@ -24,15 +23,10 @@ const NextApp: NextPage = () => {
           </div>
           <Spacer />
           <Btn icon>
-            {/* <Icon>{mdiQrcode}</Icon>
-            <Icon>{mdiAbugidaThai}</Icon>
-            <Icon>{mdiChat}</Icon> */}
-            <Icon className={'text--primary'} small>
+            <Icon title="qrcode" className={'text--primary'}>
               {mdiQrcode}
             </Icon>
-            {/* <Icon path={mdiQrcode} title="User Profile" size={1} horizontal vertical rotate={90} color="red" spin /> */}
           </Btn>
-          <button>QrCode</button>
         </Appbar>
         <Container>
           <GridRow>

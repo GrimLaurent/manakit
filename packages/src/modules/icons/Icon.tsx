@@ -10,11 +10,18 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import './Icon.scss';
-import React, { Fragment, FunctionComponent, useEffect } from 'react';
+import React, { Fragment, FunctionComponent } from 'react';
 import { IconType } from './types/Icon';
-import { useIdHtml, useClassHtml, useStyleHtml } from '../../utils';
+import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../utils';
+
+//components
+import MDIIcon from './components/MdiIcon';
+
+//helpers
+import getSizeSVG from './helpers/getSizeSVG';
 
 const Icon: FunctionComponent<IconType> = ({
+  title,
   id,
   className,
   style,
@@ -25,6 +32,8 @@ const Icon: FunctionComponent<IconType> = ({
   xLarge,
   dense,
   disabled,
+  size,
+  color,
 }) => {
   const classList = [
     { el: 'mk-icon--x-small', val: xSmall },
@@ -35,9 +44,10 @@ const Icon: FunctionComponent<IconType> = ({
     { el: 'mk-icon--disabled', val: disabled },
   ];
 
-  useEffect(() => {
-    console.log('ICON => children', children);
-  }, [children]);
+  const styleList = {
+    width: useSizeHtml(size ? useSizeHtml(size) : getSizeSVG(xSmall, small, large, xLarge, dense)),
+    height: useSizeHtml(size ? useSizeHtml(size) : getSizeSVG(xSmall, small, large, xLarge, dense)),
+  };
 
   return (
     <Fragment>
@@ -45,30 +55,14 @@ const Icon: FunctionComponent<IconType> = ({
         id={useIdHtml(id)}
         className={useClassHtml('mk-icon', className, classList)}
         style={useStyleHtml({}, style)}
+        title={title}
       >
-        {/* {children} */}
-        <MDIIcon>{children}</MDIIcon>
+        <MDIIcon styleList={styleList} dense={dense} disabled={disabled} color={color}>
+          {children}
+        </MDIIcon>
       </span>
     </Fragment>
   );
 };
 
 export default Icon;
-
-const MDIIcon: FunctionComponent<IconType> = ({ children }) => {
-  return (
-    <Fragment>
-      <span>
-        <svg
-          viewBox="0 0 24 24"
-          style={{ width: '1.5rem', height: '1.5rem', transformOrigin: 'center' }}
-          aria-labelledby="icon_labelledby_4"
-        >
-          <g style={{ transformOrigin: 'center' }}>
-            <path d={children as any}></path>
-          </g>
-        </svg>
-      </span>
-    </Fragment>
-  );
-};
