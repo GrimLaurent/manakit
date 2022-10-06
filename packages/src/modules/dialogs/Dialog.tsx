@@ -10,7 +10,7 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import './Dialog.scss';
-import React, { Fragment, FunctionComponent } from 'react';
+import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { DialogType } from './types/Dialog';
 import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../utils';
 
@@ -23,6 +23,7 @@ const Dialog: FunctionComponent<DialogType> = ({
   style,
   children,
   open,
+  close,
   fullscreen,
   width,
   height,
@@ -30,10 +31,16 @@ const Dialog: FunctionComponent<DialogType> = ({
   maxWidth,
   minHeight,
   maxHeight,
+  permanent,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const classList = [{ el: 'mk-dialog--fullscreen', val: fullscreen }];
 
-  const classListDialog = [{ el: 'mk-dialog--active', val: open }];
+  const classListDialog = [
+    { el: 'mk-dialog--active', val: isOpen },
+    { el: 'mk-dialog--permanent', val: permanent },
+  ];
 
   const styleList = {
     width: useSizeHtml(width),
@@ -44,6 +51,19 @@ const Dialog: FunctionComponent<DialogType> = ({
     maxHeight: useSizeHtml(maxHeight),
   };
 
+  const handleAction = () => {
+    if (isOpen) {
+      setIsOpen(false);
+      if (close !== undefined) close(false);
+    } else {
+      setIsOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    if (open !== undefined) setIsOpen(open);
+  }, [open]);
+
   return (
     <Fragment>
       <div
@@ -52,7 +72,7 @@ const Dialog: FunctionComponent<DialogType> = ({
         className={useClassHtml('mk-dialog--content', undefined, classListDialog)}
         style={{ zIndex: 202 }}
       >
-        {open ? <Overlay value={open} absolute={true} /> : ''}
+        {open ? <Overlay value={isOpen} absolute={true} isClose={permanent ? undefined : handleAction} /> : ''}
         <div
           id={useIdHtml(id)}
           className={useClassHtml('mk-dialog', className, classList)}
