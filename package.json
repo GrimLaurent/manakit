@@ -1,6 +1,6 @@
 {
   "name": "manakit",
-  "version": "0.0.378",
+  "version": "0.0.379",
   "private": false,
   "author": "Laurent Grimaldi",
   "description": "React User Interface Component Library",
@@ -82,6 +82,6 @@
     "typescript": "4.6.3"
   },
   "dependencies": {
-    "manakit": "0.0.377"
+    "manakit": "0.0.378"
   }
 }
