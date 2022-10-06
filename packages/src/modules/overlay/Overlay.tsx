@@ -10,7 +10,7 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import './Overlay.scss';
-import React, { Fragment, FunctionComponent } from 'react';
+import React, { Fragment, FunctionComponent, useEffect } from 'react';
 import { OverlayType } from './types/Overlay';
 import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../utils';
 
@@ -23,6 +23,7 @@ const Overlay: FunctionComponent<OverlayType> = ({
   opacity,
   zIndex,
   value,
+  isClose,
 }) => {
   const classList = [
     { el: 'opacity--absolute', val: absolute },
@@ -44,7 +45,7 @@ const Overlay: FunctionComponent<OverlayType> = ({
         className={useClassHtml('mk-overlay', className, classList)}
         style={useStyleHtml(styleList, style)}
       >
-        <div className="mk-overlay--screen" style={useStyleHtml(styleScreenList)}></div>
+        <div className="mk-overlay--screen" style={useStyleHtml(styleScreenList)} onClick={isClose}></div>
         <div className="mk-overlay--wrap">{children}</div>
       </div>
     </Fragment>

@@ -269,36 +269,70 @@
 
 //ROUNDED
 @each $name, $value in $rounded {
-  .rounded-#{$name} {
-    border-radius: #{$value};
-  }
-  .rounded-t-#{$name} {
-    border-top-left-radius: #{$value};
-    border-top-right-radius: #{$value};
-  }
-  .rounded-b-#{$name} {
-    border-bottom-left-radius: #{$value};
-    border-bottom-right-radius: #{$value};
-  }
-  .rounded-r-#{$name} {
-    border-top-right-radius: #{$value};
-    border-bottom-right-radius: #{$value};
-  }
-  .rounded-l-#{$name} {
-    border-top-left-radius: #{$value};
-    border-bottom-left-radius: #{$value};
-  }
-  .rounded-tl-#{$name} {
-    border-top-left-radius: #{$value};
-  }
-  .rounded-tr-#{$name} {
-    border-top-right-radius: #{$value};
-  }
-  .rounded-bl-#{$name} {
-    border-bottom-left-radius: #{$value};
-  }
-  .rounded-br-#{$name} {
-    border-bottom-right-radius: #{$value};
+  @if ($name == null) {
+    .rounded {
+      border-radius: #{$value};
+    }
+    .rounded-t {
+      border-top-left-radius: #{$value};
+      border-top-right-radius: #{$value};
+    }
+    .rounded-b {
+      border-bottom-left-radius: #{$value};
+      border-bottom-right-radius: #{$value};
+    }
+    .rounded-r {
+      border-top-right-radius: #{$value};
+      border-bottom-right-radius: #{$value};
+    }
+    .rounded-l {
+      border-top-left-radius: #{$value};
+      border-bottom-left-radius: #{$value};
+    }
+    .rounded-tl {
+      border-top-left-radius: #{$value};
+    }
+    .rounded-tr {
+      border-top-right-radius: #{$value};
+    }
+    .rounded-bl {
+      border-bottom-left-radius: #{$value};
+    }
+    .rounded-br {
+      border-bottom-right-radius: #{$value};
+    }
+  } @else {
+    .rounded-#{$name} {
+      border-radius: #{$value};
+    }
+    .rounded-t-#{$name} {
+      border-top-left-radius: #{$value};
+      border-top-right-radius: #{$value};
+    }
+    .rounded-b-#{$name} {
+      border-bottom-left-radius: #{$value};
+      border-bottom-right-radius: #{$value};
+    }
+    .rounded-r-#{$name} {
+      border-top-right-radius: #{$value};
+      border-bottom-right-radius: #{$value};
+    }
+    .rounded-l-#{$name} {
+      border-top-left-radius: #{$value};
+      border-bottom-left-radius: #{$value};
+    }
+    .rounded-tl-#{$name} {
+      border-top-left-radius: #{$value};
+    }
+    .rounded-tr-#{$name} {
+      border-top-right-radius: #{$value};
+    }
+    .rounded-bl-#{$name} {
+      border-bottom-left-radius: #{$value};
+    }
+    .rounded-br-#{$name} {
+      border-bottom-right-radius: #{$value};
+    }
   }
 }
 
@@ -306,76 +340,76 @@
 @each $name in $margin-list {
   @if ($name == auto) {
     .ma-#{$name} {
-      margin: #{$name};
+      margin: #{$name} !important;
     }
     .mt-#{$name} {
-      margin-top: #{$name};
+      margin-top: #{$name} !important;
     }
     .mb-#{$name} {
-      margin-bottom: #{$name};
+      margin-bottom: #{$name} !important;
     }
     .ml-#{$name} {
-      margin-left: #{$name};
+      margin-left: #{$name} !important;
     }
     .mr-#{$name} {
-      margin-right: #{$name};
+      margin-right: #{$name} !important;
     }
     .mx-#{$name} {
-      margin-left: #{$name};
-      margin-right: #{$name};
+      margin-left: #{$name} !important;
+      margin-right: #{$name} !important;
     }
     .my-#{$name} {
-      margin-top: #{$name};
-      margin-bottom: #{$name};
+      margin-top: #{$name} !important;
+      margin-bottom: #{$name} !important;
     }
   } @else {
     .ma-#{$name} {
-      margin: calc((#{$name}px) * 4);
+      margin: calc((#{$name}px) * 4) !important;
     }
     .mt-#{$name} {
-      margin-top: calc((#{$name}px) * 4);
+      margin-top: calc((#{$name}px) * 4) !important;
     }
     .mb-#{$name} {
-      margin-bottom: calc((#{$name}px) * 4);
+      margin-bottom: calc((#{$name}px) * 4) !important;
     }
     .ml-#{$name} {
-      margin-left: calc((#{$name}px) * 4);
+      margin-left: calc((#{$name}px) * 4) !important;
     }
     .mr-#{$name} {
-      margin-right: calc((#{$name}px) * 4);
+      margin-right: calc((#{$name}px) * 4) !important;
     }
     .mx-#{$name} {
-      margin-left: calc((#{$name}px) * 4);
-      margin-right: calc((#{$name}px) * 4);
+      margin-left: calc((#{$name}px) * 4) !important;
+      margin-right: calc((#{$name}px) * 4) !important;
     }
     .my-#{$name} {
-      margin-top: calc((#{$name}px) * 4);
-      margin-bottom: calc((#{$name}px) * 4);
+      margin-top: calc((#{$name}px) * 4) !important;
+      margin-bottom: calc((#{$name}px) * 4) !important;
     }
 
     @if ($name != 0) {
       .ma-n#{$name} {
-        margin: calc((-#{$name}px) * 4);
+        margin: calc((-#{$name}px) * 4) !important;
       }
       .mt-n#{$name} {
-        margin-top: calc((-#{$name}px) * 4);
+        margin-top: calc((-#{$name}px) * 4) !important;
       }
       .mb-n#{$name} {
-        margin-bottom: calc((-#{$name}px) * 4);
+        margin-bottom: calc((-#{$name}px) * 4) !important;
       }
       .ml-n#{$name} {
-        margin-left: calc((-#{$name}px) * 4);
+        margin-left: calc((-#{$name}px) * 4) !important;
       }
       .mr-n#{$name} {
-        margin-right: calc((-#{$name}px) * 4);
+        margin-right: calc((-#{$name}px) * 4) !important;
       }
       .mx-n#{$name} {
-        margin-left: calc((-#{$name}px) * 4);
-        margin-right: calc((-#{$name}px) * 4);
+        margin-left: calc((-#{$name}px) * 4) !important;
+        margin-right: calc((-#{$name}px) * 4) !important;
       }
       .my-n#{$name} {
-        margin-top: calc((-#{$name}px) * 4);
-        margin-bottom: calc((-#{$name}px) * 4);
+        margin-top: calc((-#{$name}px) * 4) !important;
+        margin-bottom: calc((-#{$name}px) * 4) !important;
       }
     }
   }
@@ -386,76 +420,76 @@
     @each $name in $margin-list {
       @if ($name == auto) {
         .ma-#{$size}-#{$name} {
-          margin: #{$name};
+          margin: #{$name} !important;
         }
         .mt-#{$size}-#{$name} {
-          margin-top: #{$name};
+          margin-top: #{$name} !important;
         }
         .mb-#{$size}-#{$name} {
-          margin-bottom: #{$name};
+          margin-bottom: #{$name} !important;
         }
         .ml-#{$size}-#{$name} {
-          margin-left: #{$name};
+          margin-left: #{$name} !important;
         }
         .mr-#{$size}-#{$name} {
-          margin-right: #{$name};
+          margin-right: #{$name} !important;
         }
         .mx-#{$size}-#{$name} {
-          margin-left: #{$name};
-          margin-right: #{$name};
+          margin-left: #{$name} !important;
+          margin-right: #{$name} !important;
         }
         .my-#{$size}-#{$name} {
-          margin-top: #{$name};
-          margin-bottom: #{$name};
+          margin-top: #{$name} !important;
+          margin-bottom: #{$name} !important;
         }
       } @else {
         .ma-#{$size}-#{$name} {
-          margin: calc((#{$name}px) * 4);
+          margin: calc((#{$name}px) * 4) !important;
         }
         .mt-#{$size}-#{$name} {
-          margin-top: calc((#{$name}px) * 4);
+          margin-top: calc((#{$name}px) * 4) !important;
         }
         .mb-#{$size}-#{$name} {
-          margin-bottom: calc((#{$name}px) * 4);
+          margin-bottom: calc((#{$name}px) * 4) !important;
         }
         .ml-#{$size}-#{$name} {
-          margin-left: calc((#{$name}px) * 4);
+          margin-left: calc((#{$name}px) * 4) !important;
         }
         .mr-#{$size}-#{$name} {
-          margin-right: calc((#{$name}px) * 4);
+          margin-right: calc((#{$name}px) * 4) !important;
         }
         .mx-#{$size}-#{$name} {
-          margin-left: calc((#{$name}px) * 4);
-          margin-right: calc((#{$name}px) * 4);
+          margin-left: calc((#{$name}px) * 4) !important;
+          margin-right: calc((#{$name}px) * 4) !important;
         }
         .my-#{$name} {
-          margin-top: calc((#{$name}px) * 4);
-          margin-bottom: calc((#{$name}px) * 4);
+          margin-top: calc((#{$name}px) * 4) !important;
+          margin-bottom: calc((#{$name}px) * 4) !important;
         }
 
         @if ($name != 0) {
           .ma-#{$size}-n#{$name} {
-            margin: calc((-#{$name}px) * 4);
+            margin: calc((-#{$name}px) * 4) !important;
           }
           .mt-#{$size}-n#{$name} {
-            margin-top: calc((-#{$name}px) * 4);
+            margin-top: calc((-#{$name}px) * 4) !important;
           }
           .mb-#{$size}-n#{$name} {
-            margin-bottom: calc((-#{$name}px) * 4);
+            margin-bottom: calc((-#{$name}px) * 4) !important;
           }
           .ml-#{$size}-n#{$name} {
-            margin-left: calc((-#{$name}px) * 4);
+            margin-left: calc((-#{$name}px) * 4) !important;
           }
           .mr-#{$size}-n#{$name} {
-            margin-right: calc((-#{$name}px) * 4);
+            margin-right: calc((-#{$name}px) * 4) !important;
           }
           .mx-#{$size}-n#{$name} {
-            margin-left: calc((-#{$name}px) * 4);
-            margin-right: calc((-#{$name}px) * 4);
+            margin-left: calc((-#{$name}px) * 4) !important;
+            margin-right: calc((-#{$name}px) * 4) !important;
           }
           .my-#{$size}-n#{$name} {
-            margin-top: calc((-#{$name}px) * 4);
-            margin-bottom: calc((-#{$name}px) * 4);
+            margin-top: calc((-#{$name}px) * 4) !important;
+            margin-bottom: calc((-#{$name}px) * 4) !important;
           }
         }
       }
@@ -466,52 +500,52 @@
 //PADDINGS
 @each $name in $padding-list {
   .pa-#{$name} {
-    padding: calc((#{$name}px) * 4);
+    padding: calc((#{$name}px) * 4) !important;
   }
   .pt-#{$name} {
-    padding-top: calc((#{$name}px) * 4);
+    padding-top: calc((#{$name}px) * 4) !important;
   }
   .pb-#{$name} {
-    padding-bottom: calc((#{$name}px) * 4);
+    padding-bottom: calc((#{$name}px) * 4) !important;
   }
   .pl-#{$name} {
-    padding-left: calc((#{$name}px) * 4);
+    padding-left: calc((#{$name}px) * 4) !important;
   }
   .pr-#{$name} {
-    padding-right: calc((#{$name}px) * 4);
+    padding-right: calc((#{$name}px) * 4) !important;
   }
   .px-#{$name} {
-    padding-left: calc((#{$name}px) * 4);
-    padding-right: calc((#{$name}px) * 4);
+    padding-left: calc((#{$name}px) * 4) !important;
+    padding-right: calc((#{$name}px) * 4) !important;
   }
   .py-#{$name} {
-    padding-top: calc((#{$name}px) * 4);
-    padding-bottom: calc((#{$name}px) * 4);
+    padding-top: calc((#{$name}px) * 4) !important;
+    padding-bottom: calc((#{$name}px) * 4) !important;
   }
 
   @if ($name != 0) {
     .pa-n#{$name} {
-      padding: calc((-#{$name}px) * 4);
+      padding: calc((-#{$name}px) * 4) !important;
     }
     .pt-n#{$name} {
-      padding-top: calc((-#{$name}px) * 4);
+      padding-top: calc((-#{$name}px) * 4) !important;
     }
     .pb-n#{$name} {
-      padding-bottom: calc((-#{$name}px) * 4);
+      padding-bottom: calc((-#{$name}px) * 4) !important;
     }
     .pl-n#{$name} {
-      padding-left: calc((-#{$name}px) * 4);
+      padding-left: calc((-#{$name}px) * 4) !important;
     }
     .pr-n#{$name} {
-      padding-right: calc((-#{$name}px) * 4);
+      padding-right: calc((-#{$name}px) * 4) !important;
     }
     .px-n#{$name} {
-      padding-left: calc((-#{$name}px) * 4);
-      padding-right: calc((-#{$name}px) * 4);
+      padding-left: calc((-#{$name}px) * 4) !important;
+      padding-right: calc((-#{$name}px) * 4) !important;
     }
     .py-n#{$name} {
-      padding-top: calc((-#{$name}px) * 4);
-      padding-bottom: calc((-#{$name}px) * 4);
+      padding-top: calc((-#{$name}px) * 4) !important;
+      padding-bottom: calc((-#{$name}px) * 4) !important;
     }
   }
 }
@@ -520,52 +554,52 @@
   @media all and (min-width: #{$width}) {
     @each $name in $padding-list {
       .pa-#{$size}-#{$name} {
-        padding: calc((#{$name}px) * 4);
+        padding: calc((#{$name}px) * 4) !important;
       }
       .pt-#{$size}-#{$name} {
-        padding-top: calc((#{$name}px) * 4);
+        padding-top: calc((#{$name}px) * 4) !important;
       }
       .pb-#{$size}-#{$name} {
-        padding-bottom: calc((#{$name}px) * 4);
+        padding-bottom: calc((#{$name}px) * 4) !important;
       }
       .pl-#{$size}-#{$name} {
-        padding-left: calc((#{$name}px) * 4);
+        padding-left: calc((#{$name}px) * 4) !important;
       }
       .pr-#{$size}-#{$name} {
-        padding-right: calc((#{$name}px) * 4);
+        padding-right: calc((#{$name}px) * 4) !important;
       }
       .px-#{$size}-#{$name} {
-        padding-left: calc((#{$name}px) * 4);
-        padding-right: calc((#{$name}px) * 4);
+        padding-left: calc((#{$name}px) * 4) !important;
+        padding-right: calc((#{$name}px) * 4) !important;
       }
       .py-#{$name} {
-        padding-top: calc((#{$name}px) * 4);
-        padding-bottom: calc((#{$name}px) * 4);
+        padding-top: calc((#{$name}px) * 4) !important;
+        padding-bottom: calc((#{$name}px) * 4) !important;
       }
 
       @if ($name != 0) {
         .pa-#{$size}-n#{$name} {
-          padding: calc((-#{$name}px) * 4);
+          padding: calc((-#{$name}px) * 4) !important;
         }
         .pt-#{$size}-n#{$name} {
-          padding-top: calc((-#{$name}px) * 4);
+          padding-top: calc((-#{$name}px) * 4) !important;
         }
         .pb-#{$size}-n#{$name} {
-          padding-bottom: calc((-#{$name}px) * 4);
+          padding-bottom: calc((-#{$name}px) * 4) !important;
         }
         .pl-#{$size}-n#{$name} {
-          padding-left: calc((-#{$name}px) * 4);
+          padding-left: calc((-#{$name}px) * 4) !important;
         }
         .pr-#{$size}-n#{$name} {
-          padding-right: calc((-#{$name}px) * 4);
+          padding-right: calc((-#{$name}px) * 4) !important;
         }
         .px-#{$size}-n#{$name} {
-          padding-left: calc((-#{$name}px) * 4);
-          padding-right: calc((-#{$name}px) * 4);
+          padding-left: calc((-#{$name}px) * 4) !important;
+          padding-right: calc((-#{$name}px) * 4) !important;
         }
         .py-#{$size}-n#{$name} {
-          padding-top: calc((-#{$name}px) * 4);
-          padding-bottom: calc((-#{$name}px) * 4);
+          padding-top: calc((-#{$name}px) * 4) !important;
+          padding-bottom: calc((-#{$name}px) * 4) !important;
         }
       }
     }
@@ -592,5 +626,29 @@
 @each $type, $value in $font-weights {
   .font-weight-#{$type} {
     font-weight: #{$value};
+  }
+}
+
+@each $name, $value in $headings {
+  .text-#{$name} {
+    font-size: map-deep-get($headings, #{$name}, 'size') !important;
+    font-weight: map-deep-get($headings, #{$name}, 'weight');
+    letter-spacing: map-deep-get($headings, #{$name}, 'letter-spacing') !important;
+    line-height: map-deep-get($headings, #{$name}, 'line-height');
+    font-family: map-deep-get($headings, #{$name}, 'font-family') !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name, $value in $headings {
+      .text-#{$size}-#{$name} {
+        font-size: map-deep-get($headings, #{$name}, 'size') !important;
+        font-weight: map-deep-get($headings, #{$name}, 'weight');
+        letter-spacing: map-deep-get($headings, #{$name}, 'letter-spacing') !important;
+        line-height: map-deep-get($headings, #{$name}, 'line-height');
+        font-family: map-deep-get($headings, #{$name}, 'font-family') !important;
+      }
+    }
   }
 }

@@ -61,6 +61,7 @@ const Btn: FunctionComponent<BtnType> = ({
     { el: 'mk-btn--disabled', val: disabled },
     { el: 'mk-btn--block', val: block },
     { el: 'mk-btn--icon', val: icon },
+    { el: 'mk-btn--round', val: icon },
     { el: 'mk-btn--fab', val: fab },
     { el: 'mk-btn--tile', val: tile },
     { el: 'mk-btn--text', val: text },
@@ -102,7 +103,7 @@ const Btn: FunctionComponent<BtnType> = ({
           className={useClassHtml('mk-btn', className, classList)}
           style={useStyleHtml(styleList, style)}
           type="button"
-          onClick={() => onClick}
+          onClick={onClick}
         >
           <div className="mk-btn--content">
             <span>{children}</span>

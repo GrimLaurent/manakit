@@ -22,13 +22,18 @@
   background-color: #f5f5f5;
 
   //default size
-  height: 36px;
-  min-width: 64px;
+
   padding: 0 16px;
   font-size: 0.875rem;
 
   &:hover {
     opacity: 0.85;
+  }
+
+  &.mk-btn:not(.mk-btn--icon):not(.mk-btn--fab) {
+    height: 36px;
+    min-width: 64px;
+    font-size: 0.875rem;
   }
 
   &.mk-btn--x-small:not(.mk-btn--icon):not(.mk-btn--fab) {
@@ -54,6 +59,10 @@
     min-width: 92px;
     padding: 0 23.1111111111px;
     font-size: 1rem;
+  }
+
+  .mk-btn--round {
+    border-radius: 50%;
   }
 
   &.mk-btn--icon:not(.mk-btn--fab) {

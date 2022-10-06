@@ -12,9 +12,16 @@
 import './Icon.scss';
 import React, { Fragment, FunctionComponent } from 'react';
 import { IconType } from './types/Icon';
-import { useIdHtml, useClassHtml, useStyleHtml } from '../../utils';
+import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../utils';
+
+//components
+import MDIIcon from './components/MdiIcon';
+
+//helpers
+import getSizeSVG from './helpers/getSizeSVG';
 
 const Icon: FunctionComponent<IconType> = ({
+  title,
   id,
   className,
   style,
@@ -25,6 +32,8 @@ const Icon: FunctionComponent<IconType> = ({
   xLarge,
   dense,
   disabled,
+  size,
+  color,
 }) => {
   const classList = [
     { el: 'mk-icon--x-small', val: xSmall },
@@ -35,14 +44,22 @@ const Icon: FunctionComponent<IconType> = ({
     { el: 'mk-icon--disabled', val: disabled },
   ];
 
+  const styleList = {
+    width: useSizeHtml(size ? useSizeHtml(size) : getSizeSVG(xSmall, small, large, xLarge, dense)),
+    height: useSizeHtml(size ? useSizeHtml(size) : getSizeSVG(xSmall, small, large, xLarge, dense)),
+  };
+
   return (
     <Fragment>
       <span
         id={useIdHtml(id)}
         className={useClassHtml('mk-icon', className, classList)}
         style={useStyleHtml({}, style)}
+        title={title}
       >
-        {children}
+        <MDIIcon styleList={styleList} dense={dense} disabled={disabled} color={color}>
+          {children}
+        </MDIIcon>
       </span>
     </Fragment>
   );

@@ -1,4 +1,8 @@
-import { ElementHTMLDefaultType_Extended, ElementSizeDefaultType_Extended } from '../../../../types';
+import {
+  ElementClassHTMLType,
+  ElementHTMLDefaultType_Extended,
+  ElementSizeDefaultType_Extended,
+} from '../../../../types';
 
 interface ModuleCustomType {
   absolute?: boolean;
@@ -11,6 +15,7 @@ interface ModuleCustomType {
   rounded?: boolean | string;
   shaped?: boolean;
   tile?: boolean;
+  contentClass?: ElementClassHTMLType;
 }
 
 export interface ToolbarType

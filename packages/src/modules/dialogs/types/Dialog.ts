@@ -2,7 +2,9 @@ import { ElementHTMLDefaultType_Extended, ElementSizeDefaultType_Extended } from
 
 interface ModuleCustomType {
   open?: boolean;
+  close?: Function;
   fullscreen?: boolean;
+  permanent?: boolean;
 }
 
 export interface DialogType

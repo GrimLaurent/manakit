@@ -3608,6 +3608,67 @@ makeerror@1.0.12:
   dependencies:
     tmpl "1.0.5"
 
+manakit@0.0.374:
+  version "0.0.374"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.374.tgz#b25b249fb8d7495345969e2d89c7f448de11a63b"
+  integrity sha512-yXtZ2Vv4OsOOmp3y7STcUQpUSmWSBrwFey3TaAXVfdfYIxi0AvexGDL3WScTKqclmBDYytiSFwzdHy00lIDIhg==
+  dependencies:
+    manakit "^0.0.373"
+
+manakit@0.0.375:
+  version "0.0.375"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.375.tgz#75ce3082a1cc4bdfb2e2bd015825e1435c4106cc"
+  integrity sha512-P09tB43b/lg6gF7JsQTZ4IG9xADtHczWYfJiaRdMEFMIeFgDc85fjI/u5OXapN+S7yoEzfcjQ6clxU2peOojYw==
+  dependencies:
+    manakit "0.0.374"
+
+manakit@0.0.376:
+  version "0.0.376"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.376.tgz#8100158a0435a6befb05280768b27cccc96cdb62"
+  integrity sha512-+kZ2J2QSptYQplyxpvYoP83h5gQPnEPYIo3hU/oElt9U7V+UN+nhOcCMAVxGl+8wkuTZYusRCilB3VkDMQMIPg==
+  dependencies:
+    manakit "0.0.375"
+
+manakit@0.0.377:
+  version "0.0.377"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.377.tgz#3f5401b1f956d695a7433852d23daf5151d9dc97"
+  integrity sha512-wk3Qe7/A/DNSAoH9Wam8N5Of7E/0TNHVN4AynS1weTSzCqYli/lo0rRGB5Pkd+/AzCQJavm4sXvlQZNunib13w==
+  dependencies:
+    manakit "0.0.376"
+
+manakit@0.0.378:
+  version "0.0.378"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.378.tgz#c07c60d32f7eeaea43db898fa739b7d2bb018782"
+  integrity sha512-30ILVf0wvWbS28BZDE31b2Eugal/Xu81skj4n+sP70yD24MXduNmcwYFvnXNolSPI4z8TtxV3fblPZlFvDeGgg==
+  dependencies:
+    manakit "0.0.377"
+
+manakit@0.0.379:
+  version "0.0.379"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.379.tgz#f3e6e5a1f14d2a6f479aa4b7bbd83085162ba28c"
+  integrity sha512-w322+XOtVZJHOWBlHPgFXhTQf60Jzv1FqvyNkpx4jfUkw6ERSIJ75dQohwMe0M6zVDrBMMRfsjMOHPlqu7AbUg==
+  dependencies:
+    manakit "0.0.378"
+
+manakit@0.0.381:
+  version "0.0.381"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.381.tgz#38e79d51579d6b4f01800d4985f7946d143cba17"
+  integrity sha512-dOjksfQB/q3YTOj9//5FAc+Ws8JHHID/X50AoY/aFh5opXSsgwOJYiy3QqCBbgB4szGX2wIWFIUY+GihwAfvEw==
+  dependencies:
+    manakit "0.0.379"
+
+manakit@0.0.382:
+  version "0.0.382"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.382.tgz#07899b3d1356f7e97a7d8a5b2729c7c73dd84a79"
+  integrity sha512-v3Wg7ln+Fm+pTdHXufqmHhTZCt2/UkfB7LHWRY2Ql2+Pq9LXi9v/spfL3tVXjUMELNv9CGzSiYFFe8XwKYToUg==
+  dependencies:
+    manakit "0.0.381"
+
+manakit@^0.0.373:
+  version "0.0.373"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.373.tgz#f0c3a2ec4cce14a172e327faf53a6280cbaf2dc5"
+  integrity sha512-2iFbZSdkCUHgtkQ/bHtgs47zc92MET5IcvOIpjKCtS2QqssdVoB2b9wviRAn8/Uyx+yQ278NbrwOrjSB3Q2OBQ==
+
 mdn-data@2.0.14:
   version "2.0.14"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"

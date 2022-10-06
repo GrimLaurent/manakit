@@ -10,7 +10,7 @@
   width: 100%;
   z-index: 6;
 
-  .mk-dialog--active {
+  &.mk-dialog--active {
     display: flex;
   }
 
