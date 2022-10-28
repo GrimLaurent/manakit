@@ -15,15 +15,16 @@ import './App.scss';
 import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { AppType } from './types/App';
 import { useIdHtml, useClassHtml, useStyleHtml } from '../../utils';
+import { generateTheme } from './theme';
 
-const App: FunctionComponent<AppType> = ({ id, className, style, children, noSSR }) => {
+const App: FunctionComponent<AppType> = ({ id, className, style, children, noSSR, theme, isDark }) => {
   if (noSSR) {
     const [render, setRender] = useState(null) as any;
 
     useEffect(() => {
       // fix Hydration failed because the initial UI does not match what was rendered on the server
       setRender(
-        <Structural id={id} className={className} style={style}>
+        <Structural id={id} className={className} style={style} theme={theme} isDark={isDark}>
           {children}
         </Structural>,
       );
@@ -32,7 +33,7 @@ const App: FunctionComponent<AppType> = ({ id, className, style, children, noSSR
     return render;
   } else {
     return (
-      <Structural id={id} className={className} style={style}>
+      <Structural id={id} className={className} style={style} theme={theme} isDark={isDark}>
         {children}
       </Structural>
     );
@@ -46,16 +47,27 @@ export default App;
  * @param className
  * @param style
  * @param children
+ * @param theme
+ * @param isDark
  * @returns React.ReactNode | React.ReactChild[]
  */
-const Structural: FunctionComponent<AppType> = ({ id, className, style, children }) => {
-  console.log('children', children);
+const Structural: FunctionComponent<AppType> = ({ id, className, style, children, theme, isDark }) => {
+  const [useTheme, setUseTheme] = useState('light');
+
+  useEffect(() => {
+    const response = generateTheme(theme);
+    setUseTheme(response.default);
+  }, []);
+
+  useEffect(() => {
+    if (isDark !== undefined) isDark ? setUseTheme('dark') : setUseTheme('light');
+  }, [isDark]);
 
   return (
     <Fragment>
       <div
         id={useIdHtml('app', id)}
-        className={useClassHtml(`mk-app`, className)}
+        className={useClassHtml(`mk-app theme--${useTheme}`, className)}
         style={useStyleHtml({}, style)}
         data-app="true"
       >

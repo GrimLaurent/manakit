@@ -36,8 +36,9 @@ const NextApp: NextPage = () => {
         </Head>
         <Appbar>
           <div>
-            <h1 className="text-uppercase text-caption">{t('portfolio')}</h1>
-            <h4 className="text-h5 font-weight-black mt-n1">Bonsoir</h4>
+            <h1 className="text-uppercase text-caption primary--text">Portfolio</h1>
+            <h4 className="text-h5 font-weight-black mt-n1 primary">Bonsoir</h4>
+            <h4 className="text-h5 font-weight-black mt-n1 text--primary">Bonsoir</h4>
           </div>
           <Spacer />
           <Btn
