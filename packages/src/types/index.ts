@@ -9,7 +9,7 @@ import {
   ElementHTMLDefaultType_Extended,
 } from './dom';
 
-import { DefaultThemeType, ThemeApiType, CoreThemeType, CustomThemeType } from './theming';
+import { ManakitPreset, UserPreset } from './theming';
 
 import { ColsSizeType, ColsOrderType, ColsAlignSelftType } from './cols';
 
@@ -37,7 +37,6 @@ export type {
   ElementHTMLDefaultRequiredType,
   ElementHTMLDefaultRequiredType_Extended,
   ElementHTMLDefaultType_Extended,
-  DefaultThemeType,
   ColsSizeType,
   ColsOrderType,
   ColsAlignSelftType,
@@ -47,10 +46,7 @@ export type {
   ElementSizeDefaultType_Extended,
   SizeType,
   RoundedType,
-  ThemeApiType,
   ElevationType,
-  CoreThemeType,
-  CustomThemeType,
   ElementActionOnClikType,
   ElementActionHrefType,
   ElementActionType_Extend,
@@ -58,4 +54,6 @@ export type {
   AlignContentType,
   JustifyType,
   AlignSelfType,
+  ManakitPreset,
+  UserPreset,
 };

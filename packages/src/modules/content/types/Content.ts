@@ -1,7 +1,5 @@
 import { ElementHTMLDefaultType_Extended } from '../../../types';
 
-interface ModuleCustomType {
-  main?: boolean;
-}
+interface ModuleCustomType {}
 
 export interface ContentType extends ModuleCustomType, ElementHTMLDefaultType_Extended {}

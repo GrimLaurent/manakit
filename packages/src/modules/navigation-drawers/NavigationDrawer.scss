@@ -1,28 +1,46 @@
 .mk-navigation-drawer {
+  // display: flex;
+  // flex-direction: column;
+  // left: 0;
+  // top: 0;
+  // overflow: hidden;
+  // pointer-events: auto;
+  // height: 100%;
+  // width: 300px;
+  // max-width: 100%;
+  // transform: translateX(0%);
+  height: 100vh;
+  top: 0px;
+  transform: translateX(0%);
+  width: 300px;
+  background-color: rgb(39, 39, 39);
+  border-color: rgb(39, 39, 39);
+
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   left: 0;
-  top: 0;
+  max-width: 100%;
   overflow: hidden;
   pointer-events: auto;
-  height: 100%;
-  width: 256px;
-  max-width: 100%;
-  transform: translateX(0%);
+  top: 0;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, visibility, width;
 
   // Color default
   background-color: #fff;
 
-  &.navigation-drawer--absolute,
-  &.navigation-drawer--fixed {
-    z-index: 1;
+  &.mk-navigation-drawer--absolute,
+  &.mk-navigation-drawer--fixed {
+    z-index: 6;
   }
 
-  &.navigation-drawer--absolute {
+  &.mk-navigation-drawer--absolute {
     position: absolute;
   }
 
-  &.navigation-drawer--fixed {
+  &.mk-navigation-drawer--fixed {
     position: fixed;
   }
 
@@ -45,6 +63,10 @@
 
   &.navigation-drawer--temporary.is--open {
     z-index: 7;
+    transform: translateX(0%);
+  }
+
+  &.mk-navigation-drawer--open {
     transform: translateX(0%);
   }
 

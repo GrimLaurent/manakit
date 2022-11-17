@@ -17,8 +17,11 @@ import { useClassHtml } from '../../../utils';
 //dependencies
 import Content from '../../content';
 
-const Container: FunctionComponent<ContainerType> = ({ id, className, style, children, fluid }) => {
-  const classList = [{ el: 'is--fluid', val: fluid }];
+const Container: FunctionComponent<ContainerType> = ({ id, className, style, children, fluid, fillHeight }) => {
+  const classList = [
+    { el: 'is--fluid', val: fluid },
+    { el: 'fill-height ', val: fillHeight },
+  ];
 
   return (
     <Fragment>

@@ -1,22 +1,3 @@
 @import './tools/index';
 @import './settings/index';
 @import './generic/index';
-
-#mk {
-  $footer-border-radius: 0 !default;
-  $footer-shaped-border-radius: map-get($rounded, 'xl') $footer-border-radius !default;
-
-  .demo-base {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border-radius: $footer-border-radius;
-  }
-
-  .demo-base-shaped {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border-radius: $footer-shaped-border-radius;
-  }
-}

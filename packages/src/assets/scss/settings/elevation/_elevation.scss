@@ -251,6 +251,6 @@ $shadow-key-ambient: map-deep-merge(
 
 @each $name, $value in $shadow-key-umbra {
   .elevation-#{$name} {
-    box-shadow: $value, map-get($shadow-key-penumbra, $name), map-get($shadow-key-ambient, $name);
+    box-shadow: $value, map-get($shadow-key-penumbra, $name), map-get($shadow-key-ambient, $name) !important;
   }
 }

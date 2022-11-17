@@ -15,7 +15,9 @@ import './App.scss';
 import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { AppType } from './types/App';
 import { useIdHtml, useClassHtml, useStyleHtml } from '../../utils';
-import { generateTheme } from './theme';
+
+import Theme from '../../services/theme';
+import { preset } from '../../presets/default';
 
 const App: FunctionComponent<AppType> = ({ id, className, style, children, noSSR, theme, isDark }) => {
   if (noSSR) {
@@ -52,26 +54,62 @@ export default App;
  * @returns React.ReactNode | React.ReactChild[]
  */
 const Structural: FunctionComponent<AppType> = ({ id, className, style, children, theme, isDark }) => {
-  const [useTheme, setUseTheme] = useState('light');
+  const [useTheme, setUseTheme] = useState('');
+
+  const styleList = {
+    transformOrigin: 'center top 0px',
+  };
 
   useEffect(() => {
-    const response = generateTheme(theme);
-    setUseTheme(response.default);
+    // theming
+    let useTheme = preset.theme.default; // default
+
+    if (theme?.theme?.default && isDark === undefined) {
+      useTheme = theme?.theme?.default;
+    } else if (isDark !== undefined) {
+      isDark ? (useTheme = 'dark') : 'light';
+    }
+
+    setUseTheme(useTheme);
+
+    // generate theme (scss/css)
+    Theme(theme, isDark);
+  }, [theme, isDark]);
+
+  useEffect(() => {
+    // control size appbar for generate spacing
+    console.log('HTML init mk-appbar', getElHTMLHeight('mk-app-bar--fixed'));
+    console.log('HTML init mk-footer', getElHTMLHeight('mk-footer--fixed'));
+    console.log('HTML init mk-navigation', getElHTMLWidth('mk-navigation-drawer--open'));
+
+    window.addEventListener('resize', () => {
+      console.log('HTML event mk-appbar', getElHTMLHeight('mk-app-bar--fixed'));
+      console.log('HTML event mk-footer', getElHTMLHeight('mk-footer--fixed'));
+      console.log('HTML event mk-navigation', getElHTMLWidth('mk-navigation-drawer--open'));
+    });
   }, []);
 
-  useEffect(() => {
-    if (isDark !== undefined) isDark ? setUseTheme('dark') : setUseTheme('light');
-  }, [isDark]);
+  function getElHTMLHeight(el: string) {
+    const appbarList = document.getElementsByClassName(el);
+    if (appbarList && appbarList[0]?.clientHeight) return appbarList[0]?.clientHeight;
+    else return 0;
+  }
+
+  function getElHTMLWidth(el: string) {
+    const appbarList = document.getElementsByClassName(el);
+    if (appbarList && appbarList[0]?.clientHeight) return appbarList[0]?.clientWidth;
+    else return 0;
+  }
 
   return (
     <Fragment>
       <div
         id={useIdHtml('app', id)}
         className={useClassHtml(`mk-app theme--${useTheme}`, className)}
-        style={useStyleHtml({}, style)}
+        style={useStyleHtml(styleList, style)}
         data-app="true"
       >
-        <div className={useClassHtml(`mk-app--wrap`)}>{children}</div>
+        <div className={`mk-app--wrap`}>{children}</div>
       </div>
     </Fragment>
   );

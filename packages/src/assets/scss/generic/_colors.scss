@@ -1,60 +1,40 @@
-@mixin background-color($color_value) {
-  background-color: $color_value !important;
-  border-color: $color_value !important;
-}
-@mixin text-color($color_value) {
-  color: $color_value !important;
-  caret-color: $color_value !important;
-}
+.mk-app {
+  background: var(--manakit-background);
+  color: var(--manakit-on-background);
 
-// Put the loop in a function so it can't leak
-@each $color_name, $color_value in $shades {
-  .mk-app .#{$color_name} {
-    @include background-color($color_value);
+  // Surface
+  .mk-surface {
+    background-color: var(--manakit-surface);
+    border-color: var(--manakit-surface);
+    color: var(--manakit-on-surface);
   }
 
-  .mk-app .text--#{$color_name} {
-    @include text-color($color_value);
+  .mk-surface--outlined {
+    border: thin solid var(--manakit-outline);
   }
-}
 
-@if ($color-use-mk) {
-  @each $color_name, $color_value in $colors-manakit {
-    .mk-app .#{$color_name} {
-      @include background-color($color_value);
-    }
+  .mk-footer {
+    background-color: var(--manakit-surface);
+    border-color: var(--manakit-surface);
+    color: var(--manakit-on-surface);
+  }
 
-    .mk-app .text--#{$color_name} {
-      @include text-color($color_value);
+  .mk-surface--shaped {
+    border-radius: 24px 0;
+  }
 
-      &.mk-icon svg g path {
-        //color MDI SVG
-        fill: $color_value !important;
-      }
+  // Themings dependencies
+  &.theme--light {
+    code {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: currentColor;
     }
   }
-}
 
-@if ($color-use-md) {
-  @each $color_name, $color_color in $colors {
-    @each $color_type, $color_value in $color_color {
-      @if ($color_type == 'base') {
-        .mk-app .#{$color_name} {
-          @include background-color($color_value);
-        }
-
-        .mk-app .text--#{$color_name} {
-          @include text-color($color_value);
-        }
-      } @else if ($color_type != 'shades') {
-        .mk-app .#{$color_name}.#{$color_type} {
-          @include background-color($color_value);
-        }
-
-        .mk-app .text--#{$color_name}.text--#{$color_type} {
-          @include text-color($color_value);
-        }
-      }
+  &.theme--dark {
+    code {
+      background-color: hsla(0, 0%, 100%, 0.1);
+      color: currentColor;
     }
   }
 }

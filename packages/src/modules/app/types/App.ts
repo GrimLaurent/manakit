@@ -1,10 +1,9 @@
-import { ElementHTMLDefaultType_Extended } from '../../../types';
+import { ElementHTMLDefaultType_Extended, UserPreset } from '../../../types';
 
 interface ModuleCustomType {
   noSSR?: boolean;
   isDark?: boolean;
-  theme?: any;
-  themeDefault?: 'light' | 'dark';
+  theme?: UserPreset;
 }
 
 export interface AppType extends ModuleCustomType, ElementHTMLDefaultType_Extended {}

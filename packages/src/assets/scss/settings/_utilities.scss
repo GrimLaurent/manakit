@@ -1,7 +1,7 @@
 // DISPLAY
 @each $name in $display-list {
   .d-#{$name} {
-    display: #{$name};
+    display: #{$name} !important;
   }
 }
 
@@ -9,7 +9,7 @@
   @media all and (min-width: #{$width}) {
     @each $name in $display-list {
       .d-#{$size}-#{$name} {
-        display: #{$name};
+        display: #{$name} !important;
       }
     }
   }
@@ -18,7 +18,7 @@
 @media print {
   @each $name in $display-list {
     .d-print-#{$name} {
-      display: #{$name};
+      display: #{$name} !important;
     }
   }
 }
@@ -26,7 +26,7 @@
 // FLEX
 @each $name in $flex-list {
   .flex-#{$name} {
-    flex-direction: #{$name};
+    flex-direction: #{$name} !important;
   }
 }
 
@@ -34,7 +34,7 @@
   @media all and (min-width: #{$width}) {
     @each $name in $flex-list {
       .flex-#{$size}-#{$name} {
-        flex-direction: #{$name};
+        flex-direction: #{$name} !important;
       }
     }
   }
@@ -42,7 +42,7 @@
 
 @each $name in $flex-align-list {
   .align-#{$name} {
-    align-items: flex-#{$name};
+    align-items: #{$name} !important;
   }
 }
 
@@ -50,7 +50,7 @@
   @media all and (min-width: #{$width}) {
     @each $name in $flex-align-list {
       .align-#{$size}-#{$name} {
-        align-items: flex-#{$name};
+        align-items: #{$name} !important;
       }
     }
   }
@@ -59,11 +59,11 @@
 @each $name in $flex-align-content-list {
   @if ($name == center) {
     .align-content-#{$name} {
-      align-content: #{$name};
+      align-content: #{$name} !important;
     }
   } @else {
     .align-content-#{$name} {
-      align-content: flex-#{$name};
+      align-content: flex-#{$name} !important;
     }
   }
 }
@@ -73,11 +73,11 @@
     @each $name in $flex-align-content-list {
       @if ($name == center) {
         .align-#{$size}-content-#{$name} {
-          align-content: #{$name};
+          align-content: #{$name} !important;
         }
       } @else {
         .align-#{$size}-content-#{$name} {
-          align-content: flex-#{$name};
+          align-content: flex-#{$name} !important;
         }
       }
     }
@@ -87,11 +87,11 @@
 @each $name in $flex-align-self-list {
   @if ($name == center) {
     .align-self-#{$name} {
-      align-self: #{$name};
+      align-self: #{$name} !important;
     }
   } @else {
     .align-self-#{$name} {
-      align-self: flex-#{$name};
+      align-self: flex-#{$name} !important;
     }
   }
 }
@@ -101,11 +101,11 @@
     @each $name in $flex-align-self-list {
       @if ($name == center) {
         .align-#{$size}-self-#{$name} {
-          align-self: #{$name};
+          align-self: #{$name} !important;
         }
       } @else {
         .align-#{$size}-self-#{$name} {
-          align-self: flex-#{$name};
+          align-self: flex-#{$name} !important;
         }
       }
     }
@@ -114,10 +114,10 @@
 
 @each $name in $flex-align-grow-shrink-list {
   .align-grow-#{$name} {
-    flex-grow: #{$name};
+    flex-grow: #{$name} !important;
   }
   .align-shrink-#{$name} {
-    flex-shrink: #{$name};
+    flex-shrink: #{$name} !important;
   }
 }
 
@@ -125,10 +125,10 @@
   @media all and (min-width: #{$width}) {
     @each $name in $flex-align-grow-shrink-list {
       .align-#{$size}-grow-#{$name} {
-        flex-grow: #{$name};
+        flex-grow: #{$name} !important;
       }
       .align-#{$size}-shrink-#{$name} {
-        flex-shrink: #{$name};
+        flex-shrink: #{$name} !important;
       }
     }
   }
@@ -136,7 +136,7 @@
 
 @each $name in $flex-align-justify-list {
   .justify-#{$name} {
-    justify-content: flex-#{$name};
+    justify-content: #{$name} !important;
   }
 }
 
@@ -144,7 +144,7 @@
   @media all and (min-width: #{$width}) {
     @each $name in $flex-align-justify-list {
       .justify-#{$size}-#{$name} {
-        justify-content: flex-#{$name};
+        justify-content: #{$name} !important;
       }
     }
   }
@@ -152,7 +152,7 @@
 
 @each $name in $flex-wrap-list {
   .flex-#{$name} {
-    flex-wrap: #{$name};
+    flex-wrap: #{$name} !important;
   }
 }
 
@@ -160,7 +160,7 @@
   @media all and (min-width: #{$width}) {
     @each $name in $flex-wrap-list {
       .flex-#{$size}-#{$name} {
-        flex-wrap: #{$name};
+        flex-wrap: #{$name} !important;
       }
     }
   }
@@ -271,67 +271,67 @@
 @each $name, $value in $rounded {
   @if ($name == null) {
     .rounded {
-      border-radius: #{$value};
+      border-radius: #{$value} !important;
     }
     .rounded-t {
-      border-top-left-radius: #{$value};
-      border-top-right-radius: #{$value};
+      border-top-left-radius: #{$value} !important;
+      border-top-right-radius: #{$value} !important;
     }
     .rounded-b {
-      border-bottom-left-radius: #{$value};
-      border-bottom-right-radius: #{$value};
+      border-bottom-left-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
     }
     .rounded-r {
-      border-top-right-radius: #{$value};
-      border-bottom-right-radius: #{$value};
+      border-top-right-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
     }
     .rounded-l {
-      border-top-left-radius: #{$value};
-      border-bottom-left-radius: #{$value};
+      border-top-left-radius: #{$value} !important;
+      border-bottom-left-radius: #{$value} !important;
     }
     .rounded-tl {
-      border-top-left-radius: #{$value};
+      border-top-left-radius: #{$value} !important;
     }
     .rounded-tr {
-      border-top-right-radius: #{$value};
+      border-top-right-radius: #{$value} !important;
     }
     .rounded-bl {
-      border-bottom-left-radius: #{$value};
+      border-bottom-left-radius: #{$value} !important;
     }
     .rounded-br {
-      border-bottom-right-radius: #{$value};
+      border-bottom-right-radius: #{$value} !important;
     }
   } @else {
     .rounded-#{$name} {
-      border-radius: #{$value};
+      border-radius: #{$value} !important;
     }
     .rounded-t-#{$name} {
-      border-top-left-radius: #{$value};
-      border-top-right-radius: #{$value};
+      border-top-left-radius: #{$value} !important;
+      border-top-right-radius: #{$value} !important;
     }
     .rounded-b-#{$name} {
-      border-bottom-left-radius: #{$value};
-      border-bottom-right-radius: #{$value};
+      border-bottom-left-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
     }
     .rounded-r-#{$name} {
-      border-top-right-radius: #{$value};
-      border-bottom-right-radius: #{$value};
+      border-top-right-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
     }
     .rounded-l-#{$name} {
-      border-top-left-radius: #{$value};
-      border-bottom-left-radius: #{$value};
+      border-top-left-radius: #{$value} !important;
+      border-bottom-left-radius: #{$value} !important;
     }
     .rounded-tl-#{$name} {
-      border-top-left-radius: #{$value};
+      border-top-left-radius: #{$value} !important;
     }
     .rounded-tr-#{$name} {
-      border-top-right-radius: #{$value};
+      border-top-right-radius: #{$value} !important;
     }
     .rounded-bl-#{$name} {
-      border-bottom-left-radius: #{$value};
+      border-bottom-left-radius: #{$value} !important;
     }
     .rounded-br-#{$name} {
-      border-bottom-right-radius: #{$value};
+      border-bottom-right-radius: #{$value} !important;
     }
   }
 }

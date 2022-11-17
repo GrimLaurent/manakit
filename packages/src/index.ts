@@ -20,6 +20,7 @@ import { Card, CardTitle, CardSubTitle, CardText, CardActions } from './modules/
 import { Chip } from './modules/chips';
 import { Table } from './modules/tables';
 import { Dialog } from './modules/dialogs';
+import { Responsive } from './modules/responsive';
 import {
   ExpansionPanels,
   ExpansionPanel,
@@ -97,4 +98,5 @@ export {
   Menu,
   Input,
   Textfield,
+  Responsive,
 };

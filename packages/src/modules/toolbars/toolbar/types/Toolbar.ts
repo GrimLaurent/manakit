@@ -2,17 +2,19 @@ import {
   ElementClassHTMLType,
   ElementHTMLDefaultType_Extended,
   ElementSizeDefaultType_Extended,
+  RoundedType,
+  ElevationType,
 } from '../../../../types';
 
 interface ModuleCustomType {
   absolute?: boolean;
   bottom?: boolean;
   dense?: boolean;
-  elevation?: number | string;
+  elevation?: ElevationType;
   flat?: boolean;
   floating?: boolean;
   outlined?: boolean;
-  rounded?: boolean | string;
+  rounded?: boolean | RoundedType;
   shaped?: boolean;
   tile?: boolean;
   contentClass?: ElementClassHTMLType;

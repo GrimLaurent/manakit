@@ -1,7 +1,5 @@
+@use 'sass:math';
 @import '../tools/_functions.sass';
-
-$color-use-md: true !default;
-$color-use-mk: true !default;
 
 $body-font-family: 'Roboto', sans-serif !default;
 $font-size-root: 16px !default;
@@ -12,11 +10,11 @@ $display-list: (none, inline, inline-block, block, table, table-cell, table-row,
 $margin-list: (auto, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 $padding-list: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 $flex-list: (row, row-reverse, column, column-reverse);
-$flex-align-list: (start, end, center, baseline, baseline);
+$flex-align-list: (flex-start, flex-end, center, baseline, baseline);
 $flex-align-content-list: (start, end, center, space-between, space-around);
 $flex-align-self-list: (start, end, center, baseline, stretch);
 $flex-align-grow-shrink-list: (0, 1);
-$flex-align-justify-list: (start, end, center, between, around);
+$flex-align-justify-list: (flex-start, flex-end, center, between, around);
 $flex-wrap-list: (nowrap, wrap, wrap-reverse);
 $float-list: (left, right, none);
 $overflow-list: (auto, hidden, visible);
@@ -28,7 +26,7 @@ $rounded: () !default;
 $rounded: map-deep-merge(
   (
     0: 0,
-    'sm': $border-radius-root / 2,
+    'sm': math.div($border-radius-root, 2),
     null: $border-radius-root,
     'lg': $border-radius-root * 2,
     'xl': $border-radius-root * 6,

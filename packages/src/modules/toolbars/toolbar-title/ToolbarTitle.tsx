@@ -12,7 +12,7 @@
 import './ToolbarTitle.scss';
 import React, { Fragment, FunctionComponent } from 'react';
 import { ToolbarTitleType } from './types/ToolbarTitle';
-import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../../utils';
+import { useIdHtml, useClassHtml, useStyleHtml } from '../../../utils';
 
 const ToolbarTitle: FunctionComponent<ToolbarTitleType> = ({ id, className, style, children }) => {
   return (

@@ -1,14 +1,6 @@
-@import './variables';
-
 .mk-app {
   display: flex;
   position: relative;
-  background: $app-background-color;
-  color: transparentize($app-text-color, 0.13);
-
-  a {
-    cursor: pointer;
-  }
 
   &--wrap {
     flex: 1 1 auto;

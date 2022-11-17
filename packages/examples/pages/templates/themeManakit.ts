@@ -2,14 +2,15 @@ const Manakit = {
   theme: {
     themes: {
       light: {
-        primary: 'pink',
+        // primary: 'pink',
         hello: '#fbbc07',
-        background: '#fffbfe',
+        // background: '#fffbfe',
         text: '#36393f',
+        surface: '#ffffff',
       },
       dark: {
         bite: 'pink',
-        background: '#36393f',
+        // background: '#36393f',
         text: '#fffbfe',
       },
     },

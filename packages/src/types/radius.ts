@@ -1,1 +1,1 @@
-export type RoundedType = boolean | 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'pill' | 'circle';
+export type RoundedType = boolean | 'none' | 'xs' | 'sm' | 'lg' | 'xl' | 'pill' | 'circle';

@@ -12,7 +12,7 @@
 import './ToolbarItems.scss';
 import React, { Fragment, FunctionComponent } from 'react';
 import { ToolbarItemsType } from './types/ToolbarItems';
-import { useIdHtml, useClassHtml, useStyleHtml, useSizeHtml } from '../../../utils';
+import { useIdHtml, useClassHtml, useStyleHtml } from '../../../utils';
 
 const ToolbarItems: FunctionComponent<ToolbarItemsType> = ({ id, className, style, children }) => {
   return (
