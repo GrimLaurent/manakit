@@ -26,6 +26,8 @@ import {
   ToolbarTitle,
 } from 'manakit';
 
+import menujson from '../menu.json';
+
 export const siteTitle = 'Manakit Sandbox (Nextjs)';
 import { mdiGithub, mdiNpm, mdiTwitter, mdiDisqus } from '@mdi/js';
 
@@ -49,6 +51,8 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
     router.push(e.target.href);
   };
 
+  console.log('menujson', menujson);
+
   return (
     <Fragment>
       <Head>
@@ -66,8 +70,15 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
         <NavigationDrawer app>
           <List dense>
             <ListItemGroup>
-              <ListItem>List</ListItem>
-              <ListItem>List</ListItem>
+              {menujson.map((menu: any) => {
+                return (
+                  <ListItem>
+                    <Link href={menu.path} key={menu.key}>
+                      {menu.key}
+                    </Link>
+                  </ListItem>
+                );
+              })}
             </ListItemGroup>
           </List>
         </NavigationDrawer>
@@ -78,9 +89,9 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
               <CardText>Bonjour is card test</CardText>
             </Responsive>
           </Card> */}
-          {/* {children} */}
           {/* </Container> */}
           Main Content
+          {children}
         </Main>
         <Footer app className={'justify-center'}>
           <a href="https://github.com/manastone" target={'_blank'} className={'primary--text d-inline-block mx-2 '}>
