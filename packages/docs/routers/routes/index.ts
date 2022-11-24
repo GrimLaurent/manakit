@@ -1,8 +1,19 @@
-import path from 'path';
+import { ABOUT_MENU  } from './about';
+import { INTRODUCTION_MENU  } from './introduction';
+import { COMPONENTS_MENU  } from './components';
+import { FEATURES_MENU  } from './features';
+import { GETTING_STARTED_MENU  } from './getting-started';
+import { STYLES_MENU  } from './styles';
 
-export const ABOUT_PATH = path.join(process.cwd(), 'content/en/about');
-export const INTRODUCTION_PATH = path.join(process.cwd(), 'content/en/introduction');
-export const COMPONENTS_PATH = path.join(process.cwd(), 'content/en/components');
-export const FEATURES_PATH = path.join(process.cwd(), 'content/en/features');
-export const GETTING_STARTED_PATH = path.join(process.cwd(), 'content/en/getting-started');
-export const STYLES_PATH = path.join(process.cwd(), 'content/en/styles');
+let allRoutes = [] as Array<any>;
+allRoutes = allRoutes.concat(
+    ABOUT_MENU,
+    INTRODUCTION_MENU,
+    COMPONENTS_MENU,
+    FEATURES_MENU,
+    GETTING_STARTED_MENU,
+    STYLES_MENU,
+);
+
+export default allRoutes;
+

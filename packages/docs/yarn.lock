@@ -1581,10 +1581,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-manakit@0.0.519:
-  version "0.0.519"
-  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.519.tgz#380fa0e257bd2e474b3217992a0b0f15b8af9cf5"
-  integrity sha512-5vwZQDTj7Ctr+PeWvzhaZ3PIy5U79tAuhbJubaP9yDMrJf1OwDZXpdyLQ02b2Aam7Z4VCaBwjvmQy3Puxx7QWA==
+manakit@0.0.532:
+  version "0.0.532"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.532.tgz#339f5d2e5947170bede0f984bc2076706bd15992"
+  integrity sha512-yCq8D6pnGhJYjmaOtykRO+gr0GpOXdJSUDnfIx9vaoLB4FyoV7QtnthCwrejbYjmNFUAPjC2rYS2WHhRTUBDuQ==
 
 markdown-extensions@^1.0.0:
   version "1.1.1"

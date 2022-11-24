@@ -5,7 +5,7 @@ import {
   FEATURES_PATH,
   GETTING_STARTED_PATH,
   STYLES_PATH,
-} from '../routes';
+} from '../assets/pathname';
 import { DirectoryRoutesType } from '../types';
 
 const getPath = (directory: DirectoryRoutesType) => {
