@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { PageMeta } from '../../routers';
+import type { PageMeta } from '../routers';
 
 export default function Articles({ posts }: { posts: PageMeta[] }) {
   return (

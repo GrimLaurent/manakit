@@ -1,12 +1,16 @@
 import { Fragment } from 'react';
 import { getPages, PageMeta } from '../../routers';
-import Articles from '../../src/components/articles';
+import Articles from '../../components/articles';
+
+import Layout from '../../components/templates/layout';
 
 export default function Home({ page }: { page: PageMeta[] }) {
   return (
     <Fragment>
-      <h1>Articles</h1>
-      <Articles posts={page} />
+      <Layout>
+        <h1>Articles</h1>
+        <Articles posts={page} />
+      </Layout>
     </Fragment>
   );
 }

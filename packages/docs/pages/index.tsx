@@ -6,6 +6,7 @@ import { copyCommand } from '../utils/copy';
 
 import { mdiContentCopy } from '@mdi/js';
 import Footer from '../components/footer';
+import { githubURL } from '../constant';
 
 export default function Welcome() {
   const [commandLine, setCommandLine] = useState('yarn add manakit');
@@ -60,7 +61,7 @@ export default function Welcome() {
             </Link>
 
             <Btn
-              href="https://github.com/manastone/manakit"
+              href={githubURL}
               target="_blank"
               className={'mx-1'}
               style={{ background: 'black', color: 'white' }}
