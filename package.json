@@ -1,6 +1,6 @@
 {
   "name": "manakit",
-  "version": "0.0.541",
+  "version": "0.0.542",
   "private": false,
   "author": "Laurent Grimaldi",
   "description": "React User Interface Component Library",
@@ -75,6 +75,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
+    "rollup-plugin-url": "^3.0.1",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "shelljs": "0.8.5",
