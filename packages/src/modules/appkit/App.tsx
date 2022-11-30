@@ -1,9 +1,9 @@
 /**
- * App
+ * Appkit
  *
- * @description App is a basic module that allows you to display content in line with the manakit theme and to ensure the effects of transitions and placement for the content.
+ * @description Appkit is a basic module that allows you to display content in line with the manakit theme and to ensure the effects of transitions and placement for the content.
  * @type Structural
- * @module App
+ * @module Appkit
  *
  * @company Manastone
  * @author Laurent Grimaldi
@@ -11,7 +11,6 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import '../../assets/scss/main.scss';
-import './App.scss';
 import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import { AppType } from './types/App';
 import { useIdHtml, useClassHtml, useStyleHtml } from '../../utils';
@@ -19,8 +18,8 @@ import { useIdHtml, useClassHtml, useStyleHtml } from '../../utils';
 import Theme from '../../services/theme';
 import { preset } from '../../presets/default';
 
-const App: FunctionComponent<AppType> = ({ id, className, style, children, noSSR, theme, isDark }) => {
-  if (noSSR) {
+const Appkit: FunctionComponent<AppType> = ({ id, className, style, children, theme, isDark }) => {
+  if (theme?.ssr !== undefined ? theme?.ssr : preset.ssr) {
     const [render, setRender] = useState(null) as any;
 
     useEffect(() => {
@@ -42,7 +41,7 @@ const App: FunctionComponent<AppType> = ({ id, className, style, children, noSSR
   }
 };
 
-export default App;
+export default Appkit;
 
 /**
  * Structural
@@ -76,40 +75,15 @@ const Structural: FunctionComponent<AppType> = ({ id, className, style, children
     Theme(theme, isDark);
   }, [theme, isDark]);
 
-  useEffect(() => {
-    // control size appbar for generate spacing
-    console.log('HTML init mk-appbar', getElHTMLHeight('mk-app-bar--fixed'));
-    console.log('HTML init mk-footer', getElHTMLHeight('mk-footer--fixed'));
-    console.log('HTML init mk-navigation', getElHTMLWidth('mk-navigation-drawer--open'));
-
-    window.addEventListener('resize', () => {
-      console.log('HTML event mk-appbar', getElHTMLHeight('mk-app-bar--fixed'));
-      console.log('HTML event mk-footer', getElHTMLHeight('mk-footer--fixed'));
-      console.log('HTML event mk-navigation', getElHTMLWidth('mk-navigation-drawer--open'));
-    });
-  }, []);
-
-  function getElHTMLHeight(el: string) {
-    const appbarList = document.getElementsByClassName(el);
-    if (appbarList && appbarList[0]?.clientHeight) return appbarList[0]?.clientHeight;
-    else return 0;
-  }
-
-  function getElHTMLWidth(el: string) {
-    const appbarList = document.getElementsByClassName(el);
-    if (appbarList && appbarList[0]?.clientHeight) return appbarList[0]?.clientWidth;
-    else return 0;
-  }
-
   return (
     <Fragment>
       <div
         id={useIdHtml('app', id)}
-        className={useClassHtml(`mk-app theme--${useTheme}`, className)}
+        className={useClassHtml(`k-application theme--${useTheme}`, className)}
         style={useStyleHtml(styleList, style)}
         data-app="true"
       >
-        <div className={`mk-app--wrap`}>{children}</div>
+        <div className={`k-application--wrap`}>{children}</div>
       </div>
     </Fragment>
   );

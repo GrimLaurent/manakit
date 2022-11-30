@@ -1,0 +1,89 @@
+.k-application {
+  .text-no-wrap {
+    white-space: nowrap !important;
+  }
+  .text-truncate {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .text-decoration-none {
+    text-decoration: none !important;
+  }
+  .text-decoration-line-through {
+    text-decoration: line-through !important;
+  }
+  .text-decoration-overline {
+    text-decoration: overline !important;
+  }
+  .text-decoration-underline {
+    text-decoration: underline !important;
+  }
+
+  @each $name in $text-list {
+    .text-#{$name} {
+      text-align: #{$name};
+    }
+  }
+
+  @each $size, $width in $grid-breakpoints {
+    @media all and (min-width: #{$width}) {
+      @each $name in $text-list {
+        .text-#{$size}-#{$name} {
+          text-align: #{$name};
+        }
+      }
+    }
+  }
+
+  // Font emphasis
+  .font-weight-black {
+    font-weight: 900 !important;
+  }
+  .font-weight-bold {
+    font-weight: 700 !important;
+  }
+  .font-weight-medium {
+    font-weight: 500 !important;
+  }
+  .font-weight-regular {
+    font-weight: 400 !important;
+  }
+  .font-weight-light {
+    font-weight: 300 !important;
+  }
+  .font-weight-thin {
+    font-weight: 100 !important;
+  }
+  .font-italic {
+    font-style: italic !important;
+  }
+
+  .text--primary {
+    opacity: 0.87 !important;
+  }
+  .text--secondary {
+    opacity: 0.6 !important;
+  }
+  .text--disabled {
+    opacity: 0.38 !important;
+  }
+
+  .text-lowercase {
+    text-transform: lowercase !important;
+  }
+  .text-uppercase {
+    text-transform: uppercase !important;
+  }
+  .text-capitalize {
+    text-transform: capitalize !important;
+  }
+  .text-none {
+    text-transform: none !important;
+  }
+  .text-break {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+}

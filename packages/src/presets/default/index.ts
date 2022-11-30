@@ -2,6 +2,7 @@
 import { ManakitPreset } from '../../types';
 
 export const preset: ManakitPreset = {
+  ssr: false,
   theme: {
     default: 'light',
     disable: false,

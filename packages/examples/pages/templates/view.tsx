@@ -7,7 +7,7 @@ import Manakit from './themeManakit';
 import Image from 'next/image';
 
 import {
-  App,
+  Appkit,
   Appbar,
   Card,
   CardText,
@@ -61,7 +61,7 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <App theme={Manakit} isDark={darkMode}>
+      <Appkit theme={Manakit} isDark={darkMode}>
         <Appbar app>
           <a href="https://manakit.manastone.fr" target={'_blank'} className={'d-inline-block mx-2 '}>
             <img src="/logo/Manakit_Logo.png" width={116} height={50} />
@@ -91,6 +91,7 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
           </Card> */}
           {/* </Container> */}
           Main Content
+          <Card elevation={'10'}>CARD PAGE WORKD</Card>
           {children}
         </Main>
         <Footer app className={'justify-center'}>
@@ -118,7 +119,7 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
             <Icon>{mdiDisqus}</Icon>
           </a>
         </Footer>
-      </App>
+      </Appkit>
     </Fragment>
   );
 }

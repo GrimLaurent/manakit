@@ -1,4 +1,4 @@
-@import '../../tools/_functions.sass';
+@import '../tools/_functions.sass';
 $shadow-key-umbra-opacity: rgba(0, 0, 0, 0.2) !default;
 $shadow-key-penumbra-opacity: rgba(0, 0, 0, 0.14) !default;
 $shadow-key-ambient-opacity: rgba(0, 0, 0, 0.12) !default;
@@ -248,9 +248,3 @@ $shadow-key-ambient: map-deep-merge(
   ),
   $shadow-key-ambient
 );
-
-@each $name, $value in $shadow-key-umbra {
-  .elevation-#{$name} {
-    box-shadow: $value, map-get($shadow-key-penumbra, $name), map-get($shadow-key-ambient, $name) !important;
-  }
-}

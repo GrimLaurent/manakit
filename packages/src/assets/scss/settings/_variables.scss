@@ -18,9 +18,20 @@ $flex-align-justify-list: (flex-start, flex-end, center, between, around);
 $flex-wrap-list: (nowrap, wrap, wrap-reverse);
 $float-list: (left, right, none);
 $overflow-list: (auto, hidden, visible);
-$text-list: (left, right, center);
+$text-list: (left, right, center, justify, start, end);
 $cols-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 $order-list: (first, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, end);
+
+// Elements //;
+$blockquote-font-size: 18px !default;
+$blockquote-font-weight: 300 !default;
+$code-kbd-border-radius: 3px !default;
+$code-kbd-font-size: 85% !default;
+$code-kbd-font-weight: normal !default;
+$code-padding: 0.2em 0.4em !default;
+$kbd-padding: 0.2em 0.4rem !default;
+$input-top-spacing: 16px !default;
+$text-field-active-label-height: 12px !default;
 
 $rounded: () !default;
 $rounded: map-deep-merge(

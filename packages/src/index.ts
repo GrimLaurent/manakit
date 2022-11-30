@@ -1,4 +1,5 @@
-import { App } from './modules/app';
+import Appkit from './modules/appkit';
+
 import { Content } from './modules/content';
 import { Main } from './modules/main';
 import { Container, GridRow, GridCol, Spacer } from './modules/grids';
@@ -48,7 +49,7 @@ import { Textfield } from './modules/textfields';
 
 export {
   Alert,
-  App,
+  Appkit,
   Content,
   Main,
   Container,

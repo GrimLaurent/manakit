@@ -1,0 +1,27 @@
+.k-application {
+    display: flex;
+    position: relative;
+
+    &--wrap {
+        flex: 1 1 auto;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: 100%;
+        position: relative;
+    }
+
+    // Firefox overrides
+    @-moz-document url-prefix() {
+        @media print {
+        .k-application {
+            display: block;
+
+            &--wrap {
+            display: block;
+            }
+        }
+        }
+    }
+}
