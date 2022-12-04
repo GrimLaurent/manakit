@@ -1,0 +1,24 @@
+// DISPLAY
+@each $name in $display-list {
+  .d-#{$name} {
+    display: #{$name} !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $display-list {
+      .d-#{$size}-#{$name} {
+        display: #{$name} !important;
+      }
+    }
+  }
+}
+
+@media print {
+  @each $name in $display-list {
+    .d-print-#{$name} {
+      display: #{$name} !important;
+    }
+  }
+}

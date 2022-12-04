@@ -1,0 +1,28 @@
+//OVERFLOW
+@each $name in $overflow-list {
+  .overflow-#{$name} {
+    order: #{$name};
+  }
+  .overflow-x-#{$name} {
+    order: #{$name};
+  }
+  .overflow-y-#{$name} {
+    order: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $overflow-list {
+      .overflow-#{$size}-#{$name} {
+        order: #{$name};
+      }
+      .overflow-#{$size}-x-#{$name} {
+        order: #{$name};
+      }
+      .overflow-#{$size}-y-#{$name} {
+        order: #{$name};
+      }
+    }
+  }
+}

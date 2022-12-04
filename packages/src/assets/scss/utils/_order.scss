@@ -1,0 +1,17 @@
+// ORDER
+
+@each $name in $order-list {
+  .order-#{$name} {
+    order: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $order-list {
+      .order-#{$size}-#{$name} {
+        order: #{$name};
+      }
+    }
+  }
+}

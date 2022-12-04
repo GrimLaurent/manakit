@@ -1,0 +1,32 @@
+// FLEX
+@each $name in $flex-list {
+  .flex-#{$name} {
+    flex-direction: #{$name} !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-list {
+      .flex-#{$size}-#{$name} {
+        flex-direction: #{$name} !important;
+      }
+    }
+  }
+}
+
+@each $name in $flex-wrap-list {
+  .flex-#{$name} {
+    flex-wrap: #{$name} !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-wrap-list {
+      .flex-#{$size}-#{$name} {
+        flex-wrap: #{$name} !important;
+      }
+    }
+  }
+}

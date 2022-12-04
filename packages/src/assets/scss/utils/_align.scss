@@ -1,0 +1,93 @@
+@each $name in $flex-align-list {
+  .align-#{$name} {
+    align-items: #{$name} !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-list {
+      .align-#{$size}-#{$name} {
+        align-items: #{$name} !important;
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-content-list {
+  @if ($name == center) {
+    .align-content-#{$name} {
+      align-content: #{$name} !important;
+    }
+  } @else {
+    .align-content-#{$name} {
+      align-content: flex-#{$name} !important;
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-content-list {
+      @if ($name == center) {
+        .align-#{$size}-content-#{$name} {
+          align-content: #{$name} !important;
+        }
+      } @else {
+        .align-#{$size}-content-#{$name} {
+          align-content: flex-#{$name} !important;
+        }
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-self-list {
+  @if ($name == center) {
+    .align-self-#{$name} {
+      align-self: #{$name} !important;
+    }
+  } @else {
+    .align-self-#{$name} {
+      align-self: flex-#{$name} !important;
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-self-list {
+      @if ($name == center) {
+        .align-#{$size}-self-#{$name} {
+          align-self: #{$name} !important;
+        }
+      } @else {
+        .align-#{$size}-self-#{$name} {
+          align-self: flex-#{$name} !important;
+        }
+      }
+    }
+  }
+}
+
+@each $name in $flex-align-grow-shrink-list {
+  .align-grow-#{$name} {
+    flex-grow: #{$name} !important;
+  }
+  .align-shrink-#{$name} {
+    flex-shrink: #{$name} !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-grow-shrink-list {
+      .align-#{$size}-grow-#{$name} {
+        flex-grow: #{$name} !important;
+      }
+      .align-#{$size}-shrink-#{$name} {
+        flex-shrink: #{$name} !important;
+      }
+    }
+  }
+}

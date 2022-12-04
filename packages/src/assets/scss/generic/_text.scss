@@ -38,26 +38,11 @@
   }
 
   // Font emphasis
-  .font-weight-black {
-    font-weight: 900 !important;
-  }
-  .font-weight-bold {
-    font-weight: 700 !important;
-  }
-  .font-weight-medium {
-    font-weight: 500 !important;
-  }
-  .font-weight-regular {
-    font-weight: 400 !important;
-  }
-  .font-weight-light {
-    font-weight: 300 !important;
-  }
-  .font-weight-thin {
-    font-weight: 100 !important;
-  }
-  .font-italic {
-    font-style: italic !important;
+
+  @each $type, $value in $font-weights {
+    .font-weight-#{$type} {
+      font-weight: #{$value} !important;
+    }
   }
 
   .text--primary {

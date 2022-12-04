@@ -1,0 +1,16 @@
+//FLOAT
+@each $name in $float-list {
+  .float-#{$name} {
+    float: #{$name};
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $float-list {
+      .float-#{$size}-#{$name} {
+        float: #{$name};
+      }
+    }
+  }
+}

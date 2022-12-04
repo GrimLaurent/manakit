@@ -1,0 +1,15 @@
+@each $name in $flex-align-justify-list {
+  .justify-#{$name} {
+    justify-content: #{$name} !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-justify-list {
+      .justify-#{$size}-#{$name} {
+        justify-content: #{$name} !important;
+      }
+    }
+  }
+}

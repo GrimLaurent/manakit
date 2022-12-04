@@ -1,0 +1,160 @@
+//MARGINS
+@each $name in $margin-list {
+  @if ($name == auto) {
+    .ma-#{$name} {
+      margin: #{$name} !important;
+    }
+    .mt-#{$name} {
+      margin-top: #{$name} !important;
+    }
+    .mb-#{$name} {
+      margin-bottom: #{$name} !important;
+    }
+    .ml-#{$name} {
+      margin-left: #{$name} !important;
+    }
+    .mr-#{$name} {
+      margin-right: #{$name} !important;
+    }
+    .mx-#{$name} {
+      margin-left: #{$name} !important;
+      margin-right: #{$name} !important;
+    }
+    .my-#{$name} {
+      margin-top: #{$name} !important;
+      margin-bottom: #{$name} !important;
+    }
+  } @else {
+    .ma-#{$name} {
+      margin: calc((#{$name}px) * 4) !important;
+    }
+    .mt-#{$name} {
+      margin-top: calc((#{$name}px) * 4) !important;
+    }
+    .mb-#{$name} {
+      margin-bottom: calc((#{$name}px) * 4) !important;
+    }
+    .ml-#{$name} {
+      margin-left: calc((#{$name}px) * 4) !important;
+    }
+    .mr-#{$name} {
+      margin-right: calc((#{$name}px) * 4) !important;
+    }
+    .mx-#{$name} {
+      margin-left: calc((#{$name}px) * 4) !important;
+      margin-right: calc((#{$name}px) * 4) !important;
+    }
+    .my-#{$name} {
+      margin-top: calc((#{$name}px) * 4) !important;
+      margin-bottom: calc((#{$name}px) * 4) !important;
+    }
+
+    @if ($name != 0) {
+      .ma-n#{$name} {
+        margin: calc((-#{$name}px) * 4) !important;
+      }
+      .mt-n#{$name} {
+        margin-top: calc((-#{$name}px) * 4) !important;
+      }
+      .mb-n#{$name} {
+        margin-bottom: calc((-#{$name}px) * 4) !important;
+      }
+      .ml-n#{$name} {
+        margin-left: calc((-#{$name}px) * 4) !important;
+      }
+      .mr-n#{$name} {
+        margin-right: calc((-#{$name}px) * 4) !important;
+      }
+      .mx-n#{$name} {
+        margin-left: calc((-#{$name}px) * 4) !important;
+        margin-right: calc((-#{$name}px) * 4) !important;
+      }
+      .my-n#{$name} {
+        margin-top: calc((-#{$name}px) * 4) !important;
+        margin-bottom: calc((-#{$name}px) * 4) !important;
+      }
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $margin-list {
+      @if ($name == auto) {
+        .ma-#{$size}-#{$name} {
+          margin: #{$name} !important;
+        }
+        .mt-#{$size}-#{$name} {
+          margin-top: #{$name} !important;
+        }
+        .mb-#{$size}-#{$name} {
+          margin-bottom: #{$name} !important;
+        }
+        .ml-#{$size}-#{$name} {
+          margin-left: #{$name} !important;
+        }
+        .mr-#{$size}-#{$name} {
+          margin-right: #{$name} !important;
+        }
+        .mx-#{$size}-#{$name} {
+          margin-left: #{$name} !important;
+          margin-right: #{$name} !important;
+        }
+        .my-#{$size}-#{$name} {
+          margin-top: #{$name} !important;
+          margin-bottom: #{$name} !important;
+        }
+      } @else {
+        .ma-#{$size}-#{$name} {
+          margin: calc((#{$name}px) * 4) !important;
+        }
+        .mt-#{$size}-#{$name} {
+          margin-top: calc((#{$name}px) * 4) !important;
+        }
+        .mb-#{$size}-#{$name} {
+          margin-bottom: calc((#{$name}px) * 4) !important;
+        }
+        .ml-#{$size}-#{$name} {
+          margin-left: calc((#{$name}px) * 4) !important;
+        }
+        .mr-#{$size}-#{$name} {
+          margin-right: calc((#{$name}px) * 4) !important;
+        }
+        .mx-#{$size}-#{$name} {
+          margin-left: calc((#{$name}px) * 4) !important;
+          margin-right: calc((#{$name}px) * 4) !important;
+        }
+        .my-#{$name} {
+          margin-top: calc((#{$name}px) * 4) !important;
+          margin-bottom: calc((#{$name}px) * 4) !important;
+        }
+
+        @if ($name != 0) {
+          .ma-#{$size}-n#{$name} {
+            margin: calc((-#{$name}px) * 4) !important;
+          }
+          .mt-#{$size}-n#{$name} {
+            margin-top: calc((-#{$name}px) * 4) !important;
+          }
+          .mb-#{$size}-n#{$name} {
+            margin-bottom: calc((-#{$name}px) * 4) !important;
+          }
+          .ml-#{$size}-n#{$name} {
+            margin-left: calc((-#{$name}px) * 4) !important;
+          }
+          .mr-#{$size}-n#{$name} {
+            margin-right: calc((-#{$name}px) * 4) !important;
+          }
+          .mx-#{$size}-n#{$name} {
+            margin-left: calc((-#{$name}px) * 4) !important;
+            margin-right: calc((-#{$name}px) * 4) !important;
+          }
+          .my-#{$size}-n#{$name} {
+            margin-top: calc((-#{$name}px) * 4) !important;
+            margin-bottom: calc((-#{$name}px) * 4) !important;
+          }
+        }
+      }
+    }
+  }
+}
