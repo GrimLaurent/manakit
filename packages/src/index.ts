@@ -1,4 +1,14 @@
+// NEW
+import KApp from './labo/KApp';
+export { KApp };
+
+// Shapes
+import KRectangle from './labo/shapes/KRectangle';
+export { KRectangle };
+
+// DEP
 import Appkit from './modules/appkit';
+import App from './modules/app';
 
 import { Content } from './modules/content';
 import { Main } from './modules/main';
@@ -50,6 +60,7 @@ import { Textfield } from './modules/textfields';
 export {
   Alert,
   Appkit,
+  App,
   Content,
   Main,
   Container,

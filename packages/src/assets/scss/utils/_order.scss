@@ -1,6 +1,13 @@
-// ORDER
-
-@each $name in $order-list {
+/**
+* @name order
+* @description Order to flex elements.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/order
+**/
+@each $name in $order {
   .order-#{$name} {
     order: #{$name};
   }
@@ -8,7 +15,7 @@
 
 @each $size, $width in $grid-breakpoints {
   @media all and (min-width: #{$width}) {
-    @each $name in $order-list {
+    @each $name in $order {
       .order-#{$size}-#{$name} {
         order: #{$name};
       }

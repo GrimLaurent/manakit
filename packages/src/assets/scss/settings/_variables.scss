@@ -1,28 +1,11 @@
 @use 'sass:math';
 @import '../tools/_functions.sass';
 
+//default
 $body-font-family: 'Roboto', sans-serif !default;
 $font-size-root: 16px !default;
 $line-height-root: 1.5 !default;
 $border-radius-root: 4px !default;
-
-$display-list: (none, inline, inline-block, block, table, table-cell, table-row, flex, inline-flex);
-$margin-list: (auto, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-$padding-list: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-$flex-list: (row, row-reverse, column, column-reverse);
-$flex-align-list: (flex-start, flex-end, center, baseline, baseline);
-$flex-align-content-list: (start, end, center, space-between, space-around);
-$flex-align-self-list: (start, end, center, baseline, stretch);
-$flex-align-grow-shrink-list: (0, 1);
-$flex-align-justify-list: (flex-start, flex-end, center, between, around);
-$flex-wrap-list: (nowrap, wrap, wrap-reverse);
-$float-list: (left, right, none);
-$overflow-list: (auto, hidden, visible);
-$text-list: (left, right, center, justify, start, end);
-$cols-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-$order-list: (first, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, end);
-
-// Elements //;
 $blockquote-font-size: 18px !default;
 $blockquote-font-weight: 300 !default;
 $code-kbd-border-radius: 3px !default;
@@ -32,7 +15,33 @@ $code-padding: 0.2em 0.4em !default;
 $kbd-padding: 0.2em 0.4rem !default;
 $input-top-spacing: 16px !default;
 $text-field-active-label-height: 12px !default;
+$text: (left, right, center, justify, start, end) !default;
+$overflow: (auto, hidden, visible) !default;
 
+//flex
+$display: (none, inline, inline-block, block, table, table-cell, table-row, flex, inline-flex) !default;
+$float: (left, right, none) !default;
+$flex: (row, row-reverse, column, column-reverse) !default;
+$flex-align: (flex-start, flex-end, center, baseline, baseline) !default;
+$flex-align-content: (start, end, center, space-between, space-around) !default;
+$flex-align-self: (start, end, center, baseline, stretch) !default;
+$flex-align-grow-shrink: (0, 1) !default;
+$flex-align-justify: (flex-start, flex-end, center, between, around) !default;
+$flex-wrap: (nowrap, wrap, wrap-reverse) !default;
+
+//grids
+$cols-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$order: (first, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, end) !default;
+
+//sizing
+$sizing-height: (auto, screen, 0, 25, 50, 75, 100) !default; // screen = 100vh
+$sizing-width: (auto, 0, 25, 50, 75, 100) !default;
+
+//spacings
+$spacing-margin: (auto, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
+$spacing-padding: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
+
+//radius & rounded
 $rounded: () !default;
 $rounded: map-deep-merge(
   (
@@ -47,6 +56,7 @@ $rounded: map-deep-merge(
   $rounded
 );
 
+//function
 $spacer: 4px !default;
 $spacers-steps: 16 !default;
 

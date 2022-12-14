@@ -21,7 +21,7 @@
     text-decoration: underline !important;
   }
 
-  @each $name in $text-list {
+  @each $name in $text {
     .text-#{$name} {
       text-align: #{$name};
     }
@@ -29,7 +29,7 @@
 
   @each $size, $width in $grid-breakpoints {
     @media all and (min-width: #{$width}) {
-      @each $name in $text-list {
+      @each $name in $text {
         .text-#{$size}-#{$name} {
           text-align: #{$name};
         }

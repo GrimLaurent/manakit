@@ -1,5 +1,13 @@
-// DISPLAY
-@each $name in $display-list {
+/**
+* @name display
+* @description Control the layout of flex containers with alignment, justification and more with responsive flexbox utilities.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/display
+**/
+@each $name in $display {
   .d-#{$name} {
     display: #{$name} !important;
   }
@@ -7,7 +15,7 @@
 
 @each $size, $width in $grid-breakpoints {
   @media all and (min-width: #{$width}) {
-    @each $name in $display-list {
+    @each $name in $display {
       .d-#{$size}-#{$name} {
         display: #{$name} !important;
       }
@@ -16,7 +24,7 @@
 }
 
 @media print {
-  @each $name in $display-list {
+  @each $name in $display {
     .d-print-#{$name} {
       display: #{$name} !important;
     }

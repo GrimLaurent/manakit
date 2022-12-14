@@ -1,5 +1,13 @@
-//FLOAT
-@each $name in $float-list {
+/**
+* @name float
+* @description Applies a custom float across any breakpoint with responsive float utilities.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/float
+**/
+@each $name in $float {
   .float-#{$name} {
     float: #{$name};
   }
@@ -7,7 +15,7 @@
 
 @each $size, $width in $grid-breakpoints {
   @media all and (min-width: #{$width}) {
-    @each $name in $float-list {
+    @each $name in $float {
       .float-#{$size}-#{$name} {
         float: #{$name};
       }

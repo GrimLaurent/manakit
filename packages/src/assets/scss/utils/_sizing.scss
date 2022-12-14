@@ -1,0 +1,56 @@
+/**
+* @name sizing 
+* @description sizing utility classes are used to modify the dimensions of an element.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/width
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/height
+**/
+
+@mixin size-element($size, $mode) {
+  @if ($size == auto) {
+    #{$mode}: #{$size};
+  } @else if ($size == screen) {
+    #{$mode}: 100vh;
+  } @else if ($size == 0) {
+    #{$mode}: #{$size};
+  } @else {
+    #{$mode}: #{$size}'%';
+  }
+}
+
+//height
+@each $name in $sizing-height {
+  .h-#{$name} {
+    @include size-element($name, height);
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $sizing-height {
+      .h-#{$size}-#{$name} {
+        @include size-element($name, height);
+      }
+    }
+  }
+}
+
+//width
+@each $name in $sizing-width {
+  .w-#{$name} {
+    @include size-element($name, width);
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $sizing-width {
+      .w-#{$size}-#{$name} {
+        @include size-element($name, width);
+      }
+    }
+  }
+}

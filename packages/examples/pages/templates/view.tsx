@@ -7,6 +7,8 @@ import Manakit from './themeManakit';
 import Image from 'next/image';
 
 import {
+  KApp,
+  App,
   Appkit,
   Appbar,
   Card,
@@ -24,6 +26,7 @@ import {
   Responsive,
   Toolbar,
   ToolbarTitle,
+  KRectangle,
 } from 'manakit';
 
 import menujson from '../menu.json';
@@ -61,7 +64,10 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Appkit theme={Manakit} isDark={darkMode}>
+      <KApp set={Manakit} isDark={darkMode}>
+        <KRectangle width={800} height={1200} color={'primary'} elevation={10}>
+          body
+        </KRectangle>
         <Appbar app>
           <a href="https://manakit.manastone.fr" target={'_blank'} className={'d-inline-block mx-2 '}>
             <img src="/logo/Manakit_Logo.png" width={116} height={50} />
@@ -119,7 +125,7 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
             <Icon>{mdiDisqus}</Icon>
           </a>
         </Footer>
-      </Appkit>
+      </KApp>
     </Fragment>
   );
 }

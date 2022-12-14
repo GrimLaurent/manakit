@@ -1,5 +1,15 @@
-//MARGINS
-@each $name in $margin-list {
+/**
+* @name margin
+* @description Spacing helpers are useful for modifying the padding and margin of an element.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/padding
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/margin
+**/
+
+@each $name in $spacing-margin {
   @if ($name == auto) {
     .ma-#{$name} {
       margin: #{$name} !important;
@@ -79,7 +89,7 @@
 
 @each $size, $width in $grid-breakpoints {
   @media all and (min-width: #{$width}) {
-    @each $name in $margin-list {
+    @each $name in $spacing-margin {
       @if ($name == auto) {
         .ma-#{$size}-#{$name} {
           margin: #{$name} !important;

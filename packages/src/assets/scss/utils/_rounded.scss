@@ -1,4 +1,13 @@
-//ROUNDED
+/**
+* @name rounded 
+* @description Use border utilities to quickly style the border-radius of any element.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/border-radius
+**/
+
 @each $name, $value in $rounded {
   @if ($name == null) {
     .rounded {
@@ -63,6 +72,17 @@
     }
     .rounded-br-#{$name} {
       border-bottom-right-radius: #{$value} !important;
+    }
+
+    //rounded shaped
+    @if ($name == lg) {
+      .rounded-shaped {
+        border-radius: #{$value} 0 !important;
+      }
+
+      .rounded-shaped-inverse {
+        border-radius: 0 #{$value} !important;
+      }
     }
   }
 }
