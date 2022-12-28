@@ -1,10 +1,23 @@
 // NEW
 import KApp from './labo/KApp';
-export { KApp };
+import KIcon from './labo/KIcon';
+import KMain from './labo/KMain';
+import KContent from './labo/KContent';
+export { KApp, KIcon, KMain, KContent };
 
 // Shapes
 import KRectangle from './labo/shapes/KRectangle';
-export { KRectangle };
+import KRoundedRectangle from './labo/shapes/KRoundedRectangle';
+import KCircle from './labo/shapes/KCircle';
+import KCapsule from './labo/shapes/KCapsule';
+export { KRectangle, KRoundedRectangle, KCircle, KCapsule };
+
+// Grids
+import KContainer from './labo/grids/KContainer';
+import KRow from './labo/grids/KRow';
+import KCol from './labo/grids/KCol';
+import KSpacer from './labo/grids/KSpacer';
+export { KContainer, KRow, KCol, KSpacer };
 
 // DEP
 import Appkit from './modules/appkit';

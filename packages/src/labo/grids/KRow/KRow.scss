@@ -1,0 +1,22 @@
+.k-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  margin: -12px;
+
+  &.is--dense {
+    margin: -4px;
+  }
+
+  &.no-gutters {
+    margin: 0;
+  }
+}
+
+.k-row + .k-row {
+  margin-top: 12px;
+}
+
+.k-row + .k-row.is--dense {
+  margin-top: 4px;
+}

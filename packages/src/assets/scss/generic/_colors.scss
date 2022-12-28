@@ -13,7 +13,7 @@
     @include background-color($color_value);
   }
 
-  .k-application .text--#{$color_name} {
+  .k-application .#{$color_name}--text {
     @include text-color($color_value);
   }
 }
@@ -25,7 +25,7 @@
         @include background-color($color_value);
       }
 
-      .k-application .text--#{$color_name} {
+      .k-application .#{$color_name}--text {
         @include text-color($color_value);
       }
     } @else if ($color_type != 'shades') {
@@ -33,7 +33,7 @@
         @include background-color($color_value);
       }
 
-      .k-application .text--#{$color_name}.text--#{$color_type} {
+      .k-application .#{$color_name}--text.#{$color_type}--text {
         @include text-color($color_value);
       }
     }

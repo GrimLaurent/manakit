@@ -21,7 +21,7 @@ import {
   SizeType,
 } from './size';
 
-import { RoundedType } from './radius';
+import { RoundedType, RoundedBasicType } from './radius';
 import { ElevationType } from './elevation';
 
 import { ElementActionOnClikType, ElementActionHrefType, ElementActionType_Extend } from './action';
@@ -46,6 +46,7 @@ export type {
   ElementSizeDefaultType_Extended,
   SizeType,
   RoundedType,
+  RoundedBasicType,
   ElevationType,
   ElementActionOnClikType,
   ElementActionHrefType,

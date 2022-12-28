@@ -1489,10 +1489,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-manakit@0.0.575:
-  version "0.0.575"
-  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.575.tgz#c97856ab73dec5317e5a64d520939c5a2d4d30c9"
-  integrity sha512-sjPpWKYx+jhWrJB2kEobjSJrQ+V468uS8pCT8WezLKdA/5vFieLRmEXzWwZNwaMyG6LL4jmk+7zHuWH9ri2Sbg==
+manakit@0.0.594:
+  version "0.0.594"
+  resolved "https://registry.yarnpkg.com/manakit/-/manakit-0.0.594.tgz#dd19084a20180eb84ea7a891679e3147d3ce81a1"
+  integrity sha512-vNfaejbAhWvK0hoBDsnBFUHJVqNRIIOnTW627YdjBARsCkb2uxBH234tSbiFSY+sGK5/21CT0ui43Wu6iDxt5g==
   dependencies:
     "@types/glob" "^8.0.0"
     gray-matter "^4.0.3"

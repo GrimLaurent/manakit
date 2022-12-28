@@ -27,6 +27,13 @@ import {
   Toolbar,
   ToolbarTitle,
   KRectangle,
+  KCircle,
+  KRoundedRectangle,
+  KCapsule,
+  KIcon,
+  KContainer,
+  KRow,
+  KCol,
 } from 'manakit';
 
 import menujson from '../menu.json';
@@ -65,7 +72,172 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <KApp set={Manakit} isDark={darkMode}>
-        <KRectangle width={800} height={1200} color={'primary'} elevation={10}>
+        <KContainer>
+          <KRow>
+            <KCol>
+              {' '}
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+            <KCol>
+              <KRectangle color="primary" width={75} height={25}>
+                KRectangle
+              </KRectangle>
+            </KCol>
+          </KRow>
+          <KRow>
+            <KCol>1</KCol>
+            <KCol>2</KCol>
+            <KCol>3</KCol>
+            <KCol>4</KCol>
+            <KCol>6</KCol>
+            <KCol>7</KCol>
+            <KCol>8</KCol>
+            <KCol>9</KCol>
+            <KCol>10</KCol>
+            <KCol>11</KCol>
+            <KCol>12</KCol>
+          </KRow>
+          <KRow>
+            <KCol>1</KCol>
+            <KCol>2</KCol>
+            <KCol>3</KCol>
+            <KCol>4</KCol>
+            <KCol>6</KCol>
+            <KCol>7</KCol>
+            <KCol>8</KCol>
+            <KCol>9</KCol>
+            <KCol>10</KCol>
+            <KCol>11</KCol>
+            <KCol>12</KCol>
+          </KRow>
+          <KRow>
+            <KCol cols={2}>1</KCol>
+            <KCol cols={2}>2</KCol>
+            <KCol cols={2}>3</KCol>
+            <KCol cols={2}>4</KCol>
+            <KCol cols={2}>6</KCol>
+            <KCol cols={2}>7</KCol>
+            <KCol cols={2}>8</KCol>
+            <KCol cols={2}>9</KCol>
+            <KCol cols={2}>10</KCol>
+            <KCol cols={2}>11</KCol>
+            <KCol cols={2}>12</KCol>
+          </KRow>
+          <KRow>
+            <KCol lg={2}>1</KCol>
+            <KCol lg={2}>2</KCol>
+            <KCol lg={2}>3</KCol>
+            <KCol lg={2}>4</KCol>
+            <KCol lg={2}>6</KCol>
+            <KCol lg={2}>7</KCol>
+            <KCol lg={2}>8</KCol>
+            <KCol lg={2}>9</KCol>
+            <KCol lg={2}>10</KCol>
+            <KCol lg={2}>11</KCol>
+            <KCol lg={2}>12</KCol>
+          </KRow>
+          <KRow>
+            <KCol sm={3} lg={2}>
+              1
+            </KCol>
+            <KCol sm={4} lg={2}>
+              2
+            </KCol>
+            <KCol sm={3} lg={2}>
+              3
+            </KCol>
+            <KCol sm={4} lg={2}>
+              4
+            </KCol>
+            <KCol sm={3} lg={2}>
+              6
+            </KCol>
+            <KCol sm={4} lg={2}>
+              7
+            </KCol>
+            <KCol sm={3} lg={2}>
+              8
+            </KCol>
+            <KCol sm={4} lg={2}>
+              9
+            </KCol>
+            <KCol sm={3} lg={2}>
+              10
+            </KCol>
+            <KCol sm={4} lg={2}>
+              11
+            </KCol>
+            <KCol sm={3} lg={2}>
+              12
+            </KCol>
+          </KRow>
+        </KContainer>
+        <KRectangle color="primary" width={300} height={300}>
+          KRectangle
+        </KRectangle>
+        <KCircle color="primary" size={300}>
+          KCircle
+        </KCircle>
+        <KRoundedRectangle color="primary" width={300} height={300}>
+          KRoundedRectangle
+        </KRoundedRectangle>
+        <KCapsule color="primary" width={300} height={100}>
+          KCapsule
+        </KCapsule>
+        <KIcon color="primary">{mdiGithub}</KIcon>
+        <Icon>{mdiGithub}</Icon>
+        <KIcon>{mdiGithub}</KIcon>
+        <KIcon small>{mdiGithub}</KIcon>
+        <KIcon large>{mdiGithub}</KIcon>
+        <div className="text-on-surface">bite</div>
+        {/* <KRectangle width={800} height={1200} color={'primary'} elevation={10}>
           body
         </KRectangle>
         <Appbar app>
@@ -90,13 +262,13 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
         </NavigationDrawer>
         <Main>
           {/* <Container fluid> */}
-          {/* <Card>
+        {/* <Card>
             <Responsive aspectRatio={'16/9'}>
               <CardText>Bonjour is card test</CardText>
             </Responsive>
           </Card> */}
-          {/* </Container> */}
-          Main Content
+        {/* </Container> */}
+        {/* Main Content
           <Card elevation={'10'}>CARD PAGE WORKD</Card>
           {children}
         </Main>
@@ -124,7 +296,7 @@ function Layout({ children, home }: { children: React.ReactNode; home?: boolean 
           >
             <Icon>{mdiDisqus}</Icon>
           </a>
-        </Footer>
+        </Footer> */}
       </KApp>
     </Fragment>
   );

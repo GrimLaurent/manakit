@@ -1,0 +1,15 @@
+.k-col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  width: 100%;
+  padding: 12px;
+}
+
+.k-row.no-gutters > .k-col {
+  padding: 0;
+}
+
+.k-row.is--dense > .k-col {
+  padding: 4px;
+}

@@ -40,7 +40,8 @@ const KRectangle: FunctionComponent<RectangleClassType> = (props) => {
   const classList = [
     { el: 'elevation-1', val: typeof elevation === 'boolean' && elevation === true },
     { el: 'elevation', val: typeof elevation === 'string' || typeof elevation === 'number' ? elevation : false },
-    { el: useColor('surface', color, dark, light), val: color ? true : false },
+    { el: useColor('surface', color, dark, light), val: true }, // background
+    { el: useColor('on-surface--text', color ? 'on-' + color + '--text' : undefined, dark, light), val: true }, // text
   ];
 
   const styleList = {
@@ -55,7 +56,7 @@ const KRectangle: FunctionComponent<RectangleClassType> = (props) => {
   return (
     <Fragment>
       <div id={id} className={useClassName('k-rectangle', className, classList)} style={useStyle(styleList, style)}>
-        {children}
+        <div className={'k-rectangle--wrap'}>{children}</div>
       </div>
     </Fragment>
   );
