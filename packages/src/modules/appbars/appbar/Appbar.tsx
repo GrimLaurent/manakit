@@ -42,8 +42,8 @@ const Appbar: FunctionComponent<AppbarType> = ({
   app,
 }) => {
   const classList = [
-    { el: 'app-bar--fixed', val: fixed },
-    { el: 'app-bar--fixed', val: app },
+    { el: 'mk-app-bar--fixed', val: fixed },
+    { el: 'mk-app-bar--fixed', val: app },
   ];
 
   return (

@@ -10,23 +10,15 @@
  * @copyright (c)2022 ManaStone and the ManaKit project authors
  */
 import './Content.scss';
-import React, { Fragment, FunctionComponent, useEffect, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import { ContentType } from './types/Content';
 import { useIdHtml, useClassHtml, useStyleHtml } from '../../utils';
 
-const Content: FunctionComponent<ContentType> = ({ id, className, style, children, main }) => {
+const Content: FunctionComponent<ContentType> = ({ id, className, style, children }) => {
   return (
-    <Fragment>
-      {main ? (
-        <main id={useIdHtml(id)} className={useClassHtml(`mk-content`, className)} style={useStyleHtml({}, style)}>
-          {children}
-        </main>
-      ) : (
-        <section id={useIdHtml(id)} className={useClassHtml(`mk-content`, className)} style={useStyleHtml({}, style)}>
-          {children}
-        </section>
-      )}
-    </Fragment>
+    <section id={useIdHtml(id)} className={useClassHtml(`mk-content`, className)} style={useStyleHtml({}, style)}>
+      {children}
+    </section>
   );
 };
 

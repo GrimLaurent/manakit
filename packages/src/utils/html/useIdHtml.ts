@@ -5,7 +5,7 @@
  * @param custom
  */
 function useIdHtml(init?: string, custom?: string) {
-  return custom ? custom : init;
+  return custom ? custom : init ? init : '';
 }
 
 export default useIdHtml;

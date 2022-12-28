@@ -1,6 +1,7 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
+import url from 'rollup-plugin-url';
 
 const pkg = require('./package.json');
 
@@ -26,5 +27,12 @@ export default {
       typescript: require('typescript'),
     }),
     postcss(),
+    url({
+      // by default, rollup-plugin-url will not handle font files
+      include: ['**/*.woff', '**/*.woff2', '**/*.ttf'],
+      // setting infinite limit will ensure that the files
+      // are always bundled with the code, not copied to /dist
+      limit: Infinity,
+    }),
   ],
 };

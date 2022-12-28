@@ -1,4 +1,28 @@
-import { App } from './modules/app';
+// NEW
+import KApp from './labo/KApp';
+import KIcon from './labo/KIcon';
+import KMain from './labo/KMain';
+import KContent from './labo/KContent';
+export { KApp, KIcon, KMain, KContent };
+
+// Shapes
+import KRectangle from './labo/shapes/KRectangle';
+import KRoundedRectangle from './labo/shapes/KRoundedRectangle';
+import KCircle from './labo/shapes/KCircle';
+import KCapsule from './labo/shapes/KCapsule';
+export { KRectangle, KRoundedRectangle, KCircle, KCapsule };
+
+// Grids
+import KContainer from './labo/grids/KContainer';
+import KRow from './labo/grids/KRow';
+import KCol from './labo/grids/KCol';
+import KSpacer from './labo/grids/KSpacer';
+export { KContainer, KRow, KCol, KSpacer };
+
+// DEP
+import Appkit from './modules/appkit';
+import App from './modules/app';
+
 import { Content } from './modules/content';
 import { Main } from './modules/main';
 import { Container, GridRow, GridCol, Spacer } from './modules/grids';
@@ -20,6 +44,7 @@ import { Card, CardTitle, CardSubTitle, CardText, CardActions } from './modules/
 import { Chip } from './modules/chips';
 import { Table } from './modules/tables';
 import { Dialog } from './modules/dialogs';
+import { Responsive } from './modules/responsive';
 import {
   ExpansionPanels,
   ExpansionPanel,
@@ -47,6 +72,7 @@ import { Textfield } from './modules/textfields';
 
 export {
   Alert,
+  Appkit,
   App,
   Content,
   Main,
@@ -97,4 +123,5 @@ export {
   Menu,
   Input,
   Textfield,
+  Responsive,
 };

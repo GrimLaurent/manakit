@@ -1,0 +1,88 @@
+/**
+* @name rounded 
+* @description Use border utilities to quickly style the border-radius of any element.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/border-radius
+**/
+
+@each $name, $value in $rounded {
+  @if ($name == null) {
+    .rounded {
+      border-radius: #{$value} !important;
+    }
+    .rounded-t {
+      border-top-left-radius: #{$value} !important;
+      border-top-right-radius: #{$value} !important;
+    }
+    .rounded-b {
+      border-bottom-left-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
+    }
+    .rounded-r {
+      border-top-right-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
+    }
+    .rounded-l {
+      border-top-left-radius: #{$value} !important;
+      border-bottom-left-radius: #{$value} !important;
+    }
+    .rounded-tl {
+      border-top-left-radius: #{$value} !important;
+    }
+    .rounded-tr {
+      border-top-right-radius: #{$value} !important;
+    }
+    .rounded-bl {
+      border-bottom-left-radius: #{$value} !important;
+    }
+    .rounded-br {
+      border-bottom-right-radius: #{$value} !important;
+    }
+  } @else {
+    .rounded-#{$name} {
+      border-radius: #{$value} !important;
+    }
+    .rounded-t-#{$name} {
+      border-top-left-radius: #{$value} !important;
+      border-top-right-radius: #{$value} !important;
+    }
+    .rounded-b-#{$name} {
+      border-bottom-left-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
+    }
+    .rounded-r-#{$name} {
+      border-top-right-radius: #{$value} !important;
+      border-bottom-right-radius: #{$value} !important;
+    }
+    .rounded-l-#{$name} {
+      border-top-left-radius: #{$value} !important;
+      border-bottom-left-radius: #{$value} !important;
+    }
+    .rounded-tl-#{$name} {
+      border-top-left-radius: #{$value} !important;
+    }
+    .rounded-tr-#{$name} {
+      border-top-right-radius: #{$value} !important;
+    }
+    .rounded-bl-#{$name} {
+      border-bottom-left-radius: #{$value} !important;
+    }
+    .rounded-br-#{$name} {
+      border-bottom-right-radius: #{$value} !important;
+    }
+
+    //rounded shaped
+    @if ($name == lg) {
+      .rounded-shaped {
+        border-radius: #{$value} 0 !important;
+      }
+
+      .rounded-shaped-inverse {
+        border-radius: 0 #{$value} !important;
+      }
+    }
+  }
+}

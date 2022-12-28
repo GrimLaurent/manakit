@@ -38,7 +38,7 @@ With Manakit you have a whole list of React components to be able to quickly cre
 | ---------------- | ---------------------- | --------- |
 | Alert            | \*                     | Pre-Alpha |
 | App              | \*                     | Alpha     |
-| AppBar           | \*                     | Pre-Alpha |
+| AppBar           | \*                     | Alpha     |
 | Avatar           | \*                     | Pre-Alpha |
 | BottomBar        | \*                     | Pre-Alpha |
 | Breadcrumbs      | \*                     | Pre-Alpha |
@@ -89,10 +89,11 @@ With Manakit you have a whole list of React components to be able to quickly cre
 | Tables           | \*                     | Pre-Alpha |
 | \*               | Table                  | Pre-Alpha |
 | Textfield        | \*                     | Pre-Alpha |
-| Toolbars         | \*                     | Pre-Alpha |
-| \*               | Toolbar                | Pre-Alpha |
-| \*               | ToolbarItems           | Pre-Alpha |
-| \*               | ToolbarTitle           | Pre-Alpha |
+| Toolbars         | \*                     | Alpha     |
+| \*               | Toolbar                | Alpha     |
+| \*               | ToolbarItems           | Alpha     |
+| \*               | ToolbarTitle           | Alpha     |
+| Responsive       | \*                     | Pre-Alpha |
 
 </details>
 

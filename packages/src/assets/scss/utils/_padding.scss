@@ -1,0 +1,118 @@
+/**
+* @name padding
+* @description Spacing helpers are useful for modifying the padding and margin of an element.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/padding
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/margin
+**/
+
+@each $name in $spacing-padding {
+  .pa-#{$name} {
+    padding: calc((#{$name}px) * 4) !important;
+  }
+  .pt-#{$name} {
+    padding-top: calc((#{$name}px) * 4) !important;
+  }
+  .pb-#{$name} {
+    padding-bottom: calc((#{$name}px) * 4) !important;
+  }
+  .pl-#{$name} {
+    padding-left: calc((#{$name}px) * 4) !important;
+  }
+  .pr-#{$name} {
+    padding-right: calc((#{$name}px) * 4) !important;
+  }
+  .px-#{$name} {
+    padding-left: calc((#{$name}px) * 4) !important;
+    padding-right: calc((#{$name}px) * 4) !important;
+  }
+  .py-#{$name} {
+    padding-top: calc((#{$name}px) * 4) !important;
+    padding-bottom: calc((#{$name}px) * 4) !important;
+  }
+
+  @if ($name != 0) {
+    .pa-n#{$name} {
+      padding: calc((-#{$name}px) * 4) !important;
+    }
+    .pt-n#{$name} {
+      padding-top: calc((-#{$name}px) * 4) !important;
+    }
+    .pb-n#{$name} {
+      padding-bottom: calc((-#{$name}px) * 4) !important;
+    }
+    .pl-n#{$name} {
+      padding-left: calc((-#{$name}px) * 4) !important;
+    }
+    .pr-n#{$name} {
+      padding-right: calc((-#{$name}px) * 4) !important;
+    }
+    .px-n#{$name} {
+      padding-left: calc((-#{$name}px) * 4) !important;
+      padding-right: calc((-#{$name}px) * 4) !important;
+    }
+    .py-n#{$name} {
+      padding-top: calc((-#{$name}px) * 4) !important;
+      padding-bottom: calc((-#{$name}px) * 4) !important;
+    }
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $spacing-padding {
+      .pa-#{$size}-#{$name} {
+        padding: calc((#{$name}px) * 4) !important;
+      }
+      .pt-#{$size}-#{$name} {
+        padding-top: calc((#{$name}px) * 4) !important;
+      }
+      .pb-#{$size}-#{$name} {
+        padding-bottom: calc((#{$name}px) * 4) !important;
+      }
+      .pl-#{$size}-#{$name} {
+        padding-left: calc((#{$name}px) * 4) !important;
+      }
+      .pr-#{$size}-#{$name} {
+        padding-right: calc((#{$name}px) * 4) !important;
+      }
+      .px-#{$size}-#{$name} {
+        padding-left: calc((#{$name}px) * 4) !important;
+        padding-right: calc((#{$name}px) * 4) !important;
+      }
+      .py-#{$name} {
+        padding-top: calc((#{$name}px) * 4) !important;
+        padding-bottom: calc((#{$name}px) * 4) !important;
+      }
+
+      @if ($name != 0) {
+        .pa-#{$size}-n#{$name} {
+          padding: calc((-#{$name}px) * 4) !important;
+        }
+        .pt-#{$size}-n#{$name} {
+          padding-top: calc((-#{$name}px) * 4) !important;
+        }
+        .pb-#{$size}-n#{$name} {
+          padding-bottom: calc((-#{$name}px) * 4) !important;
+        }
+        .pl-#{$size}-n#{$name} {
+          padding-left: calc((-#{$name}px) * 4) !important;
+        }
+        .pr-#{$size}-n#{$name} {
+          padding-right: calc((-#{$name}px) * 4) !important;
+        }
+        .px-#{$size}-n#{$name} {
+          padding-left: calc((-#{$name}px) * 4) !important;
+          padding-right: calc((-#{$name}px) * 4) !important;
+        }
+        .py-#{$size}-n#{$name} {
+          padding-top: calc((-#{$name}px) * 4) !important;
+          padding-bottom: calc((-#{$name}px) * 4) !important;
+        }
+      }
+    }
+  }
+}

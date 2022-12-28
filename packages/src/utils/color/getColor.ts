@@ -1,7 +1,8 @@
-import { CoreThemeType } from './../../types';
+// import { CoreThemeType } from './../../types';
 import formatColorToRgba from './formatColorToRgba';
 
-function getColor(theme: CoreThemeType, value?: any, base?: any, mode?: any) {
+// Deprecated V0.0.470
+function getColor(theme: any, value?: any, base?: any, mode?: any) {
   let colorStringify;
   let color;
   let opacity;

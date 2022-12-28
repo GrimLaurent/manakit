@@ -21,6 +21,7 @@ function useClassHtml(base?: string, externalClass?: string | CSSProperties, cla
           break;
         case 'string':
         case 'number':
+          console.log('value', value);
           response = response + ' ' + value.el + '-' + value.val;
           break;
       }

@@ -10,6 +10,6 @@ describe('useIdHtml', () => {
   });
 
   test('string is undefined as expected', () => {
-    expect(useIdHtml(undefined)).toBe(undefined);
+    expect(useIdHtml(undefined)).toBe('');
   });
 });

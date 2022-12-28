@@ -38,18 +38,17 @@ const Toolbar: FunctionComponent<ToolbarType> = ({
   contentClass,
 }) => {
   const classList = [
-    { el: 'elevation-4', val: typeof elevation === 'boolean' && elevation },
-    { el: 'elevation', val: typeof elevation === 'string' ? elevation : false },
-    { el: 'rounded-lg', val: typeof rounded === 'boolean' && rounded },
+    { el: 'elevation', val: elevation },
+    { el: 'rounded', val: rounded === true },
     { el: 'rounded', val: typeof rounded === 'string' ? rounded : false },
-    { el: 'toolbar--absolute', val: absolute },
-    { el: 'toolbar--bottom', val: bottom },
-    { el: 'is--dense', val: dense },
-    { el: 'is--flat', val: flat },
-    { el: 'toolbar--floating', val: floating },
-    { el: 'toolbar--outlined', val: outlined },
-    { el: 'toolbar--shaped', val: shaped },
-    { el: 'toolbar--tile', val: tile },
+    { el: 'mk-toolbar--absolute', val: absolute },
+    { el: 'mk-toolbar--bottom', val: bottom },
+    { el: 'mk-toolbar--dense', val: dense },
+    { el: 'mk-toolbar--flat', val: flat },
+    { el: 'mk-toolbar--floating', val: floating },
+    { el: 'mk-surface--outlined', val: outlined },
+    { el: 'mk-surface--shaped', val: shaped },
+    { el: 'rounded-0', val: tile },
   ];
 
   const styleList = {
@@ -69,7 +68,7 @@ const Toolbar: FunctionComponent<ToolbarType> = ({
     <Fragment>
       <header
         id={useIdHtml(id)}
-        className={useClassHtml('mk-toolbar', className, classList)}
+        className={useClassHtml('mk-surface mk-toolbar', className, classList)}
         style={useStyleHtml(styleList, style)}
       >
         <div className={useClassHtml('mk-toolbar--content', contentClass)} style={useStyleHtml(styleWrapList)}>

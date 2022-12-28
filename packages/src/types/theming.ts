@@ -1,81 +1,31 @@
-export interface DefaultThemeType {
-  name: string;
-  font: {
-    [key: string]: string;
-  };
-  icon: {
-    iconfont: string;
-    value: {
-      [key: string]: string;
-    };
-  };
+export interface ManakitPreset {
+  ssr: boolean;
   theme: {
-    dark: boolean;
+    default: 'light' | 'dark';
+    disable: boolean;
     themes: {
-      [key: string]: {
+      light: {
+        [key: string]: string;
+      };
+      dark: {
         [key: string]: string;
       };
     };
-    options: {
-      customProperties: boolean;
-      themeCache: boolean;
+  };
+}
+
+export interface UserPreset {
+  ssr?: boolean;
+  theme?: {
+    default?: 'light' | 'dark';
+    disable?: boolean;
+    themes?: {
+      light?: {
+        [key: string]: string;
+      };
+      dark?: {
+        [key: string]: string;
+      };
     };
   };
-  breakpoint: {
-    treshold: {
-      [key: string]: string;
-    };
-  };
-  rounded: {
-    [key: string]: string;
-  };
-}
-
-export interface DarkLightType {
-  dark?: boolean;
-  light?: boolean;
-}
-
-export interface ThemeApiType {
-  icon: {};
-  pkg: {};
-  sys: {
-    font: keyObjectType;
-    iconfont: keyObjectType;
-    rounded: keyObjectType;
-    breakpoint: keyObjectType;
-  };
-  themes: {
-    light: keyObjectType;
-    dark: keyObjectType;
-  };
-}
-
-type keyObjectType = {
-  [key: string]: any;
-};
-
-export interface CoreThemeType {
-  mode: {
-    default: string;
-    use: string;
-  };
-  sys: {
-    font: keyObjectType;
-    rounded: keyObjectType;
-    breakpoint: keyObjectType;
-  };
-  themes: keyObjectType;
-}
-
-export interface CustomThemeType {
-  mode?: {
-    default?: string;
-  };
-  sys?: {
-    font?: keyObjectType;
-    rounded?: keyObjectType;
-    breakpoint?: keyObjectType;
-  };
-  themes?: keyObjectType;
 }

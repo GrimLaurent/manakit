@@ -1,14 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from '../index';
+import { presetTestnoSSR, presetTestSSR } from './presetTest';
 
-describe('App', () => {
+describe('module App', () => {
   test('render App without props', () => {
     render(<App />);
-  });
-
-  test('render App with props noSSR', () => {
-    render(<App noSSR />);
   });
 
   test('render App with props id', () => {
@@ -31,8 +28,8 @@ describe('App', () => {
     );
   });
 
-  //Render full
-  test('render App with all props + SSR', () => {
+  //Render basic
+  test('render App with props id , className, style and children', () => {
     render(
       <App id={'testId'} className={'test-class-name'} style={{ background: 'red' }}>
         <p>Hello World</p>
@@ -40,9 +37,35 @@ describe('App', () => {
     );
   });
 
-  test('render App with all props + noSSR', () => {
+  //Render with set props (theming and config)
+  test('render App with SSR', () => {
     render(
-      <App id={'testId'} className={'test-class-name'} style={{ background: 'red' }} noSSR>
+      <App set={presetTestSSR}>
+        <p>Hello World</p>
+      </App>,
+    );
+  });
+
+  test('render App without SSR', () => {
+    render(
+      <App set={presetTestnoSSR}>
+        <p>Hello World</p>
+      </App>,
+    );
+  });
+
+  // All props
+  test('render App with all props', () => {
+    render(
+      <App id={'testId'} className={'test-class-name'} style={{ background: 'red' }} set={presetTestnoSSR}>
+        <p>Hello World</p>
+      </App>,
+    );
+  });
+
+  test('render App with all props and mode SSR', () => {
+    render(
+      <App id={'testId'} className={'test-class-name'} style={{ background: 'red' }} set={presetTestSSR}>
         <p>Hello World</p>
       </App>,
     );

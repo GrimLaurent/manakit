@@ -1,4 +1,4 @@
-import { RoundedType, CoreThemeType } from '../../types';
+import { RoundedType } from '../../types';
 /**
  * useRoundedTheme
  * @param value
@@ -6,7 +6,8 @@ import { RoundedType, CoreThemeType } from '../../types';
  * @returns number | string
  */
 
-const getRounded = (theme: CoreThemeType, value?: RoundedType, persistent?: RoundedType) => {
+// Depecrated V0.0.470
+const getRounded = (theme: any, value?: RoundedType, persistent?: RoundedType) => {
   if (value) {
     if (typeof value === 'boolean') {
       if (persistent) return theme.sys.rounded['md'];

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout, { siteTitle } from './templates/view';
@@ -28,6 +28,8 @@ const NextApp: NextPage = () => {
   const { t } = useTranslation();
   const [openDialog, setOpenDialog] = useState(false);
 
+  // Theme();
+
   return (
     <Fragment>
       <Layout home>
@@ -36,8 +38,9 @@ const NextApp: NextPage = () => {
         </Head>
         <Appbar>
           <div>
-            <h1 className="text-uppercase text-caption">{t('portfolio')}</h1>
-            <h4 className="text-h5 font-weight-black mt-n1">Bonsoir</h4>
+            <h1 className="text-uppercase text-caption primary--text">Portfolio</h1>
+            <h4 className="text-h5 font-weight-black mt-n1 primary">Bonsoir</h4>
+            <h4 className="text-h5 font-weight-black mt-n1 text--primary">Bonsoir</h4>
           </div>
           <Spacer />
           <Btn
@@ -52,6 +55,17 @@ const NextApp: NextPage = () => {
           </Btn>
         </Appbar>
         <Container>
+          <div className="demo-root-key">Demo root key</div>
+          <div className="d-none">none</div>
+          <div className="d-md-none">Demo root key</div>
+          <div className="d-xs-none">Demo root key</div>
+          <div className="d-xl-none">Demo root key</div>
+          <div className="primary" style={{ width: '300px', height: '200px' }}>
+            Demo primary
+          </div>
+          <div className="secondary" style={{ width: '300px', height: '200px' }}>
+            Demo secondary
+          </div>
           <GridRow>
             <GridCol cols={12}>
               <Card>

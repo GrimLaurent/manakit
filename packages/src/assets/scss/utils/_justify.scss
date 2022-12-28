@@ -1,0 +1,24 @@
+/**
+* @name justify
+* @description Control the layout of flex containers with alignment, justification and more with responsive flexbox utilities.
+* @type stylesheet
+* 
+* @author Laurent Grimaldi
+* @package ManaKit
+* @link https://developer.mozilla.org/fr/docs/Web/CSS/justify-content
+**/
+@each $name in $flex-align-justify {
+  .justify-#{$name} {
+    justify-content: #{$name} !important;
+  }
+}
+
+@each $size, $width in $grid-breakpoints {
+  @media all and (min-width: #{$width}) {
+    @each $name in $flex-align-justify {
+      .justify-#{$size}-#{$name} {
+        justify-content: #{$name} !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.k-rounded-rectangle {
+  height: 100%;
+  width: 100%;
+
+  .k-rounded-rectangle--wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}

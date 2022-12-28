@@ -1,4 +1,10 @@
 .mk-toolbar-items {
   display: flex;
   height: inherit;
+
+  > .mk-btn {
+    border-radius: 0;
+    height: 100% !important;
+    max-height: none;
+  }
 }

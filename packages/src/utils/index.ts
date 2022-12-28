@@ -10,6 +10,7 @@ import isExistElementStorage from './local/isExistElementStorage';
 import setElementStorage from './local/setElementStorage';
 
 import concatObject from './format/concatObj';
+import structuralString from './format/structuralString';
 
 import formatColorToRgba from './color/formatColorToRgba';
 import getColor from './color/getColor';
@@ -29,4 +30,5 @@ export {
   formatColorToRgba,
   getRounded,
   getColor,
+  structuralString,
 };
