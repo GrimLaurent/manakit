@@ -20,13 +20,13 @@
     "noUnusedParameters": true,
     "strictNullChecks": true
   },
-  "include": ["packages/**/*", "scripts/App", "packages/assets"],
+  "include": ["package/**/*", "scripts/App", "package/assets"],
   "exclude": [
     "node_modules",
     "build",
-    "packages/**/*.stories.tsx",
-    "packages/**/*.test.tsx",
-    "packages/stories/",
+    "package/**/*.stories.tsx",
+    "package/**/*.test.tsx",
+    "package/stories/",
     "scripts"
   ]
 }
