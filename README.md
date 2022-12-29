@@ -62,6 +62,7 @@ Be part of the next revolution in code editing by contributing to the project. T
 ## License
 
 Licensed under the [MIT license](https://github.com/manastone/manakit/blob/main/LICENSE.md).
+
 Copyright © 2022-2023 Manastone, Laurent Grimaldi
 
 ## We support these projects
