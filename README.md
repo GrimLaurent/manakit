@@ -1,138 +1,85 @@
-# Manakit - React User Interface Component Library
+<p align="center">
+  <img src="https://github.com/manastone/.github/blob/main/assets/manakit/img/ManaKit_Icon.png" height="128">
+  <h1 align="center">ManaKit for React.js</h1>
+</p>
+
+<p align="center">
+  <a aria-label="Follow Manastone on Twitter" href="https://twitter.com/Manastone_FR" target="_blank">
+    <img alt="" src="https://img.shields.io/badge/Follow%20@Manastone-black.svg?style=for-the-badge&logo=Twitter">
+  </a>
+  <a aria-label="Join the community on Discord" href="https://discord.gg/ZEqWHHpmM4" target="_blank">
+    <img alt="" src="https://img.shields.io/badge/Join%20the%20community-black.svg?style=for-the-badge&logo=Discord">
+  </a>
+    <a aria-label="Explore ManaKit Package" href="https://www.npmjs.com/package/manakit" target="_blank">
+    <img alt="" src="https://img.shields.io/badge/ManaKit-black.svg?style=for-the-badge&logo=NPM">
+  </a>
+</p>
+
+ManaKit is an integrated interface component framework by a Front developer, for Front developers, written entirely and shamelessly for Reajt.JS. Features include generic components, simplified integration, low dependency, TypeScript support, broad Node.js and browser compatibility, compliance with W3C and SEO standards, etc.
+
+<img width="1012" alt="github-banner" src="https://github.com/manastone/.github/blob/main/assets/manakit/img/Cover.png">
 
 [![DDL_ALL](https://img.shields.io/npm/dt/manakit.svg)](https://www.npmjs.com/package/manakit)&nbsp;
 [![DDL_MONTHS](https://img.shields.io/npm/dm/manakit.svg)](https://www.npmjs.com/package/manakit)&nbsp;
 [![LICENSE](https://img.shields.io/npm/l/manakit.svg)](https://www.npmjs.com/package/manakit)&nbsp;
 [![VERSION_MANAKIT](https://img.shields.io/npm/v/manakit.svg)](https://www.npmjs.com/package/manakit)&nbsp;
-[![SIZE_MANAKIT](https://packagephobia.now.sh/badge?p=manakit)](https://www.npmjs.com/package/manakit)&nbsp;
+[![DISCORD_BADGE](https://img.shields.io/discord/961266579365056573?color=5865F2&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/ZEqWHHpmM4)
 
-Manakit is a MIT licensed project that is developed and maintained by Laurent Grimaldi; with support from the entire Core Team. Thank's use Manakit and support Open Source Software at the same time! 🎉
+| :warning: | **ManaKit is currently in development.** <br> We will post a link here when we have an alpha and beta release ready for testing. Until then, we welcome contributors to help bring this project to life. | &nbsp;&nbsp;&nbsp;&nbsp;[CONTRIBUTE](https://github.com/manastone/manakit/blob/main/CONTRIBUTING.md)&nbsp;&nbsp;&nbsp;&nbsp; |
+| - |:-| - |
 
-## Introduction
+## Table of Contents
 
-Manakit is a user interface component library for web applications. It is based on the Javascript language via the React.js framework. It has a clean and modern syntax, offers full customization and native support for recent browsers.
+- [Motivation](#motivation)
+- [Community](#community)
+- [Contributing](#contributing)
+- [Core Team](#core-team-manakit)
+- [License](#license)
 
-Although inspired by Material Design, Vuetify and many other interface libraries, Manakit is not itself a library derived from Material Design. As a complete and independent library, Manakit brings together essential components such as theme management, grids (12 columns) and normalized CSS standards. Manakit embraces the modules in order to limit the imports and the duplication of code that they imply.
 
-## Contributing to Manakit
+## Motivation
 
-Developers interested in contributing should read the [Code of Conduct](https://github.com/manastone/manakit/blob/main/CODE_OF_CONDUCT.md) and the [Contribution Guide](https://github.com/manastone/manakit/blob/main/CONTRIBUTING.md).
+There are hundreds of interface frameworks. 
 
-> Please do **not** ask general questions in an issue. Issues are only to report bugs, suggest enhancements, or request new features. For general questions and discussions, ask in the [discord](https://discord.gg/ATm5mcPK3h).
+Why a new one? 
 
-To help you get you familiar with our contribution process, we have a list of [good first issues](https://github.com/manastone/manakit/labels/good%20first%20issues) that contain bugs which have a relatively limited scope. This is a great place to get started. If you have any questions, please join us on the [discord](https://discord.gg/ATm5mcPK3h).
+We realized that many frameworks wanted to do everything and this was mainly based on the standards imposed by Material Design. Bored with the lack of originality and the complexity of some and the financial cost of others, we decided to create our own open source framework. Starting from an idea in the air, we want to make this project a reality in order to make a free, open source, simple and maintainable interface framework over time. We are inspired by the MD frameworks and the Swift UI architecture in order to offer a development alternative.
 
-We also have a list of [help wanted](https://github.com/manastone/manakit/labels/help%20wanted) issues that you might want to check.
+[Join us](https://discord.gg/ZEqWHHpmM4) and let's create an awesome framework together.
 
-This project exists thanks to all the people who contribute 😍!
+## Community
 
-## Components in Manakit
+Join our growing community on [Discord](https://discord.gg/ZEqWHHpmM4) and [GitHub Discussions](https://github.com/manastone/manakit/discussions) where we discuss and collaborate on all things ManaKit. Don't be shy, jump right in and be part of the discussion!
 
-With Manakit you have a whole list of React components to be able to quickly create your interfaces without too much complexity. Here is the non-exhaustive list of the different components available via Manakit and their state of development (Pre-Alpha / Alpha / Beta / Stable)
+## Contributing
 
-<details>
-<summary>See Component List</summary>
-<br />
+Be part of the next revolution in code editing by contributing to the project. This is a community-led effort, so we welcome as many contributors who can help. Read the [Contribution Guide](https://github.com/manastone/manakit/blob/main/CONTRIBUTING.md) for more information.
 
-| **Component**    | **Children Component** | **State** |
-| ---------------- | ---------------------- | --------- |
-| Alert            | \*                     | Pre-Alpha |
-| App              | \*                     | Alpha     |
-| AppBar           | \*                     | Alpha     |
-| Avatar           | \*                     | Pre-Alpha |
-| BottomBar        | \*                     | Pre-Alpha |
-| Breadcrumbs      | \*                     | Pre-Alpha |
-| Btn              | \*                     | Pre-Alpha |
-| Cards            | \*                     | Pre-Alpha |
-| \*               | Card                   | Pre-Alpha |
-| \*               | CardActions            | Pre-Alpha |
-| \*               | CardSubTitle           | Pre-Alpha |
-| \*               | CardText               | Pre-Alpha |
-| \*               | CardTitle              | Pre-Alpha |
-| Chip             | \*                     | Pre-Alpha |
-| Content          | \*                     | Pre-Alpha |
-| Dialog           | \*                     | Pre-Alpha |
-| Divider          | \*                     | Pre-Alpha |
-| ExpansionPanels  | \*                     | Pre-Alpha |
-| \*               | ExpansionPanel         | Pre-Alpha |
-| \*               | ExpansionPanelContent  | Pre-Alpha |
-| \*               | ExpansionPanelHeader   | Pre-Alpha |
-| \*               | ExpansionPanels        | Pre-Alpha |
-| Footer           | \*                     | Pre-Alpha |
-| Grids            | \*                     | Alpha     |
-| \*               | GridCol                | Alpha     |
-| \*               | Container              | Alpha     |
-| \*               | GridRow                | Alpha     |
-| \*               | Spacer                 | Alpha     |
-| Icon             | \*                     | Pre-Alpha |
-| InputEl          | \*                     | Pre-Alpha |
-| Layout           | \*                     | Pre-Alpha |
-| \*               | Hstack                 | Pre-Alpha |
-| \*               | Vstack                 | Pre-Alpha |
-| Lists            | \*                     | Pre-Alpha |
-| \*               | List                   | Pre-Alpha |
-| \*               | ListItem               | Pre-Alpha |
-| \*               | ListItemAction         | Pre-Alpha |
-| \*               | ListItemAvatar         | Pre-Alpha |
-| \*               | ListItemContent        | Pre-Alpha |
-| \*               | ListItemGroup          | Pre-Alpha |
-| \*               | ListItemIcon           | Pre-Alpha |
-| \*               | ListItemSubtitle       | Pre-Alpha |
-| \*               | ListItemTitle          | Pre-Alpha |
-| Main             | \*                     | Pre-Alpha |
-| Menu             | \*                     | Pre-Alpha |
-| NavigationDrawer | \*                     | Pre-Alpha |
-| Overlay          | \*                     | Pre-Alpha |
-| Paper            | \*                     | Pre-Alpha |
-| Subheader        | \*                     | Pre-Alpha |
-| SystemBar        | \*                     | Pre-Alpha |
-| Tables           | \*                     | Pre-Alpha |
-| \*               | Table                  | Pre-Alpha |
-| Textfield        | \*                     | Pre-Alpha |
-| Toolbars         | \*                     | Alpha     |
-| \*               | Toolbar                | Alpha     |
-| \*               | ToolbarItems           | Alpha     |
-| \*               | ToolbarTitle           | Alpha     |
-| Responsive       | \*                     | Pre-Alpha |
+## Core Team ManaKit
 
-</details>
+[@Lalattyna](https://github.com/Lalattyna)
 
-## Getting Started
+## License
 
-You can use Manakit on a new project, or an existing project.
-For this you must install Manakit and the dependencies required for Manakit.
+Licensed under the [MIT license](https://github.com/manastone/manakit/blob/main/LICENSE.md).
 
-Manakit works on both [CRA](https://create-react-app.dev/) and [Next.js](https://nextjs.org/).
+Copyright © 2022-2023 Manastone, Laurent Grimaldi
 
-**Minimum system requirements 📌:**
+## We support these projects
 
-- React.js **18.0** or more
-- React dom **18.0** or more
-
-NodeJS **16** or more
-
-📌 Manakit is currently in pre Alpha, the minimal configuration will open in order to ensure greater support.
-
-### Install Manakit
-
-**npm**
-
-    `npm i manakit`
-
-**yarn**
-
-    `yarn add manakit`
-
-## Documentation
-
-In project, sorry...
-
-You will have thanks to that the list of all the available modules, their doc and their available configuration.
-
-## Follow & Join
-
-[![Discord](https://img.shields.io/badge/-Discord-0D1117?style=flat&logo=discord)](https://discord.gg/24pTEehYbQ)&nbsp;
-[![Twitter](https://img.shields.io/badge/-Twitter-0D1117?style=flat&logo=twitter)](https://twitter.com/ManastoneDev)&nbsp;
-[![Npm](https://img.shields.io/badge/-Npm-0D1117?style=flat&logo=npm)](https://www.npmjs.com/org/manastone)&nbsp;
-
-Copyright (c) 2022 Laurent Grimaldi
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.w3.org/">
+        <img src="https://user-images.githubusercontent.com/62988176/209962287-d19c7bf5-2eda-42b7-885d-47902db893c3.png" height="75">
+        <p>W3C</p>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://humanstxt.org/">
+        <img src="https://user-images.githubusercontent.com/62988176/209962360-048f7199-49dc-4385-9469-d0af6b4a8ea9.png" height="75">
+        <p>Human.txt</p>
+      </a>
+    </td>
+  </tr>
+</table>
