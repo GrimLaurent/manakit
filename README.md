@@ -57,7 +57,7 @@ Be part of the next revolution in code editing by contributing to the project. T
 
 ## Core Team ManaKit
 
-[@Laurent Grimaldi](https://github.com/Lalattyna)
+[@Lalattyna](https://github.com/Lalattyna)
 
 ## License
 
