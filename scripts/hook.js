@@ -1,10 +1,10 @@
 /**
  * HOOK
  * @description hook config for yarn command in terminal
- * @function npmHookBuild => yarn build
+ * @function npmHook => yarn build
  */
-const { execSync } = require('child_process');
 const shell = require('shelljs');
+const chalk = require('chalk');
 
 const intro = require('./intro');
 const clear = require('./clear');
@@ -20,12 +20,12 @@ function hook(type) {
   test(type);
   build(type);
 
-  shell.echo('[5/6] 🗂️   Fetching copyright and documentation...');
+  shell.echo(chalk.grey('[5/6]') + ' 🗂️   Fetching copyright and documentation...');
   shell.exec(`cp LICENSE.md build/`);
   shell.exec(`cp README.md build/`);
   shell.exec(`cp CONTRIBUTING.md build/`);
 
-  shell.echo('[6/6] 🚀  Ready for publish ?');
+  shell.echo(chalk.grey('[6/6]') + ' 🚀  Ready for publish ?');
 }
 
 for (var i = 0; i < process.argv.length; i++) {
