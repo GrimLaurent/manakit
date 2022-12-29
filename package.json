@@ -27,10 +27,10 @@
   },
   "homepage": "https://manastone.fr",
   "scripts": {
-    "build": "rollup -c",
+    "build": "node scripts/hook.js build",
+    "deploy": "node scripts/hook.js deploy",
     "test": "jest",
     "lint": "eslint",
-    "deploy": "node scripts/cli.js deploy",
     "prepare": "husky install",
     "scriptname": "cmd"
   },

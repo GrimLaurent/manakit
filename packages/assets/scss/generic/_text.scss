@@ -1,0 +1,74 @@
+.k-application {
+  .text-no-wrap {
+    white-space: nowrap !important;
+  }
+  .text-truncate {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .text-decoration-none {
+    text-decoration: none !important;
+  }
+  .text-decoration-line-through {
+    text-decoration: line-through !important;
+  }
+  .text-decoration-overline {
+    text-decoration: overline !important;
+  }
+  .text-decoration-underline {
+    text-decoration: underline !important;
+  }
+
+  @each $name in $text {
+    .text-#{$name} {
+      text-align: #{$name};
+    }
+  }
+
+  @each $size, $width in $grid-breakpoints {
+    @media all and (min-width: #{$width}) {
+      @each $name in $text {
+        .text-#{$size}-#{$name} {
+          text-align: #{$name};
+        }
+      }
+    }
+  }
+
+  // font emphasis
+
+  @each $type, $value in $font-weights {
+    .font-weight-#{$type} {
+      font-weight: #{$value} !important;
+    }
+  }
+
+  .text--primary {
+    opacity: 0.87 !important;
+  }
+  .text--secondary {
+    opacity: 0.6 !important;
+  }
+  .text--disabled {
+    opacity: 0.38 !important;
+  }
+
+  .text-lowercase {
+    text-transform: lowercase !important;
+  }
+  .text-uppercase {
+    text-transform: uppercase !important;
+  }
+  .text-capitalize {
+    text-transform: capitalize !important;
+  }
+  .text-none {
+    text-transform: none !important;
+  }
+  .text-break {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+}
