@@ -20,21 +20,18 @@ function hook(type) {
   test(type);
   build(type);
 
-  if (type === 'deploy') {
-    shell.echo('[6] 🚀 Fetching copyright and documentation...');
-    shell.exec(`cp LICENSE.md build/`);
-    shell.exec(`cp README.md build/`);
-    shell.exec(`cp CONTRIBUTING.md build/`);
-  }
+  shell.echo('[5/6] 🗂️   Fetching copyright and documentation...');
+  shell.exec(`cp LICENSE.md build/`);
+  shell.exec(`cp README.md build/`);
+  shell.exec(`cp CONTRIBUTING.md build/`);
+
+  shell.echo('[6/6] 🚀  Ready for publish ?');
 }
 
 for (var i = 0; i < process.argv.length; i++) {
   switch (process.argv[i]) {
     case 'build':
       hook('build');
-      break;
-    case 'deploy':
-      hook('deploy');
       break;
   }
 }

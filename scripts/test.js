@@ -1,8 +1,8 @@
 const shell = require('shelljs');
 
 function test(type) {
-  if (type === 'build' || type === 'deploy') {
-    shell.echo('[3] 🔗  Test package...');
+  if (type === 'build') {
+    shell.echo('[3/6] 🪤   Test package...');
     shell.exec(`yarn jest`);
   }
 }

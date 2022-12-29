@@ -28,7 +28,6 @@
   "homepage": "https://manastone.fr",
   "scripts": {
     "build": "node scripts/hook.js build",
-    "deploy": "node scripts/hook.js deploy",
     "test": "jest",
     "lint": "eslint",
     "prepare": "husky install",
