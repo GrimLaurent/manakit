@@ -1,6 +1,4 @@
 const shell = require('shelljs');
-const chalk = require('chalk');
-const pkg = require('../package.json');
 
 function clear(type) {
   if (type === 'build' || type === 'deploy') {

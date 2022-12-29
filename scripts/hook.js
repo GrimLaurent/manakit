@@ -5,8 +5,6 @@
  */
 const { execSync } = require('child_process');
 const shell = require('shelljs');
-const chalk = require('chalk');
-const boxen = require('boxen');
 
 const intro = require('./intro');
 const clear = require('./clear');
