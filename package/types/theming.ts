@@ -17,7 +17,7 @@ export interface ManakitPreset {
 export interface UserPreset {
   ssr?: boolean;
   theme?: {
-    default?: 'light' | 'dark';
+    default?: string;
     disable?: boolean;
     themes?: {
       light?: {

@@ -51,7 +51,7 @@ const App: FunctionComponent<AppClassType> = (props) => {
     if (isDark !== undefined) {
       isDark ? (hasTheme = 'dark') : (hasTheme = 'light');
     } else if (set?.theme?.default !== undefined) {
-      hasTheme = set?.theme?.default;
+      hasTheme = set?.theme?.default as never;
     }
 
     setUseTheme(hasTheme);
