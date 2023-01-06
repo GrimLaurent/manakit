@@ -46,15 +46,15 @@ const App: FunctionComponent<AppClassType> = (props) => {
 
   useEffect(() => {
     // theming
-    let useTheme = preset.theme.default; // default
+    let hasTheme = preset.theme.default; // default
 
-    if (set?.theme?.default && isDark === undefined) {
-      useTheme = set?.theme?.default;
-    } else if (isDark !== undefined) {
-      isDark ? (useTheme = 'dark') : 'light';
+    if (isDark !== undefined) {
+      isDark ? (hasTheme = 'dark') : (hasTheme = 'light');
+    } else if (set?.theme?.default !== undefined) {
+      hasTheme = set?.theme?.default;
     }
 
-    setUseTheme(useTheme);
+    setUseTheme(hasTheme);
 
     // generate theme (scss/css)
     Theme(set, isDark);
