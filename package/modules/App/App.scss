@@ -1,5 +1,15 @@
 @import '../../assets/scss/main.scss';
 
+.theme--light.k-application {
+  background: var(--manakit-background);
+  color: var(--manakit-on-background);
+}
+
+.theme--dark.k-application {
+  background: var(--manakit-background);
+  color: var(--manakit-on-background);
+}
+
 .k-application {
   display: flex;
   position: relative;

@@ -10,12 +10,17 @@ import genStyleElement from './utils/genStyleElement';
 
 function Theme(userPreset?: UserPreset, dark?: boolean) {
   const applyTheme = Themeable(userPreset);
+  const defaultTheme = userPreset?.theme?.default === 'dark' ? true : false;
 
   if (checkOrCreateStyleElement()) {
     const styleEl = document.getElementById('manakit-theme-stylesheet') as HTMLStyleElement;
 
     if (styleEl) {
-      const css = genStylesRoot(applyTheme, dark);
+      const css = genStylesRoot(
+        applyTheme,
+        dark !== undefined ? dark : defaultTheme !== undefined ? defaultTheme : undefined,
+      );
+
       styleEl!.sheet!.insertRule(css, 0);
       genStyleCss(styleEl, applyTheme);
     }

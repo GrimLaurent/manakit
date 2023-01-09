@@ -1,7 +1,7 @@
-import App from './modules/App';
+import App, { AppKit } from './modules/App';
 import Icon from './modules/Icon';
 import View from './modules/View';
-export { App, Icon, View };
+export { App, AppKit, Icon, View };
 
 // shapes
 import Rectangle from './modules/shapes/Rectangle';

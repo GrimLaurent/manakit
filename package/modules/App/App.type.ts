@@ -11,21 +11,21 @@ export class AppClassType {
   className?: ElementClassHTMLType;
   style?: ElementStyleHTMLType;
   children?: ElementChildrenType;
-  isDark?: boolean;
   set?: UserPreset;
+  colorScheme?: 'dark' | 'light' | 'auto';
   constructor(
     id = undefined,
     className = undefined,
     style = undefined,
     children = undefined,
-    isDark = false,
+    colorScheme?: undefined,
     set = undefined,
   ) {
     this.id = id;
     this.className = className;
     this.style = style;
     this.children = children;
-    this.isDark = isDark;
     this.set = set;
+    this.colorScheme = colorScheme;
   }
 }

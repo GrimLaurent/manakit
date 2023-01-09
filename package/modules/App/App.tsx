@@ -25,7 +25,7 @@ import { preset } from '../../presets/default';
 import { useId, useClassName, useStyle } from '../../utils/dom';
 
 const App: FunctionComponent<AppClassType> = (props) => {
-  const { id, className, style, children, set, isDark } = props;
+  const { id, className, style, children, set, colorScheme } = props;
   const [render, setRender]: Array<any> = useState(undefined);
   const [useTheme, setUseTheme] = useState('');
 
@@ -45,20 +45,31 @@ const App: FunctionComponent<AppClassType> = (props) => {
   );
 
   useEffect(() => {
-    // theming
-    let hasTheme = preset.theme.default; // default
+    if (colorScheme === 'auto') {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setUseTheme('dark');
+      } else {
+        setUseTheme('false');
+      }
 
-    if (isDark !== undefined) {
-      isDark ? (hasTheme = 'dark') : (hasTheme = 'light');
-    } else if (set?.theme?.default !== undefined) {
-      hasTheme = set?.theme?.default as never;
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+        setUseTheme(event.matches ? 'dark' : 'light');
+      });
+    } else {
+      if (colorScheme) {
+        setUseTheme(colorScheme);
+      } else if (set?.theme?.default !== undefined) {
+        setUseTheme(set?.theme?.default as never);
+      } else {
+        setUseTheme(preset.theme.default); // default
+      }
     }
+  }, [set, colorScheme]);
 
-    setUseTheme(hasTheme);
-
+  useEffect(() => {
     // generate theme (scss/css)
-    Theme(set, isDark);
-  }, [set, isDark]);
+    Theme(set, useTheme === 'dark');
+  }, [useTheme]);
 
   // render
   if (set?.ssr !== undefined ? set?.ssr : preset.ssr) {
