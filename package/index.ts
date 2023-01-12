@@ -16,3 +16,7 @@ import GridRow from './modules/grids/GridRow';
 import GridItem from './modules/grids/GridItem';
 import Spacer from './modules/grids/Spacer';
 export { Grid, GridRow, GridItem, Spacer };
+
+// typography
+import Text from './modules/Text';
+export { Text };

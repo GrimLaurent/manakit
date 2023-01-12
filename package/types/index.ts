@@ -28,6 +28,14 @@ import { ElementActionOnClikType, ElementActionHrefType, ElementActionType_Exten
 
 import { AlignType, AlignContentType, JustifyType, AlignSelfType } from './align';
 
+import {
+  TypographyType,
+  TypographyWeightType,
+  TypographyAlignType,
+  TypographyDecorationType,
+  TypographyTransformType,
+} from './typography';
+
 export type {
   ElementIdHTMLType,
   ElementClassHTMLType,
@@ -57,4 +65,9 @@ export type {
   AlignSelfType,
   ManakitPreset,
   UserPreset,
+  TypographyType,
+  TypographyWeightType,
+  TypographyAlignType,
+  TypographyDecorationType,
+  TypographyTransformType,
 };
