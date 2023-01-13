@@ -13,6 +13,8 @@ export type TypographyType =
   | 'caption'
   | 'overline';
 
+export type TypographyDOMType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+
 export type TypographyWeightType = 'black' | 'bold' | 'medium' | 'regular' | 'light' | 'thin';
 export type TypographyAlignType = 'left' | 'center' | 'right' | 'justify';
 export type TypographyDecorationType = 'none' | 'overline' | 'underline' | 'line-through';

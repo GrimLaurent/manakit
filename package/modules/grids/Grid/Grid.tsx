@@ -26,7 +26,7 @@ const Grid: FunctionComponent<GridClassType> = ({ id, className, style, children
 
   return (
     <Fragment>
-      <section id={id} className={useClassName(`k-grid`, className)} style={useStyle({}, style)}>
+      <section id={id} className={useClassName(`k-grid`, className, classList)} style={useStyle({}, style)}>
         {children}
       </section>
     </Fragment>

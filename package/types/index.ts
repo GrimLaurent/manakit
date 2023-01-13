@@ -34,6 +34,7 @@ import {
   TypographyAlignType,
   TypographyDecorationType,
   TypographyTransformType,
+  TypographyDOMType,
 } from './typography';
 
 export type {
@@ -70,4 +71,5 @@ export type {
   TypographyAlignType,
   TypographyDecorationType,
   TypographyTransformType,
+  TypographyDOMType,
 };

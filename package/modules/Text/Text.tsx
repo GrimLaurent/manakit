@@ -16,60 +16,89 @@ import { TextClassType } from './Text.type';
 import './Text.scss';
 
 // utilities
-import { useClassName, useStyle } from '../../utils/dom';
+import { useClassName, useSize, useStyle } from '../../utils/dom';
 
 const Text: FunctionComponent<TextClassType> = ({
   id,
   className,
   style,
   children,
-  type,
-  xs,
-  sm,
-  md,
-  lg,
-  xl,
-  align,
-  alignXs,
-  alignSm,
-  alignMd,
-  alignLg,
-  alignXl,
-  weight,
+  font,
   italic,
-  decoration,
-  transform,
   primary,
   secondary,
   disabled,
+  alt,
+  frame,
+  alignement,
 }) => {
   const classList = [
-    { el: 'text-' + type, val: type ? true : false },
-    { el: 'text-xs-' + xs, val: xs ? true : false },
-    { el: 'text-sm-' + sm, val: sm ? true : false },
-    { el: 'text-md-' + md, val: md ? true : false },
-    { el: 'text-lg-' + lg, val: lg ? true : false },
-    { el: 'text-xl-' + xl, val: xl ? true : false },
-    { el: 'text-' + align, val: align ? true : false },
-    { el: 'text-xs-' + alignXs, val: alignXs ? true : false },
-    { el: 'text-sm-' + alignSm, val: alignSm ? true : false },
-    { el: 'text-md-' + alignMd, val: alignMd ? true : false },
-    { el: 'text-lg-' + alignLg, val: alignLg ? true : false },
-    { el: 'text-xl-' + alignXl, val: alignXl ? true : false },
-    { el: 'font-weight-' + weight, val: weight ? true : false },
+    { el: 'text-' + font?.default, val: font?.default ? true : false },
+    { el: 'text-xs-' + font?.xs, val: font?.xs ? true : false },
+    { el: 'text-sm-' + font?.sm, val: font?.sm ? true : false },
+    { el: 'text-md-' + font?.md, val: font?.md ? true : false },
+    { el: 'text-lg-' + font?.lg, val: font?.lg ? true : false },
+    { el: 'text-xl-' + font?.xl, val: font?.xl ? true : false },
+    { el: 'text-' + alignement?.default, val: alignement?.default ? true : false },
+    { el: 'text-xs-' + alignement?.xs, val: alignement?.xs ? true : false },
+    { el: 'text-sm-' + alignement?.sm, val: alignement?.sm ? true : false },
+    { el: 'text-md-' + alignement?.md, val: alignement?.md ? true : false },
+    { el: 'text-lg-' + alignement?.lg, val: alignement?.lg ? true : false },
+    { el: 'text-xl-' + alignement?.xl, val: alignement?.xl ? true : false },
+    { el: 'font-weight-' + font?.weight, val: font?.weight ? true : false },
+    { el: 'text-decoration-' + font?.decoration, val: font?.decoration ? true : false },
+    { el: 'text-' + font?.transform, val: font?.transform ? true : false },
     { el: 'font-italic', val: italic },
-    { el: 'text-decoration-' + decoration, val: decoration ? true : false },
-    { el: 'text-' + transform, val: transform ? true : false },
     { el: 'text--primary', val: primary },
     { el: 'text--secondary', val: secondary },
     { el: 'text--disabled', val: disabled },
   ];
 
+  const styleList = {
+    width: useSize(frame?.width),
+    height: useSize(frame?.height),
+    minWidth: useSize(frame?.minWidth),
+    maxWidth: useSize(frame?.maxWidth),
+    minHeight: useSize(frame?.minHeight),
+    maxHeight: useSize(frame?.maxHeight),
+    fontSize: useSize(font?.size),
+  };
+
   return (
     <Fragment>
-      <span id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
-        {children}
-      </span>
+      {alt === 'h1' ? (
+        <h1 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
+          {children}
+        </h1>
+      ) : alt === 'h2' ? (
+        <h2 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+          {children}
+        </h2>
+      ) : alt === 'h3' ? (
+        <h3 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+          {children}
+        </h3>
+      ) : alt === 'h4' ? (
+        <h4 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+          {children}
+        </h4>
+      ) : alt === 'h5' ? (
+        <h5 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+          {children}
+        </h5>
+      ) : alt === 'h6' ? (
+        <h6 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+          {children}
+        </h6>
+      ) : alt === 'span' ? (
+        <span id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+          {children}
+        </span>
+      ) : (
+        <p id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+          {children}
+        </p>
+      )}
     </Fragment>
   );
 };
