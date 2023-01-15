@@ -19,4 +19,5 @@ export { Grid, GridRow, GridItem, Spacer };
 
 // typography
 import Text from './modules/Text';
-export { Text };
+import Label from './modules/Label';
+export { Text, Label };

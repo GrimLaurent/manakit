@@ -1,4 +1,5 @@
 import { CSSProperties } from 'react';
+import getClassColor from './color';
 
 export const useId = (d?: string, n?: string) => {
   // d: default id
@@ -6,10 +7,16 @@ export const useId = (d?: string, n?: string) => {
   return n ? n : d ? d : '';
 };
 
-export const useClassName = (d?: string, x?: string | CSSProperties, c?: object) => {
+export const useClassName = (
+  d?: string,
+  x?: string | CSSProperties,
+  c?: object,
+  t?: { color?: unknown; background?: unknown },
+) => {
   // d: default className
   // x: props.className ( custom by developer )
   // c: class for module
+  // t: colorTheme for module
   let response = d ? d : '';
   if (c) {
     for (const [key, value] of Object.entries(c)) {
@@ -23,6 +30,12 @@ export const useClassName = (d?: string, x?: string | CSSProperties, c?: object)
           break;
       }
     }
+  }
+  if (t) {
+    const color = typeof t?.color === 'string' ? t?.color : undefined;
+    const background = typeof t?.background === 'string' ? t?.background : undefined;
+
+    response = response + ' ' + getClassColor(color, background);
   }
   if (x) {
     response = response + ' ' + x;
@@ -50,14 +63,19 @@ export const useSize = (v?: number | string) => {
       if (isNaN(v as never)) {
         return v;
       } else {
-        const obj = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        if (v !== '' && v !== undefined) {
+          const obj = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-        for (let v of obj) {
-          if ((v as string)!.includes(v)) {
-            return v + 'px';
+          for (let e of obj) {
+            if ((v as string)!.includes(e)) {
+              return v + 'px';
+            }
           }
+
+          return v;
+        } else {
+          return '0px';
         }
-        return v;
       }
     default:
       return v === undefined ? undefined : '';

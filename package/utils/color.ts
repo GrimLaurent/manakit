@@ -17,3 +17,29 @@ export const useColor = (d: string, color?: string, dark?: boolean, light?: bool
     }
   }
 };
+
+/**
+ * getClassColor
+ * @param color
+ * @param backgroundColor
+ * @returns string
+ */
+function getClassColor(c?: string, b?: string) {
+  let response = '';
+  if (c !== undefined) {
+    if ((c as string)!.includes('.')) {
+      const el = c!.slice(1);
+      response = response + `${el}--text`;
+    }
+  }
+  if (b !== undefined) {
+    if ((b as string)!.includes('.')) {
+      const el = c!.slice(1);
+      response = response + `${el}`;
+    }
+  }
+
+  return response.trim();
+}
+
+export default getClassColor;

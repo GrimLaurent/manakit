@@ -7,7 +7,7 @@
  * @package ManaKit
  * @author Laurent Grimaldi
  * @repository https://github.com/manastone/manakit
- * @copyright (c)2022 Manastone and the ManaKit project authors
+ * @copyright (c)2023 Manastone and the ManaKit project authors
  */
 import React, { FunctionComponent, Fragment } from 'react';
 import { TextClassType } from './Text.type';
