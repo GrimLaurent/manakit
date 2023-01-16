@@ -4,16 +4,19 @@ import {
   ElementStyleHTMLType,
   ElementChildrenType,
   SizeType,
-} from '../../types';
+  ElevationType,
+  RoundedBasicType,
+} from '../../../types';
 
-export class ResponsiveClassType {
+export class ToolbarClassType {
   id?: ElementIdHTMLType;
   className?: ElementClassHTMLType;
   style?: ElementStyleHTMLType;
   children?: ElementChildrenType;
-  aspectRatio?: string | number;
-  contentClass?: string;
-  fillHeight?: boolean;
+  // themes
+  foregroundColor?: string | { color: string; opacity: number | string };
+  backgroundColor?: string | { color: string; opacity: number | string };
+
   // frame
   frame?: {
     width?: SizeType;
@@ -23,9 +26,20 @@ export class ResponsiveClassType {
     maxWidth?: SizeType;
     maxHeight?: SizeType;
   };
-  content?: {
-    width?: SizeType;
-    body?: ElementChildrenType;
+  // color
+  primary?: boolean;
+  secondary?: boolean;
+  disabled?: boolean;
+  //position
+  fixed?: boolean;
+  absolute?: boolean;
+
+  // elevation
+  elevation?: ElevationType | boolean;
+  rounded?: RoundedBasicType | string | number;
+
+  placement?: {
+    position?: 'topBar' | 'bottomBar';
   };
   constructor(id = undefined, className = undefined, style = undefined, children = undefined) {
     this.id = id;

@@ -71,31 +71,31 @@ const Text: FunctionComponent<TextClassType> = ({
           {children}
         </h1>
       ) : alt === 'h2' ? (
-        <h2 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+        <h2 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
           {children}
         </h2>
       ) : alt === 'h3' ? (
-        <h3 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+        <h3 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
           {children}
         </h3>
       ) : alt === 'h4' ? (
-        <h4 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+        <h4 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
           {children}
         </h4>
       ) : alt === 'h5' ? (
-        <h5 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+        <h5 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
           {children}
         </h5>
       ) : alt === 'h6' ? (
-        <h6 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+        <h6 id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
           {children}
         </h6>
       ) : alt === 'span' ? (
-        <span id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+        <span id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
           {children}
         </span>
       ) : (
-        <p id={id} className={useClassName(`k-text`, className, classList)} style={useStyle({}, style)}>
+        <p id={id} className={useClassName(`k-text`, className, classList)} style={useStyle(styleList, style)}>
           {children}
         </p>
       )}

@@ -1,0 +1,33 @@
+.k-toolbar {
+  contain: layout;
+  display: block;
+  flex: 1 1 auto;
+  max-width: 100%;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    left 0.2s cubic-bezier(0.4, 0, 0.2, 1), right 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+
+  &.k-toolbar--absolute {
+    position: absolute;
+  }
+
+  &.k-toolbar--fixed {
+    position: fixed;
+    z-index: 5;
+  }
+
+  &.k-toolbar--top {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+  }
+
+  &.k-toolbar--bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+  }
+}

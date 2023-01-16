@@ -22,13 +22,13 @@ describe('module Responsive', () => {
     render(<Responsive style={{ margin: '10px' }} />);
   });
   test('render Responsive with props width, height', () => {
-    render(<Responsive height={320} width={320} />);
+    render(<Responsive frame={{ height: 320, width: 320 }} />);
   });
   test('render Responsive with props minWidth, minHeight', () => {
-    render(<Responsive minHeight={320} minWidth={320} />);
+    render(<Responsive frame={{ minHeight: 320, minWidth: 320 }} />);
   });
   test('render Responsive with props maxWidth, maxHeight', () => {
-    render(<Responsive maxHeight={320} maxWidth={320} />);
+    render(<Responsive frame={{ maxHeight: 320, maxWidth: 320 }} />);
   });
   test('render Responsive with props aspectRatio string', () => {
     render(<Responsive aspectRatio={'16/9'} />);

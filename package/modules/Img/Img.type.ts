@@ -6,14 +6,18 @@ import {
   SizeType,
 } from '../../types';
 
-export class ResponsiveClassType {
+export class ImgClassType {
   id?: ElementIdHTMLType;
   className?: ElementClassHTMLType;
   style?: ElementStyleHTMLType;
   children?: ElementChildrenType;
+  src: string;
+  alt?: string;
   aspectRatio?: string | number;
   contentClass?: string;
   fillHeight?: boolean;
+  contain?: boolean;
+  position?: string;
   // frame
   frame?: {
     width?: SizeType;
@@ -23,14 +27,8 @@ export class ResponsiveClassType {
     maxWidth?: SizeType;
     maxHeight?: SizeType;
   };
-  content?: {
-    width?: SizeType;
-    body?: ElementChildrenType;
-  };
-  constructor(id = undefined, className = undefined, style = undefined, children = undefined) {
-    this.id = id;
-    this.className = className;
-    this.style = style;
-    this.children = children;
+
+  constructor(src = '') {
+    this.src = src;
   }
 }

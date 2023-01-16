@@ -1,7 +1,8 @@
 import App, { AppKit } from './modules/App';
 import Icon from './modules/Icon';
+import Img from './modules/Img';
 import View from './modules/View';
-export { App, AppKit, Icon, View };
+export { App, AppKit, Icon, View, Img };
 
 // shapes
 import Rectangle from './modules/shapes/Rectangle';
@@ -21,3 +22,7 @@ export { Grid, GridRow, GridItem, Spacer };
 import Text from './modules/Text';
 import Label from './modules/Label';
 export { Text, Label };
+
+// bars
+import Toolbar from './modules/bars/Toolbar';
+export { Toolbar };

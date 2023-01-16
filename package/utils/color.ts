@@ -29,13 +29,13 @@ function getClassColor(c?: string, b?: string) {
   if (c !== undefined) {
     if ((c as string)!.includes('.')) {
       const el = c!.slice(1);
-      response = response + `${el}--text`;
+      response = response + ' ' + `${el}--text`;
     }
   }
   if (b !== undefined) {
     if ((b as string)!.includes('.')) {
-      const el = c!.slice(1);
-      response = response + `${el}`;
+      const el = b!.slice(1);
+      response = response + ' ' + `${el}`;
     }
   }
 

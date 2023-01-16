@@ -26,30 +26,33 @@ const Responsive: FunctionComponent<ResponsiveClassType> = ({
   children,
   contentClass,
   aspectRatio,
-  width,
-  height,
-  minWidth,
-  maxWidth,
-  minHeight,
-  maxHeight,
+  frame,
+  content,
   fillHeight,
 }) => {
   const classList = [{ el: 'fill-height', val: fillHeight }];
 
   const styleList = {
-    width: useSize(width),
-    height: useSize(height),
-    minWidth: useSize(minWidth),
-    maxWidth: useSize(maxWidth),
-    minHeight: useSize(minHeight),
-    maxHeight: useSize(maxHeight),
+    width: useSize(frame?.width),
+    height: useSize(frame?.height),
+    minWidth: useSize(frame?.minWidth),
+    maxWidth: useSize(frame?.maxWidth),
+    minHeight: useSize(frame?.minHeight),
+    maxHeight: useSize(frame?.maxHeight),
+  };
+
+  const styleContentList = {
+    width: useSize(content?.width),
   };
 
   return (
     <Fragment>
       <div id={id} className={useClassName('k-responsive', className, classList)} style={useStyle(styleList, style)}>
         <div className="k-responsive--sizer" style={{ paddingBottom: useRatio(aspectRatio) }}></div>
-        <div className={useClassName('k-responsive--content', contentClass)}>{children}</div>
+        <Fragment>{content?.body}</Fragment>
+        <div className={useClassName('k-responsive--content', contentClass)} style={useStyle(styleContentList)}>
+          <Fragment>{children}</Fragment>
+        </div>
       </div>
     </Fragment>
   );
