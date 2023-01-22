@@ -1,8 +1,13 @@
-import App, { AppKit } from './modules/App';
+// import App, { AppKit } from './modules/App';
+import Application, { App, AppKit, ManaKit } from './components/Application/App';
+import Main from './components/Application/Main';
 import Icon from './modules/Icon';
 import Img from './modules/Img';
 import View from './modules/View';
-export { App, AppKit, Icon, View, Img };
+import Btn from './modules/Btn';
+import Navigation from './modules/Navigation';
+import Overlay from './modules/overlay';
+export { Application, App, AppKit, ManaKit, Main, Icon, View, Img, Btn, Navigation, Overlay };
 
 // shapes
 import Rectangle from './modules/shapes/Rectangle';
@@ -25,4 +30,10 @@ export { Text, Label };
 
 // bars
 import Toolbar from './modules/bars/Toolbar';
-export { Toolbar };
+import ToolbarTitle from './modules/bars/Toolbar/ToolbarTitle';
+export { Toolbar, ToolbarTitle };
+
+// layout
+import HStack from './modules/layout/HStack/Hstack';
+import VStack from './modules/layout/VStack';
+export { VStack, HStack };

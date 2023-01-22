@@ -20,3 +20,27 @@ export const generateSizeDom = (
     domObjectif[0].style[paramObjectif] = String(value) + unit ? unit : 'px';
   }
 };
+
+export function getElHTMLHeight(el: string) {
+  const appbarList = document.getElementsByClassName(el);
+  if (appbarList && appbarList[0]?.clientHeight) return appbarList[0]?.clientHeight;
+  else return 0;
+}
+
+export function getElHTMLWidth(el: string, condition?: string) {
+  const appbarList = document.getElementsByClassName(el);
+  console.log('getElHTMLWidth', appbarList);
+
+  if (condition) {
+    if (appbarList && appbarList[0]?.clientHeight && appbarList[0].className.includes(condition))
+      return appbarList[0]?.clientWidth;
+    else return 0;
+  } else {
+    if (appbarList && appbarList[0]?.clientHeight) return appbarList[0]?.clientWidth;
+    else return 0;
+  }
+}
+
+import { getElementClassName } from './getElementClassName';
+
+export { getElementClassName };

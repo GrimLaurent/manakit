@@ -18,9 +18,6 @@ import './Toolbar.scss';
 // utilities
 import { useClassName, useSize, useStyle } from '../../../utils/dom';
 
-// dependencies
-import RoundedRectangle from '../../shapes/RoundedRectangle';
-
 const Toolbar: FunctionComponent<ToolbarClassType> = ({
   id,
   className,
@@ -33,36 +30,57 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
   absolute,
   placement,
   rounded,
+  elevation,
+  dense,
 }) => {
   const classList = [
+    { el: 'k-toolbar--dense', val: dense },
     { el: 'k-toolbar--absolute', val: absolute },
     { el: 'k-toolbar--fixed', val: fixed },
     { el: 'k-toolbar--top', val: placement?.position === 'topBar' },
     { el: 'k-toolbar--bottom', val: placement?.position === 'bottomBar' },
+    { el: 'rounded-xs', val: rounded === 'xs' },
+    { el: 'rounded-sm', val: rounded === 'sm' },
+    { el: 'rounded', val: typeof rounded === 'boolean' && rounded === true }, //default
+    { el: 'rounded-lg', val: rounded === 'lg' },
+    { el: 'rounded-xl', val: rounded === 'xl' },
+    { el: 'rounded-0', val: rounded === 'none' },
+    { el: 'elevation-1', val: typeof elevation === 'boolean' && elevation === true },
+    { el: 'elevation', val: typeof elevation === 'string' || typeof elevation === 'number' ? elevation : false },
   ];
 
   const styleList = {
     width: useSize(frame?.width),
-    height: useSize(frame?.height ? frame?.height : '64px'),
+    height: useSize(frame?.height),
     minWidth: useSize(frame?.minWidth),
     maxWidth: useSize(frame?.maxWidth),
     minHeight: useSize(frame?.minHeight),
     maxHeight: useSize(frame?.maxHeight),
+    borderRadius:
+      rounded !== 'none' &&
+      rounded !== 'xs' &&
+      rounded !== 'sm' &&
+      rounded !== 'lg' &&
+      rounded !== 'xl' &&
+      typeof rounded !== 'boolean'
+        ? useSize(rounded)
+        : '',
   };
 
   return (
     <Fragment>
-      <RoundedRectangle
+      <header
         id={id}
         className={useClassName(`k-toolbar`, className, classList, {
           color: foregroundColor,
           background: backgroundColor,
         })}
         style={useStyle(styleList, style)}
-        rounded={rounded ? rounded : 'none'}
       >
-        <Fragment>{children}</Fragment>
-      </RoundedRectangle>
+        <div className="k-toolbar--wrap">
+          <Fragment>{children}</Fragment>
+        </div>
+      </header>
     </Fragment>
   );
 };

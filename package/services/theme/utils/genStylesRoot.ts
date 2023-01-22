@@ -12,7 +12,7 @@ function genStylesRoot(themes: any, dark?: boolean) {
 
   for (const [key, value] of Object.entries(themes[dark ? 'dark' : 'light'])) {
     const keyTrans = structuralString(key);
-    varCss = `${varCss}--manakit-${keyTrans}:${value};`;
+    varCss = `${varCss}--mkt-${keyTrans}:${value};`;
   }
 
   return `:root {\n ${varCss}\n }\n\n`;

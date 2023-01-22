@@ -4,19 +4,31 @@ import {
   ElementStyleHTMLType,
   ElementChildrenType,
   SizeType,
-  ElevationType,
-  RoundedBasicType,
-} from '../../../types';
+} from '../../types';
 
-export class ToolbarClassType {
+export class BtnClassType {
   id?: ElementIdHTMLType;
   className?: ElementClassHTMLType;
   style?: ElementStyleHTMLType;
   children?: ElementChildrenType;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  href?: 'string';
+
+  xSmall?: boolean;
+  small?: boolean;
+  large?: boolean;
+  xLarge?: boolean;
   // themes
   foregroundColor?: string | { color: string; opacity: number | string };
   backgroundColor?: string | { color: string; opacity: number | string };
-
+  // display
+  titleOnly?: boolean;
+  iconOnly?: boolean;
+  // icon
+  icon?: {
+    slot?: ElementChildrenType;
+    position?: 'top' | 'bottom' | 'right' | 'left';
+  };
   // frame
   frame?: {
     width?: SizeType;
@@ -30,18 +42,6 @@ export class ToolbarClassType {
   primary?: boolean;
   secondary?: boolean;
   disabled?: boolean;
-  //position
-  fixed?: boolean;
-  absolute?: boolean;
-
-  // elevation
-  elevation?: ElevationType | boolean;
-  rounded?: RoundedBasicType | string | number;
-
-  placement?: {
-    position?: 'topBar' | 'bottomBar';
-  };
-  dense?: boolean;
   constructor(id = undefined, className = undefined, style = undefined, children = undefined) {
     this.id = id;
     this.className = className;

@@ -6,9 +6,9 @@ import {
   SizeType,
   ElevationType,
   RoundedBasicType,
-} from '../../../types';
+} from '../../../../types';
 
-export class ToolbarClassType {
+export class ToolbarTitleClassType {
   id?: ElementIdHTMLType;
   className?: ElementClassHTMLType;
   style?: ElementStyleHTMLType;

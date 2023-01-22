@@ -19,6 +19,10 @@ html {
   &::-ms-reveal {
     display: none;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 // iOS Safari hack to allow click events on body

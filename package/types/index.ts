@@ -73,3 +73,8 @@ export type {
   TypographyTransformType,
   TypographyDOMType,
 };
+
+// NEW
+import { ColorScheme } from './app';
+
+export type { ColorScheme };

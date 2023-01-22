@@ -45,17 +45,25 @@ const App: FunctionComponent<AppClassType> = (props) => {
   );
 
   useEffect(() => {
+    console.log('USEFFECT set, colorScheme', colorScheme);
     if (colorScheme === 'auto') {
+      console.log(
+        'USEFFECT set, colorScheme dans le if',
+        colorScheme,
+        'macthMedia',
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches,
+      );
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         setUseTheme('dark');
       } else {
-        setUseTheme('false');
+        setUseTheme('light');
       }
 
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
         setUseTheme(event.matches ? 'dark' : 'light');
       });
     } else {
+      console.log('USEFFECT set, colorScheme dans le else', colorScheme);
       if (colorScheme) {
         setUseTheme(colorScheme);
       } else if (set?.theme?.default !== undefined) {
