@@ -75,6 +75,6 @@ export type {
 };
 
 // NEW
-import { ColorScheme } from './app';
+import { ColorScheme, SizeHTML, RoundedClass, RoundedClass_Extended, ElevationClass } from './app';
 
-export type { ColorScheme };
+export type { ColorScheme, SizeHTML, RoundedClass, RoundedClass_Extended, ElevationClass };

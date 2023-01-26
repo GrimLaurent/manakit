@@ -17,20 +17,26 @@ import './Main.scss';
 
 // utilities
 import { useClassName, useSize, useStyle } from '../../../utils/dom';
-import { getSizeNavigation } from '../../../services/main';
+import { getSizeFooter, getSizeNavigation, getSizeSystemBar } from '../../../services/main';
 
 const Main: FunctionComponent<MainClassType> = ({ id, className, style, children }) => {
+  const [paddingTop, setPaddingTop] = useState(0);
+  const [paddingBottom, setPaddingBottom] = useState(0);
   const [paddingLeft, setPaddingLeft] = useState(0);
   const [paddingRight, setPaddingRight] = useState(0);
 
   const styleList = {
-    padding: `0 ${useSize(paddingRight)} 0 ${useSize(paddingLeft)}`,
+    padding: `${useSize(paddingTop)} ${useSize(paddingRight)} ${useSize(paddingBottom)} ${useSize(paddingLeft)}`,
   };
 
   useEffect(() => {
+    let top = 0;
     let right = 0;
     let left = 0;
+    let bottom = 0;
+    const systemBar = getSizeSystemBar();
     const navigation = getSizeNavigation();
+    const footer = getSizeFooter();
 
     if (navigation) {
       navigation.map((el) => {
@@ -41,6 +47,17 @@ const Main: FunctionComponent<MainClassType> = ({ id, className, style, children
         }
       });
     }
+
+    if (footer) {
+      bottom = bottom + footer;
+    }
+
+    if (systemBar) {
+      top = top + systemBar;
+    }
+
+    setPaddingTop(top);
+    setPaddingBottom(bottom);
     setPaddingLeft(left);
     setPaddingRight(right);
   });

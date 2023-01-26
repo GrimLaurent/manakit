@@ -1,0 +1,37 @@
+.mkt-system-bar {
+  align-items: center;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0 8px;
+
+  &:not(.theme--dark):not(.theme--light) {
+    border-color: var(--mkt-primary);
+    background: var(--mkt-primary);
+    color: var(--mkt-text);
+  }
+
+  &.theme--light {
+    border-color: var(--mkt-primary--light);
+    background: var(--mkt-primary--light);
+    color: var(--mkt-text--light);
+  }
+
+  &.theme--dark {
+    border-color: var(--mkt-primary--dark);
+    background: var(--mkt-primary--dark);
+    color: var(--mkt-text--dark);
+  }
+
+  &.mkt-system-bar--absolute,
+  &.mkt-system-bar--fixed {
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &.mkt-system-bar--fixed {
+    position: fixed;
+  }
+}

@@ -42,5 +42,7 @@ export function getElHTMLWidth(el: string, condition?: string) {
 }
 
 import { getElementClassName } from './getElementClassName';
+import { getClassNameElevation } from './getClassNameElevation';
+import { getClassNameRounded } from './getClassNameRounded';
 
-export { getElementClassName };
+export { getElementClassName, getClassNameElevation, getClassNameRounded };

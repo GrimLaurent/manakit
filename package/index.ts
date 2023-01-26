@@ -1,13 +1,19 @@
 // import App, { AppKit } from './modules/App';
 import Application, { App, AppKit, ManaKit } from './components/Application/App';
 import Main from './components/Application/Main';
+import Footer from './components/Application/Footer';
 import Icon from './modules/Icon';
 import Img from './modules/Img';
 import View from './modules/View';
 import Btn from './modules/Btn';
 import Navigation from './modules/Navigation';
 import Overlay from './modules/overlay';
-export { Application, App, AppKit, ManaKit, Main, Icon, View, Img, Btn, Navigation, Overlay };
+export { Application, App, AppKit, ManaKit, Main, Footer, Icon, View, Img, Btn, Navigation, Overlay };
+
+// bars
+import SystemBar from './components/Bars/SystemBar';
+import Toolbar from './components/Bars/Toolbar';
+export { SystemBar, Toolbar };
 
 // shapes
 import Rectangle from './modules/shapes/Rectangle';
@@ -29,9 +35,9 @@ import Label from './modules/Label';
 export { Text, Label };
 
 // bars
-import Toolbar from './modules/bars/Toolbar';
-import ToolbarTitle from './modules/bars/Toolbar/ToolbarTitle';
-export { Toolbar, ToolbarTitle };
+// import Toolbar from './modules/bars/Toolbar';
+// import ToolbarTitle from './modules/bars/Toolbar/ToolbarTitle';
+// export { Toolbar, ToolbarTitle };
 
 // layout
 import HStack from './modules/layout/HStack/Hstack';

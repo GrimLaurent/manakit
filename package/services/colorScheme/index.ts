@@ -22,3 +22,7 @@ function colorScheme(userPreset?: UserPreset, mode?: ColorScheme) {
 }
 
 export default colorScheme;
+
+import { getClassNameColorScheme } from './getClassNameColor';
+
+export { getClassNameColorScheme };

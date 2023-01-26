@@ -1,3 +1,5 @@
 import { getSizeNavigation } from './getSizeNavigation';
+import { getSizeFooter } from './getSizeFooter';
+import { getSizeSystemBar } from './getSizeSystemBar';
 
-export { getSizeNavigation };
+export { getSizeNavigation, getSizeFooter, getSizeSystemBar };

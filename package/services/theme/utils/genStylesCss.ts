@@ -13,21 +13,29 @@ function genStyleCss(styleHTML: HTMLStyleElement, themes: any) {
     for (const [key, value] of Object.entries(themes[e])) {
       const keyTrans = structuralString(key);
       styleHTML!.sheet!.insertRule(
-        `.k-application.theme--${e} .${keyTrans} {background-color: ${value} !important; border-color: ${value} !important;}`,
+        `.mkt-application.theme--${e} .${keyTrans} {background-color: ${value} !important; border-color: ${value} !important;}`,
         0,
       );
       styleHTML!.sheet!.insertRule(
-        `.k-application.theme--${e} .${keyTrans}--text {color: ${value} !important; caret-color: ${value} !important;}`,
+        `.mkt-application.theme--${e} .${keyTrans}--outlined {border-color: ${value} !important;}`,
+        0,
+      );
+      styleHTML!.sheet!.insertRule(
+        `.mkt-application.theme--${e} .${keyTrans}--text {color: ${value} !important; caret-color: ${value} !important;}`,
         0,
       );
 
       // force theme with props dark/light
       styleHTML!.sheet!.insertRule(
-        `.k-application .${keyTrans}-${e} {background-color: ${value} !important; border-color: ${value} !important;}`,
+        `.mkt-application .${keyTrans}-${e} {background-color: ${value} !important; border-color: ${value} !important;}`,
         0,
       );
       styleHTML!.sheet!.insertRule(
-        `.k-application .${keyTrans}-${e}--text {color: ${value} !important; caret-color: ${value} !important;}`,
+        `.mkt-application .${keyTrans}-${e}--outlined {border-color: ${value} !important;}`,
+        0,
+      );
+      styleHTML!.sheet!.insertRule(
+        `.mkt-application .${keyTrans}-${e}--text {color: ${value} !important; caret-color: ${value} !important;}`,
         0,
       );
 
