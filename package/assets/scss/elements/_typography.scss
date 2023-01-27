@@ -1,4 +1,4 @@
-.k-application {
+.mkt-application {
   @each $name, $value in $headings {
     .text-#{$name} {
       font-size: map-deep-get($headings, #{$name}, 'size') !important;

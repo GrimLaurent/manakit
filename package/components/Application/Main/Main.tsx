@@ -17,7 +17,7 @@ import './Main.scss';
 
 // utilities
 import { useClassName, useSize, useStyle } from '../../../utils/dom';
-import { getSizeFooter, getSizeNavigation, getSizeSystemBar } from '../../../services/main';
+import { getSizeAppBar, getSizeFooter, getSizeNavigation, getSizeSystemBar } from '../../../services/main';
 
 const Main: FunctionComponent<MainClassType> = ({ id, className, style, children }) => {
   const [paddingTop, setPaddingTop] = useState(0);
@@ -35,6 +35,7 @@ const Main: FunctionComponent<MainClassType> = ({ id, className, style, children
     let left = 0;
     let bottom = 0;
     const systemBar = getSizeSystemBar();
+    const appBar = getSizeAppBar();
     const navigation = getSizeNavigation();
     const footer = getSizeFooter();
 
@@ -48,13 +49,9 @@ const Main: FunctionComponent<MainClassType> = ({ id, className, style, children
       });
     }
 
-    if (footer) {
-      bottom = bottom + footer;
-    }
-
-    if (systemBar) {
-      top = top + systemBar;
-    }
+    if (systemBar) top = top + systemBar;
+    if (appBar) top = top + appBar;
+    if (footer) bottom = bottom + footer;
 
     setPaddingTop(top);
     setPaddingBottom(bottom);

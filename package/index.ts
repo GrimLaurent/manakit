@@ -12,8 +12,9 @@ export { Application, App, AppKit, ManaKit, Main, Footer, Icon, View, Img, Btn, 
 
 // bars
 import SystemBar from './components/Bars/SystemBar';
-import Toolbar from './components/Bars/Toolbar';
-export { SystemBar, Toolbar };
+import Toolbar, { ToolbarTitle, ToolbarItems } from './components/Bars/Toolbar';
+import AppBar, { AppBarTitle } from './components/Bars/AppBar';
+export { SystemBar, Toolbar, ToolbarTitle, ToolbarItems, AppBar, AppBarTitle };
 
 // shapes
 import Rectangle from './modules/shapes/Rectangle';

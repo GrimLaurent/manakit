@@ -18,6 +18,7 @@ import './Navigation.scss';
 // utilities
 import { useClassName, useSize, useStyle } from '../../utils/dom';
 import Overlay from '../overlay';
+import { getSizeFooter, getSizeSystemBar, getSizeAppBar } from '../../services/main';
 
 const Navigation: FunctionComponent<any> = ({
   id,
@@ -35,6 +36,9 @@ const Navigation: FunctionComponent<any> = ({
   temporary,
   bottomNav,
 }) => {
+  const [marginTop, setMarginTop] = useState(0);
+  const [marginBottom, setMarginBottom] = useState(0);
+
   const classList = [
     { el: 'k-navigation--fixed', val: fixed },
     { el: 'k-navigation--absolute', val: absolute },
@@ -50,6 +54,8 @@ const Navigation: FunctionComponent<any> = ({
     maxWidth: useSize(frame?.maxWidth),
     minHeight: useSize(frame?.minHeight),
     maxHeight: useSize(frame?.maxHeight),
+    marginTop: useSize(marginTop),
+    marginBottom: useSize(marginBottom),
     transform: bottomNav
       ? open
         ? 'translateY(0%)'
@@ -58,6 +64,29 @@ const Navigation: FunctionComponent<any> = ({
       ? 'translateX(0%)'
       : 'translateX(-100%)',
   };
+
+  useEffect(() => {
+    let top = 0;
+    let bottom = 0;
+    const systemBar = getSizeSystemBar();
+    const appBar = getSizeAppBar();
+    const footer = getSizeFooter();
+
+    if (footer) {
+      bottom = bottom + footer;
+    }
+
+    if (systemBar) {
+      top = top + systemBar;
+    }
+
+    if (appBar) {
+      top = top + appBar;
+    }
+
+    setMarginTop(top);
+    setMarginBottom(bottom);
+  });
 
   useEffect(() => {
     // control size appbar for generate spacing

@@ -40,7 +40,7 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
   light,
   color,
   rounded,
-  elevation,
+  elevation = 2,
   outlined,
   width,
   height,
@@ -64,7 +64,7 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
     { el: 'mkt-toolbar--shaped', val: shaped },
     { el: 'theme--light', val: light },
     { el: 'theme--dark', val: dark },
-    { el: getClassNameElevation(2, elevation), val: flat ? false : true },
+    { el: getClassNameElevation(2, elevation), val: flat ? flat : elevation ? true : false },
     { el: getClassNameRounded(true, rounded), val: rounded !== undefined },
     {
       el: getClassNameColorScheme(color, dark, light, undefined, outlined),
@@ -79,6 +79,10 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
     maxWidth: useSize(maxWidth),
     minHeight: useSize(minHeight),
     maxHeight: useSize(maxHeight),
+  };
+
+  const styleListWrap = {
+    height: height ? useSize(height) : useSize(componentHeight),
   };
 
   useEffect(() => {
@@ -110,11 +114,15 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
           className={useClassName('mkt-toolbar', className, classList)}
           style={useStyle(styleList, style)}
         >
-          <Fragment>{children}</Fragment>
+          <div className="mkt-toolbar--wrap" style={useStyle(styleListWrap)}>
+            <Fragment>{children}</Fragment>
+          </div>
         </header>
       ) : (
         <div id={id} className={useClassName('mkt-toolbar', className, classList)} style={useStyle(styleList, style)}>
-          <Fragment>{children}</Fragment>
+          <div className="mkt-toolbar--wrap" style={useStyle(styleListWrap)}>
+            <Fragment>{children}</Fragment>
+          </div>
         </div>
       )}
     </Fragment>
