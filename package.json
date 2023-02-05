@@ -1,9 +1,9 @@
 {
   "name": "manakit",
-  "version": "0.2.0",
+  "version": "0.2.152",
   "private": false,
   "author": "Laurent Grimaldi",
-  "description": "React User Interface Component Library",
+  "description": "ManaKit for React.js – Framework UI Components. Open source, free forever.",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "types": "build/index.d.ts",
@@ -12,7 +12,6 @@
     "react-component",
     "ui",
     "interface",
-    "material design",
     "manastone",
     "manakit"
   ],

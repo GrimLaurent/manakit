@@ -1,0 +1,7 @@
+@import '../settings/index';
+
+@each $name, $value in $shadow-key-umbra {
+  .mkt-application .elevation-#{$name} {
+    box-shadow: $value, map-get($shadow-key-penumbra, $name), map-get($shadow-key-ambient, $name) !important;
+  }
+}

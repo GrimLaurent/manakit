@@ -1,0 +1,75 @@
+.mkt-toolbar {
+  contain: layout;
+  display: block;
+  flex: 1 1 auto;
+  max-width: 100%;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    left 0.2s cubic-bezier(0.4, 0, 0.2, 1), right 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+
+  &:not(.theme--dark):not(.theme--light) {
+    border-color: var(--mkt-surface);
+    background: var(--mkt-surface);
+    color: var(--mkt-text);
+  }
+
+  &.theme--light {
+    border-color: var(--mkt-surface--light);
+    background: var(--mkt-surface--light);
+    color: var(--mkt-text--light);
+  }
+
+  &.theme--dark {
+    border-color: var(--mkt-surface--dark);
+    background: var(--mkt-surface--dark);
+    color: var(--mkt-text--dark);
+  }
+
+  .mkt-toolbar--wrap {
+    align-items: center;
+    display: flex;
+    position: relative;
+    z-index: 0;
+    padding: 4px 16px;
+  }
+
+  &.mkt-toolbar--dense {
+    .mkt-toolbar--wrap {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &.mkt-toolbar--floating {
+    display: inline-flex;
+  }
+}
+
+.mkt-toolbar-items {
+  display: flex;
+  height: inherit;
+
+  > .mkt-toolbar--title {
+    -webkit-margin-start: 16px;
+    margin-inline-start: 16px;
+  }
+}
+
+.mkt-toolbar--title {
+  flex: 1 1;
+  font-size: 1.25rem;
+  min-width: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75rem;
+  text-transform: none;
+
+  .mkt-toolbar--title--placeholder {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
