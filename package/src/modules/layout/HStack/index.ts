@@ -1,4 +1,4 @@
-import Hstack from './Hstack';
+import HStack from './HStack';
 
-export { Hstack };
-export default Hstack;
+export { HStack };
+export default HStack;
