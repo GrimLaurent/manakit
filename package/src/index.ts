@@ -41,6 +41,6 @@ export { Text, Label };
 // export { Toolbar, ToolbarTitle };
 
 // layout
-import HStack from './modules/layout/HStack/Hstack';
+import HStack from './modules/layout/HStack';
 import VStack from './modules/layout/VStack';
 export { VStack, HStack };
