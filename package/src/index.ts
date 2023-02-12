@@ -5,16 +5,20 @@ import Footer from './components/Application/Footer';
 import Icon from './modules/Icon';
 import Img from './modules/Img';
 import View from './modules/View';
-import Btn from './modules/Btn';
+// import Btn from './modules/Btn';
 import Navigation from './modules/Navigation';
 import Overlay from './modules/overlay';
-export { Application, App, AppKit, ManaKit, Main, Footer, Icon, View, Img, Btn, Navigation, Overlay };
+export { Application, App, AppKit, ManaKit, Main, Footer, Icon, View, Img, Navigation, Overlay };
 
 // bars
 import SystemBar from './components/Bars/SystemBar';
 import Toolbar, { ToolbarTitle, ToolbarItems } from './components/Bars/Toolbar';
 import AppBar, { AppBarTitle } from './components/Bars/AppBar';
 export { SystemBar, Toolbar, ToolbarTitle, ToolbarItems, AppBar, AppBarTitle };
+
+// actions
+import Btn from './components/Btn';
+export { Btn };
 
 // shapes
 import Rectangle from './modules/shapes/Rectangle';

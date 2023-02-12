@@ -1,0 +1,213 @@
+.mkt-btn {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-grid;
+  grid-template-areas: 'prepend content append';
+  grid-template-columns: max-content auto max-content;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.0892857143em;
+  line-height: normal;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  text-decoration: none;
+  text-indent: 0.0892857143em;
+  text-transform: uppercase;
+  transition-duration: 0.28s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  vertical-align: middle;
+  flex-shrink: 0;
+  border-style: solid;
+  border-width: 0;
+
+  &:hover {
+    span.mkt-btn--overlay {
+      opacity: 0.04;
+    }
+  }
+
+  span.mkt-btn--overlay {
+    background-color: var(--mkt-text);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  span.mkt-btn--content {
+    grid-area: content;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  span.mkt-btn--content,
+  span.mkt-btn--prepend,
+  span.mkt-btn--append {
+    align-items: center;
+    display: flex;
+    transition: transform, opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &.mkt-btn--stacked {
+    grid-template-areas:
+      'prepend'
+      'content'
+      'append';
+    grid-template-columns: auto;
+    grid-template-rows: max-content max-content max-content;
+    justify-items: center;
+    align-content: center;
+  }
+  &.mkt-btn--block {
+    display: flex;
+    flex: 1 0 auto;
+    min-width: 100%;
+  }
+  &.mkt-btn--outlined {
+    border: thin solid currentColor;
+  }
+  &.mkt-btn--text {
+    background: transparent !important;
+  }
+  &.mkt-btn--flat {
+    box-shadow: none !important;
+  }
+
+  // disabled
+  &.mkt-btn--disabled {
+    pointer-events: none;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  // icon position
+  &:not(.mkt-btn--stacked) {
+    span.mkt-btn--prepend {
+      grid-area: prepend;
+      margin-inline-start: calc(20 / -9);
+      margin-inline-end: calc(20 / 4.5);
+    }
+    span.mkt-btn--append {
+      grid-area: append;
+      margin-inline-start: calc(20 / -9);
+      margin-inline-end: calc(20 / 4.5);
+    }
+  }
+
+  &.mkt-btn--stacked {
+    span.mkt-btn--prepend {
+      margin-bottom: 4px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+    span.mkt-btn--append {
+      margin-top: 4px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+
+  // sizing
+  &:not(.mkt-btn--stacked) {
+    &:not(.mkt-btn--icon) {
+      &.mkt-btn--size-x-small {
+        height: 20px;
+        font-size: 0.625rem;
+        min-width: 36px;
+        padding: 0 8px;
+      }
+      &.mkt-btn--size-small {
+        height: 28px;
+        font-size: 0.75rem;
+        min-width: 50px;
+        padding: 0 12px;
+      }
+      &.mkt-btn--size-default {
+        height: 36px;
+        font-size: 0.875rem;
+        min-width: 64px;
+        padding: 0 16px;
+      }
+      &.mkt-btn--size-large {
+        height: 44px;
+        font-size: 1rem;
+        min-width: 78px;
+        padding: 0 20px;
+      }
+      &.mkt-btn--size-x-large {
+        height: 52px;
+        font-size: 1.125rem;
+        min-width: 92px;
+        padding: 0 24px;
+      }
+    }
+    &.mkt-btn--icon {
+      border-radius: 50%;
+      min-width: 0;
+      padding: 0;
+
+      &.mkt-btn--size-x-small {
+        height: 20px;
+        font-size: 0.625rem;
+      }
+      &.mkt-btn--size-small {
+        height: 28px;
+        font-size: 0.75rem;
+      }
+      &.mkt-btn--size-default {
+        height: 36px;
+        font-size: 0.875rem;
+      }
+      &.mkt-btn--size-large {
+        height: 44px;
+        font-size: 1rem;
+      }
+      &.mkt-btn--size-x-large {
+        height: 52px;
+        font-size: 1.125rem;
+      }
+    }
+  }
+  &.mkt-btn--stacked {
+    &:not(.mkt-btn--icon) {
+      &.mkt-btn--size-x-small {
+        height: 56px;
+        font-size: 0.625rem;
+        min-width: 56px;
+        padding: 0 12px;
+      }
+      &.mkt-btn--size-small {
+        height: 64px;
+        font-size: 0.75rem;
+        min-width: 64px;
+        padding: 0 14px;
+      }
+      &.mkt-btn--size-default {
+        height: 72px;
+        font-size: 0.875rem;
+        min-width: 72px;
+        padding: 0 16px;
+      }
+      &.mkt-btn--size-large {
+        height: 80px;
+        font-size: 1rem;
+        min-width: 80px;
+        padding: 0 18px;
+      }
+      &.mkt-btn--size-x-large {
+        height: 88px;
+        font-size: 1.125rem;
+        min-width: 88px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
