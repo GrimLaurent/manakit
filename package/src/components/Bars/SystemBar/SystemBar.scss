@@ -6,21 +6,21 @@
   padding: 0 8px;
 
   &:not(.theme--dark):not(.theme--light) {
-    border-color: var(--mkt-primary);
-    background: var(--mkt-primary);
-    color: var(--mkt-text);
+    border-color: rgb(var(--mkt-primary));
+    background: rgb(var(--mkt-primary));
+    color: rgb(var(--mkt-text));
   }
 
   &.theme--light {
-    border-color: var(--mkt-primary--light);
-    background: var(--mkt-primary--light);
-    color: var(--mkt-text--light);
+    border-color: rgb(var(--mkt-primary--light));
+    background: rgb(var(--mkt-primary--light));
+    color: rgb(var(--mkt-text--light));
   }
 
   &.theme--dark {
-    border-color: var(--mkt-primary--dark);
-    background: var(--mkt-primary--dark);
-    color: var(--mkt-text--dark);
+    border-color: rgb(var(--mkt-primary--dark));
+    background: rgb(var(--mkt-primary--dark));
+    color: rgb(var(--mkt-text--dark));
   }
 
   &.mkt-system-bar--absolute,

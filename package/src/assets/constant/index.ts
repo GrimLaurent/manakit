@@ -13,3 +13,5 @@ export const toolbarHeightMin = 48;
 export const toolbarHeightDense = 56;
 // system bar
 export const systemBarHeight = 24;
+// bottom navigation
+export const bottomNavigationHeight = 56;

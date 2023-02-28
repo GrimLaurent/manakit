@@ -8,23 +8,49 @@
     box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  border-style: solid;
+  border-width: 0;
 
   &:not(.theme--dark):not(.theme--light) {
-    border-color: var(--mkt-surface);
-    background: var(--mkt-surface);
-    color: var(--mkt-text);
+    &:not(.mkt-toolbar--outlined) {
+      border-color: rgb(var(--mkt-surface));
+      background: rgb(var(--mkt-surface));
+      color: rgb(var(--mkt-text));
+    }
+
+    &.mkt-toolbar--outlined {
+      border-color: rgb(var(--mkt-text));
+      background: transparent;
+      color: rgb(var(--mkt-text));
+    }
   }
 
   &.theme--light {
-    border-color: var(--mkt-surface--light);
-    background: var(--mkt-surface--light);
-    color: var(--mkt-text--light);
+    &:not(.mkt-toolbar--outlined) {
+      border-color: rgb(var(--mkt-surface--light));
+      background: rgb(var(--mkt-surface--light));
+      color: rgb(var(--mkt-text--light));
+    }
+
+    &.mkt-toolbar--outlined {
+      border-color: rgb(var(--mkt-text--light));
+      background: transparent;
+      color: rgb(var(--mkt-text--light));
+    }
   }
 
   &.theme--dark {
-    border-color: var(--mkt-surface--dark);
-    background: var(--mkt-surface--dark);
-    color: var(--mkt-text--dark);
+    &:not(.mkt-toolbar--outlined) {
+      border-color: rgb(var(--mkt-surface--dark));
+      background: rgb(var(--mkt-surface--dark));
+      color: rgb(var(--mkt-text--dark));
+    }
+
+    &.mkt-toolbar--outlined {
+      border-color: rgb(var(--mkt-text--dark));
+      background: transparent;
+      color: rgb(var(--mkt-text--dark));
+    }
   }
 
   .mkt-toolbar--wrap {
@@ -43,8 +69,18 @@
     }
   }
 
+  &.mkt-toolbar--flat {
+    box-shadow: none !important;
+  }
+  &.mkt-toolbar--outlined {
+    border-width: thin !important;
+    box-shadow: none !important;
+  }
   &.mkt-toolbar--floating {
-    display: inline-flex;
+    display: inline-flex !important;
+  }
+  &.mkt-toolbar--absolute {
+    position: absolute !important;
   }
 }
 

@@ -26,7 +26,7 @@ $flex-align: (flex-start, flex-end, center, baseline, baseline) !default;
 $flex-align-content: (start, end, center, space-between, space-around) !default;
 $flex-align-self: (start, end, center, baseline, stretch) !default;
 $flex-align-grow-shrink: (0, 1) !default;
-$flex-align-justify: (flex-start, flex-end, center, between, around) !default;
+$flex-align-justify: (flex-start, flex-end, center, space-between, space-around, space-around) !default;
 $flex-wrap: (nowrap, wrap, wrap-reverse) !default;
 
 // grids
@@ -38,8 +38,8 @@ $sizing-height: (auto, screen, 0, 25, 50, 75, 100) !default; // screen = 100vh
 $sizing-width: (auto, 0, 25, 50, 75, 100) !default;
 
 // spacings
-$spacing-margin: (auto, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
-$spacing-padding: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
+$spacing-margin: (auto, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) !default;
+$spacing-padding: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) !default;
 
 // radius & rounded
 $rounded: () !default;

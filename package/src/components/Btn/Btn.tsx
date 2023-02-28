@@ -23,6 +23,10 @@ import {
 } from '../../types';
 import { useClassName, useSize, useStyle } from '../../utils/dom';
 
+// modules
+import Anchor from './modules/anchor';
+import Button from './modules/button';
+
 // styles
 import './Btn.scss';
 
@@ -56,6 +60,9 @@ const Btn: FunctionComponent<BtnClassType> = ({
   active,
   loading,
   disabled,
+  icon,
+  href,
+  target,
 }) => {
   const classList = [
     { el: 'mkt-btn--stacked', val: stacked },
@@ -63,6 +70,7 @@ const Btn: FunctionComponent<BtnClassType> = ({
     { el: 'mkt-btn--text', val: text },
     { el: 'mkt-btn--block', val: block },
     { el: 'mkt-btn--flat', val: flat },
+    { el: 'mkt-btn--icon', val: icon },
     { el: 'theme--light', val: light },
     { el: 'theme--dark', val: dark },
 
@@ -71,9 +79,10 @@ const Btn: FunctionComponent<BtnClassType> = ({
     { el: 'is--disabled', val: disabled },
 
     { el: getClassNameElevation(2, elevation), val: elevation !== undefined },
+    { el: 'elevation-2', val: elevation === undefined && !flat && !text && !outlined },
     { el: getClassNameRounded(true, rounded), val: rounded !== undefined },
     {
-      el: getClassNameColorScheme(color, dark, light, undefined, outlined),
+      el: getClassNameColorScheme(color, dark, light, text, outlined),
       val: color !== undefined,
     },
     { el: 'mkt-btn--size-x-small', val: size === 'xs' },
@@ -100,48 +109,38 @@ const Btn: FunctionComponent<BtnClassType> = ({
 
   return (
     <Fragment>
-      <button
-        type="button"
-        id={id}
-        className={useClassName('mkt-btn', className, classList)}
-        style={useStyle(styleList, style)}
-        value={!disabled ? value : undefined}
-        onClick={!disabled && !loading ? onClick : undefined}
-        disabled={disabled}
-      >
-        {loading ? (
-          typeof loading === 'boolean' ? (
-            <span className="mkt-btn--wrap-loading">Loading ...</span>
-          ) : (
-            <Fragment>{loading}</Fragment>
-          )
-        ) : (
-          <Fragment>
-            <span className="mkt-btn--overlay" />
-
-            {prependIcon ? (
-              <span className="mkt-btn--prepend">
-                <Fragment>{prependIcon}</Fragment>
-              </span>
-            ) : null}
-
-            <span className="mkt-btn--content">
-              <Fragment>{children}</Fragment>
-            </span>
-
-            {appendIcon ? (
-              <span className="mkt-btn--append">
-                <Fragment>{appendIcon}</Fragment>
-              </span>
-            ) : null}
-          </Fragment>
-        )}
-      </button>
+      {href ? (
+        <a
+          href={href}
+          target={target}
+          id={id}
+          className={useClassName('mkt-btn', className, classList)}
+          style={useStyle(styleList, style)}
+        >
+          <Anchor loading={loading} prependIcon={prependIcon} appendIcon={appendIcon}>
+            {children}
+          </Anchor>
+        </a>
+      ) : (
+        <button
+          type="button"
+          id={id}
+          className={useClassName('mkt-btn', className, classList)}
+          style={useStyle(styleList, style)}
+          value={!disabled ? value : undefined}
+          onClick={!disabled && !loading ? onClick : undefined}
+          disabled={disabled}
+        >
+          <Button loading={loading} prependIcon={prependIcon} appendIcon={appendIcon}>
+            {children}
+          </Button>
+        </button>
+      )}
     </Fragment>
   );
 };
 
-class BtnClassType {
+export class BtnClassType {
   id?: ElementIdHTMLType;
   className?: ElementClassHTMLType;
   style?: ElementStyleHTMLType;

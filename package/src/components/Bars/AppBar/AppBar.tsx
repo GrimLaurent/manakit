@@ -50,9 +50,7 @@ const AppBar: FunctionComponent<AppBarClassType> = ({
   minWidth,
   maxWidth,
   maxHeight,
-  shaped,
   floating,
-  bottom,
   dense,
   flat,
 }) => {
@@ -90,10 +88,8 @@ const AppBar: FunctionComponent<AppBarClassType> = ({
         outlined={outlined}
         elevation={elevation}
         dense={dense}
-        bottom={bottom}
         flat={flat}
         floating={floating}
-        shaped={shaped}
         width={width}
         height={height}
         minWidth={minWidth}
@@ -122,10 +118,8 @@ class AppBarClassType {
   outlined?: boolean;
   elevation?: ElevationClass;
   dense?: boolean;
-  bottom?: boolean;
   flat?: boolean;
   floating?: boolean;
-  shaped?: boolean;
   width?: SizeHTML;
   height?: SizeHTML;
   minWidth?: SizeHTML;

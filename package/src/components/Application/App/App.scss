@@ -5,8 +5,8 @@
   position: relative;
 
   // colorScheme
-  background: var(--mkt-background);
-  color: var(--mkt-text);
+  background: rgb(var(--mkt-background));
+  color: rgb(var(--mkt-text));
 
   a {
     cursor: pointer;
