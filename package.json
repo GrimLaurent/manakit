@@ -1,6 +1,6 @@
 {
   "name": "manakit",
-  "version": "0.2.229",
+  "version": "0.2.230",
   "private": false,
   "author": "Laurent Grimaldi",
   "description": "ManaKit for React.js – Framework UI Components. Open source, free forever.",
@@ -78,8 +78,5 @@
     "shelljs": "0.8.5",
     "ts-jest": "^28.0.5",
     "typescript": "4.6.3"
-  },
-  "dependencies": {
-    "@mdi/js": "^7.1.96"
   }
 }
