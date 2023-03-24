@@ -78,3 +78,8 @@ export type {
 import { ColorScheme, SizeHTML, RoundedClass, RoundedClass_Extended, ElevationClass } from './app';
 
 export type { ColorScheme, SizeHTML, RoundedClass, RoundedClass_Extended, ElevationClass };
+
+// NEW EVOL
+import { MarginType, MarginSizeType } from './margin';
+import { PaddingType, PaddingSizeType } from './padding';
+export type { MarginType, MarginSizeType, PaddingType, PaddingSizeType };

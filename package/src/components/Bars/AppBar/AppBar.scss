@@ -14,7 +14,7 @@
   }
 
   .mkt-app-bar--title {
-    flex: 1 1;
+    //flex: 1 1;
     font-size: 1.25rem;
     min-width: 0;
     font-size: 1.25rem;
@@ -22,6 +22,7 @@
     letter-spacing: 0;
     line-height: 1.75rem;
     text-transform: none;
+    color: rgb(var(--mkt-text));
 
     .mkt-app-bar--title--placeholder {
       overflow: hidden;

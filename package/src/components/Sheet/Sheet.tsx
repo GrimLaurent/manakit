@@ -50,6 +50,7 @@ const Sheet: FunctionComponent<SheetClassType> = ({
   statik,
   fixed,
   sticky,
+  role,
 }) => {
   const classList = [
     { el: 'theme--light', val: light },
@@ -79,7 +80,12 @@ const Sheet: FunctionComponent<SheetClassType> = ({
 
   return (
     <Fragment>
-      <div id={id} className={useClassName('mkt-sheet', className, classList)} style={useStyle(styleList, style)}>
+      <div
+        id={id}
+        className={useClassName('mkt-sheet', className, classList)}
+        style={useStyle(styleList, style)}
+        role={role}
+      >
         <Fragment>{children}</Fragment>
       </div>
     </Fragment>
@@ -108,6 +114,7 @@ class SheetClassType {
   statik?: boolean;
   fixed?: boolean;
   sticky?: boolean;
+  role?: string;
 }
 
 export default Sheet;

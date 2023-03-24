@@ -19,8 +19,6 @@ import './Main.scss';
 import { useClassName, useSize, useStyle } from '../../../utils/dom';
 import { getSizeAppBar, getSizeFooter, getSizeNavigation, getSizeSystemBar } from '../../../services/main';
 
-const MainPosition: any = createContext(null);
-
 const Main: FunctionComponent<MainClassType> = ({ id, className, style, children }) => {
   // const [paddingTop, setPaddingTop] = useState(0);
   // const [paddingBottom, setPaddingBottom] = useState(0);
@@ -70,18 +68,16 @@ const Main: FunctionComponent<MainClassType> = ({ id, className, style, children
 
   return (
     <Fragment>
-      <MainPosition.Provider value={padding}>
-        <main
-          id={id}
-          className={useClassName('mkt-main', className)}
-          style={useStyle(styleList, style)}
-          data-booted="true"
-        >
-          <div className="mkt-main--wrap">
-            <Fragment>{children}</Fragment>
-          </div>
-        </main>
-      </MainPosition.Provider>
+      <main
+        id={id}
+        className={useClassName('mkt-main', className)}
+        style={useStyle(styleList, style)}
+        data-booted="true"
+      >
+        <div className="mkt-main--wrap">
+          <Fragment>{children}</Fragment>
+        </div>
+      </main>
     </Fragment>
   );
 };
