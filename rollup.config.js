@@ -6,7 +6,7 @@ import url from 'rollup-plugin-url';
 const pkg = require('./package.json');
 
 export default {
-  input: 'package/index.ts',
+  input: 'package/src/index.ts',
   output: [
     {
       file: pkg.main,

@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "strictNullChecks": true
   },
-  "include": ["package/**/*", "scripts/App", "package/assets"],
+  "include": ["package/**/*", "scripts/App", "package/src/assets"],
   "exclude": [
     "node_modules",
     "build",

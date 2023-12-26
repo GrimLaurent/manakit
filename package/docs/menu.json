@@ -1,0 +1,10 @@
+[
+  {
+    "category": "introduction",
+    "children": [{ "name": "why manakit", "slug": "why-manakit" }]
+  },
+  {
+    "category": "components",
+    "children": [{ "name": "Buttons", "slug": "buttons" }]
+  }
+]
