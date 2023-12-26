@@ -1,6 +1,6 @@
 <script lang="ts">
 	$: idBase = $$props.id;
-	$: classBase = $$props.class;
+	$: classBase = $$props.class ? $$props.class : '';
 	$: styleBase = $$props.style;
 </script>
 

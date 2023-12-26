@@ -6,11 +6,11 @@
 	"description": "Manakit for Svelte – Framework UI Components. Open source, free forever.",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && yarn build:rollup && npm run package",
+		"build": "vite build && npm run build:rollup && npm run package",
 		"build:rollup": "rollup -c --bundleConfigAsCjs",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
-		"prepublishOnly": "npm run package",
+		"prepublishOnly": "npm run build",
 		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
