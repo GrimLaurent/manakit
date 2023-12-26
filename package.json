@@ -1,6 +1,6 @@
 {
 	"name": "manakit",
-	"version": "0.3.4",
+	"version": "0.3.5",
 	"private": false,
 	"author": "Laurent Grimaldi",
 	"description": "Manakit for Svelte – Framework UI Components. Open source, free forever.",
