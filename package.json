@@ -1,13 +1,13 @@
 {
 	"name": "manakit",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"private": false,
 	"author": "Laurent Grimaldi",
 	"description": "Manakit for Svelte – Framework UI Components. Open source, free forever.",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && yarn build:rollup",
-		"build:rollup": "rollup -c --bundleConfigAsCjs && mv build dist/vitepreprocess",
+		"build:rollup": "rollup -c --bundleConfigAsCjs && rm -rf dist/vitepreprocess && mv build dist/vitepreprocess",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"test": "npm run test:integration && npm run test:unit",
@@ -23,7 +23,8 @@
 			"types": "./src/lib/index.ts",
 			"svelte": "./src/lib/index.ts"
 		},
-		"./*": "./src/lib/*"
+		"./*": "./src/lib/*",
+		"./vite": "./src/lib/plugins/*"
 	},
 	"publishConfig": {
 		"types": "./dist/index.d.ts",
