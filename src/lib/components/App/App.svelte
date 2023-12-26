@@ -1,7 +1,16 @@
 <script lang="ts">
-	export let message: String = 'Manakit - Svelte Power';
+	$: idBase = $$props.id;
+	$: classBase = $$props.class;
+	$: styleBase = $$props.style;
 </script>
 
-<div data-app="manakit">
-	{message}
+<div id={idBase} class={classBase} style={styleBase} data-app="manakit">
+	<!-- slot: default -->
+	<slot />
 </div>
+
+<style>
+	div {
+		display: flex;
+	}
+</style>
