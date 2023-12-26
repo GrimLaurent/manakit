@@ -1,0 +1,22 @@
+.mkt-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  margin: -12px;
+
+  &.is--dense {
+    margin: -4px;
+  }
+
+  &.no-gutters {
+    margin: 0;
+  }
+}
+
+.mkt-row + .mkt-row {
+  margin-top: 12px;
+}
+
+.mkt-row + .mkt-row.is--dense {
+  margin-top: 4px;
+}

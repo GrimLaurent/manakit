@@ -21,9 +21,9 @@ import { useClassName, useStyle } from '../../../utils/dom';
 const ToolbarItems: FunctionComponent<ToolbarItemsClassType> = ({ id, className, style, children }) => {
   return (
     <Fragment>
-      <header id={id} className={useClassName('mkt-toolbar-items', className)} style={useStyle({}, style)}>
+      <div id={id} className={useClassName('mkt-toolbar-items', className)} style={useStyle({}, style)}>
         <Fragment>{children}</Fragment>
-      </header>
+      </div>
     </Fragment>
   );
 };

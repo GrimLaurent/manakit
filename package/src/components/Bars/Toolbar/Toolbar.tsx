@@ -48,9 +48,7 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
   minWidth,
   maxWidth,
   maxHeight,
-  shaped,
   floating,
-  bottom,
   dense,
   flat,
 }) => {
@@ -59,12 +57,11 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
     { el: 'mkt-toolbar--absolute', val: absolute },
     { el: 'mkt-toolbar--flat', val: flat },
     { el: 'mkt-toolbar--dense', val: dense },
-    { el: 'mkt-toolbar--bottom', val: bottom },
     { el: 'mkt-toolbar--floating', val: floating },
-    { el: 'mkt-toolbar--shaped', val: shaped },
+    { el: 'mkt-toolbar--outlined', val: outlined },
     { el: 'theme--light', val: light },
     { el: 'theme--dark', val: dark },
-    { el: getClassNameElevation(2, elevation), val: flat ? flat : elevation ? true : false },
+    { el: getClassNameElevation(2, elevation), val: flat || outlined ? false : elevation ? true : false },
     { el: getClassNameRounded(true, rounded), val: rounded !== undefined },
     {
       el: getClassNameColorScheme(color, dark, light, undefined, outlined),
@@ -92,10 +89,15 @@ const Toolbar: FunctionComponent<ToolbarClassType> = ({
     });
   }, []);
 
+  useEffect(() => {
+    componentSize();
+  }, [dense]);
+
   const componentSize = () => {
     const width = window.innerWidth;
     console.log('size', width);
     if (width > md) {
+      console.log('componentSize', width, md, dense);
       if (dense) {
         setComponentHeight(toolbarHeightDense);
       } else {
@@ -143,10 +145,8 @@ class ToolbarClassType {
   outlined?: boolean;
   elevation?: ElevationClass;
   dense?: boolean;
-  bottom?: boolean;
   flat?: boolean;
   floating?: boolean;
-  shaped?: boolean;
   width?: SizeHTML;
   height?: SizeHTML;
   minWidth?: SizeHTML;

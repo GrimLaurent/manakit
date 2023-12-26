@@ -1,0 +1,34 @@
+.mkt-divider {
+  display: block;
+  flex: 1 1 100%;
+  height: 0px;
+  max-height: 0px;
+  opacity: 0.12;
+  transition: inherit;
+  border-style: solid;
+  border-width: thin 0 0 0;
+  overflow: visible;
+
+  &.mkt-divider--inset:not(.mkt-divider--vertical) {
+    max-width: calc(100% - 72px);
+    margin-inline-start: 72px;
+  }
+
+  &.mkt-divider--inset.mkt-divider--vertical {
+    margin-top: 8px;
+    min-height: 0;
+    max-height: calc(100% - 16px);
+  }
+
+  &.mkt-divider--vertical {
+    align-self: stretch;
+    border-width: 0 thin 0 0;
+    display: inline-flex;
+    height: inherit;
+    margin-left: -1px;
+    max-height: 100%;
+    max-width: 0px;
+    vertical-align: text-bottom;
+    width: 0px;
+  }
+}

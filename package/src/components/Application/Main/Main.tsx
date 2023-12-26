@@ -9,7 +9,7 @@
  * @repository https://github.com/manastone/manakit
  * @copyright (c)2022 Manastone and the ManaKit project authors
  */
-import React, { FunctionComponent, Fragment, useEffect, useState } from 'react';
+import React, { FunctionComponent, Fragment, useEffect, useState, createContext } from 'react';
 import { ElementChildrenType, ElementClassHTMLType, ElementIdHTMLType, ElementStyleHTMLType } from '../../../types';
 
 // styles
@@ -20,13 +20,14 @@ import { useClassName, useSize, useStyle } from '../../../utils/dom';
 import { getSizeAppBar, getSizeFooter, getSizeNavigation, getSizeSystemBar } from '../../../services/main';
 
 const Main: FunctionComponent<MainClassType> = ({ id, className, style, children }) => {
-  const [paddingTop, setPaddingTop] = useState(0);
-  const [paddingBottom, setPaddingBottom] = useState(0);
-  const [paddingLeft, setPaddingLeft] = useState(0);
-  const [paddingRight, setPaddingRight] = useState(0);
+  // const [paddingTop, setPaddingTop] = useState(0);
+  // const [paddingBottom, setPaddingBottom] = useState(0);
+  // const [paddingLeft, setPaddingLeft] = useState(0);
+  // const [paddingRight, setPaddingRight] = useState(0);
+  const [padding, setPadding]: any = useState(null);
 
   const styleList = {
-    padding: `${useSize(paddingTop)} ${useSize(paddingRight)} ${useSize(paddingBottom)} ${useSize(paddingLeft)}`,
+    padding: padding,
   };
 
   useEffect(() => {
@@ -53,10 +54,16 @@ const Main: FunctionComponent<MainClassType> = ({ id, className, style, children
     if (appBar) top = top + appBar;
     if (footer) bottom = bottom + footer;
 
-    setPaddingTop(top);
-    setPaddingBottom(bottom);
-    setPaddingLeft(left);
-    setPaddingRight(right);
+    // setPaddingTop(top);
+    // setPaddingBottom(bottom);
+    // setPaddingLeft(left);
+    // setPaddingRight(right);
+    const paddingTop = top;
+    const paddingRight = right;
+    const paddingBottom = bottom;
+    const paddingLeft = left;
+
+    setPadding(`${useSize(paddingTop)} ${useSize(paddingRight)} ${useSize(paddingBottom)} ${useSize(paddingLeft)}`);
   });
 
   return (
