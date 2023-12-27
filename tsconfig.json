@@ -11,5 +11,6 @@
 		"strict": true,
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext"
-	}
+	},
+	"exclude": ["dist-vite", "src/lib/presets", "src/lib/plugins", "src/lib/styles"]
 }

@@ -19,6 +19,6 @@
 		"noUnusedParameters": true,
 		"strictNullChecks": true
 	},
-	"include": ["src/lib/plugins/**/*", "src/lib/styles/**/*"],
-	"exclude": ["node_modules", "dist-vite"]
+	"include": ["src/lib/plugins/**/*", "src/lib/styles/**/*", "src/lib/types/**/*"],
+	"exclude": ["node_modules", "dist-vite", "dist"]
 }
