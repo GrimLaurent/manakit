@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { className, styleName } from '$lib/utils';
+	import { className, styleName } from '../../utils';
 
 	// props
 	export let color: string | undefined = undefined;

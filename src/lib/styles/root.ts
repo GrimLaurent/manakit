@@ -1,12 +1,12 @@
-import type { Preset } from '../types';
+import type { generateClass } from '../types';
 
-function setRootCSS(settings: Preset) {
+function setRootCSS({ data, dark }: generateClass) {
 	let response = '';
-	if (settings.colors) {
-		if (!settings.dark) {
+	if (data) {
+		if (!dark) {
 			// no use darkmode
 			response += ':root {\n';
-			for (const [key, value] of Object.entries(settings.colors)) {
+			for (const [key, value] of Object.entries(data)) {
 				if (typeof value === 'string') {
 					response += ` --color-${key}: ${value};\n`;
 				} else if (typeof value === 'object' && value?.light) {
@@ -20,7 +20,7 @@ function setRootCSS(settings: Preset) {
 			// light
 			response += ':root {\n';
 			response += 'color-scheme: light;\n';
-			for (const [key, value] of Object.entries(settings.colors)) {
+			for (const [key, value] of Object.entries(data)) {
 				if (typeof value === 'object' && value?.light) {
 					response += ` --color-${key}: ${value.light};\n`;
 				} else if (typeof value === 'string') {
@@ -31,7 +31,7 @@ function setRootCSS(settings: Preset) {
 			// dark in light
 			response += '.dark {\n';
 			response += 'color-scheme: light;\n';
-			for (const [key, value] of Object.entries(settings.colors)) {
+			for (const [key, value] of Object.entries(data)) {
 				if (typeof value === 'object' && value?.dark) {
 					response += ` --color-${key}: ${value.dark};\n`;
 				} else if (typeof value === 'string') {
@@ -47,7 +47,7 @@ function setRootCSS(settings: Preset) {
 			// dark
 			response += ':root {\n';
 			response += 'color-scheme: dark;\n';
-			for (const [key, value] of Object.entries(settings.colors)) {
+			for (const [key, value] of Object.entries(data)) {
 				if (typeof value === 'object' && value?.dark) {
 					response += ` --color-${key}: ${value.dark};\n`;
 				} else if (typeof value === 'string') {
@@ -58,7 +58,7 @@ function setRootCSS(settings: Preset) {
 			// light in dark
 			response += '.light {\n';
 			response += 'color-scheme: dark;\n';
-			for (const [key, value] of Object.entries(settings.colors)) {
+			for (const [key, value] of Object.entries(data)) {
 				if (typeof value === 'object' && value?.light) {
 					response += ` --color-${key}: ${value.light};\n`;
 				} else if (typeof value === 'string') {

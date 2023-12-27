@@ -49,6 +49,10 @@ export interface generateClass {
 		| (string | number)[]
 		| {
 				[key: string | number]: string | number | Array<string | number> | undefined;
+		  }
+		| {
+				[key: string]: string | undefined | { light?: string; dark?: string };
 		  };
 	value?: number;
+	dark?: boolean;
 }

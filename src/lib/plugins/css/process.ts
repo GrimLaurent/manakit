@@ -2,6 +2,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import preset from '../../presets/default';
+import { formatProperties } from './utils';
 
 export const pathCssPackage = path.resolve(`node_modules/manakit/dist`, 'app.css');
 
@@ -37,7 +38,10 @@ export function buildCSSFile(config: any) {
 	const excludeCss = config?.exclude ? config?.exclude : [];
 	const breakpoint = preset!.screens;
 
-	response += setRootCSS(preset);
+	response += setRootCSS({
+		data: formatProperties(preset.colors, config?.theme?.colors),
+		dark: config.dark || preset.dark
+	});
 
 	if (!excludeCss.includes('theme')) {
 		response += setClassTheme(preset);
