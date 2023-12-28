@@ -126,7 +126,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			});
 			response += css({
 				key: 'padding-bottom',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
