@@ -17,3 +17,6 @@ export { default as CardTitle } from './components/Card/CardTitle.svelte';
 export { default as CardSubtitle } from './components/Card/CardSubtitle.svelte';
 export { default as CardActions } from './components/Card/CardActions.svelte';
 export { default as Dialog } from './components/Dialog/Dialog.svelte';
+
+// New components
+export { default as Overlay } from './components/Overlay/Overlay.svelte';

@@ -66,9 +66,9 @@
 	}
 
 	$: idHtml = $$props.id;
-	$: classHtml = className(undefined, $$props.class, classList);
-	$: classHoverHtml = className(undefined, undefined, classHoverList);
-	$: classActiveHtml = className(undefined, undefined, classActiveList);
+	$: classHtml = className($$props.class, classList);
+	$: classHoverHtml = className(undefined, classHoverList);
+	$: classActiveHtml = className(undefined, classActiveList);
 	$: styleHtml = styleName($$props.style, styleList);
 </script>
 

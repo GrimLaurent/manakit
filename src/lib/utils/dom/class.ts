@@ -1,5 +1,5 @@
-export const className = (base?: string, props?: string, component?: object) => {
-	let response = base || '';
+export const className = (props?: string, component?: object) => {
+	let response;
 	if (component) {
 		for (const [, data] of Object.entries(component)) {
 			switch (typeof data.value) {
@@ -10,7 +10,9 @@ export const className = (base?: string, props?: string, component?: object) => 
 		}
 	}
 	if (props) {
-		response = response + ' ' + props;
+		response += ' ' + props;
 	}
-	return response.trim();
+
+	if (response) return response.trim();
+	else return response;
 };

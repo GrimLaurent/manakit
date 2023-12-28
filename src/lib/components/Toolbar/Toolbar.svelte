@@ -43,7 +43,7 @@
 	$: styleContentList = [{ property: `height`, value: height }];
 
 	$: idHtml = $$props.id;
-	$: classHtml = className(undefined, $$props.class, classList);
+	$: classHtml = className($$props.class, classList);
 	$: styleHtml = styleName($$props.style, styleList);
 	$: styleContentHtml = styleName(undefined, styleContentList);
 </script>

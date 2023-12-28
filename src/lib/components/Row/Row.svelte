@@ -32,14 +32,14 @@
 	}
 </script>
 
-<div class={className('dal-responsive', $$props.class, classList)} {...$$props.style}>
+<div class={className($$props.class, classList)} {...$$props.style}>
 	{#if aspectRatio}
 		<div class="dal-responsive--sizer" style={`padding-bottom: ${calAspectRatio(aspectRatio)}`} />
 	{:else}
 		<div class="dal-responsive--sizer" />
 	{/if}
 
-	<div class={className('dal-responsive--content', contentClass)}>
+	<div class={className(contentClass)}>
 		<!-- slot: default -->
 		<slot />
 	</div>

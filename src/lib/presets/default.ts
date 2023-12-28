@@ -18,7 +18,11 @@ const preset: Preset = {
 		background: {
 			light: '#FCFCFD',
 			dark: '#111827'
-		}
+		},
+		surface: {
+			dark: '#202A38'
+		},
+		shadow: '#0d0d0d'
 	},
 	fontFamily: {},
 	screens: {
