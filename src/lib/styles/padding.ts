@@ -9,7 +9,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}pt-${value}  {\n`;
 			response += css({
 				key: 'padding-top',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -17,7 +17,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}pb-${value}  {\n`;
 			response += css({
 				key: 'padding-bottom',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -25,7 +25,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}pl-${value}  {\n`;
 			response += css({
 				key: 'padding-left',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -33,7 +33,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}pr-${value}  {\n`;
 			response += css({
 				key: 'padding-right',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -41,12 +41,12 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}px-${value}  {\n`;
 			response += css({
 				key: 'padding-left',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += css({
 				key: 'padding-right',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -54,12 +54,12 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}py-${value}  {\n`;
 			response += css({
 				key: 'padding-top',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += css({
 				key: 'padding-bottom',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -67,7 +67,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}pa-${value}  {\n`;
 			response += css({
 				key: 'padding',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -76,7 +76,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.pt-${value}  {\n`;
 			response += css({
 				key: 'padding-top',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -84,7 +84,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.pb-${value}  {\n`;
 			response += css({
 				key: 'padding-bottom',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -92,7 +92,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.pl-${value}  {\n`;
 			response += css({
 				key: 'padding-left',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -100,7 +100,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.pr-${value}  {\n`;
 			response += css({
 				key: 'padding-right',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -108,12 +108,12 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.px-${value}  {\n`;
 			response += css({
 				key: 'padding-left',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += css({
 				key: 'padding-right',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
@@ -121,7 +121,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.py-${value}  {\n`;
 			response += css({
 				key: 'padding-top',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += css({
@@ -134,7 +134,7 @@ function setClassPadding({ screen, data }: generateClass) {
 			response += `.pa-${value}  {\n`;
 			response += css({
 				key: 'padding',
-				value: `${value}`,
+				value: `${value}px`,
 				important: true
 			});
 			response += '}\n';
