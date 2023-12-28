@@ -44,7 +44,7 @@ export function buildCSSFile(config: any) {
 
 	response += setRootCSS({
 		data: formatProperties(preset.colors, config?.theme?.colors),
-		dark: config.dark || preset.dark
+		dark: config?.dark || preset.dark
 	});
 
 	if (config?.normalize !== undefined ? config?.normalize : true) {
