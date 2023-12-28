@@ -43,9 +43,14 @@ export function buildCSSFile(config: any) {
 		dark: config.dark || preset.dark
 	});
 
-	if (!excludeCss.includes('theme')) {
-		response += setClassTheme(preset);
+	if (config?.normalize !== undefined ? config?.normalize : true) {
+		response += setNormalizeCss();
 	}
+
+	if (!excludeCss.includes(''))
+		if (!excludeCss.includes('theme')) {
+			response += setClassTheme(preset);
+		}
 	if (!excludeCss.includes('display')) {
 		response += setClassDisplay({ data: preset.variables.display });
 	}

@@ -27,8 +27,8 @@
 <style>
 	div {
 		display: flex;
-		background: var(--dal-theme-background);
-		color: var(--dal-theme-text);
+		background: var(--color-background);
+		color: var(--color-text);
 	}
 
 	div > div {

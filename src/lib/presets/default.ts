@@ -4,16 +4,20 @@ const preset: Preset = {
 	dark: false,
 	colors: {
 		primary: {
-			light: '#fffff',
-			dark: '#cccccc'
+			light: '#6750A4',
+			dark: '#D0BCFF'
 		},
 		error: { light: '#B3261E', dark: '#F2B8B5' },
 		warning: { light: '#fdb400', dark: '#fdb400' },
 		success: { light: '#4caf50', dark: '#4caf50' },
 		info: { light: '#2196f3', dark: '#2196f3' },
+		text: {
+			light: '#010101',
+			dark: '#FDFDFD'
+		},
 		background: {
-			light: '#FFFBFE',
-			dark: '#1C1B1F'
+			light: '#FCFCFD',
+			dark: '#111827'
 		}
 	},
 	fontFamily: {},
