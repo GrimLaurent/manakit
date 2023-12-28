@@ -9,7 +9,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}mt-${value}  {\n`;
 			response += css({
 				key: 'margin-top',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -17,7 +17,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}mb-${value}  {\n`;
 			response += css({
 				key: 'margin-bottom',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -25,7 +25,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}ml-${value}  {\n`;
 			response += css({
 				key: 'margin-left',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -33,7 +33,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}mr-${value}  {\n`;
 			response += css({
 				key: 'margin-right',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -41,12 +41,12 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}mx-${value}  {\n`;
 			response += css({
 				key: 'margin-left',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += css({
 				key: 'margin-right',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -54,12 +54,12 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}my-${value}  {\n`;
 			response += css({
 				key: 'margin-top',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += css({
 				key: 'margin-bottom',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -67,7 +67,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.${mediaQueries(screen)}ma-${value}  {\n`;
 			response += css({
 				key: 'margin',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -76,7 +76,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.mt-${value}  {\n`;
 			response += css({
 				key: 'margin-top',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -84,7 +84,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.mb-${value}  {\n`;
 			response += css({
 				key: 'margin-bottom',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -92,7 +92,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.ml-${value}  {\n`;
 			response += css({
 				key: 'margin-left',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -100,7 +100,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.mr-${value}  {\n`;
 			response += css({
 				key: 'margin-right',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -108,12 +108,12 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.mx-${value}  {\n`;
 			response += css({
 				key: 'margin-left',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += css({
 				key: 'margin-right',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -121,12 +121,12 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.my-${value}  {\n`;
 			response += css({
 				key: 'margin-top',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += css({
 				key: 'margin-bottom',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';
@@ -134,7 +134,7 @@ function setClassMargin({ screen, data }: generateClass) {
 			response += `.ma-${value}  {\n`;
 			response += css({
 				key: 'margin',
-				value: `${value}px`,
+				value: `${value}${value !== 'auto' && 'px'}`,
 				important: true
 			});
 			response += '}\n';

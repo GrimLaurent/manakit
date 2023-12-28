@@ -107,7 +107,7 @@ export function buildCSSFile(config: any) {
 		});
 	}
 
-	if (!excludeCss.include('typography')) {
+	if (!excludeCss.includes('typography')) {
 		response += setClassTextAlign({ data: preset.variables.textAlign });
 		response += setClassTextDecoration({ data: preset.variables.textDecoration });
 		response += setClassTextOpacity({ data: preset.variables.textOpacity });
