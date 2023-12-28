@@ -5,7 +5,7 @@ function setClassShadow({ data }: generateClass) {
 	let response = '';
 	for (const [key, value] of Object.entries(data as Array<string>)) {
 		// shadow
-		response += `.${key !== null ? 'shadow-' + key : 'shadow'} {\n`;
+		response += `.${key !== 'null' ? 'shadow-' + key : 'shadow'} {\n`;
 		if (value?.length === 1) {
 			response += css({
 				key: 'box-shadow',

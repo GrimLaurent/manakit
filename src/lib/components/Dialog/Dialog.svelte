@@ -5,6 +5,7 @@
 	export let open: boolean = false;
 	export let color: string | undefined = undefined;
 	export let background: string | undefined = undefined;
+	export let mandatory: boolean | undefined = undefined;
 
 	$: classList = [{ class: `dialog`, value: true }];
 
@@ -14,7 +15,9 @@
 	];
 
 	function handleForceClose() {
-		open = false;
+		if (!mandatory) {
+			open = false;
+		}
 	}
 
 	$: idHtml = $$props.id;
@@ -43,8 +46,8 @@
 <style>
 	.dialog {
 		display: flex;
-		background: var(--dal-theme-background);
-		color: var(--dal-theme-text);
+		/* background: var(--dal-theme-background);
+		color: var(--dal-theme-text); */
 	}
 
 	.overlay-container {
@@ -73,7 +76,7 @@
 
 	.overlay-scrim {
 		pointer-events: auto;
-		background: var(--dal-theme-on-surface);
+		background: var(--color-text);
 		border-radius: inherit;
 		bottom: 0;
 		left: 0;
