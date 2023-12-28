@@ -6,6 +6,7 @@
 	export let color: string | undefined = undefined;
 	export let background: string | undefined = undefined;
 	export let elevation: CardElevated | undefined = true;
+	export let shadow: string | boolean | undefined = 'xxl';
 	export let width: string | number | undefined = undefined;
 	export let height: string | number | undefined = undefined;
 	export let minWidth: string | number | undefined = undefined;
@@ -29,6 +30,8 @@
 		{ class: `card`, value: true },
 		{ class: `elevation-2`, value: typeof elevation === 'boolean' && elevation },
 		{ class: `elevation-${elevation}`, value: typeof elevation !== 'boolean' && elevation },
+		{ class: `shadow`, value: typeof shadow === 'boolean' && shadow },
+		{ class: `shadow-${shadow}`, value: typeof shadow !== 'boolean' && shadow },
 		{ class: `rounded`, value: typeof rounded === 'boolean' && rounded },
 		{ class: `rounded-${rounded}`, value: typeof rounded !== 'boolean' && rounded },
 		{ class: `is-disabled`, value: isDisabled },
@@ -150,8 +153,8 @@
 		border-style: solid;
 		border-width: 0;
 		border-radius: 4px;
-		background: var(--dal-theme-surface);
-		color: var(--dal-theme-on-surface);
+		background: var(--color-surface);
+		color: var(--color-text);
 	}
 
 	.card :global([class*='card-text']) {

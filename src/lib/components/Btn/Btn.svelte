@@ -20,6 +20,7 @@
 	export let color: string | undefined = undefined;
 	export let background: string | undefined = undefined;
 	export let elevation: BtnElevated | undefined = undefined;
+	export let shadow: string | boolean | undefined = undefined;
 
 	$: isDisabled = loading ? loading : disabled;
 	$: isHover = false;
@@ -38,7 +39,9 @@
 		{ class: `density-${density}`, value: density },
 		{ class: `rounded`, value: typeof rounded === 'boolean' && rounded },
 		{ class: `rounded-${rounded}`, value: typeof rounded !== 'boolean' && rounded },
-		{ class: `elevation-${elevation}`, value: elevation }
+		{ class: `elevation-${elevation}`, value: elevation },
+		{ class: `shadow`, value: typeof shadow === 'boolean' && shadow },
+		{ class: `shadow-${shadow}`, value: typeof shadow !== 'boolean' && shadow }
 	];
 
 	$: classHoverList = [
@@ -153,8 +156,8 @@
 
 <style>
 	.btn {
-		--btn-background: var(--dal-theme-surface);
-		--btn-color: var(--dal-theme-on-surface);
+		--btn-background: var(--color-background);
+		--btn-color: var(--color-text);
 		align-items: center;
 		display: inline-grid;
 		grid-template-areas: 'prepend content append';

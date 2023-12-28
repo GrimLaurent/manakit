@@ -4,8 +4,8 @@ import { css } from '../plugins/css';
 function setClassShadow({ data }: generateClass) {
 	let response = '';
 	for (const [key, value] of Object.entries(data as Array<string>)) {
-		// elevation
-		response += `.shadow-${key} {\n`;
+		// shadow
+		response += `.${key !== null ? 'shadow-' + key : 'shadow'} {\n`;
 		if (value?.length === 1) {
 			response += css({
 				key: 'box-shadow',

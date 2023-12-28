@@ -14,6 +14,7 @@
 	export let bordered: boolean = false;
 	export let height: number | string | undefined = undefined;
 	export let theme: 'dark' | 'light' | undefined = undefined;
+	export let shadow: string | boolean | undefined = undefined;
 
 	$: classList = [
 		{ class: `toolbar`, value: true },
@@ -26,7 +27,11 @@
 		{ class: `rounded-${rounded}`, value: typeof rounded !== 'boolean' && rounded },
 		{ class: `elevation-8`, value: typeof elevation === 'boolean' && elevation },
 		{ class: `elevation-${elevation}`, value: typeof elevation !== 'boolean' && elevation },
-		{ class: `${theme}`, value: theme }
+		{ class: `shadow`, value: typeof shadow === 'boolean' && shadow },
+		{ class: `shadow-${shadow}`, value: typeof shadow !== 'boolean' && shadow },
+		{ class: `${theme}`, value: theme },
+		{ class: `shadow`, value: typeof shadow === 'boolean' && shadow },
+		{ class: `shadow-${shadow}`, value: typeof shadow !== 'boolean' && shadow }
 	];
 
 	$: styleList = [
