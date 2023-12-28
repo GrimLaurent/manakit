@@ -36,6 +36,11 @@ export interface Preset {
 		order: { [key: string]: string | number };
 		height: { [key: string]: string | number };
 		width: { [key: string]: string | number };
+		textAlign: { [key: string]: string };
+		textDecoration: { [key: string]: string };
+		textOpacity: { [key: string]: string | number };
+		textTransform: { [key: string]: string | number };
+		fontEmphasis: { [key: string]: string | number };
 	};
 }
 

@@ -167,6 +167,39 @@ const preset: Preset = {
 			'50': '50%',
 			'75': '75%',
 			'100': '100%'
+		},
+		textAlign: {
+			left: 'left',
+			right: 'right',
+			center: 'center',
+			justify: 'justify',
+			start: 'start',
+			end: 'end'
+		},
+		textDecoration: {
+			none: 'none',
+			'line-through': 'line-through',
+			overline: 'overline',
+			underline: 'underline'
+		},
+		textOpacity: {
+			'high-emphasis': '1',
+			'medium-emphasis': '0.7',
+			disabled: '0.38'
+		},
+		textTransform: {
+			lowercase: 'lowercase',
+			uppercase: 'uppercase',
+			capitalize: 'capitalize',
+			none: 'none'
+		},
+		fontEmphasis: {
+			black: '900',
+			bold: '700',
+			medium: '500',
+			regular: '400',
+			light: '300',
+			thin: '100'
 		}
 	}
 };

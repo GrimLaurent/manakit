@@ -30,6 +30,10 @@ import setNormalizeCss from '../../styles/normalize';
 import setClassRounded from '../../styles/rounded';
 import setClassWidth from '../../styles/width';
 import setClassHeight from '../../styles/height';
+import setClassTextAlign from '../../styles/textAlign';
+import setClassTextDecoration from '../../styles/textDecoration';
+import setClassTextOpacity from '../../styles/textOpacity';
+import setClassTextTransform from '../../styles/textTransform';
 
 export function buildCSSFile(config: any) {
 	let response = '';
@@ -101,6 +105,13 @@ export function buildCSSFile(config: any) {
 		response += setClassHeight({
 			data: preset.variables.height
 		});
+	}
+
+	if (!excludeCss.include('typography')) {
+		response += setClassTextAlign({ data: preset.variables.textAlign });
+		response += setClassTextDecoration({ data: preset.variables.textDecoration });
+		response += setClassTextOpacity({ data: preset.variables.textOpacity });
+		response += setClassTextTransform({ data: preset.variables.textTransform });
 	}
 
 	for (const [key, value] of Object.entries(breakpoint!)) {

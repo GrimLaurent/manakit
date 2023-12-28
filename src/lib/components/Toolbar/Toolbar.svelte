@@ -61,8 +61,8 @@
 		overflow: hidden;
 		position: relative;
 		width: 100%;
-		background: var(--dal-theme-background);
-		color: var(--dal-theme-text);
+		background: var(--color-background);
+		color: var(--color-text);
 	}
 
 	.toolbar-content {
