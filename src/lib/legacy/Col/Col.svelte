@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { className } from '../../utils';
-	import type { ColAlignSelf, ColsOrder, ColsSize } from './Col.types.ts';
+	import type { ColAlignSelf, ColsOrder, ColsSize } from './Col.types';
 
 	export let cols: ColsSize | undefined = '12';
 	export let sm: ColsSize | undefined = undefined;
@@ -45,7 +45,7 @@
 	];
 </script>
 
-<div class={className('dal-col', $$props.class, classList)} {...$$props.style}>
+<div class={className($$props.class, classList)} {...$$props.style}>
 	<slot />
 </div>
 

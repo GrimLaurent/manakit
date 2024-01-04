@@ -16,11 +16,12 @@ const preset: Preset = {
 			dark: '#FDFDFD'
 		},
 		background: {
-			light: '#FCFCFD',
-			dark: '#111827'
+			light: '#FEFEFE',
+			dark: '#202020'
 		},
 		surface: {
-			dark: '#202A38'
+			light: '#F6F6F8',
+			dark: '#2C2D33'
 		},
 		shadow: '#0d0d0d'
 	},

@@ -35,6 +35,17 @@ function setNormalizeCss() {
 	response += `.fill-height {\n`;
 	response += `height: 100% !important;\n`;
 	response += '}\n';
+
+	response += `img, video {\n`;
+	response += ` max-width: 100%;\n`;
+	response += ` height: auto;\n`;
+	response += '}\n';
+
+	response += `img, svg, video, canvas, audio, iframe, embed, object {\n`;
+	response += ` display: block;\n`;
+	response += ` vertical-align: middle;\n`;
+	response += '}\n';
+
 	return response;
 }
 

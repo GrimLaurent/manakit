@@ -6,6 +6,7 @@
 	export let contentClass: string | undefined = undefined;
 
 	$: classList = [
+		{ class: `dal-responsive`, value: true },
 		{ class: `is-inset`, value: inset },
 		{ class: `is-vertical`, value: vertical }
 	];
@@ -32,14 +33,14 @@
 	}
 </script>
 
-<div class={className('dal-responsive', $$props.class, classList)} {...$$props.style}>
+<div class={className($$props.class, classList)} {...$$props.style}>
 	{#if aspectRatio}
 		<div class="dal-responsive--sizer" style={`padding-bottom: ${calAspectRatio(aspectRatio)}`} />
 	{:else}
 		<div class="dal-responsive--sizer" />
 	{/if}
 
-	<div class={className('dal-responsive--content', contentClass)}>
+	<div class={className('dal-responsive--content ' + contentClass)}>
 		<!-- slot: default -->
 		<slot />
 	</div>

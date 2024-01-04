@@ -6,6 +6,7 @@
 	export let contentClass: string | undefined = undefined;
 
 	$: classList = [
+		{ class: `dal-responsive`, value: true },
 		{ class: `is-inset`, value: inset },
 		{ class: `is-vertical`, value: vertical }
 	];
