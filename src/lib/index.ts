@@ -26,4 +26,6 @@ export { default as CardBody } from './components/card/card.body.svelte';
 export { default as CardTitle } from './components/card/card.title.svelte';
 export { default as CardActions } from './components/card/card.actions.svelte';
 
+export { default as Modal } from './components/modal/modal.svelte';
+
 export { default as CardLegacy } from './legacy/Card/Card.svelte';

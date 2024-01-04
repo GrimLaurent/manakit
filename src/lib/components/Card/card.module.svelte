@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { classMap, styleMap } from '../../utils';
 	import type { Theme } from '$lib/types';
+	import { classMap, styleMap } from '../../utils';
 
 	export let theme: Theme = undefined;
 	export let shadow: string | boolean | undefined = undefined;
@@ -15,6 +15,8 @@
 	export let image: boolean = false;
 
 	// state
+	$: innerWidth = 0;
+	$: innerHeight = 0;
 	$: isHover = false;
 	$: isHoverLink = false;
 
@@ -24,6 +26,9 @@
 	};
 </script>
 
+<svelte:window bind:innerWidth bind:innerHeight />
+{innerWidth}
+{innerHeight}
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -42,7 +47,12 @@
 		rounded: rounded || true,
 		theme: theme
 	})}
-	style={styleMap({ default: $$props.style, background: $$props.background, color: $$props.color })}
+	style={styleMap({
+		default: $$props.style,
+		background: $$props.background,
+		color: $$props.color,
+		sizing: [$$props, [innerWidth, innerHeight]]
+	})}
 	role={$$props.role}
 	tabindex={$$props.tabindex}
 	on:mouseenter={() => handleMouseHover(true)}
