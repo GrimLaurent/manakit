@@ -9,10 +9,12 @@
 	export let closeOnOutside: boolean = false;
 </script>
 
+{$$props.open}
 <dialog
 	id={$$props.id}
 	class={classMap({
 		component: 'modal',
+		'modal-is-open': $$props.open,
 		'modal-is-bottom': $$props.bottom,
 		'modal-is-top': $$props.top
 	})}
@@ -64,6 +66,20 @@
 		transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 		transition-property: transform, opacity, visibility;
 		overflow-y: hidden;
+	}
+
+	.modal-is-open {
+		pointer-events: auto;
+		visibility: visible;
+		opacity: 1;
+		background: #0006;
+		animation: modal-pop 0.2s ease-out;
+	}
+
+	@keyframes modal-pop {
+		0% {
+			opacity: 0;
+		}
 	}
 
 	:global(.modal-body) {

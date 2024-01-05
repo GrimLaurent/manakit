@@ -2,7 +2,7 @@
 	import { classMap, styleMap } from '../../utils';
 </script>
 
-<h2
+<div
 	id={$$props.id}
 	class={classMap({
 		component: 'card-actions',
@@ -12,7 +12,7 @@
 >
 	<!-- slot: default -->
 	<slot />
-</h2>
+</div>
 
 <style>
 	.card-actions {
