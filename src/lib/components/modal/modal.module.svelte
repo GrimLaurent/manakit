@@ -6,6 +6,7 @@
 	export let theme: Theme = undefined;
 	export let shadow: string | boolean | undefined = undefined;
 	export let rounded: string | boolean | undefined = undefined;
+	export let closeOnOutside: boolean = false;
 </script>
 
 <dialog
@@ -17,20 +18,6 @@
 	})}
 	open={$$props.open}
 >
-	<!-- <div
-		class={classMap({
-			component: 'modal-body',
-			default: $$props.class,
-			shadow: shadow || 'xl',
-			rounded: rounded || 'xl',
-			theme: theme
-		})}
-		style={styleMap({ default: $$props.style })}
-	> -->
-	<!-- slot: default -->
-	<!-- <slot />
-	</div> -->
-
 	<Card
 		class={classMap({
 			component: 'modal-body',
@@ -47,9 +34,11 @@
 	</Card>
 
 	<!-- close outside -->
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<!-- <div tabindex="0" class="modal-backdrop" on:click role="button" /> -->
-	<form method="dialog" class="modal-overlay"><button on:click>close</button></form>
+	{#if closeOnOutside}
+		<form method="dialog" class="modal-overlay">
+			<button on:click>close</button>
+		</form>
+	{/if}
 </dialog>
 
 <style>
@@ -78,19 +67,13 @@
 	}
 
 	:global(.modal-body) {
-		/* max-height: calc(100vh - 5em); */
 		grid-column-start: 1;
 		grid-row-start: 1;
-		/* width: 91.666667%; */
-		/* max-width: 32rem; */
-		/* padding: 1.5rem; */
 		overflow-y: auto !important;
 		overscroll-behavior: contain;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 		transition-duration: 0.2s;
-		/* background: var(--color-surface);
-		color: var(--color-text); */
 	}
 
 	.modal-overlay {

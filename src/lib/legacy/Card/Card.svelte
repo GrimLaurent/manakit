@@ -72,8 +72,6 @@
 	$: classHoverHtml = className(undefined, classHoverList);
 	$: classActiveHtml = className(undefined, classActiveList);
 	$: styleHtml = styleName($$props.style, styleList);
-
-	console.log('Card props', $$props);
 </script>
 
 {#if href}

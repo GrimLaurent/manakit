@@ -4,7 +4,6 @@
 	export let open: boolean = false;
 </script>
 
-{open}
 <Component {...$$props} {open} on:click>
 	<slot />
 </Component>

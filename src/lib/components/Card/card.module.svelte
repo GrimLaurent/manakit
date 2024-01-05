@@ -27,8 +27,7 @@
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
-{innerWidth}
-{innerHeight}
+
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
