@@ -9,7 +9,6 @@
 	export let closeOnOutside: boolean = false;
 </script>
 
-{$$props.open}
 <dialog
 	id={$$props.id}
 	class={classMap({
@@ -59,7 +58,7 @@
 		opacity: 0;
 		border: 0;
 		overscroll-behavior: contain;
-		z-index: 999;
+		z-index: 4000;
 		background-color: transparent;
 		color: inherit;
 		transition-duration: 0.2s;
