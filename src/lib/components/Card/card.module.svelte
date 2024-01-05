@@ -43,7 +43,7 @@
 		'card-is-compact': compact,
 		'card-is-image': image,
 		shadow: shadow || (isHover && 'xl'),
-		rounded: rounded || true,
+		// rounded: rounded || true,
 		theme: theme
 	})}
 	style={styleMap({
@@ -82,6 +82,8 @@
 
 <style>
 	.card {
+		--card-radius: 0.25rem;
+
 		display: block;
 		overflow: hidden;
 		overflow-wrap: break-word;
@@ -90,6 +92,7 @@
 		z-index: 0;
 		border-style: solid;
 		border-width: 0;
+		border-radius: var(--card-radius);
 		background: var(--color-surface);
 		color: var(--color-text);
 	}
