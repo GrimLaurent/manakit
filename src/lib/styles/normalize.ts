@@ -46,6 +46,11 @@ function setNormalizeCss() {
 	response += ` vertical-align: middle;\n`;
 	response += '}\n';
 
+	response += `.no-scroll {\n`;
+	response += ` height: 100%;\n`;
+	response += ` overflow: hidden;\n`;
+	response += '}\n';
+
 	return response;
 }
 

@@ -7,6 +7,43 @@
 	export let shadow: string | boolean | undefined = undefined;
 	export let rounded: string | boolean | undefined = undefined;
 	export let closeOnOutside: boolean = false;
+
+	import { onMount } from 'svelte';
+
+	function addNoScrollClassToHtml() {
+		const html = document.documentElement;
+		html.classList.add('no-scroll');
+	}
+
+	function removeNoScrollClassFromHtml() {
+		const html = document.documentElement;
+		html.classList.remove('no-scroll');
+	}
+
+	onMount(() => {
+		if ($$props?.open) {
+			addNoScrollClassToHtml();
+		} else {
+			removeNoScrollClassFromHtml();
+		}
+
+		return () => {
+			removeNoScrollClassFromHtml();
+		};
+	});
+
+	$: init = 0;
+
+	$: {
+		if ($$props?.open) {
+			addNoScrollClassToHtml();
+			init = 1;
+		}
+
+		if (!$$props?.open && init === 1) {
+			removeNoScrollClassFromHtml();
+		}
+	}
 </script>
 
 <dialog
@@ -37,7 +74,7 @@
 	<!-- close outside -->
 	{#if closeOnOutside}
 		<form method="dialog" class="modal-overlay">
-			<button on:click>close</button>
+			<button on:click on:click={() => removeNoScrollClassFromHtml()}>close</button>
 		</form>
 	{/if}
 </dialog>
