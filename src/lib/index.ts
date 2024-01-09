@@ -21,7 +21,7 @@ export { default as Dialog } from './legacy/Dialog/Dialog.svelte';
 // New components
 export { default as Overlay } from './legacy/Overlay/Overlay.svelte';
 
-export { default as Card } from './components/cards/card.svelte';
+export { default as Card } from './components/cards/cards.svelte';
 export { default as CardBody } from './components/cards/card.body.svelte';
 export { default as CardTitle } from './components/cards/card.title.svelte';
 export { default as CardActions } from './components/cards/card.actions.svelte';
