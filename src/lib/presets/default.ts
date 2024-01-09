@@ -23,6 +23,10 @@ const preset: Preset = {
 			light: '#F6F6F8',
 			dark: '#2C2D33'
 		},
+		divider: {
+			light: '#ebeced',
+			dark: '#2e333b'
+		},
 		shadow: '#0d0d0d'
 	},
 	fontFamily: {},
