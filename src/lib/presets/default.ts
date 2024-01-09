@@ -19,6 +19,10 @@ const preset: Preset = {
 			light: '#FEFEFE',
 			dark: '#202020'
 		},
+		textOnSurface: {
+			light: '#010101',
+			dark: '#FDFDFD'
+		},
 		surface: {
 			light: '#F6F6F8',
 			dark: '#2C2D33'
