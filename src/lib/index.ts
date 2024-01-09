@@ -33,5 +33,6 @@ export { default as Divider } from './components/divider/divider.svelte';
 export { default as Alert } from './components/alert/alert.svelte';
 
 export { default as Avatar } from './components/avatar/avatar.svelte';
+export { default as AvatarGroup } from './components/avatar/avatar.group.svelte';
 
 export { default as CardLegacy } from './legacy/Card/Card.svelte';
