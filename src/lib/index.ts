@@ -39,4 +39,6 @@ export { default as Toolbar } from './components/toolbar/toolbar.svelte';
 
 export { default as Spacer } from './components/spacer/spacer.svelte';
 
+export { default as Drawer } from './components/drawer/drawer.svelte';
+
 export { default as CardLegacy } from './legacy/Card/Card.svelte';
