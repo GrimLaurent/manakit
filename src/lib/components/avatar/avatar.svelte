@@ -17,8 +17,6 @@
 			return value;
 		}
 	}
-
-	console.log('$$slot', $$slots);
 </script>
 
 <div
