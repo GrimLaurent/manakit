@@ -85,7 +85,7 @@
 		flex-direction: column;
 	}
 
-	details summary {
+	details :global(summary) {
 		display: grid;
 		grid-auto-flow: column;
 		align-content: flex-start;
@@ -131,7 +131,7 @@
 		text-wrap: balance;
 	}
 
-	details summary::after {
+	details :global(summary:after) {
 		justify-self: end;
 		display: block;
 		margin-top: -0.5rem;
@@ -147,7 +147,7 @@
 		pointer-events: none;
 	}
 
-	details[open] summary::after {
+	details[open] :global(summary:after) {
 		transform: rotate(225deg);
 		margin-top: 0;
 	}
