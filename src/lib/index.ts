@@ -41,4 +41,7 @@ export { default as Spacer } from './components/spacer/spacer.svelte';
 
 export { default as Drawer } from './components/drawer/drawer.svelte';
 
+export { default as Menu } from './components/menu/menu.svelte';
+export { default as MenuTitle } from './components/menu/menu.title.svelte';
+
 export { default as CardLegacy } from './legacy/Card/Card.svelte';

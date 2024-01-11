@@ -41,6 +41,7 @@ export interface Preset {
 		textOpacity: { [key: string]: string | number };
 		textTransform: { [key: string]: string | number };
 		fontEmphasis: { [key: string]: string | number };
+		position: { [key: string]: string };
 	};
 }
 

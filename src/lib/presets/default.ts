@@ -80,6 +80,12 @@ const preset: Preset = {
 			flex: 'flex',
 			'inline-flex': 'inline-flex'
 		},
+		position: {
+			relative: 'relative',
+			fixed: 'fixed',
+			absolute: 'absolute',
+			sticky: 'sticky'
+		},
 		alignContent: {
 			start: 'flex-start',
 			end: 'flex-end',

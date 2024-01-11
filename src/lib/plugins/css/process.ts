@@ -34,6 +34,7 @@ import setClassTextAlign from '../../styles/textAlign';
 import setClassTextDecoration from '../../styles/textDecoration';
 import setClassTextOpacity from '../../styles/textOpacity';
 import setClassTextTransform from '../../styles/textTransform';
+import setClassPosition from '../../styles/position';
 
 export function buildCSSFile(config: any) {
 	let response = '';
@@ -112,6 +113,10 @@ export function buildCSSFile(config: any) {
 		response += setClassTextDecoration({ data: preset.variables.textDecoration });
 		response += setClassTextOpacity({ data: preset.variables.textOpacity });
 		response += setClassTextTransform({ data: preset.variables.textTransform });
+	}
+
+	if (!excludeCss.includes('position')) {
+		response += setClassPosition({ data: preset.variables.position });
 	}
 
 	for (const [key, value] of Object.entries(breakpoint!)) {
@@ -200,6 +205,10 @@ export function buildCSSFile(config: any) {
 				screen: key,
 				data: preset.variables.height
 			});
+		}
+
+		if (!excludeCss.includes('position')) {
+			response += setClassPosition({ screen: key, data: preset.variables.position });
 		}
 
 		response += '}\n\n';
