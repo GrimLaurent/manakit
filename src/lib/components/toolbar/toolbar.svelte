@@ -23,17 +23,17 @@
 		sizing: [$$props, [innerWidth, innerHeight]]
 	})}
 >
-	<div
+	<!-- <div
 		class={classMap({
 			component: 'toolbar-content'
 		})}
-	>
-		<slot />
-	</div>
+	> -->
+	<slot />
+	<!-- </div> -->
 </div>
 
 <style>
-	.toolbar {
+	/* .toolbar {
 		display: flex;
 		align-items: center;
 		padding: 0.5rem;
@@ -47,6 +47,14 @@
 		flex: 0 0 auto;
 		position: relative;
 		transition: inherit;
+		width: 100%;
+	} */
+
+	.toolbar {
+		display: flex;
+		align-items: center;
+		padding: var(--navbar-padding, 0.5rem);
+		min-height: 4rem;
 		width: 100%;
 	}
 </style>

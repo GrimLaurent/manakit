@@ -44,4 +44,6 @@ export { default as Drawer } from './components/drawer/drawer.svelte';
 export { default as Menu } from './components/menu/menu.svelte';
 export { default as MenuTitle } from './components/menu/menu.title.svelte';
 
+export { default as TextInput } from './components/textinput/textinput.svelte';
+
 export { default as CardLegacy } from './legacy/Card/Card.svelte';

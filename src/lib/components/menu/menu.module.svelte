@@ -3,7 +3,12 @@
 </script>
 
 {#if $$props.submenu}
-	<details id={$$props.id}>
+	<details
+		id={$$props.id}
+		class={classMap({
+			'menu-is-collapsible': $$props.collapsible
+		})}
+	>
 		<!-- slot: summary -->
 		{#if $$slots.summary}
 			<slot name="summary" />
@@ -150,5 +155,9 @@
 	details[open] :global(summary:after) {
 		transform: rotate(225deg);
 		margin-top: 0;
+	}
+
+	details[open].menu-is-collapsible :global(ul) {
+		position: absolute !important;
 	}
 </style>

@@ -34,9 +34,13 @@
 			class="drawer-overlay"
 			on:click={$$props.onclose}
 		></label>
-		<ul class="menu" on:click={() => console.log('drawer-overlay')}>
+		<!-- <ul class="menu" on:click={() => console.log('drawer-overlay')}>
 			<slot />
-		</ul>
+		</ul> -->
+
+		<div class="drawer-content">
+			<slot />
+		</div>
 	</div>
 </div>
 
@@ -85,6 +89,15 @@
 		grid-row-start: 1;
 	}
 
+	.drawer-side > .drawer-content {
+		flex: 0 1 auto;
+		height: 100%;
+		max-width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background: var(--color-surface);
+	}
+
 	.drawer-side > .menu {
 		display: flex;
 		flex-direction: column;
@@ -96,7 +109,8 @@
 		background-color: var(--color-surface);
 	}
 
-	.drawer-side > .menu {
+	.drawer-side > .menu,
+	.drawer-side > .drawer-content {
 		transform: translate(-100%);
 	}
 
@@ -105,7 +119,8 @@
 		justify-items: end;
 	}
 
-	.drawer-is-end .drawer-side > .menu {
+	.drawer-is-end .drawer-side > .menu,
+	.drawer-is-end .drawer-side > .drawer-content {
 		transform: translate(100%);
 	}
 
@@ -119,7 +134,8 @@
 		opacity: 0.42;
 	}
 
-	.drawer-is-open .drawer-side > .menu {
+	.drawer-is-open .drawer-side > .menu,
+	.drawer-is-open .drawer-side > .drawer-content {
 		transform: translate(0);
 	}
 </style>
