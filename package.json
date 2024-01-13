@@ -2,56 +2,31 @@
 	"name": "manakit",
 	"version": "0.3.43",
 	"private": false,
-	"author": "Laurent Grimaldi",
-	"description": "Manakit – Framework UI Components. Open source, free forever.",
-	"scripts": {
-		"build": "rollup -c --bundleConfigAsCjs",
-		"clear:css": "rm -rf build/app.css",
-		"default:config": "cp src/lib/plugins/vite/default/config.js build/.manakit.cjs",
-		"prepublishOnly": "npm run build && npm run clear:css",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write"
-	},
+	"description": "Manakit - CSS framework for rapidly building custom user interfaces.",
+	"author": "Nycolaide <laurent.grimaldi@mindelve.com>",
+	"license": "MIT",
+	"main": "build/index.js",
+	"module": "build/index.js",
+	"types": "build/index.d.ts",
+	"type": "module",
 	"exports": {
-		".": {
-			"types": "./src/index.ts",
-			"default": "./src/index.ts"
-		},
-		"./*": "./src/*"
+		"./vite": "./build/index.js",
+		".": "./build/style.css"
 	},
-	"publishConfig": {
-		"types": "./build/index.d.ts",
-		"exports": {
-			".": {
-				"types": "./build/index.d.ts",
-				"default": "./build/index.js"
-			}
-		},
-		"typesVersions": {
-			">4.0": {
-				"index.d.ts": [
-					"./build/index.d.ts"
-				]
-			}
-		}
+	"scripts": {
+		"build": "rollup -c --bundleConfigAsCjs"
 	},
 	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
+		"build"
 	],
-	"types": "./src/index.ts",
-	"type": "module",
 	"devDependencies": {
 		"@rollup/plugin-typescript": "^11.1.6",
-		"@types/eslint": "^8.56.2",
 		"@types/node": "^20.11.0",
 		"@typescript-eslint/eslint-plugin": "^6.18.1",
 		"@typescript-eslint/parser": "^6.18.1",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"prettier": "^3.2.1",
-		"publint": "^0.2.7",
 		"rollup": "^4.9.5",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
 		"tslib": "^2.6.2",

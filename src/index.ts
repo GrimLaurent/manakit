@@ -1,3 +1,1 @@
-export function helloworld() {
-	console.log('hello world');
-}
+export * from './vite';
