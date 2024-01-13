@@ -54,6 +54,7 @@ const preset: Preset = {
 	variables: {
 		display: {
 			none: 'none',
+			grid: 'grid',
 			inline: 'inline',
 			'inline-block': 'inline-block',
 			block: 'block',

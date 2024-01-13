@@ -47,4 +47,6 @@ export { default as MenuTitle } from './components/menu/menu.title.svelte';
 export { default as TextInput } from './components/textinput/textinput.svelte';
 export { default as Input } from './components/input/input.svelte';
 
+export { default as Button } from './components/button/button.svelte';
+
 export { default as CardLegacy } from './legacy/Card/Card.svelte';

@@ -48,9 +48,9 @@ export function buildCSSFile(config: any) {
 		dark: config?.dark || preset.dark
 	});
 
-	if (config?.normalize !== undefined ? config?.normalize : true) {
-		response += setNormalizeCss();
-	}
+	// if (config?.normalize !== undefined ? config?.normalize : true) {
+	response += setNormalizeCss();
+	// }
 
 	if (!excludeCss.includes(''))
 		if (!excludeCss.includes('theme')) {

@@ -15,6 +15,11 @@ function setNormalizeCss() {
 	response += `tab-size: 4;\n`;
 	response += '}\n';
 
+	// body
+	response += `body {\n`;
+	response += `margin: 0;\n`;
+	response += '}\n';
+
 	// *
 	response += `* {\n`;
 	response += `padding: 0;\n`;
