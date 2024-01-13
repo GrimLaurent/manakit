@@ -1,16 +1,24 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
+		"declaration": true,
+		"declarationDir": "build",
+		"module": "ESNext",
+		"target": "ESNext",
+		"lib": ["ES2022", "DOM"],
 		"sourceMap": true,
+		"moduleResolution": "Node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"allowJs": true,
 		"strict": true,
-		"module": "ES6",
-		"moduleResolution": "Bundler"
+		"forceConsistentCasingInFileNames": false,
+		"noFallthroughCasesInSwitch": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"noUnusedParameters": true,
+		"strictNullChecks": true
 	},
-	"exclude": ["dist-vite", "src/lib/presets", "src/lib/plugins", "src/lib/styles"]
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "build"]
 }

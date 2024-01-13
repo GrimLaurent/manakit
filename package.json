@@ -3,49 +3,34 @@
 	"version": "0.3.43",
 	"private": false,
 	"author": "Laurent Grimaldi",
-	"description": "Manakit for Svelte – Framework UI Components. Open source, free forever.",
+	"description": "Manakit – Framework UI Components. Open source, free forever.",
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build && npm run build:rollup && npm run default:config && npm run package",
-		"build:rollup": "rollup -c --bundleConfigAsCjs",
-		"preview": "vite preview",
-		"package": "svelte-kit sync && svelte-package && publint",
-		"clear:css": "rm -rf dist/app.css",
-		"default:config": "cp src/lib/plugins/vite/default/config.js dist-vite/.manakit.cjs",
+		"build": "rollup -c --bundleConfigAsCjs",
+		"clear:css": "rm -rf build/app.css",
+		"default:config": "cp src/lib/plugins/vite/default/config.js build/.manakit.cjs",
 		"prepublishOnly": "npm run build && npm run clear:css",
-		"test": "npm run test:integration && npm run test:unit",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write  --plugin prettier-plugin-svelte .",
-		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"format": "prettier --write"
 	},
 	"exports": {
 		".": {
-			"types": "./src/lib/index.ts",
-			"svelte": "./src/lib/index.ts"
+			"types": "./src/index.ts",
+			"default": "./src/index.ts"
 		},
-		"./*": "./src/lib/*",
-		"./vite": {
-			"types": "./dist-vite/index.d.ts",
-			"default": "./dist-vite/index.js"
-		},
-		"./styles": "./dist/app.css"
+		"./*": "./src/*"
 	},
 	"publishConfig": {
-		"types": "./dist/index.d.ts",
+		"types": "./build/index.d.ts",
 		"exports": {
 			".": {
-				"types": "./dist/index.d.ts",
-				"svelte": "./dist/index.js",
-				"default": "./dist/index.js"
+				"types": "./build/index.d.ts",
+				"default": "./build/index.js"
 			}
 		},
 		"typesVersions": {
 			">4.0": {
 				"index.d.ts": [
-					"./dist/index.d.ts"
+					"./build/index.d.ts"
 				]
 			}
 		}
@@ -55,35 +40,21 @@
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
 	],
-	"peerDependencies": {
-		"svelte": "^4.0.0"
-	},
+	"types": "./src/index.ts",
+	"type": "module",
 	"devDependencies": {
-		"@playwright/test": "^1.28.1",
-		"@rollup/plugin-typescript": "^11.1.5",
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/package": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@types/eslint": "8.56.0",
-		"@types/node": "^20.10.5",
-		"@typescript-eslint/eslint-plugin": "^6.16.0",
-		"@typescript-eslint/parser": "^6.16.0",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@types/eslint": "^8.56.2",
+		"@types/node": "^20.11.0",
+		"@typescript-eslint/eslint-plugin": "^6.18.1",
+		"@typescript-eslint/parser": "^6.18.1",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.35.1",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.1.2",
-		"publint": "^0.1.9",
-		"rollup": "^4.9.1",
+		"prettier": "^3.2.1",
+		"publint": "^0.2.7",
+		"rollup": "^4.9.5",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
-		"svelte": "^4.2.7",
-		"svelte-check": "^3.6.0",
 		"tslib": "^2.6.2",
-		"typescript": "^5.3.3",
-		"vite": "^5.0.10",
-		"vitest": "^1.0.0"
-	},
-	"types": "./src/lib/index.ts",
-	"type": "module"
+		"typescript": "^5.3.3"
+	}
 }
