@@ -1,6 +1,6 @@
 import { prefix } from '../../constant';
-import { VarRoot } from '../../types';
+import { RootVar } from '../../types';
 
-export const createRootVar = ({ slug, value }: VarRoot) => {
+export const createRootVar = ({ slug, value }: RootVar) => {
 	return `--${prefix}-${slug}: ${value};\n`;
 };
