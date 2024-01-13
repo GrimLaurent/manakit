@@ -1,13 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from '@rollup/plugin-typescript';
 
-const pkg = require('./package.json');
-
 export default {
-	input: 'src/index.ts',
+	input: 'src/integrations/vite/index.ts',
 	output: {
-		file: pkg.main,
+		file: 'build/index.js',
 		format: 'es',
 		sourcemap: true
 	},

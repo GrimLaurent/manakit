@@ -10,8 +10,11 @@
 	"types": "build/index.d.ts",
 	"type": "module",
 	"exports": {
-		"./vite": "./build/index.js",
-		".": "./build/style.css"
+		".": "./build/style.css",
+		"./vite": {
+			"types": "./build/index.d.ts",
+			"default": "./build/index.js"
+		}
 	},
 	"scripts": {
 		"build": "rollup -c --bundleConfigAsCjs"
