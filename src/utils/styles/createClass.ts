@@ -8,7 +8,7 @@ export const createClass = ({ className, properties, important, screen }: ClassC
 
 	if (properties) {
 		if (haveDot)
-			css += screen && screen !== mediaInit ? `.${screen}\\:${className} {\n` : `.${className} {\n`;
+			css += screen && screen !== mediaInit ? `${screen}\\:${className} {\n` : `${className} {\n`;
 		else css += `${className} {\n`;
 
 		for (const [key, value] of Object.entries(properties)) {

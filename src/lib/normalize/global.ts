@@ -13,5 +13,20 @@ export const normalizeGlobal = () => {
 		}
 	});
 
+	css += createClass({
+		className: 'blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre',
+		properties: {
+			margin: 0
+		}
+	});
+
+	css += createClass({
+		className: 'h1, h2, h3, h4, h5, h6',
+		properties: {
+			'font-size': 'inherit',
+			'font-weight': 'inherit'
+		}
+	});
+
 	return css;
 };
