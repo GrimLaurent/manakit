@@ -1,12 +1,14 @@
 import fs from 'fs/promises';
 import { pathCss } from './constant';
-import { createRootVar } from './utils';
+
+import { normalize } from './lib/normalize';
+import { fonts } from './lib/fonts';
 
 export const buildCSS = () => {
-	let response = '';
+	let cssString = '';
 
-	response += `:root {\n`;
-	response += createRootVar({ slug: 'test-gloubiboulga', value: 'blue' });
-	response += '}\n';
-	fs.writeFile(pathCss, response);
+	cssString += fonts();
+	cssString += normalize();
+
+	fs.writeFile(pathCss, cssString);
 };
