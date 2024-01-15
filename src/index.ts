@@ -3,6 +3,7 @@ import { pathCss } from './constant';
 
 import { normalize } from './lib/normalize';
 import { btnStatic, btnResponsive } from './components/btn';
+import { colorRoot } from './lib/colors';
 
 const responsive = {
 	none: '0',
@@ -16,6 +17,10 @@ const responsive = {
 export const buildCSS = () => {
 	let cssString = '';
 
+	// root
+	cssString += colorRoot();
+
+	// class
 	cssString += normalize();
 	cssString += btnStatic();
 
