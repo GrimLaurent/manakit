@@ -11,7 +11,7 @@ export interface PropertieCSS {
 
 export interface ClassCSS {
 	className: string;
-	properties: { [key: string]: string | number };
+	properties: { [key: string]: string | number | unknown };
 	important?: boolean;
 	screen?: string;
 }

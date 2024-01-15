@@ -50,5 +50,14 @@ export const btnClass = () => {
 		}
 	});
 
+	css += createClass({
+		className: '.btn-disabled, .btn[disabled]',
+		properties: {
+			'pointer-events': 'none',
+			'background-color': 'gray',
+			color: 'darkgray'
+		}
+	});
+
 	return css;
 };
