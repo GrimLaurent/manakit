@@ -1,4 +1,6 @@
-export const themes = {
+import { Themes } from '../../types';
+
+export const initialTheme: Themes = {
 	default: {
 		error: { light: '#B3261E', dark: '#F2B8B5' },
 		warning: { light: '#fdb400', dark: '#fdb400' },
