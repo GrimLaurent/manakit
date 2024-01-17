@@ -31,6 +31,7 @@ export const createClass = ({
 			css += propertie({ key, value, important });
 		}
 		css += '}\n';
+	}
 
 	return css;
 };
