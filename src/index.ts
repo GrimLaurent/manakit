@@ -14,7 +14,7 @@ import { flexClass } from './lib/flex';
 import { gridsFlexClass, gridsFlexStaticClass } from './lib/gridsFlex';
 import { radiusClass } from './lib/radius';
 import { shadowClass } from './lib/shadow';
-import { fontsClass, fontsStaticClass } from './lib/fonts';
+import { fontsClass, fontsRoot, fontsStaticClass } from './lib/fonts';
 
 export const initialResponsive = {
 	none: '0',
@@ -38,6 +38,7 @@ export const buildCSS = ({
 
 	// root
 	cssString += colorRoot({ themes, dark });
+	cssString += fontsRoot();
 
 	// class
 	cssString += normalize();

@@ -1,12 +1,12 @@
-// import { createRoot } from '../../utils';
+import { createRoot } from '../../utils';
 
-// const variables = {
-// 	'font-title': 'Roboto',
-// 	'font-body': 'Roboto'
-// };
+export const initialFamily = {
+	'font-title': 'Roboto',
+	'font-body': 'Roboto'
+};
 
-export const fontsFamily = () => {
-	const css = '';
-	//css += createRoot({ variables });
+export const family = () => {
+	let css = '';
+	css += createRoot({ name: 'font', variables: initialFamily });
 	return css;
 };
