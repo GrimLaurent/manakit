@@ -19,7 +19,9 @@
 	"scripts": {
 		"build": "npm run build:rollup && npm run init:config ",
 		"build:rollup": "rollup -c --bundleConfigAsCjs",
-		"init:config": "cp src/preset/default.js build/.manakit.cjs"
+		"clear:css": "rm -rf build/manakit.css",
+		"init:config": "cp src/preset/default.js build/.manakit.cjs",
+		"prepublishOnly": "npm run build && npm run clear:css"
 	},
 	"files": [
 		"build"
