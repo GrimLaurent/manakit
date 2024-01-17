@@ -21,28 +21,44 @@ export const colorsRoot = ({ themes, dark }: { themes: Themes; dark: boolean }) 
 		if (theme === 'default') {
 			// @media prefers-color-scheme light
 			if (dark) css += '@media (prefers-color-scheme: light) {\n';
-			css += createRoot({ variables: lightMode, scheme: dark ? 'light' : undefined });
+			css += createRoot({
+				name: 'color',
+				variables: lightMode,
+				scheme: dark ? 'light' : undefined
+			});
 			if (dark)
-				css += createRoot({ variables: darkMode, scheme: 'light', className: '.theme-dark' });
+				css += createRoot({
+					name: 'color',
+					variables: darkMode,
+					scheme: 'light',
+					className: '.theme-dark'
+				});
 			if (dark) css += '}\n\n';
 
 			if (dark) {
 				// @media prefers-color-scheme dark
 				css += '@media (prefers-color-scheme: dark) {\n';
-				css += createRoot({ variables: darkMode, scheme: 'dark' });
-				css += createRoot({ variables: lightMode, scheme: 'dark', className: '.theme-light' });
+				css += createRoot({ name: 'color', variables: darkMode, scheme: 'dark' });
+				css += createRoot({
+					name: 'color',
+					variables: lightMode,
+					scheme: 'dark',
+					className: '.theme-light'
+				});
 				css += '}\n\n';
 			}
 		} else {
 			// @media prefers-color-scheme light
 			if (dark) css += '@media (prefers-color-scheme: light) {\n';
 			css += createRoot({
+				name: 'color',
 				variables: lightMode,
 				scheme: dark ? 'light' : undefined,
 				className: `[manakit-theme=${theme}]`
 			});
 			if (dark)
 				css += createRoot({
+					name: 'color',
 					variables: darkMode,
 					scheme: 'light',
 					className: `[manakit-theme=${theme}].theme-dark`
@@ -53,11 +69,13 @@ export const colorsRoot = ({ themes, dark }: { themes: Themes; dark: boolean }) 
 				// @media prefers-color-scheme dark
 				css += '@media (prefers-color-scheme: dark) {\n';
 				css += createRoot({
+					name: 'color',
 					variables: darkMode,
 					scheme: 'dark',
 					className: `[manakit-theme=${theme}]`
 				});
 				css += createRoot({
+					name: 'color',
 					variables: lightMode,
 					scheme: 'dark',
 					className: `[manakit-theme=${theme}].theme-light`

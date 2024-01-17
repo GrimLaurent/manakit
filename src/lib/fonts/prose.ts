@@ -1,24 +1,24 @@
-import { createRoot, createClass } from '../../utils';
+import { createClass } from '../../utils';
 
-const variables = {
-	'prose-h1-size': 'var(--mk-text-4xl)',
-	'prose-h1-weight': '800',
-	'prose-h2-size': 'var(--mk-text-2xl)',
-	'prose-h2-weight': '700',
-	'prose-h3-size': 'var(--mk-text-2xl)',
-	'prose-h3-weight': '600',
-	'prose-h4-size': 'var(--mk-text-xl)',
-	'prose-h4-weight': '600',
-	'prose-kdh-size': 'var(--mk-text-sm)',
-	'prose-kdh-weight': '500',
-	'prose-p-size': 'var(--mk-text-base)',
-	'prose-p-weight': '400'
-};
+// const variables = {
+// 	'prose-h1-size': 'var(--mk-text-4xl)',
+// 	'prose-h1-weight': '800',
+// 	'prose-h2-size': 'var(--mk-text-2xl)',
+// 	'prose-h2-weight': '700',
+// 	'prose-h3-size': 'var(--mk-text-2xl)',
+// 	'prose-h3-weight': '600',
+// 	'prose-h4-size': 'var(--mk-text-xl)',
+// 	'prose-h4-weight': '600',
+// 	'prose-kdh-size': 'var(--mk-text-sm)',
+// 	'prose-kdh-weight': '500',
+// 	'prose-p-size': 'var(--mk-text-base)',
+// 	'prose-p-weight': '400'
+// };
 
 // root
 export const fontsProse = () => {
-	let css = '';
-	css += createRoot({ variables });
+	const css = '';
+	// css += createRoot({ variables });
 	return css;
 };
 

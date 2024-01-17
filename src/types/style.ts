@@ -1,4 +1,5 @@
 export interface RootVar {
+	section: string;
 	slug: string;
 	value: string | number;
 }
@@ -18,6 +19,7 @@ export interface ClassCSS {
 }
 
 export interface RootCSS {
+	name: string;
 	variables: { [key: string]: string | number };
 	className?: string;
 	scheme?: string;
