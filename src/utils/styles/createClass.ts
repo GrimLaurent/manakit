@@ -32,11 +32,5 @@ export const createClass = ({
 		}
 		css += '}\n';
 
-		// if (parentClassName) {
-		// 	css += parentClassName + css;
-		// }
-	}
-
-	console.log('css', css);
 	return css;
 };
