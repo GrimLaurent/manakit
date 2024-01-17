@@ -1,8 +1,8 @@
 import { createRoot } from '../../utils';
 
 export const initialFamily = {
-	'font-title': 'Roboto',
-	'font-body': 'Roboto'
+	title: 'Roboto,sans-serif',
+	body: 'Roboto,sans-serif'
 };
 
 export const family = () => {

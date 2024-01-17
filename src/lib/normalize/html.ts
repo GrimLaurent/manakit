@@ -8,7 +8,7 @@ export const normalizeHTML = () => {
 		properties: {
 			'line-height': 1.5,
 			'tab-size': 4,
-			'font-family': 'var(--mk-font-body)',
+			'font-family': 'var(--font-body)',
 			'font-feature-settings': 'normal',
 			'font-variation-settings': 'normal'
 		}

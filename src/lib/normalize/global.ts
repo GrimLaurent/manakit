@@ -24,7 +24,8 @@ export const normalizeGlobal = () => {
 		className: 'h1, h2, h3, h4, h5, h6',
 		properties: {
 			'font-size': 'inherit',
-			'font-weight': 'inherit'
+			'font-weight': 'inherit',
+			'font-family': 'var(--font-title)'
 		}
 	});
 
