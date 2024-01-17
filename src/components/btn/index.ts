@@ -7,6 +7,7 @@ export const btnStatic = () => {
 	let css = '';
 	// class
 	css += btnClass();
+	css += btnColorClass();
 	return css;
 };
 
@@ -15,6 +16,5 @@ export const btnResponsive = ({ screen }: { screen: string }) => {
 	// class
 	css += btnSizeClass({ screen });
 	css += btnTypeClass({ screen });
-	css += btnColorClass({ screen });
 	return css;
 };

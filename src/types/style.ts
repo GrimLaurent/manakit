@@ -10,6 +10,7 @@ export interface PropertieCSS {
 }
 
 export interface ClassCSS {
+	parentClassName?: string;
 	className: string;
 	properties: { [key: string]: string | number | unknown };
 	important?: boolean;
