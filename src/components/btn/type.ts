@@ -29,6 +29,14 @@ const properties = [
 			width: '3rem',
 			padding: 0
 		}
+	},
+	{
+		className: '.btn-outline',
+		properties: {
+			'border-color': 'currentColor',
+			'background-color': 'transparent',
+			color: 'red'
+		}
 	}
 ];
 

@@ -34,6 +34,22 @@ export const btnClass = () => {
 	});
 
 	css += createClass({
+		className: ':where(.btn:is(input[type=checkbox])), :where(.btn:is(input[type=radio]))',
+		properties: {
+			width: 'auto',
+			appearance: 'none',
+			margin: 0
+		}
+	});
+
+	css += createClass({
+		className: '.btn:is(input[type=checkbox]):after, .btn:is(input[type=radio]):after',
+		properties: {
+			content: 'attr(aria-label)'
+		}
+	});
+
+	css += createClass({
 		className: '.btn:hover',
 		properties: {
 			'border-color': 'orange',

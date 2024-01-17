@@ -28,5 +28,13 @@ export const normalizeGlobal = () => {
 		}
 	});
 
+	css += createClass({
+		className: 'img, svg, video, canvas, audio, iframe, embed, object ',
+		properties: {
+			display: 'block',
+			'vertical-align': 'middle'
+		}
+	});
+
 	return css;
 };
