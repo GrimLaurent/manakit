@@ -34,21 +34,25 @@ const properties = [
 		className: '.btn-outline',
 		properties: {
 			'border-color': 'currentColor',
-			'background-color': 'transparent',
-			color: 'red'
+			'background-color': 'transparent'
+		}
+	},
+	{
+		className: '.btn-text',
+		properties: {
+			'background-color': 'transparent'
 		}
 	}
 ];
 
 // class
-export const btnTypeClass = ({ screen }: { screen: string }) => {
+export const btnTypeClass = () => {
 	let css = '';
 
 	properties.forEach((item) => {
 		css += createClass({
 			className: item.className,
-			properties: item.properties,
-			screen
+			properties: item.properties
 		});
 	});
 

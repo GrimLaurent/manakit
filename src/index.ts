@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import { pathCss } from './constant';
 
 import { normalize } from './lib/normalize';
-// import { btnStatic, btnResponsive } from './components/btn';
+import { btnResponsive, btnStatic } from './components/btn';
 import { colorClass, colorRoot } from './lib/colors';
 import { Themes } from './types';
 import { sizingClass } from './lib/sizing';
@@ -15,6 +15,9 @@ import { gridsFlexClass, gridsFlexStaticClass } from './lib/gridsFlex';
 import { radiusClass } from './lib/radius';
 import { shadowClass } from './lib/shadow';
 import { fontsClass, fontsRoot, fontsStaticClass } from './lib/fonts';
+import { toolbarStatic } from './components/toolbar';
+import { cardResponsive, cardStatic } from './components/card';
+import { modalStatic } from './components/modal';
 
 export const initialResponsive = {
 	none: '0',
@@ -49,7 +52,10 @@ export const buildCSS = ({
 	cssString += fontsStaticClass();
 
 	// components
-	// cssString += btnStatic();
+	cssString += btnStatic();
+	cssString += toolbarStatic();
+	cssString += cardStatic();
+	cssString += modalStatic();
 
 	for (const [screen, value] of Object.entries(responsive)) {
 		if (screen !== 'none') cssString += `@media screen and (min-width: ${value}) {\n`;
@@ -65,7 +71,8 @@ export const buildCSS = ({
 		cssString += fontsClass({ screen });
 
 		// components
-		// cssString += btnResponsive({ screen });
+		cssString += btnResponsive({ screen });
+		cssString += cardResponsive({ screen });
 		if (screen !== 'none') cssString += '}\n\n';
 	}
 

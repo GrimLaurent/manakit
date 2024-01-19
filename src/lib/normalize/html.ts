@@ -14,5 +14,20 @@ export const normalizeHTML = () => {
 		}
 	});
 
+	css += createClass({
+		className: 'body',
+		properties: {
+			margin: 0,
+			'line-height': 'inherit'
+		}
+	});
+
+	css += createClass({
+		className: 'dialog',
+		properties: {
+			padding: 0
+		}
+	});
+
 	return css;
 };

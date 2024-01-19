@@ -37,5 +37,13 @@ export const normalizeGlobal = () => {
 		}
 	});
 
+	css += createClass({
+		className:
+			':root:has(:is(.modal-open,.modal:target,.modal-toggle:checked+.modal,.modal[open]))',
+		properties: {
+			overflow: 'hidden'
+		}
+	});
+
 	return css;
 };

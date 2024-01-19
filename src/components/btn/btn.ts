@@ -7,16 +7,17 @@ export const btnClass = () => {
 	css += createClass({
 		className: '.btn',
 		properties: {
+			position: 'relative',
 			display: 'inline-flex',
-			height: '3rem',
-			'min-height': '3rem',
+			height: '2.25rem',
+			'min-height': '2.25rem',
 			'flex-shrink': 0,
 			cursor: 'pointer',
 			'user-select': 'none',
 			'flex-wrap': 'wrap',
 			'align-items': 'center',
 			'justify-content': 'center',
-			'border-radius': 'var(--btn-rounded,.5rem)',
+			'border-radius': '.5rem',
 			'border-color': 'transparent',
 			'padding-left': '1rem',
 			'padding-right': '1rem',
@@ -27,9 +28,10 @@ export const btnClass = () => {
 			'font-weight': 600,
 			'text-decoration-line': 'none',
 			'transition-duration': '.2s',
-			'border-width': 'var(--btn-border,1px)',
-			'outline-color': 'red',
-			'background-color': 'green'
+			'outline-color': 'var(--color-outline)',
+			'border-width': '1px',
+			'background-color': 'var(--color-surface-container)',
+			color: 'var(--color-on-surface)'
 		}
 	});
 
@@ -43,17 +45,9 @@ export const btnClass = () => {
 	});
 
 	css += createClass({
-		className: '.btn:is(input[type=checkbox]):after, .btn:is(input[type=radio]):after',
+		className: '.btn:is(input[type=checkbox])::after, .btn:is(input[type=radio])::after',
 		properties: {
 			content: 'attr(aria-label)'
-		}
-	});
-
-	css += createClass({
-		className: '.btn:hover',
-		properties: {
-			'border-color': 'orange',
-			'background-color': 'cyan'
 		}
 	});
 
@@ -70,8 +64,8 @@ export const btnClass = () => {
 		className: '.btn-disabled, .btn[disabled]',
 		properties: {
 			'pointer-events': 'none',
-			'background-color': 'gray',
-			color: 'darkgray'
+			'background-color': '#d9dadc',
+			color: '#b9babe'
 		}
 	});
 

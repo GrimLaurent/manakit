@@ -18,21 +18,21 @@ export const colorsClass = ({ themes }: { themes: Themes }) => {
 		css += createClass({
 			className: `.bg\\:${key}`,
 			properties: {
-				background: `var(--mk-${key})`
+				'background-color': `var(--color-${key})!important`
 			}
 		});
 
 		css += createClass({
 			className: `.text\\:${key}`,
 			properties: {
-				color: `var(--mk-${key})`
+				color: `var(--color-${key})!important`
 			}
 		});
 
 		css += createClass({
 			className: `.border\\:${key}`,
 			properties: {
-				'border-color': `var(--mk-${key})`
+				'border-color': `var(--color-${key})!important`
 			}
 		});
 	});

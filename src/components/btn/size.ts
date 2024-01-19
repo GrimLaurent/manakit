@@ -34,8 +34,18 @@ const properties = [
 	{
 		className: '.btn-lg',
 		properties: {
-			height: '4rem',
-			'min-height': '4rem',
+			height: '44px',
+			'min-height': '44px',
+			'padding-left': '1.5rem',
+			'padding-right': '1.5rem',
+			'font-size': '1.125rem'
+		}
+	},
+	{
+		className: '.btn-xl',
+		properties: {
+			height: '52px',
+			'min-height': '52px',
 			'padding-left': '1.5rem',
 			'padding-right': '1.5rem',
 			'font-size': '1.125rem'
