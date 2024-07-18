@@ -12,19 +12,19 @@
     "react-component",
     "ui",
     "interface",
-    "manastone",
+    "minedelve",
     "manakit"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/manastone/manakit.git",
+    "url": "https://github.com/minedelve/manakit.git",
     "directory": "/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/manastone/manakit/issues"
+    "url": "https://github.com/minedelve/manakit/issues"
   },
-  "homepage": "https://manastone.fr",
+  "homepage": "https://minedelve.com",
   "scripts": {
     "build": "node scripts/hook.js build",
     "test": "jest",
