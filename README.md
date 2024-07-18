@@ -23,10 +23,11 @@ ManaKit is an integrated interface component framework by a Front developer, for
 [![DDL_MONTHS](https://img.shields.io/npm/dm/manakit.svg)](https://www.npmjs.com/package/manakit)&nbsp;
 [![LICENSE](https://img.shields.io/npm/l/manakit.svg)](https://www.npmjs.com/package/manakit)&nbsp;
 [![VERSION_MANAKIT](https://img.shields.io/npm/v/manakit.svg)](https://www.npmjs.com/package/manakit)&nbsp;
-[![DISCORD_BADGE](https://img.shields.io/discord/961266579365056573?color=5865F2&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/CmtVqtSzHP)
 
-| :warning: | **ManaKit is currently in development.** <br> We will post a link here when we have an alpha and beta release ready for testing. Until then, we welcome contributors to help bring this project to life. | &nbsp;&nbsp;&nbsp;&nbsp;[CONTRIBUTE](https://github.com/manastone/manakit/blob/main/CONTRIBUTING.md)&nbsp;&nbsp;&nbsp;&nbsp; |
-| --------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+<!-- [![DISCORD_BADGE](https://img.shields.io/discord/961266579365056573?color=5865F2&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/CmtVqtSzHP) -->
+
+| :warning: | **ManaKit is give up.** <br> We will post a link here when we have an alpha and beta release ready for testing. Until then, we welcome contributors to help bring this project to life. | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| --------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 
 ## Table of Contents
 
@@ -46,25 +47,23 @@ Why a new one?
 
 We realized that many frameworks wanted to do everything and this was mainly based on the standards imposed by Material Design. Bored with the lack of originality and the complexity of some and the financial cost of others, we decided to create our own open source framework. Starting from an idea in the air, we want to make this project a reality in order to make a free, open source, simple and maintainable interface framework over time. We are inspired by the MD frameworks and the Swift UI architecture in order to offer a development alternative.
 
-[Join us](https://discord.gg/CmtVqtSzHP) and let's create an awesome framework together.
-
 ## Community
 
-Join our growing community on [Discord](https://discord.gg/CmtVqtSzHP) and [GitHub Discussions](https://github.com/manastone/manakit/discussions) where we discuss and collaborate on all things ManaKit. Don't be shy, jump right in and be part of the discussion!
+Join our growing community on Discord and GitHub Discussions where we discuss and collaborate on all things ManaKit. Don't be shy, jump right in and be part of the discussion!
 
 ## Contributing
 
-Be part of the next revolution in code editing by contributing to the project. This is a community-led effort, so we welcome as many contributors who can help. Read the [Contribution Guide](https://github.com/minedelve/manakit/blob/main/CONTRIBUTING.md) for more information.
+Be part of the next revolution in code editing by contributing to the project. This is a community-led effort, so we welcome as many contributors who can help. Read the Contribution Guide for more information.
 
 ## Core Team ManaKit
 
-[@GrimLaurent](https://github.com/Nycolaide)
+[@Nycolaide](https://github.com/Nycolaide)
 
 ## License
 
-Licensed under the [MIT license](https://github.com/minedelve/manakit/blob/main/LICENSE.md).
+Licensed under the MIT license.
 
-Copyright © 2022-2023 Minedelve, Laurent Grimaldi
+Copyright © 2022-2023 Laurent Grimaldi
 
 ## We support these projects
 
